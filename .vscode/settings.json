@@ -3,5 +3,6 @@
     {
       "text": "Commit messages must be generated in English."
     }
-  ]
+  ],
+  "github.copilot.chat.codesearch.enabled": true
 }
