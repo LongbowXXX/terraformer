@@ -72,8 +72,8 @@ Once generated, you can invoke these agents via `@Name`. They come equipped with
 
 ## 📄 Documentation
 
-  * [Project Charter (ANTP v1.4)](https://www.google.com/search?q=./docs/PROJECT_CHARTER.md) - The core philosophy.
-  * [Development Context (ADR)](https://www.google.com/search?q=./docs/DEVELOPMENT_CONTEXT.md) - Architecture decisions.
+  * [Project Charter (ANTP v1.4)](./docs/PROJECT_CHARTER.md) - The core philosophy.
+  * [Development Context (ADR)](./docs/DEVELOPMENT_CONTEXT.md) - Architecture decisions.
 
 -----
 
