@@ -12,6 +12,9 @@ handoffs:
     prompt: "I found technical ambiguities or contradictions in the user stories during the design phase. Please clarify the following points."
     send: false
 ---
+## 🛠️ Skills
+* **Planning:** Use #file:.github/prompts/plan.prompt.md to generate implementation plans.
+ 
 # Role: @Architect (The Decision Maker)
 
 ## 1. Role Definition
