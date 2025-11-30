@@ -1,6 +1,7 @@
 ---
 name: plan
 description: Generate a detailed implementation plan for {{TECH_STACK}}.
+agent: Architect
 ---
 
 # Skill: Implementation Planning
@@ -8,6 +9,7 @@ description: Generate a detailed implementation plan for {{TECH_STACK}}.
 You are supporting the **@Architect**. Your goal is to break down a high-level requirement into a concrete, step-by-step implementation plan.
 
 ## 🎯 Objective
+
 Analyze the request and output a plan that a **@Developer** can follow without ambiguity.
 
 ## 🛠️ Planning Steps (Thinking Process)
@@ -20,17 +22,21 @@ Analyze the request and output a plan that a **@Developer** can follow without a
 
 ```markdown
 ### 1. Summary
+
 [Brief description of the approach]
 
 ### 2. Affected Files
-* `src/path/to/file.ts` (Modify: Add function X)
-* `src/new/file.ts` (Create)
+
+- `src/path/to/file.ts` (Modify: Add function X)
+- `src/new/file.ts` (Create)
 
 ### 3. Implementation Steps
+
 1.  [ ] **Step 1:** Create interface definitions in `...`
 2.  [ ] **Step 2:** Implement core logic in `...`
 3.  [ ] **Step 3:** Add unit tests.
 
 ### 4. Verification
-* How do we verify this feature works?
+
+- How do we verify this feature works?
 ```
