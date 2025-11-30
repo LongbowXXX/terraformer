@@ -25,25 +25,16 @@ Generate 6 agent definition files.
 ### Agent Generation Steps
 
 #### 1. `.github/agents/developer.agent.md`
-* **Source:** Use the template content from `.github/templates/developer.agent.template.md`.
-* **Action:**
-    1.  Read the template file.
-    2.  Replace `{{TECH_STACK}}` with the actual stack (e.g., "React, TypeScript").
-    3.  If the project language is NOT English, translate the **description**, **handoff prompt**, and **system prompt body** into the target language. (Keep YAML keys like `name`, `tools` in English).
-    4.  Output the full content.
+* **Source:** Template `.github/templates/developer.agent.template.md`.
+* **Action:** Replace `{{TECH_STACK}}`, translate non-keys to Primary Language.
 
 #### 2. `.github/agents/architect.agent.md`
-* **Role:** Decision Maker & Designer.
-* **YAML Config:**
-    * name: Architect
-    * handoffs:
-        * label: `Start Implementation (@Developer)`
-        * agent: `developer`
+* **Source:** Template `.github/templates/architect.agent.template.md`.
+* **Action:** Replace `{{TECH_STACK}}`, translate non-keys to Primary Language.
 
 #### 3. `.github/agents/business_analyst.agent.md`
-* **Role:** Requirement Definer.
-* **YAML Config:**
-    * handoffs: target `architect`
+* **Source:** Template `.github/templates/business_analyst.agent.template.md`.
+* **Action:** Translate non-keys to Primary Language.
 
 #### 4. `.github/agents/quality_guard.agent.md`
 * **Role:** Reviewer.
@@ -59,20 +50,3 @@ Generate 6 agent definition files.
 ## 📤 Output Format
 Output each file content inside a code block with its filename.
 Ensure valid YAML Frontmatter for every file.
-
-**Example Output:**
-
-File: `.github/agents/developer.agent.md`
-```markdown
----
-name: Developer
-description: Implementation Specialist (React/TypeScript)
-tools: ["*"]
-handoffs:
-  - label: 🛑 Escalate to Architect
-    agent: architect
-    prompt: "I have encountered a specification gap or contradiction that requires your decision. Please review the current context."
-    send: false
----
-# Role: @Developer
-(Content from template with {{TECH_STACK}} replaced...)
