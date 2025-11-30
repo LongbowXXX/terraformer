@@ -76,6 +76,8 @@ Once generated, you can invoke these agents via `@Name`. They come equipped with
 
 - [Project Charter (ANTP v1.4)](./docs/PROJECT_CHARTER.md) - The core philosophy.
 - [Development Context (ADR)](./docs/DEVELOPMENT_CONTEXT.md) - Architecture decisions.
+- [AI-Oriented Docs](./agents-docs/) - Detailed documentation for AI agents and developers.
+- [LLM Context Map](./llms.txt) - High-density project summary for LLMs.
 
 ## 🤖 Meet Our Mascot: ANTP-Bot ("Ant")
 
