@@ -75,6 +75,17 @@ Once generated, you can invoke these agents via `@Name`. They come equipped with
   * [Project Charter (ANTP v1.4)](./docs/PROJECT_CHARTER.md) - The core philosophy.
   * [Development Context (ADR)](./docs/DEVELOPMENT_CONTEXT.md) - Architecture decisions.
 
+## 🤖 Meet Our Mascot: ANTP-Bot ("Ant")
+
+Terraformer isn't just a tool; it's a mission to cultivate legacy code.
+Our mascot, **ANTP-Bot** (affectionately known as **"Ant"**), embodies this mission.
+
+![ANTP-Bot Mascot](./mascot.png)
+
+> ANTP-Bot, a diligent robotic ant, is shown using its terraforming tool to convert barren, wired ground into flourishing digital circuits and greenery. Its backpack is loaded with blueprints for a better future.
+
+Just like a colony of ants working together to build complex structures, the ANTP (AI-Native Transformation Protocol) agents coordinate to transform your project into a thriving AI-Native ecosystem.
+
 -----
 
 Powered by **ANTP v1.4** | *Making human-only projects habitable for AI.*
