@@ -150,8 +150,8 @@ Since this project consists of "configuration and templates" rather than "code,"
 ```mermaid
 graph TB
     subgraph "Generator Layer"
-        P1[/terraformer]
-        P2[/terraform-context]
+        P1["/terraformer"]
+        P2["/terraform-context"]
     end
 
     subgraph "Template Layer"

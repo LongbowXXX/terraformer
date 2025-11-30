@@ -45,18 +45,18 @@ graph TB
 
     subgraph "Generated Output (Target Project)"
         subgraph "L4: Agents"
-            AR[@Architect]
-            BA[@BusinessAnalyst]
-            QG[@QualityGuard]
-            LB[@Librarian]
-            GD[@Gardener]
-            DV[@Developer]
+            AR["@Architect"]
+            BA["@BusinessAnalyst"]
+            QG["@QualityGuard"]
+            LB["@Librarian"]
+            GD["@Gardener"]
+            DV["@Developer"]
         end
 
         subgraph "L2: Skills"
-            SP[/plan]
-            SR[/refactor]
-            STT[/test]
+            SP["/plan"]
+            SR["/refactor"]
+            STT["/test"]
         end
 
         L3[L3: llms.txt]
@@ -65,8 +65,15 @@ graph TB
 
     TE --> AT
     TE --> ST
-    AT --> AR & BA & QG & LB & GD & DV
-    ST --> SP & SR & STT
+    AT --> AR
+    AT --> BA
+    AT --> QG
+    AT --> LB
+    AT --> GD
+    AT --> DV
+    ST --> SP
+    ST --> SR
+    ST --> STT
     TC --> L3
 ```
 
