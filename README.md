@@ -21,7 +21,7 @@ Terraformer implements the **Roles & Skills Architecture**. It doesn't just give
 | :------------------- | :------------------------------- | :-------------------------------- |
 | **L4: Agents**       | Specialized Roles with Authority | `.github/agents/*.agent.md`       |
 | **L2: Skills**       | Standardized Procedures (SOPs)   | `.github/prompts/*.prompt.md`     |
-| **L3: Knowledge**    | Explicit Context Map             | `llms.txt`                        |
+| **L3: Knowledge**    | Explicit Context Map             | [`llms.txt`](./llms.txt)          |
 | **L1: Constitution** | Immutable Rules                  | `.github/copilot-instructions.md` |
 
 ## 🛠️ How to Use (Installation)
