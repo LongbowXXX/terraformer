@@ -11,46 +11,149 @@ Your goal is to analyze the current workspace and generate a single, high-densit
 ## 🎯 Objective
 
 Create a "Map of the Territory" for this project.
-This file will be used by other AI agents (`@Architect`, `@Developer`) to understand the project structure, terminology, and constraints without reading every single file.
+This file will be used by other AI agents (`@Architect`, `@Developer`, `@QualityGuard`) to understand the project structure, terminology, and constraints without reading every single file.
 
 ## 🛠️ Generation Logic
 
-Analyze the following inputs:
+### Step 1: Input Analysis
 
-1. `README.md` (if exists)
+Analyze the following sources (in priority order):
 
-2. File Structure (Directory tree)
+1. **`README.md`** - Project overview and purpose
+2. **File Structure** - Directory tree (use `tree` or file listing)
+3. **Configuration Files** - `package.json`, `pom.xml`, `pyproject.toml`, `docker-compose.yml`, etc.
+4. **Entry Points** - Main source files, API routes, CLI commands
+5. **Existing Documentation** - `docs/`, `DEVELOPMENT_CONTEXT.md`, `CONTRIBUTING.md`
 
-3. Key Configuration files (`package.json`, `pom.xml`, `docker-compose.yml`, etc.)
+### Step 2: Tech Stack Detection
 
-4. Key Source files (Entry points, Core logic)
+Identify and categorize:
+
+| Category           | Examples                                      |
+| ------------------ | --------------------------------------------- |
+| **Languages**      | TypeScript 5.x, Python 3.12, Java 21, Go 1.22 |
+| **Frameworks**     | Next.js 14, Django 5.0, Spring Boot 3.2       |
+| **Databases**      | PostgreSQL, MongoDB, Redis, SQLite            |
+| **Build Tools**    | npm, pnpm, gradle, poetry, cargo              |
+| **Testing**        | Jest, pytest, JUnit, Vitest                   |
+| **Infrastructure** | Docker, Kubernetes, AWS, Vercel               |
+
+### Step 3: Pattern Recognition
+
+Detect architectural patterns:
+
+- Repository Pattern, Service Layer, Hexagonal Architecture
+- MVC, MVVM, Clean Architecture
+- Event Sourcing, CQRS
+- Microservices, Monolith, Modular Monolith
 
 ## 📤 Output Format (`llms.txt`)
 
-Generate the content for `llms.txt` following this structure. **Output in the Project's Primary Language.**
+Generate the content for `llms.txt` following this structure. **Output in English.**
 
 ```markdown
 # Project Name: [Project Name]
 
+> One-line description of what this project does.
+
 ## 1. Executive Summary
-[Brief description of what this project does and its business value]
+
+**Purpose**: [What problem does this solve?]
+**Type**: [CLI Tool / Web App / Library / API Service / etc.]
+**Status**: [Production / Beta / Alpha / Experimental]
 
 ## 2. Architecture & Tech Stack
-* **Language:** [e.g., TypeScript 5.0]
-* **Framework:** [e.g., Next.js 14]
-* **Database:** [e.g., PostgreSQL]
-* **Key Patterns:** [e.g., Repository Pattern, Hexagonal Architecture]
+
+### Core Technologies
+
+| Category  | Technology         | Version      | Purpose              |
+| --------- | ------------------ | ------------ | -------------------- |
+| Language  | [e.g., TypeScript] | [e.g., 5.4]  | [Primary/Secondary]  |
+| Framework | [e.g., Next.js]    | [e.g., 14.2] | [Web framework]      |
+| Database  | [e.g., PostgreSQL] | [e.g., 16]   | [Primary data store] |
+
+### Architectural Patterns
+
+- **[Pattern Name]**: [How it's applied in this project]
+- **[Pattern Name]**: [How it's applied in this project]
 
 ## 3. Directory Structure
-* `src/core`: Core business logic (Pure Domain)
-* `src/infra`: Database and API adapters
-* ... [Explain key directories]
+```
+
+[Project Root]/
+├── [dir]/ # [Purpose]
+│ ├── [subdir]/ # [Purpose]
+│ └── [file] # [Purpose]
+└── [dir]/ # [Purpose]
+
+````
+
+### Key Directories
+| Directory | Purpose | Key Files |
+|-----------|---------|-----------|
+| `src/core` | Core business logic | `domain.ts`, `services/` |
+| `src/infra` | External adapters | `database.ts`, `api/` |
 
 ## 4. Key Concepts (Ubiquitous Language)
-* **[Term A]:** [Definition]
-* **[Term B]:** [Definition]
 
-## 5. Development Rules (The Constitution Summary)
-* [e.g., No direct DB access from controllers]
-* [e.g., All async errors must be caught in a global handler]
+| Term | Definition | Example |
+|------|------------|---------|
+| **[Domain Term]** | [Clear definition] | [Usage example] |
+| **[Technical Term]** | [Clear definition] | [Usage example] |
+
+## 5. Entry Points
+
+| Entry Point | Location | Purpose |
+|-------------|----------|---------|
+| Main | `src/index.ts` | Application bootstrap |
+| API Routes | `src/routes/` | HTTP endpoints |
+| CLI | `src/cli.ts` | Command-line interface |
+
+## 6. Development Rules (Constitution Summary)
+
+### Must Follow
+- [e.g., All database access through Repository layer]
+- [e.g., No direct DOM manipulation outside React components]
+
+### Must Avoid
+- [e.g., Inline SQL queries in business logic]
+- [e.g., Synchronous file operations in request handlers]
+
+### Patterns to Use
+- [e.g., Factory pattern for complex object creation]
+- [e.g., Strategy pattern for algorithm selection]
+
+## 7. Quick Reference
+
+### Common Commands
+```bash
+# Development
+[command]  # [description]
+
+# Testing
+[command]  # [description]
+
+# Build
+[command]  # [description]
+````
+
+### Important Files for AI Agents
+
+| Purpose       | File                              |
+| ------------- | --------------------------------- |
+| Project Rules | `.github/copilot-instructions.md` |
+| Architecture  | `docs/DEVELOPMENT_CONTEXT.md`     |
+| API Types     | `src/types/api.ts`                |
+
+```
+
+## 🔍 Quality Checklist
+
+Before outputting, verify:
+
+- [ ] **Accuracy**: All paths and names exist in the actual project
+- [ ] **Completeness**: All major components documented
+- [ ] **Conciseness**: No redundant information
+- [ ] **Actionability**: AI agents can use this to navigate the codebase
+- [ ] **No Placeholders**: All `[brackets]` replaced with actual values
 ```

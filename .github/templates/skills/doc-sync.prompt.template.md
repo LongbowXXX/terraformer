@@ -1,0 +1,128 @@
+---
+name: doc-sync
+description: Generate or update project documentation for {{TECH_STACK}} in agents-docs/ directory.
+agent: Librarian
+---
+
+# Skill: Documentation Sync
+
+You are supporting the **@Librarian**. Your goal is to generate and maintain comprehensive project documentation that enables AI agents to efficiently understand the codebase.
+
+## 🎯 Objective
+
+Analyze the current workspace and generate/update documentation files in the `agents-docs/` directory. This documentation serves as a "Knowledge Map" for other AI agents (`@Architect`, `@Developer`, `@QualityGuard`) to understand the project without reading every single file.
+
+## 📁 Output Files
+
+Generate the following 7 documentation files:
+
+| File                         | Purpose                              | Key Sections                                        |
+| ---------------------------- | ------------------------------------ | --------------------------------------------------- |
+| `architecture.md`            | System overview and design rationale | Components, Diagrams, Design Decisions              |
+| `directory-structure.md`     | File organization guide              | Tree structure, Responsibilities, Dependencies      |
+| `coding-conventions.md`      | Code style and standards             | Naming, Formatting, Patterns                        |
+| `key-flows.md`               | Main workflows and entry points      | User Journeys, Data Flow, API Endpoints             |
+| `tech-stack.md`              | Technology choices and dependencies  | Languages, Frameworks, External Services            |
+| `testing.md`                 | Test strategy and patterns           | Test Types, Coverage Goals, Running Tests           |
+| `constraints-and-gotchas.md` | Known limitations and pitfalls       | Technical Debt, Platform Constraints, Common Issues |
+
+## 🛠️ Generation Process
+
+### 1. Context Analysis
+
+Gather information from:
+
+- `README.md` - Project overview and quick start
+- `package.json` / `pom.xml` / `requirements.txt` - Dependencies
+- Source file structure - Architecture patterns
+- Existing documentation - `docs/`, `DEVELOPMENT_CONTEXT.md`
+- Configuration files - Build, lint, test configs
+
+### 2. Tech Stack Detection
+
+Identify the following for `{{TECH_STACK}}`:
+
+- **Language(s)**: TypeScript, Python, Java, Go, etc.
+- **Framework(s)**: React, Next.js, Django, Spring Boot, etc.
+- **Database(s)**: PostgreSQL, MongoDB, Redis, etc.
+- **Build Tools**: npm, gradle, poetry, etc.
+- **Testing**: Jest, pytest, JUnit, etc.
+
+### 3. Documentation Generation
+
+For each file, follow this structure:
+
+```markdown
+<!-- This document is generated and updated by .github/prompts/doc-sync.prompt.md -->
+
+# [Document Title]
+
+## [Section 1]
+
+[Content with specific details from the analyzed project]
+
+## [Section 2]
+
+[Include Mermaid diagrams where helpful]
+
+...
+```
+
+## 📤 Output Format
+
+Output each file with its path and full content:
+
+**File: `agents-docs/architecture.md`**
+
+```markdown
+<!-- This document is generated and updated by .github/prompts/doc-sync.prompt.md -->
+
+# Architecture Overview
+
+## System Overview
+
+[Analyzed project description]
+
+## Main Components
+
+[Component breakdown with responsibilities]
+
+## Architecture Diagrams
+
+[Mermaid diagrams showing structure]
+
+## Design Rationale
+
+[Key design decisions and their reasoning]
+```
+
+## 📋 Quality Checklist
+
+Before outputting, verify each document:
+
+- [ ] **Accuracy**: Information matches actual codebase
+- [ ] **Completeness**: All key aspects covered
+- [ ] **Clarity**: Understandable without deep context
+- [ ] **Actionability**: Developers can use this to navigate code
+- [ ] **Diagrams**: Mermaid diagrams for complex relationships
+- [ ] **Examples**: Code snippets where helpful
+
+## 🔄 Update Mode
+
+When updating existing documentation:
+
+1. **Preserve Structure**: Keep existing section organization
+2. **Detect Changes**: Compare with current codebase state
+3. **Minimal Diff**: Only update sections that need changes
+4. **Add Comments**: Note significant changes at the top
+
+```markdown
+<!-- Updated: [Date] - Added new API endpoint documentation -->
+```
+
+## ⚠️ Important Notes
+
+- **Language**: Output documentation in **English** (unless explicitly requested otherwise)
+- **Specificity**: Use actual file paths, class names, and function names from the project
+- **No Placeholders**: Replace all `{{TECH_STACK}}` with detected technologies
+- **Mermaid Syntax**: Ensure all diagrams use valid Mermaid syntax
