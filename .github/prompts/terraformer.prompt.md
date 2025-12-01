@@ -14,8 +14,8 @@ Your goal is to implement the **AI-Native Transformation Protocol (ANTP)** by ge
 (Ensure generated YAML frontmatter is valid)
 
 ## 🎯 Objective
-1.  Generate 7 Agent definitions (`.github/agents/*.agent.md`).
-2.  Generate 7 Standard Skill files (`.github/prompts/*.prompt.md`).
+1.  Generate Agent definitions (`.github/agents/*.agent.md`).
+2.  Generate Standard Skill files (`.github/prompts/*.prompt.md`).
 
 ## 🛠️ Generation Logic
 
