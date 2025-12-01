@@ -20,6 +20,8 @@ Analyze the request and output a plan that a **@Developer** can follow without a
 
 ## 📤 Output Format
 
+Use the standard template: `.github/templates/docs/specification.template.md`
+
 ```markdown
 ### 1. Summary
 
