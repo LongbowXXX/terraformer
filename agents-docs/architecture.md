@@ -16,6 +16,23 @@ Traditional projects rely on implicit knowledge (Tribal Knowledge). When generic
 
 Terraformer solves this by **making implicit context explicit and machine-readable**.
 
+## Development Modes
+
+Terraformer supports two distinct development modes to balance speed and quality:
+
+### 1. Standard Mode (Default)
+
+- **Priority**: Quality, Maintainability, Documentation
+- **Process**: Strict adherence to the ANTP workflow (Design -> Review -> Implement -> Verify).
+- **Deliverables**: Production-ready code, comprehensive documentation, full test coverage.
+
+### 2. Prototype Mode
+
+- **Priority**: Speed, Exploration, Feedback
+- **Process**: Relaxed workflow. Steps like formal design reviews or comprehensive testing may be skipped or simplified.
+- **Deliverables**: Working software marked as **Prototype**.
+- **Constraint**: Prototype code must be refactored or rewritten before production use.
+
 ## Main Components
 
 ### ANTP Four-Layer Stack

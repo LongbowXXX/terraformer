@@ -323,6 +323,41 @@ sequenceDiagram
 
 ---
 
+## Use Case 6: Prototype Development
+
+### Overview
+
+Rapidly build a working prototype to validate ideas or demonstrate functionality. Speed is prioritized over strict process adherence.
+
+### Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant DV as @Developer
+    participant QG as @QualityGuard
+
+    U->>DV: "Build a prototype for [Feature] (Prototype Mode)"
+    DV->>DV: Rapid Implementation (Skip formal design)
+    DV->>U: Checkpoint / Demo
+    U->>DV: Feedback
+    DV->>DV: Iterate
+    DV->>QG: Request Quick Check
+    QG->>QG: Basic Sanity Check (Skip deep review)
+    QG->>U: Deliver Prototype
+    Note over U: ⚠️ Prototype Code (Not Production Ready)
+```
+
+### Process Flow
+
+1.  **Request**: User explicitly requests "Prototype Mode".
+2.  **Implementation**: `@Developer` implements directly, skipping formal `@Architect` design phase if appropriate.
+3.  **Iteration**: Fast feedback loops with the user.
+4.  **Delivery**: Code is delivered as a **Prototype**.
+5.  **Cleanup**: Prototype code must be revisited for productionization (Refactor/Rewrite) later.
+
+---
+
 ## Skill Execution Flows
 
 ### `/plan` Skill

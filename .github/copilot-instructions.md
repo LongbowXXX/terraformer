@@ -44,6 +44,7 @@ The `@Developer` agent is **strictly prohibited** from changing specifications. 
 1. **STOP immediately** - Do not improvise
 2. **Escalate** to `@Architect` via handoff mechanism
 3. This prevents "Specification Drift" where code diverges from documentation
+4. **EXCEPTION**: If the user explicitly requests **"Prototype Mode"**, this restriction is lifted. The Developer may implement directly, but must mark code as `/* PROTOTYPE */`.
 
 ### Template Variable System
 

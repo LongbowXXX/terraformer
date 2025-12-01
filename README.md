@@ -73,6 +73,17 @@ Once generated, you can invoke these agents via `@Name`. They come equipped with
 
 > **The Anti-Generalist Principle:** `@Developer` is strictly prohibited from changing specifications. If a blocker is found, it must escalate to `@Architect`.
 
+### ⚡ Prototype Mode (Speed > Strictness)
+
+For rapid prototyping or idea validation, you can explicitly request **"Prototype Mode"**.
+
+> "Build a prototype for [Feature] (Prototype Mode)"
+
+In this mode:
+- `@Developer` skips formal spec checks.
+- `@QualityGuard` relaxes review criteria.
+- Generated code is marked with `/* PROTOTYPE */` and is **not production-ready**.
+
 ## 📄 Documentation
 
 - [Project Charter (ANTP v1.4)](./docs/PROJECT_CHARTER.md) - The core philosophy.

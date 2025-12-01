@@ -116,6 +116,19 @@
 
 **Plan**: Add error case detection and clear message output
 
+### 4. Prototype Debt
+
+**Status**: Code created in "Prototype Mode" prioritizes speed over quality.
+
+**Impact**:
+
+- Potential security vulnerabilities
+- Lack of tests
+- Unoptimized performance
+- Hardcoded values
+
+**Plan**: Prototype code must be explicitly scheduled for refactoring or rewriting before being promoted to production.
+
 ## Common Troubles and Solutions
 
 ### Trouble 1: Agent Not Recognized
