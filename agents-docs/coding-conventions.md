@@ -1,4 +1,4 @@
-<!-- This document is generated and updated by .github/prompts/document-project.prompt.md -->
+<!-- This document is generated/updated by the sync-doc workflow -->
 
 # Design Principles and Coding Conventions
 

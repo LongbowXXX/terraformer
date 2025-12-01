@@ -1,4 +1,4 @@
-<!-- This document is generated and updated by .github/prompts/document-project.prompt.md -->
+<!-- This document is generated/updated by the sync-doc workflow -->
 
 # Key Functional Flows
 
@@ -302,4 +302,14 @@ flowchart TD
     B --> C[Generate Edge Case Tests]
     C --> D[Generate Security Tests]
     D --> E[Output Test Code]
+```
+
+### `/doc-sync` Skill
+
+```mermaid
+flowchart TD
+    A[Analyze Project] --> B[Detect Tech Stack]
+    B --> C[Generate Documentation Files]
+    C --> D[Verify Accuracy]
+    D --> E[Output to agents-docs/]
 ```

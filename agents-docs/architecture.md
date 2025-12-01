@@ -1,4 +1,4 @@
-<!-- This document is generated and updated by .github/prompts/document-project.prompt.md -->
+<!-- This document is generated/updated by the sync-doc workflow -->
 
 # Architecture Overview
 
@@ -57,6 +57,7 @@ graph TB
             SP["/plan"]
             SR["/refactor"]
             STT["/test"]
+            DS["/doc-sync"]
         end
 
         L3[L3: AGENTS.md]
@@ -74,6 +75,7 @@ graph TB
     ST --> SP
     ST --> SR
     ST --> STT
+    ST --> DS
     TC --> L3
 ```
 

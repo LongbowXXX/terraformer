@@ -1,4 +1,4 @@
-<!-- This document is generated and updated by .github/prompts/document-project.prompt.md -->
+<!-- This document is generated/updated by the sync-doc workflow -->
 
 # Testing Strategy and Guide
 
@@ -119,6 +119,7 @@ terraformer/
 | `/plan`     | Feature addition request | Affected files list, implementation steps |
 | `/refactor` | Code improvement request | Refactoring plan, diff                    |
 | `/test`     | Test generation request  | Test code (Happy Path + Edge Case)        |
+| `/doc-sync` | Doc update request       | 7 documentation files in `agents-docs/`   |
 
 ## Test Execution Methods
 

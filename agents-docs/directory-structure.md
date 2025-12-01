@@ -1,4 +1,4 @@
-<!-- This document is generated and updated by .github/prompts/document-project.prompt.md -->
+<!-- This document is generated/updated by the sync-doc workflow -->
 
 # Directory Structure Guide
 
@@ -14,9 +14,14 @@ terraformer/
 │   └── templates/                  # Generation Templates
 │       ├── *.agent.template.md     # L4: Agent Templates (6 types)
 │       └── skills/                 # L2: Skill Templates
+│           ├── doc-sync.prompt.template.md
 │           ├── plan.prompt.template.md
 │           ├── refactor.prompt.template.md
 │           └── test.prompt.template.md
+│       └── docs/                   # Documentation Templates
+│           ├── requirements.template.md
+│           ├── review_report.template.md
+│           └── specification.template.md
 ├── .vscode/
 │   ├── extensions.json            # Recommended Extensions
 │   └── settings.json              # VS Code Settings
@@ -76,6 +81,7 @@ terraformer/
 | `plan.prompt.template.md`     | `/plan`         | `@Architect`                  |
 | `refactor.prompt.template.md` | `/refactor`     | `@Gardener`                   |
 | `test.prompt.template.md`     | `/test`         | `@Developer`, `@QualityGuard` |
+| `doc-sync.prompt.template.md` | `/doc-sync`     | `@Librarian`                  |
 
 - **Feature**: Contains `{{TECH_STACK}}` placeholder
 - **Update Frequency**: When adding new framework support or updating best practices
