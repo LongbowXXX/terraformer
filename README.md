@@ -52,10 +52,11 @@ cp -r terraformer/.github/templates ./my-legacy-project/.github/
 1.  Open your project in **VS Code** (ensure GitHub Copilot Chat extension is active).
 2.  Open `AGENTS.md` (generated in step 2) to provide context.
 3.  Type **`/terraformer`** in the Copilot Chat.
-4.  Terraformer will analyze your project and generate:
+4.  Terraformer will analyze your project and **generate or update**:
     - **Agent Definitions** (e.g., `architect.agent.md`) customized for your tech stack.
     - **Standard Skills** (`plan.prompt.md`, `refactor.prompt.md`, etc.).
 5.  Save the outputs to `.github/agents/` and `.github/prompts/`.
+    - *Note: You can re-run `/terraformer` at any time to update your agents and skills if the project context changes.*
 
 ## 👥 The Specialized Agents (Agents & Skills)
 

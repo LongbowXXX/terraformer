@@ -8,7 +8,7 @@ Terraformer has two main entry points:
 
 | Command              | Purpose                       | Output              |
 | -------------------- | ----------------------------- | ------------------- |
-| `/terraformer`       | Generate AI agents and skills | 6 agents + 3 skills |
+| `/terraformer`       | Generate or Update AI agents and skills | 6 agents + 3 skills |
 | `/terraform-context` | Generate context map          | `AGENTS.md`         |
 
 ### Startup Flow
@@ -63,7 +63,7 @@ sequenceDiagram
 
     U->>TE: Execute /terraformer
     TE->>LP: Detect tech stack
-    TE->>U: Generate 6 agents + 3 skills
+    TE->>U: Generate or Update agents + skills
     U->>LP: Save to .github/agents/, .github/prompts/
 
     Note over LP: AI-Native Environment Complete
@@ -80,7 +80,7 @@ sequenceDiagram
 
 1. **Preparation**: Copy Terraformer's `.github/` to target project
 2. **L3 Generation**: Generate and save `AGENTS.md` with `/terraform-context`
-3. **L4+L2 Generation**: Generate and save agents and skills with `/terraformer`
+3. **L4+L2 Generation**: Generate or Update agents and skills with `/terraformer`
 4. **Verification**: Invoke generated agents with `@Agent` to verify operation
 
 ---
