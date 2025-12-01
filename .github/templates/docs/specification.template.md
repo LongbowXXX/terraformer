@@ -11,6 +11,7 @@ status: draft
 | **Created** | {{DATE}} |
 | **Status** | Draft / In Review / Approved |
 | **Reviewers** | [List reviewers] |
+| **Source Requirements** | [Link to Requirements] |
 
 ## 1. Overview
 

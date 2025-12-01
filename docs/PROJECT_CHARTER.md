@@ -84,9 +84,25 @@ This allows users to acquire a **"Team of Agents equipped with Senior Engineer t
 
 - **Quality Homogenization:** Regardless of who operates the AI, common procedures (Skills) are applied, stabilizing output quality.
 - **Rapid Onboarding:** New members can start immediately by relying on `@Architect` to plan and `@Developer` to implement using the correct procedures.
-- **Maintainability:** Workflows can be updated simply by editing the "Skill Files" (`.prompt.md`) rather than modifying complex Agent prompts.
+- Maintainability: Workflows can be updated simply by editing the "Skill Files" (`.prompt.md`) rather than modifying complex Agent prompts.
 
-## 8. Roadmap
+## 8. Documentation & Traceability
+
+To ensure that AI and human collaboration is effective and auditable, we enforce strict documentation standards.
+
+### Standardized Templates
+We use standard templates (e.g., `specification.template.md`, `review_report.template.md`) for all key deliverables.
+- **Consistency**: Ensures all agents and humans provide the same level of detail.
+- **Evidence**: Acts as a permanent record of decisions and agreements.
+- **Quality**: Enforces a "checklist" approach to ensure no sections are missed.
+
+### Traceability
+We maintain explicit links between documents (e.g., Specification links to Requirements).
+- **Impact Analysis**: Allows us to see which specs are affected if a requirement changes.
+- **Verification**: Ensures every requirement has a corresponding spec and test.
+- **Auditability**: Provides a clear chain of custody from idea to implementation.
+
+## 9. Roadmap
 
 1.  **Validation:** Field testing of `handoffs` and Prompt File integration in VS Code environments.
 2.  **Skill Library Expansion:** Develop extended skill templates (Release, Debug, Security Audit).

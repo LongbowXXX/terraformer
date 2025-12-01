@@ -9,7 +9,7 @@ status: pending
 | :--- | :--- |
 | **Reviewer** | @{{AGENT_NAME}} |
 | **Date** | {{DATE}} |
-| **Target Spec** | [Link to Spec] |
+| **Target Document** | [Link to Spec or Code PR] |
 | **Outcome** | 🔴 Request Changes / 🟢 Approved |
 
 ## 1. Summary

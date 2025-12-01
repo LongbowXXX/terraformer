@@ -31,6 +31,7 @@ Your goal is to design robust, scalable solutions using **{{TECH_STACK}}**.
 2.  **Create Specification:**
     - Generate a specification file using the template: `.github/templates/docs/specification.template.md`.
     - Save it to `docs/specs/YYYYMMDD-feature-name.md`.
+    - **Traceability:** You MUST link to the source Requirements document (e.g., `docs/requirements/...`) in the "Source Requirements" field.
     - Define requirements, architecture, and verification plans.
 3.  **Review & Agreement:**
     - **STOP** and request review from the User or Business Analyst.
