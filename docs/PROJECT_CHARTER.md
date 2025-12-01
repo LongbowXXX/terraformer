@@ -73,7 +73,24 @@ In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into
     - **Equipped Skill:** **`/test`** (TDD-based test generation and verification).
     - **Constraint:** Must escalate to `@Architect` (using `/plan`) if implementation is blocked.
 
-## 6. Technical Strategy: Skill Injection Mechanism
+    - **Constraint:** Must escalate to `@Architect` (using `/plan`) if implementation is blocked.
+
+## 6. Development Modes
+
+To balance the need for high-quality production code with the reality of rapid experimentation, ANTP v1.4 supports two distinct development modes.
+
+### A. Standard Mode (Default)
+- **Philosophy:** "Slow is Smooth, Smooth is Fast."
+- **Process:** Strict adherence to the Roles & Skills Matrix. No code without specs.
+- **Goal:** Maintainability, Security, and Long-term Stability.
+
+### B. Prototype Mode (Opt-in)
+- **Philosophy:** "Move Fast and Break Things (Temporarily)."
+- **Process:** Explicitly requested by the user. `@Developer` can implement without formal specs. `@QualityGuard` relaxes checks.
+- **Goal:** Idea Validation, PoC, Temporary Solutions.
+- **Constraint:** Code MUST be marked as `/* PROTOTYPE */` and is considered technical debt that must be paid down (refactored/rewritten) before production use.
+
+## 7. Technical Strategy: Skill Injection Mechanism
 
 The Terraformer Engine bootstraps the project using the following logic:
 
@@ -83,13 +100,13 @@ The Terraformer Engine bootstraps the project using the following logic:
 
 This allows users to acquire a **"Team of Agents equipped with Senior Engineer thought processes"** simply by running `/terraformer`.
 
-## 7. Expected Effects
+## 8. Expected Effects
 
 - **Quality Homogenization:** Regardless of who operates the AI, common procedures (Skills) are applied, stabilizing output quality.
 - **Rapid Onboarding:** New members can start immediately by relying on `@Architect` to plan and `@Developer` to implement using the correct procedures.
 - Maintainability: Workflows can be updated simply by editing the "Skill Files" (`.prompt.md`) rather than modifying complex Agent prompts.
 
-## 8. Documentation & Traceability
+## 9. Documentation & Traceability
 
 To ensure that AI and human collaboration is effective and auditable, we enforce strict documentation standards.
 
@@ -105,7 +122,7 @@ We maintain explicit links between documents (e.g., Specification links to Requi
 - **Verification**: Ensures every requirement has a corresponding spec and test.
 - **Auditability**: Provides a clear chain of custody from idea to implementation.
 
-## 9. Roadmap
+## 10. Roadmap
 
 1.  **Validation:** Field testing of `handoffs` and Prompt File integration in VS Code environments.
 2.  **Skill Library Expansion:** Develop extended skill templates (Release, Debug, Security Audit).
