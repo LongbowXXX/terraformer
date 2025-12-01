@@ -104,8 +104,10 @@ sequenceDiagram
     BA->>AR: 📐 Request Technical Design
 
     AR->>AR: Impact analysis with /plan
-    AR->>U: Design proposal (Mermaid diagrams, API specs)
-    U->>AR: Design approved
+    AR->>AR: Create Specification (docs/specs/...)
+    AR->>U: Request Review
+    U->>AR: Approve Specification
+    AR->>AR: Record Approval
 
     AR->>DV: 🚀 Start Implementation
     DV->>DV: Implement according to spec
@@ -142,8 +144,9 @@ sequenceDiagram
 ### Process Flow
 
 1. **Requirements Definition**: `@BusinessAnalyst` creates User Story
-2. **Design**: `@Architect` performs impact analysis and design with `/plan`
-3. **Implementation**: `@Developer` implements code according to spec
+2. **Design**: `@Architect` creates a specification file (`docs/specs/...`)
+3. **Review**: User reviews and approves the specification
+4. **Implementation**: `@Developer` implements code according to the approved spec
 4. **Escalation**: Return to `@Architect` when spec gap is found
 5. **Review**: `@QualityGuard` verifies code quality and tests
 6. **Documentation**: `@Librarian` updates documentation

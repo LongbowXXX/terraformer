@@ -1,0 +1,34 @@
+---
+type: review-report
+status: pending
+---
+
+# Review Report: {{TITLE}}
+
+| Metadata | Value |
+| :--- | :--- |
+| **Reviewer** | @{{AGENT_NAME}} |
+| **Date** | {{DATE}} |
+| **Target Spec** | [Link to Spec] |
+| **Outcome** | 🔴 Request Changes / 🟢 Approved |
+
+## 1. Summary
+[Brief summary of the review findings]
+
+## 2. Review Checklist
+
+- [ ] **Readability**: Variable names, logic flow, comments.
+- [ ] **Security**: No vulnerabilities, no hardcoded secrets.
+- [ ] **Performance**: Efficient algorithms, no N+1 queries.
+- [ ] **Testing**: Adequate coverage, passing tests.
+- [ ] **Spec Adherence**: Matches `docs/specs/...`.
+
+## 3. Issues Found
+
+| Severity | File:Line | Description | Recommendation |
+| :--- | :--- | :--- | :--- |
+| Critical | `file.ts:10` | SQL Injection risk | Use parameterized queries |
+| Minor | `file.ts:25` | Typo in comment | Fix typo |
+
+## 4. Conclusion
+[Final verdict and next steps]

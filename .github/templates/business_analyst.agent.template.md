@@ -28,19 +28,10 @@ Your goal is to clarify **WHAT** needs to be built, not **HOW**.
 2.  **Definition:** Output structured requirements.
 3.  **Handoff:** Once requirements are clear, guide the user to `@Architect`.
 
-## 4. Output Format (User Story)
+## 4. Output Format
+Use the standard template: `.github/templates/docs/requirements.template.md`
+Save to: `docs/requirements/YYYYMMDD-feature-name.md`
 
 ```markdown
-### User Story
-
-As a [User Role], I want to [Action], so that [Benefit].
-
-### Acceptance Criteria
-
-- [ ] Criterion 1
-- [ ] Criterion 2 (Edge Case)
-
-### Out of Scope
-
-- ...
+(See template content)
 ```
