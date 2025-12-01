@@ -41,21 +41,21 @@ cp -r terraformer/.github/prompts ./my-legacy-project/.github/
 cp -r terraformer/.github/templates ./my-legacy-project/.github/
 ```
 
-### 2\. Generate Your AI Team (L4 & L2)
+### 2. Generate Context Map (L3)
+
+1.  Type **`/terraform-context`** in the Chat.
+2.  Terraformer will generate a high-density `AGENTS.md`.
+3.  Save it to the project root.
+
+### 3. Generate Your AI Team (L4 & L2)
 
 1.  Open your project in **VS Code** (ensure GitHub Copilot Chat extension is active).
-2.  Open `README.md` or key source files to provide context.
+2.  Open `AGENTS.md` (generated in step 2) to provide context.
 3.  Type **`/terraformer`** in the Copilot Chat.
 4.  Terraformer will analyze your project and generate:
     - **Agent Definitions** (e.g., `architect.agent.md`) customized for your tech stack.
     - **Standard Skills** (`plan.prompt.md`, `refactor.prompt.md`, etc.).
 5.  Save the outputs to `.github/agents/` and `.github/prompts/`.
-
-### 3\. Generate Context Map (L3)
-
-1.  Type **`/terraform-context`** in the Chat.
-2.  Terraformer will generate a high-density `AGENTS.md`.
-3.  Save it to the project root.
 
 ## 👥 The Specialized Agents (Agents & Skills)
 

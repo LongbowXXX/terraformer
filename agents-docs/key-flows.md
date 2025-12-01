@@ -17,14 +17,20 @@ Terraformer has two main entry points:
 sequenceDiagram
     participant U as User
     participant CC as Copilot Chat
+    participant TC as /terraform-context
     participant TF as /terraformer
     participant TP as Templates
     participant FS as File System
 
+    U->>CC: /terraform-context
+    CC->>TC: Execute prompt
+    TC->>FS: Analyze workspace
+    TC->>U: Generate AGENTS.md
+    U->>FS: Save AGENTS.md
+
     U->>CC: /terraformer
     CC->>TF: Execute prompt
-    TF->>FS: Read README.md
-    TF->>FS: Scan file structure
+    TF->>FS: Read AGENTS.md
     TF->>TF: Detect {{TECH_STACK}}
     TF->>TP: Load templates
     TF->>TF: Replace placeholders

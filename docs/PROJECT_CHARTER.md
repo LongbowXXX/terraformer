@@ -94,11 +94,12 @@ To balance the need for high-quality production code with the reality of rapid e
 
 The Terraformer Engine bootstraps the project using the following logic:
 
-1.  **Skill Scanning:** Scans the user's `.github/prompts/` to detect existing know-how (Prompt Files).
-2.  **Template Expansion:** Automatically generates missing standard skills (Plan, Refactor, Test) from built-in templates.
-3.  **Dynamic Injection:** When generating Agent definitions (`.agent.md`), the engine injects instructions such as _"When performing this task, you MUST follow the procedure defined in `#skill-name`."_
+1.  **Context Generation:** Executes `/terraform-context` to generate `AGENTS.md`, creating a high-density map of the project.
+2.  **Skill Scanning:** Scans the user's `.github/prompts/` to detect existing know-how (Prompt Files).
+3.  **Template Expansion:** Automatically generates missing standard skills (Plan, Refactor, Test) from built-in templates.
+4.  **Dynamic Injection:** When generating Agent definitions (`.agent.md`), the engine injects instructions such as _"When performing this task, you MUST follow the procedure defined in `#skill-name`."_
 
-This allows users to acquire a **"Team of Agents equipped with Senior Engineer thought processes"** simply by running `/terraformer`.
+This allows users to acquire a **"Team of Agents equipped with Senior Engineer thought processes"** simply by running `/terraformer` (after context generation).
 
 ## 8. Expected Effects
 

@@ -150,6 +150,9 @@ graph LR
 
     TC -->|References| RM
     TC -->|References| DC
+    TC -->|Generates| L3[AGENTS.md]
+
+    TF -->|Reads| L3
 
     AT -->|References| ST
 

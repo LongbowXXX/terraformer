@@ -58,9 +58,10 @@ terraformer/
 
 1. Prepare test project (e.g., TypeScript + React)
 2. Copy `.github/prompts/`, `.github/templates/`
-3. Execute `/terraformer`
-4. Verify no `{{TECH_STACK}}` remains in generated results
-5. Verify tech stack is correctly reflected
+3. Execute `/terraform-context` (Generate `AGENTS.md`)
+4. Execute `/terraformer`
+5. Verify no `{{TECH_STACK}}` remains in generated results
+6. Verify tech stack is correctly reflected
 
 **Verification Checklist**:
 
@@ -143,7 +144,7 @@ flowchart TD
     C --> D{Which Test?}
 
     D -->|Syntax| E[Check YAML Errors]
-    D -->|Template| F[Execute /terraformer]
+    D -->|Template| F[Execute /terraform-context -> /terraformer]
     D -->|Agent| G[Invoke @Agent]
     D -->|Handoffs| H[Verify Button Click]
     D -->|Skill| I[Execute /skill]
@@ -171,7 +172,10 @@ echo "console.log('hello');" > src/index.ts
 cp -r ../terraformer/.github/prompts ./.github/
 cp -r ../terraformer/.github/templates ./.github/
 
-# 4. Open in VS Code
+# 4. Generate Context
+# (In Copilot Chat: /terraform-context)
+
+# 5. Open in VS Code
 code .
 ```
 

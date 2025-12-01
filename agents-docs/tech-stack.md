@@ -90,8 +90,9 @@ Verification Steps:
 
 1. Create test project
 2. Copy `.github/`
-3. Execute `/terraformer`
-4. Visually verify generated results
+3. Execute `/terraform-context`
+4. Execute `/terraformer`
+5. Visually verify generated results
 
 ### Linters/Formatters
 
