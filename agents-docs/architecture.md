@@ -24,7 +24,7 @@ Terraformer solves this by **making implicit context explicit and machine-readab
 | ------ | ------------ | ------------------------------------ | --------------------------------- |
 | **L1** | Constitution | Immutable project rules              | `.github/copilot-instructions.md` |
 | **L2** | Skills       | Standard Operating Procedures (SOPs) | `.github/prompts/*.prompt.md`     |
-| **L3** | Knowledge    | Explicit context map                 | `llms.txt`                        |
+| **L3** | Knowledge    | Explicit context map                 | `AGENTS.md`                       |
 | **L4** | Agents       | Specialized AI roles                 | `.github/agents/*.agent.md`       |
 
 ## Architecture Diagrams
@@ -59,7 +59,7 @@ graph TB
             STT["/test"]
         end
 
-        L3[L3: llms.txt]
+        L3[L3: AGENTS.md]
         L1[L1: copilot-instructions.md]
     end
 

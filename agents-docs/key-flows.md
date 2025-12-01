@@ -9,7 +9,7 @@ Terraformer has two main entry points:
 | Command              | Purpose                       | Output              |
 | -------------------- | ----------------------------- | ------------------- |
 | `/terraformer`       | Generate AI agents and skills | 6 agents + 3 skills |
-| `/terraform-context` | Generate context map          | `llms.txt`          |
+| `/terraform-context` | Generate context map          | `AGENTS.md`         |
 
 ### Startup Flow
 
@@ -52,8 +52,8 @@ sequenceDiagram
     U->>LP: Open in VS Code
     U->>TC: Execute /terraform-context
     TC->>LP: Analyze README.md, source code
-    TC->>U: Generate llms.txt
-    U->>LP: Save llms.txt (L3 complete)
+    TC->>U: Generate AGENTS.md
+    U->>LP: Save AGENTS.md (L3 complete)
 
     U->>TE: Execute /terraformer
     TE->>LP: Detect tech stack
@@ -73,7 +73,7 @@ sequenceDiagram
 ### Process Flow
 
 1. **Preparation**: Copy Terraformer's `.github/` to target project
-2. **L3 Generation**: Generate and save `llms.txt` with `/terraform-context`
+2. **L3 Generation**: Generate and save `AGENTS.md` with `/terraform-context`
 3. **L4+L2 Generation**: Generate and save agents and skills with `/terraformer`
 4. **Verification**: Invoke generated agents with `@Agent` to verify operation
 
@@ -125,7 +125,7 @@ sequenceDiagram
     end
 
     QG->>LB: ✅ Approve & Merge
-    LB->>LB: Update documentation, sync llms.txt
+    LB->>LB: Update documentation, sync AGENTS.md
     LB->>AR: 🏁 Task Complete
 ```
 

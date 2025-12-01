@@ -38,7 +38,7 @@ The protocol establishes four integrated layers within a project:
 | :----- | :--------------- | :------------------------------------------------------------------------------- | :-------------------------------- |
 | **L1** | **Constitution** | Project Rules & Laws                                                             | `.github/copilot-instructions.md` |
 | **L2** | **Skills**       | **(New)** Standardized Task Procedures<br>(e.g., Planning, Testing, Refactoring) | `.github/prompts/*.prompt.md`     |
-| **L3** | **Knowledge**    | Explicit Context Map                                                             | `llms.txt`                        |
+| **L3** | **Knowledge**    | Explicit Context Map                                                             | `AGENTS.md`                       |
 | **L4** | **Agents**       | Specialized Roles with Authority                                                 | `.github/agents/*.agent.md`       |
 
 ## 5. Architecture: Roles & Skills Matrix

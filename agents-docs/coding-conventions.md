@@ -27,7 +27,7 @@ Eliminate tribal knowledge and make everything explicit and machine-readable
 | ------------------------------------------- | --------------------------------------------- |
 | "Only use this API when..."                 | Document as rule in `copilot-instructions.md` |
 | "The reason for this design decision is..." | Record as ADR in `DEVELOPMENT_CONTEXT.md`     |
-| "Project glossary"                          | "Ubiquitous Language" section in `llms.txt`   |
+| "Project glossary"                          | "Ubiquitous Language" section in `AGENTS.md`  |
 
 ### 3. Zero Friction Adoption
 

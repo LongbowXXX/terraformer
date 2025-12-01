@@ -21,7 +21,7 @@ Terraformer implements the **Roles & Skills Architecture**. It doesn't just give
 | :------------------- | :------------------------------- | :-------------------------------- |
 | **L4: Agents**       | Specialized Roles with Authority | `.github/agents/*.agent.md`       |
 | **L2: Skills**       | Standardized Procedures (SOPs)   | `.github/prompts/*.prompt.md`     |
-| **L3: Knowledge**    | Explicit Context Map             | [`llms.txt`](./llms.txt)          |
+| **L3: Knowledge**    | Explicit Context Map             | [`AGENTS.md`](./AGENTS.md)        |
 | **L1: Constitution** | Immutable Rules                  | `.github/copilot-instructions.md` |
 
 ## 🛠️ How to Use (Installation)
@@ -54,7 +54,7 @@ cp -r terraformer/.github/templates ./my-legacy-project/.github/
 ### 3\. Generate Context Map (L3)
 
 1.  Type **`/terraform-context`** in the Chat.
-2.  Terraformer will generate a high-density `llms.txt`.
+2.  Terraformer will generate a high-density `AGENTS.md`.
 3.  Save it to the project root.
 
 ## 👥 The Specialized Six (Agents & Skills)
@@ -77,7 +77,7 @@ Once generated, you can invoke these agents via `@Name`. They come equipped with
 - [Project Charter (ANTP v1.4)](./docs/PROJECT_CHARTER.md) - The core philosophy.
 - [Development Context (ADR)](./docs/DEVELOPMENT_CONTEXT.md) - Architecture decisions.
 - [AI-Oriented Docs](./agents-docs/) - Detailed documentation for AI agents and developers.
-- [LLM Context Map](./llms.txt) - High-density project summary for LLMs.
+- [Context Map for Agents](./AGENTS.md) - High-density project summary for AI coding agents.
 
 ## 🤖 Meet Our Mascot: ANTP-Bot ("Ant")
 

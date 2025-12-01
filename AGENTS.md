@@ -1,0 +1,123 @@
+# AGENTS.md - Terraformer
+
+> A Meta-Engine that transforms legacy codebases into AI-Native environments by implementing the AI-Native Transformation Protocol (ANTP v1.4).
+
+This file provides context and instructions for AI coding agents working on this project.
+
+## 1. Executive Summary
+
+**Purpose**: Eliminate "Context Debt" in legacy projects by generating specialized AI agents and standardized procedures (SOPs).
+
+**Type**: Meta-Engine / Code Generator (Prompt-based, no runtime code)
+
+**Status**: Beta (ANTP v1.4)
+
+## 2. Architecture & Tech Stack
+
+→ **Details**: [agents-docs/architecture.md](./agents-docs/architecture.md), [agents-docs/tech-stack.md](./agents-docs/tech-stack.md)
+
+| Category      | Technology               | Purpose                 |
+| ------------- | ------------------------ | ----------------------- |
+| Runtime       | VS Code + GitHub Copilot | Execution environment   |
+| Configuration | Markdown + YAML          | Agent/Skill definitions |
+
+### Core Patterns
+
+- **Four-Layer Stack (ANTP)**: L1 Constitution → L2 Skills → L3 Knowledge → L4 Agents
+- **Anti-Generalist Principle**: `@Developer` has zero spec authority; must escalate
+
+## 3. Directory Structure
+
+→ **Details**: [agents-docs/directory-structure.md](./agents-docs/directory-structure.md)
+
+```
+terraformer/
+├── .github/
+│   ├── copilot-instructions.md    # L1: Constitution
+│   ├── prompts/                    # Engine (/terraformer, /terraform-context)
+│   └── templates/                  # Agent & Skill templates
+├── docs/                           # PROJECT_CHARTER.md, DEVELOPMENT_CONTEXT.md
+├── agents-docs/                    # AI-oriented documentation
+└── AGENTS.md                       # This file (L3: Knowledge)
+```
+
+## 4. Key Concepts (Ubiquitous Language)
+
+| Term                    | Definition                                            |
+| ----------------------- | ----------------------------------------------------- |
+| **Context Debt**        | Implicit knowledge causing AI failures                |
+| **ANTP**                | AI-Native Transformation Protocol (4-layer framework) |
+| **Handoffs**            | YAML property for workflow transitions between agents |
+| **Specification Drift** | AI "fixing" code without updating documentation       |
+| **{{TECH_STACK}}**      | Template placeholder replaced during generation       |
+
+## 5. Entry Points & Key Flows
+
+→ **Details**: [agents-docs/key-flows.md](./agents-docs/key-flows.md)
+
+| Command              | Purpose                          |
+| -------------------- | -------------------------------- |
+| `/terraformer`       | Generate 6 agents + 4 skills     |
+| `/terraform-context` | Generate `AGENTS.md`             |
+| `@Architect`         | Design authority                 |
+| `@Developer`         | Implementation (no spec changes) |
+
+## 6. Development Rules
+
+→ **Details**: [agents-docs/coding-conventions.md](./agents-docs/coding-conventions.md), [agents-docs/constraints-and-gotchas.md](./agents-docs/constraints-and-gotchas.md)
+
+### Must Follow
+
+- `@Developer` must **immediately escalate** spec gaps (Anti-Drift Lock)
+- Templates must use `{{TECH_STACK}}` placeholder
+
+### Must Avoid
+
+- `@Developer` making specification changes
+- Generic AI interactions without role assignment
+
+## 7. Testing
+
+→ **Details**: [agents-docs/testing.md](./agents-docs/testing.md)
+
+Manual verification via test projects; automated CI planned.
+
+## 8. Quick Reference
+
+### Agents (The Specialized Six)
+
+| Agent              | Authority      | Constraint             |
+| ------------------ | -------------- | ---------------------- |
+| `@Architect`       | Design & Specs | —                      |
+| `@BusinessAnalyst` | Requirements   | No code                |
+| `@QualityGuard`    | Merge Approval | —                      |
+| `@Librarian`       | Documentation  | —                      |
+| `@Gardener`        | Refactoring    | —                      |
+| `@Developer`       | **None**       | Must escalate blockers |
+
+### Skills
+
+| Skill       | Purpose                    |
+| ----------- | -------------------------- |
+| `/plan`     | Impact analysis & planning |
+| `/refactor` | Safe refactoring           |
+| `/test`     | TDD-based test generation  |
+| `/doc-sync` | Documentation sync         |
+
+---
+
+## 📚 Detailed Documentation Index
+
+| Topic                 | Link                                                                               |
+| --------------------- | ---------------------------------------------------------------------------------- |
+| Architecture & Design | [agents-docs/architecture.md](./agents-docs/architecture.md)                       |
+| Directory Structure   | [agents-docs/directory-structure.md](./agents-docs/directory-structure.md)         |
+| Coding Conventions    | [agents-docs/coding-conventions.md](./agents-docs/coding-conventions.md)           |
+| Key Flows & Use Cases | [agents-docs/key-flows.md](./agents-docs/key-flows.md)                             |
+| Tech Stack            | [agents-docs/tech-stack.md](./agents-docs/tech-stack.md)                           |
+| Testing Strategy      | [agents-docs/testing.md](./agents-docs/testing.md)                                 |
+| Constraints & Gotchas | [agents-docs/constraints-and-gotchas.md](./agents-docs/constraints-and-gotchas.md) |
+
+---
+
+_Context map for AI coding agents - Terraformer (ANTP v1.4)_

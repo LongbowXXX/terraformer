@@ -25,12 +25,12 @@ When generic, generalist AI assistants (like a raw LLM session) are introduced t
 
 We have defined the **AI-Native Transformation Protocol (ANTP)**, a comprehensive framework consisting of four strictly integrated layers. Each layer addresses a specific aspect of the human-AI collaboration gap.
 
-| Layer  | Component        | Description & Strategic Value                                                                                                                                                                                                                                             | Tech Stack                      |
-| :----- | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------ |
-| **L1** | **Constitution** | **The Rule of Law.** Defines the project's immutable laws, coding standards, and security policies. It acts as the "Global System Prompt" that applies to every interaction, ensuring consistency across all agents.                                                      | .github/copilot-instructions.md |
-| **L2** | **Skills**       | **Standardized Procedures (SOPs).** A library of reusable prompt patterns for specific tasks (e.g., Planning, Testing, Refactoring). These ensure that routine tasks are executed with high precision and uniform quality, regardless of the user.                        | .github/prompts/\*.prompt.md    |
-| **L3** | **Knowledge**    | **Explicit Context / The Brain.** A standardized, machine-readable summary of the project (using the llms.txt standard). This converts scattered docs into a high-density information source that agents can query to understand the "Big Picture" without hallucinating. | llms.txt (Markdown)             |
-| **L4** | **Agents**       | **The Workforce.** A team of specialized AI personas. Unlike a general chatbot, these agents have narrow scopes, specific tools, and strict authority boundaries. They prevent the "One AI fits all" problem.                                                             | .github/agents/\*.agent.md      |
+| Layer  | Component        | Description & Strategic Value                                                                                                                                                                                                                                            | Tech Stack                      |
+| :----- | :--------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------ |
+| **L1** | **Constitution** | **The Rule of Law.** Defines the project's immutable laws, coding standards, and security policies. It acts as the "Global System Prompt" that applies to every interaction, ensuring consistency across all agents.                                                     | .github/copilot-instructions.md |
+| **L2** | **Skills**       | **Standardized Procedures (SOPs).** A library of reusable prompt patterns for specific tasks (e.g., Planning, Testing, Refactoring). These ensure that routine tasks are executed with high precision and uniform quality, regardless of the user.                       | .github/prompts/\*.prompt.md    |
+| **L3** | **Knowledge**    | **Explicit Context / The Brain.** A standardized, machine-readable summary of the project (using the AGENTS.md format). This converts scattered docs into a high-density information source that agents can query to understand the "Big Picture" without hallucinating. | AGENTS.md (Markdown)            |
+| **L4** | **Agents**       | **The Workforce.** A team of specialized AI personas. Unlike a general chatbot, these agents have narrow scopes, specific tools, and strict authority boundaries. They prevent the "One AI fits all" problem.                                                            | .github/agents/\*.agent.md      |
 
 ## **4\. Architecture: The Specialized Six (L4 Agents)**
 
@@ -54,7 +54,7 @@ These agents are the "Thinkers." They hold the power to decide _what_ gets built
    - **Behavior:** Acts as a strict, unyielding reviewer who cares more about long-term maintainability than short-term speed.
 4. **@Librarian (The Keeper of Truth):**
    - **Responsibility:** Documentation & Context maintenance.
-   - **Trigger:** Activates whenever code changes to ensure docs/ and llms.txt are synchronized.
+   - **Trigger:** Activates whenever code changes to ensure docs/ and AGENTS.md are synchronized.
    - **Goal:** To ensure that the "Map" (Docs) always matches the "Territory" (Code).
 5. **@Gardener (The Maintainer):**
    - **Responsibility:** Proactive technical debt management, dependency updates, and dead code removal.
@@ -103,7 +103,7 @@ terraformer/
 │ ├── copilot-instructions.md \# L1: Constitution - Immutable project rules  
 │ ├── prompts/  
 │ │ ├── terraformer.prompt.md \# The Meta-Engine. Generates agents & skills.  
-│ │ └── terraform-context.prompt.md \# Generates llms.txt context map.  
+│ │ └── terraform-context.prompt.md \# Generates AGENTS.md context map.  
 │ └── templates/  
 │ ├── _.agent.template.md \# L4: Agent templates (6 roles)  
 │ └── skills/_.prompt.template.md \# L2: Skill templates (plan, refactor, test)  
@@ -115,6 +115,6 @@ terraformer/
 ## **7\. Future Roadmap**
 
 - **Validation Phase:** Conduct user testing to verify the handoffs UI behavior in various VS Code environments (Insiders vs. Stable) to ensure robustness.
-- **L3 Automation:** Develop a specialized generator for L3 (llms.txt) to automate the @Librarian logic. This will likely involve a script or a more complex prompt chain to summarize code into high-level context.
+- **L3 Automation:** Develop a specialized generator for L3 (AGENTS.md) to automate the @Librarian logic. This will likely involve a script or a more complex prompt chain to summarize code into high-level context.
 - **CI/CD Integration:** Explore ways to trigger @QualityGuard automatically within GitHub Actions, not just in the IDE chat.
 - **MCP Expansion:** Investigate integrating Model Context Protocol (MCP) servers to give agents direct access to external tools (e.g., Jira for @BusinessAnalyst, Database for @Architect).

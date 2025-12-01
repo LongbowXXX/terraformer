@@ -49,7 +49,7 @@ terraformer/
 | File                          | Responsibility                             | Trigger              |
 | ----------------------------- | ------------------------------------------ | -------------------- |
 | `terraformer.prompt.md`       | Main engine. Generates 6 agents + 3 skills | `/terraformer`       |
-| `terraform-context.prompt.md` | Generates `llms.txt` context map           | `/terraform-context` |
+| `terraform-context.prompt.md` | Generates `AGENTS.md` context map          | `/terraform-context` |
 
 - **Dependencies**: References template files in `templates/` directory
 - **Update Frequency**: When improving engine logic
@@ -205,5 +205,5 @@ target-project/
 │       ├── plan.prompt.md
 │       ├── refactor.prompt.md
 │       └── test.prompt.md
-└── llms.txt                       # L3: Generated Context Map
+└── AGENTS.md                      # L3: Generated Context Map
 ```

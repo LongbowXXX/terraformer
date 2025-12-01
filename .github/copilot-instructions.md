@@ -12,7 +12,7 @@ Terraformer is a **Meta-Engine** that transforms legacy codebases into AI-Native
 | -------------------- | ------------------------------ | --------------------------------- |
 | **L1: Constitution** | Immutable project rules        | `.github/copilot-instructions.md` |
 | **L2: Skills**       | Standardized procedures (SOPs) | `.github/prompts/*.prompt.md`     |
-| **L3: Knowledge**    | Explicit context map           | `llms.txt`                        |
+| **L3: Knowledge**    | Explicit context map           | `AGENTS.md`                       |
 | **L4: Agents**       | Specialized AI roles           | `.github/agents/*.agent.md`       |
 
 ## Key Components
@@ -20,7 +20,7 @@ Terraformer is a **Meta-Engine** that transforms legacy codebases into AI-Native
 ### Prompt Files (The Engine)
 
 - **`/terraformer`** - Main engine that generates 6 agents + 3 skills for target projects
-- **`/terraform-context`** - Generates `llms.txt` context map
+- **`/terraform-context`** - Generates `AGENTS.md` context map
 
 ### Agent Templates (`.github/templates/`)
 

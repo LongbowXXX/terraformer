@@ -64,7 +64,7 @@
 
 ### Sensitive Information Leakage
 
-**Risk**: `llms.txt` may contain sensitive information
+**Risk**: `AGENTS.md` may contain sensitive information
 
 **Mitigation**:
 
