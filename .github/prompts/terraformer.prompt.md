@@ -14,8 +14,8 @@ Your goal is to implement the **AI-Native Transformation Protocol (ANTP)** by ge
 (Ensure generated YAML frontmatter is valid)
 
 ## 🎯 Objective
-1.  Generate 6 Agent definitions (`.github/agents/*.agent.md`).
-2.  Generate 3 Standard Skill files (`.github/prompts/*.prompt.md`).
+1.  Generate 7 Agent definitions (`.github/agents/*.agent.md`).
+2.  Generate 7 Standard Skill files (`.github/prompts/*.prompt.md`).
 
 ## 🛠️ Generation Logic
 
@@ -25,8 +25,12 @@ Analyze `README.md` and file structure to determine **{{TECH_STACK}}** and **Pri
 ### 2. Skill Generation (Standard Equipment)
 Generate the following skill files by reading their templates from `.github/templates/skills/` and replacing `{{TECH_STACK}}`.
 
+* `.github/prompts/audit.prompt.md` (from `audit.prompt.template.md`)
+* `.github/prompts/debug.prompt.md` (from `debug.prompt.template.md`)
+* `.github/prompts/doc-sync.prompt.md` (from `doc-sync.prompt.template.md`)
 * `.github/prompts/plan.prompt.md` (from `plan.prompt.template.md`)
 * `.github/prompts/refactor.prompt.md` (from `refactor.prompt.template.md`)
+* `.github/prompts/requirements.prompt.md` (from `requirements.prompt.template.md`)
 * `.github/prompts/test.prompt.md` (from `test.prompt.template.md`)
 
 ### 3. Agent Generation (With Skill Injection)
@@ -34,8 +38,12 @@ Generate agents using `.github/templates/*.agent.template.md`.
 **Injection:** Append references to the generated skills in the System Prompt.
 
 * **@Architect:** "Use `/plan` for detailed design tasks."
+* **@BusinessAnalyst:** "Use `/requirements` for user story generation."
+* **@QualityGuard:** "Use `/audit` for code review checklists."
+* **@Librarian:** "Use `/doc-sync` for documentation consistency."
 * **@Gardener:** "Use `/refactor` for code maintenance."
-* **@QualityGuard:** "Use `/test` for verifying coverage."
+* **@Debugger:** "Use `/debug` for root cause analysis."
+* **@Developer:** "Use `/test` for TDD and verification."
 
 ## 📤 Output Format
 Output each file content inside a code block with its filename.
