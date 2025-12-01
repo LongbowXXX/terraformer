@@ -47,8 +47,8 @@ cp -r terraformer/.github/templates ./my-legacy-project/.github/
 2.  Open `README.md` or key source files to provide context.
 3.  Type **`/terraformer`** in the Copilot Chat.
 4.  Terraformer will analyze your project and generate:
-    - **6 Agent Definitions** (e.g., `architect.agent.md`) customized for your tech stack.
-    - **3 Standard Skills** (`plan.prompt.md`, `refactor.prompt.md`, etc.).
+    - **7 Agent Definitions** (e.g., `architect.agent.md`) customized for your tech stack.
+    - **5 Standard Skills** (`plan.prompt.md`, `refactor.prompt.md`, etc.).
 5.  Save the outputs to `.github/agents/` and `.github/prompts/`.
 
 ### 3\. Generate Context Map (L3)
@@ -57,7 +57,7 @@ cp -r terraformer/.github/templates ./my-legacy-project/.github/
 2.  Terraformer will generate a high-density `AGENTS.md`.
 3.  Save it to the project root.
 
-## 👥 The Specialized Six (Agents & Skills)
+## 👥 The Specialized Seven (Agents & Skills)
 
 Once generated, you can invoke these agents via `@Name`. They come equipped with specialized skills (`#skill`).
 
@@ -68,6 +68,7 @@ Once generated, you can invoke these agents via `@Name`. They come equipped with
 | **@QualityGuard**    | **Enforcer**       | ✅ Merge Approval      | `/audit` (Code Review Checklist)     |
 | **@Librarian**       | **Keeper**         | ✅ Documentation       | `/doc-sync` (Doc Consistency Check)  |
 | **@Gardener**        | **Maintainer**     | ✅ Refactoring         | `/refactor` (Safe Refactoring)       |
+| **@Debugger**        | **Bug Hunter**     | ✅ Bug Analysis        | `/debug` (Root Cause Analysis)       |
 | **@Developer**       | **Implementer**    | ❌ **No Spec Changes** | `/test` (TDD & Verification)         |
 
 > **The Anti-Generalist Principle:** `@Developer` is strictly prohibited from changing specifications. If a blocker is found, it must escalate to `@Architect`.

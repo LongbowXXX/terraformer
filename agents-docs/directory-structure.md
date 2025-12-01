@@ -21,7 +21,8 @@ terraformer/
 │       └── docs/                   # Documentation Templates
 │           ├── requirements.template.md
 │           ├── review_report.template.md
-│           └── specification.template.md
+│           ├── specification.template.md
+│           └── bug_fix_plan.md
 ├── .vscode/
 │   ├── extensions.json            # Recommended Extensions
 │   └── settings.json              # VS Code Settings
@@ -72,6 +73,7 @@ terraformer/
 | `quality_guard.agent.template.md`    | `@QualityGuard`    | Management Layer (Merge Approval Authority)    |
 | `librarian.agent.template.md`        | `@Librarian`       | Management Layer (Documentation Authority)     |
 | `gardener.agent.template.md`         | `@Gardener`        | Management Layer (Refactoring Authority)       |
+| `debugger.agent.template.md`         | `@Debugger`        | Management Layer (Bug Analysis Authority)      |
 | `developer.agent.template.md`        | `@Developer`       | Execution Layer (**NO Spec Change Authority**) |
 
 ##### Skill Templates (`skills/*.prompt.template.md`)
@@ -82,6 +84,7 @@ terraformer/
 | `refactor.prompt.template.md` | `/refactor`     | `@Gardener`                   |
 | `test.prompt.template.md`     | `/test`         | `@Developer`, `@QualityGuard` |
 | `doc-sync.prompt.template.md` | `/doc-sync`     | `@Librarian`                  |
+| `debug.prompt.template.md`    | `/debug`        | `@Debugger`                   |
 
 - **Feature**: Contains `{{TECH_STACK}}` placeholder
 - **Update Frequency**: When adding new framework support or updating best practices

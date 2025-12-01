@@ -90,6 +90,14 @@ terraformer/
 | Spec Gap                | **Stop immediately** and output escalation request |
 | Prompted to Change Spec | **Refuse** and explain lack of authority           |
 
+#### @Debugger
+
+| Scenario                | Expected Behavior                            |
+| ----------------------- | -------------------------------------------- |
+| Bug Report              | Analyze logs and reproduce with `/debug`     |
+| Spec Flaw Identified    | Escalate to `@Architect`                     |
+| Code Error Identified   | Create Fix Plan and request `@Developer`     |
+
 #### @BusinessAnalyst
 
 | Scenario                | Expected Behavior                            |
@@ -120,6 +128,7 @@ terraformer/
 | `/refactor` | Code improvement request | Refactoring plan, diff                    |
 | `/test`     | Test generation request  | Test code (Happy Path + Edge Case)        |
 | `/doc-sync` | Doc update request       | 7 documentation files in `agents-docs/`   |
+| `/debug`    | Bug report               | Analysis, reproduction, and fix plan      |
 
 ## Test Execution Methods
 
