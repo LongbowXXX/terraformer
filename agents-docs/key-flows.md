@@ -8,7 +8,7 @@ Terraformer has two main entry points:
 
 | Command              | Purpose                       | Output              |
 | -------------------- | ----------------------------- | ------------------- |
-| `/terraformer`       | Generate or Update AI agents and skills | 6 agents + 3 skills |
+| `/terraformer`       | Generate or Update AI agents and skills | 7 agents + 7 skills |
 | `/terraform-context` | Generate context map          | `AGENTS.md`         |
 
 ### Startup Flow

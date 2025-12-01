@@ -57,7 +57,7 @@ terraformer/
 
 | Command              | Purpose                          |
 | -------------------- | -------------------------------- |
-| `/terraformer`       | Generate 6 agents + 4 skills     |
+| `/terraformer`       | Generate 7 agents + 7 skills     |
 | `/terraform-context` | Generate `AGENTS.md`             |
 | `@Architect`         | Design authority                 |
 | `@Developer`         | Implementation (no spec changes) |
@@ -84,7 +84,7 @@ Manual verification via test projects; automated CI planned.
 
 ## 8. Quick Reference
 
-### Agents (The Specialized Six)
+### Agents (The Specialized Seven)
 
 | Agent              | Authority      | Constraint             |
 | ------------------ | -------------- | ---------------------- |

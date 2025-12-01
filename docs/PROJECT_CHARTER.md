@@ -68,11 +68,9 @@ In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into
 
 ### B. Execution Layer (Restricted)
 
-6.  **@Developer (The Implementer)**
+7.  **@Developer (The Implementer)**
     - **Authority:** Implementation ONLY (Strictly prohibited from changing specs).
     - **Equipped Skill:** **`/test`** (TDD-based test generation and verification).
-    - **Constraint:** Must escalate to `@Architect` (using `/plan`) if implementation is blocked.
-
     - **Constraint:** Must escalate to `@Architect` (using `/plan`) if implementation is blocked.
 
 ## 6. Development Modes

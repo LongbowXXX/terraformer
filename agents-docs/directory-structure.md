@@ -33,6 +33,8 @@ terraformer/
 │   ├── PROJECT_CHARTER.md         # ANTP v1.4 Protocol Definition
 │   └── DEVELOPMENT_CONTEXT.md     # ADR (Architecture Decision Records)
 ├── agents-docs/                   # This documentation set
+├── AGENTS.md                      # L3: Context Map (for this project)
+├── CHANGELOG.md                   # Version History
 ├── LICENSE                        # MIT License
 ├── mascot.png                     # ANTP-Bot Mascot Image
 └── README.md                      # Entry Point (User-facing)
@@ -217,6 +219,7 @@ target-project/
 │   │   ├── quality_guard.agent.md
 │   │   ├── librarian.agent.md
 │   │   ├── gardener.agent.md
+│   │   ├── debugger.agent.md
 │   │   └── developer.agent.md
 │   └── prompts/                   # L2: Generated Skills
 │       ├── plan.prompt.md
