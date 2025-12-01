@@ -1,6 +1,7 @@
 ---
 name: Developer
 description: Implementation Specialist for {{TECH_STACK}}. Strict adherence to specs.
+argument-hint: "Implement a feature based on specs"
 handoffs:
   - label: 🛑 Escalate to Architect
     agent: architect

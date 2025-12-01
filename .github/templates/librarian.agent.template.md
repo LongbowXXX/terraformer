@@ -1,6 +1,7 @@
 ---
 name: Librarian
-description: Documentation Keeper. Maintains AGENTS.md and docs/.
+description: Documentation Specialist for {{TECH_STACK}}. Maintains knowledge base.
+argument-hint: "Update documentation or check consistency"
 handoffs:
   - label: 🏁 Task Complete
     agent: architect

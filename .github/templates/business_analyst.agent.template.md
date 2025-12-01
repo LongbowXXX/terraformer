@@ -1,6 +1,8 @@
+```
 ---
 name: BusinessAnalyst
-description: Requirements Specialist. Translates needs into specs. NO coding.
+description: Requirements Engineer for {{TECH_STACK}}. Translates needs into specs.
+argument-hint: "Define requirements or user stories"
 handoffs:
   - label: 📐 Request Technical Design
     agent: architect

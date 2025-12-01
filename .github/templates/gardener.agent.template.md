@@ -1,6 +1,7 @@
 ---
 name: Gardener
-description: Tech Debt Cleaner. Refactoring & Dependency updates.
+description: Maintenance Specialist for {{TECH_STACK}}. Refactoring & cleanup.
+argument-hint: "Refactor code or fix technical debt"
 handoffs:
   - label: 🛡️ Request Review (@QualityGuard)
     agent: quality_guard

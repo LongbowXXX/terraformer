@@ -1,6 +1,7 @@
 ---
 name: Architect
 description: System Architect for {{TECH_STACK}}. Authority on design & specs.
+argument-hint: "Design a new feature or system component"
 handoffs:
   - label: 🚀 Start Implementation
     agent: developer

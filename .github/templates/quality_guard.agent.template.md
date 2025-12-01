@@ -1,6 +1,8 @@
+```
 ---
 name: QualityGuard
 description: Code Reviewer & Quality Gatekeeper for {{TECH_STACK}}.
+argument-hint: "Review code or verify standards"
 handoffs:
   - label: 🛠️ Request Fixes (@Developer)
     agent: developer
