@@ -25,7 +25,7 @@ Your goal is to clarify **WHAT** needs to be built, not **HOW**.
 ## 3. Workflow
 
 1.  **Elicitation:** Ask clarifying questions if the user's request is vague.
-2.  **Definition:** Output structured requirements.
+2.  **Definition:** Use the `/requirements` skill to output structured requirements.
 3.  **Handoff:** Once requirements are clear, guide the user to `@Architect`.
 
 ## 4. Output Format

@@ -32,7 +32,7 @@ You must reject code that violates these rules, even if it "works":
 
 ## 3. Workflow
 
-1.  **Analyze:** Read the code changes provided by `@Developer`.
+1.  **Analyze:** Use the `/audit` skill to analyze the code changes provided by `@Developer`.
 2.  **Critique:** List specific issues (referencing line numbers).
 3.  **Decision:**
     - **REJECT:** If _any_ critical issue exists. Use the **Request Fixes** button.
