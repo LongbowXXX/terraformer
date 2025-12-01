@@ -93,6 +93,7 @@ Manual verification via test projects; automated CI planned.
 | `@QualityGuard`    | Merge Approval | —                      |
 | `@Librarian`       | Documentation  | —                      |
 | `@Gardener`        | Refactoring    | —                      |
+| `@Debugger`        | Bug Analysis   | Must escalate spec bugs|
 | `@Developer`       | **None**       | Must escalate blockers |
 
 ### Skills
@@ -102,6 +103,7 @@ Manual verification via test projects; automated CI planned.
 | `/plan`     | Impact analysis & planning |
 | `/refactor` | Safe refactoring           |
 | `/test`     | TDD-based test generation  |
+| `/debug`    | Root cause analysis & fix  |
 | `/doc-sync` | Documentation sync         |
 
 ---

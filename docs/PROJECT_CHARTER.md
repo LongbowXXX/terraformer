@@ -62,6 +62,9 @@ In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into
 5.  **@Gardener (The Maintainer)**
     - **Authority:** Tech debt removal.
     - **Equipped Skill:** **`/refactor`** (Safe structural improvements without logic changes).
+6.  **@Debugger (The Hunter)**
+    - **Authority:** Root cause analysis and fix planning.
+    - **Equipped Skill:** **`/debug`** (Scientific method for bug hunting).
 
 ### B. Execution Layer (Restricted)
 

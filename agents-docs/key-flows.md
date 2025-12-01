@@ -268,6 +268,61 @@ sequenceDiagram
 
 ---
 
+---
+
+## Use Case 5: Bug Fix Flow
+
+### Overview
+
+Structured workflow for identifying, analyzing, and fixing bugs, including escalation for specification flaws.
+
+### Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant DB as @Debugger
+    participant AR as @Architect
+    participant DV as @Developer
+    participant QG as @QualityGuard
+    participant LB as @Librarian
+
+    U->>DB: "I found a bug: [Description]"
+    DB->>DB: Analyze logs & reproduce with /debug
+    DB->>DB: Identify Root Cause
+
+    alt Specification Flaw
+        DB->>AR: 🛑 Escalate to Architect
+        AR->>AR: Update Specification
+        AR->>DB: 🏁 Spec Fixed
+    end
+
+    DB->>DB: Create Fix Plan
+    DB->>DV: 🛠️ Request Implementation
+    DV->>DV: Implement Fix
+    DV->>QG: 🛡️ Request Review
+    QG->>QG: Verify Fix & Regressions
+    QG->>LB: ✅ Approve & Merge
+    LB->>LB: Update documentation
+```
+
+### Related Files
+
+- `.github/agents/debugger.agent.md` - Bug analysis agent
+- `.github/prompts/debug.prompt.md` - Debugging skill
+
+### Process Flow
+
+1. **Discovery**: User reports a bug or logs indicate failure.
+2. **Analysis**: `@Debugger` uses `/debug` to analyze and reproduce the issue.
+3. **Decision**:
+    - If code error: Proceed to Fix Plan.
+    - If spec flaw: Escalate to `@Architect` for spec update.
+4. **Implementation**: `@Developer` implements the fix based on the plan.
+5. **Verification**: `@QualityGuard` verifies the fix.
+
+---
+
 ## Skill Execution Flows
 
 ### `/plan` Skill

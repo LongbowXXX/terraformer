@@ -1,0 +1,62 @@
+# Bug Fix Plan: [Issue Title]
+
+> **Status**: Draft | Approved | Implemented
+> **Author**: @Debugger
+> **Date**: {{DATE}}
+
+## 1. Problem Description
+
+### Symptoms
+- [Describe what the user sees/experiences]
+- [Include error messages or log snippets]
+
+### Impact
+- [Low/Medium/High/Critical]
+- [Describe the business or technical impact]
+
+## 2. Reproduction
+
+### Steps to Reproduce
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+
+### Reproduction Script (Optional but Recommended)
+```{{LANGUAGE}}
+// Code to reproduce the issue
+```
+
+## 3. Root Cause Analysis
+
+### Diagnosis
+- **File**: `[path/to/file]`
+- **Line(s)**: [Line numbers]
+- **Logic Flaw**: [Explain WHY the code is failing]
+
+### Evidence
+- [Trace analysis, variable values, etc.]
+
+## 4. Proposed Solution
+
+### Fix Description
+[Explain the approach to fix the issue]
+
+### Code Changes
+```diff
+// Show the intended changes
+- original_code
++ fixed_code
+```
+
+### Alternatives Considered
+- [Alternative 1]: [Why rejected]
+
+## 5. Verification Plan
+
+### Automated Tests
+- [ ] New test case covering the bug
+- [ ] Regression testing (existing suite)
+
+### Manual Verification
+- [ ] [Manual step 1]
+- [ ] [Manual step 2]
