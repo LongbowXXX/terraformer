@@ -100,7 +100,7 @@ User → @BusinessAnalyst → @Architect → @Developer → @QualityGuard → @L
 **Applied To**: `/terraformer` command
 
 - User executes a single command
-- Internally generates 6 agents and 3 skills
+- Internally generates 7 agents and 7 skills
 - Hides complexity and provides simple interface
 
 ## Naming Conventions
@@ -118,12 +118,12 @@ User → @BusinessAnalyst → @Architect → @Developer → @QualityGuard → @L
 ### Agent Names
 
 - **Format**: PascalCase (with `@` prefix)
-- **Examples**: `@Architect`, `@BusinessAnalyst`, `@QualityGuard`
+- **Examples**: `@Architect`, `@BusinessAnalyst`, `@QualityGuard`, `@Debugger`
 
 ### Skill Names
 
 - **Format**: kebab-case (with `/` prefix)
-- **Examples**: `/plan`, `/refactor`, `/test`
+- **Examples**: `/plan`, `/refactor`, `/test`, `/debug`, `/requirements`
 
 ### Variable Names (in Templates)
 

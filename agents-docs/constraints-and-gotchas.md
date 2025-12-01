@@ -260,7 +260,7 @@ handoffs:
 ### During Extension
 
 1. **Customize carefully**: Verify impact scope before changing templates
-2. **Separate custom agents**: Manage in separate files from standard 6 agents
+2. **Separate custom agents**: Manage in separate files from standard 7 agents
 3. **Sync documentation**: Record customization details
 
 ## Future Improvement Plans

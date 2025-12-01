@@ -122,13 +122,15 @@ terraformer/
 
 **Purpose**: Verify that generated skills behave as expected
 
-| Skill       | Verification Scenario    | Expected Output                           |
-| ----------- | ------------------------ | ----------------------------------------- |
-| `/plan`     | Feature addition request | Affected files list, implementation steps |
-| `/refactor` | Code improvement request | Refactoring plan, diff                    |
-| `/test`     | Test generation request  | Test code (Happy Path + Edge Case)        |
-| `/doc-sync` | Doc update request       | 7 documentation files in `agents-docs/`   |
-| `/debug`    | Bug report               | Analysis, reproduction, and fix plan      |
+| Skill           | Verification Scenario    | Expected Output                           |
+| --------------- | ------------------------ | ----------------------------------------- |
+| `/plan`         | Feature addition request | Affected files list, implementation steps |
+| `/requirements` | User need expression     | User Story, Acceptance Criteria           |
+| `/audit`        | Code review request      | Review report, security check             |
+| `/refactor`     | Code improvement request | Refactoring plan, diff                    |
+| `/test`         | Test generation request  | Test code (Happy Path + Edge Case)        |
+| `/doc-sync`     | Doc update request       | 7 documentation files in `agents-docs/`   |
+| `/debug`        | Bug report               | Analysis, reproduction, and fix plan      |
 
 ## Test Execution Methods
 

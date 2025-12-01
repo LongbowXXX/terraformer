@@ -56,8 +56,8 @@ graph TB
     end
 
     subgraph "Templates"
-        AT[Agent Templates<br/>6 Roles]
-        ST[Skill Templates<br/>3 SOPs]
+        AT[Agent Templates<br/>7 Roles]
+        ST[Skill Templates<br/>7 SOPs]
     end
 
     subgraph "Generated Output (Target Project)"
@@ -67,6 +67,7 @@ graph TB
             QG["@QualityGuard"]
             LB["@Librarian"]
             GD["@Gardener"]
+            DB["@Debugger"]
             DV["@Developer"]
         end
 
@@ -75,6 +76,9 @@ graph TB
             SR["/refactor"]
             STT["/test"]
             DS["/doc-sync"]
+            RQ["/requirements"]
+            AU["/audit"]
+            DBG["/debug"]
         end
 
         L3[L3: AGENTS.md]
@@ -88,11 +92,15 @@ graph TB
     AT --> QG
     AT --> LB
     AT --> GD
+    AT --> DB
     AT --> DV
     ST --> SP
     ST --> SR
     ST --> STT
     ST --> DS
+    ST --> RQ
+    ST --> AU
+    ST --> DBG
     TC --> L3
 ```
 
@@ -106,6 +114,7 @@ graph TD
         QG[🛡️ @QualityGuard<br/>Merge Approval Authority]
         LB[📚 @Librarian<br/>Documentation Authority]
         GD[🌱 @Gardener<br/>Refactoring Authority]
+        DB[🐞 @Debugger<br/>Bug Analysis Authority]
     end
 
     subgraph "Execution Layer"
@@ -121,6 +130,7 @@ graph TD
     QG -->|Approved| LB
     LB -->|Complete| AR
     GD -->|Refactoring Complete| QG
+    DB -->|Bug Fix Plan| DV
 ```
 
 ### Workflow (Handoffs Mechanism)
@@ -206,4 +216,4 @@ The `handoffs:` property defined in each agent's YAML frontmatter:
 
 - Same template can be applied to different tech stacks (TypeScript, Python, Java, etc.)
 - Generates prompts optimized for target project at generation time
-- Reduces maintenance burden (6 templates × N tech stacks → just 6 templates)
+- Reduces maintenance burden (7 templates × N tech stacks → just 7 templates)

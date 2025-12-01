@@ -403,3 +403,33 @@ flowchart TD
     C --> D[Verify Accuracy]
     D --> E[Output to agents-docs/]
 ```
+
+### `/requirements` Skill
+
+```mermaid
+flowchart TD
+    A[Analyze User Input] --> B[Identify Core Needs]
+    B --> C[Draft User Story]
+    C --> D[Define Acceptance Criteria]
+    D --> E[Output Requirement Doc]
+```
+
+### `/audit` Skill
+
+```mermaid
+flowchart TD
+    A[Analyze Code Changes] --> B[Check against Guidelines]
+    B --> C[Verify Test Coverage]
+    C --> D[Detect Security Issues]
+    D --> E[Output Review Report]
+```
+
+### `/debug` Skill
+
+```mermaid
+flowchart TD
+    A[Analyze Error/Issue] --> B[Reproduce Issue]
+    B --> C[Identify Root Cause]
+    C --> D[Propose Fix Plan]
+    D --> E[Output Debug Report]
+```

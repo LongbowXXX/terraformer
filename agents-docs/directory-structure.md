@@ -12,11 +12,14 @@ terraformer/
 │   │   ├── terraformer.prompt.md
 │   │   └── terraform-context.prompt.md
 │   └── templates/                  # Generation Templates
-│       ├── *.agent.template.md     # L4: Agent Templates (6 types)
+│       ├── *.agent.template.md     # L4: Agent Templates (7 types)
 │       └── skills/                 # L2: Skill Templates
+│           ├── audit.prompt.template.md
+│           ├── debug.prompt.template.md
 │           ├── doc-sync.prompt.template.md
 │           ├── plan.prompt.template.md
 │           ├── refactor.prompt.template.md
+│           ├── requirements.prompt.template.md
 │           └── test.prompt.template.md
 │       └── docs/                   # Documentation Templates
 │           ├── requirements.template.md
@@ -54,7 +57,7 @@ terraformer/
 
 | File                          | Responsibility                             | Trigger              |
 | ----------------------------- | ------------------------------------------ | -------------------- |
-| `terraformer.prompt.md`       | Main engine. Generates 6 agents + 3 skills | `/terraformer`       |
+| `terraformer.prompt.md`       | Main engine. Generates 7 agents + 7 skills | `/terraformer`       |
 | `terraform-context.prompt.md` | Generates `AGENTS.md` context map          | `/terraform-context` |
 
 - **Dependencies**: References template files in `templates/` directory
@@ -78,13 +81,15 @@ terraformer/
 
 ##### Skill Templates (`skills/*.prompt.template.md`)
 
-| Template                      | Generated Skill | Used By                       |
-| ----------------------------- | --------------- | ----------------------------- |
-| `plan.prompt.template.md`     | `/plan`         | `@Architect`                  |
-| `refactor.prompt.template.md` | `/refactor`     | `@Gardener`                   |
-| `test.prompt.template.md`     | `/test`         | `@Developer`, `@QualityGuard` |
-| `doc-sync.prompt.template.md` | `/doc-sync`     | `@Librarian`                  |
-| `debug.prompt.template.md`    | `/debug`        | `@Debugger`                   |
+| Template                          | Generated Skill | Used By                       |
+| --------------------------------- | --------------- | ----------------------------- |
+| `plan.prompt.template.md`         | `/plan`         | `@Architect`                  |
+| `requirements.prompt.template.md` | `/requirements` | `@BusinessAnalyst`            |
+| `audit.prompt.template.md`        | `/audit`        | `@QualityGuard`               |
+| `doc-sync.prompt.template.md`     | `/doc-sync`     | `@Librarian`                  |
+| `refactor.prompt.template.md`     | `/refactor`     | `@Gardener`                   |
+| `debug.prompt.template.md`        | `/debug`        | `@Debugger`                   |
+| `test.prompt.template.md`         | `/test`         | `@Developer`, `@QualityGuard` |
 
 - **Feature**: Contains `{{TECH_STACK}}` placeholder
 - **Update Frequency**: When adding new framework support or updating best practices
