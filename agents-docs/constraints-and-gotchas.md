@@ -4,7 +4,7 @@
 
 ## Performance Requirements
 
-- **Context Window**: The total size of `AGENTS.md`, `copilot-instructions.md`, and the active agent definition must fit within the LLM's context window (approx. 32k-128k tokens depending on the model). Keep `AGENTS.md` high-density.
+- **Context Window**: The total size of `AGENTS.md` and the active agent definition must fit within the LLM's context window (approx. 32k-128k tokens depending on the model). Keep `AGENTS.md` high-density.
 - **Latency**: Complex chains of thought in prompts can increase response time.
 
 ## Security Considerations

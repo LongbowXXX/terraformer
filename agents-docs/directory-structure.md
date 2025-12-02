@@ -13,10 +13,10 @@ terraformer/
 │   ├── agents/             # Generated Agent definitions (L4)
 │   ├── prompts/            # Skill definitions (L2)
 │   ├── templates/          # Source templates for Agents and Skills
-│   └── copilot-instructions.md # Constitution (L1)
+
 ├── agents-docs/            # Documentation for the Terraformer system itself
 ├── docs/                   # High-level documentation (Charter, Context)
-├── AGENTS.md               # Knowledge Map (L3)
+├── AGENTS.md               # Constitution (L1) & Knowledge Map (L3)
 └── README.md               # User Guide
 ```
 
@@ -25,7 +25,7 @@ terraformer/
 ### `/.github/`
 
 - **Role**: Contains the core configuration for GitHub Copilot. This is the "deployable" part of Terraformer.
-- **Key Files**: `copilot-instructions.md`
+- **Key Files**: (None)
 - **Subdirectories**: `prompts/`, `templates/`
 
 ### `/.github/templates/`
@@ -50,8 +50,7 @@ graph TD
     Templates[.github/templates] -->|Generates| Agents[.github/agents]
     Templates -->|Generates| Skills[.github/prompts]
     Prompts[.github/prompts] -->|Referenced by| Agents
-    Instructions[.github/copilot-instructions.md] -->|Governs| Agents
-    AGENTS[AGENTS.md] -->|Provides Context to| Agents
+    AGENTS[AGENTS.md] -->|Governs & Provides Context to| Agents
 ```
 
 ## Layer Structure

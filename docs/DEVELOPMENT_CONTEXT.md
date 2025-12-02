@@ -25,12 +25,12 @@ When generic, generalist AI assistants (like a raw LLM session) are introduced t
 
 We have defined the **AI-Native Transformation Protocol (ANTP)**, a comprehensive framework consisting of four strictly integrated layers. Each layer addresses a specific aspect of the human-AI collaboration gap.
 
-| Layer  | Component        | Description & Strategic Value                                                                                                                                                                                                                                            | Tech Stack                      |
-| :----- | :--------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------ |
-| **L1** | **Constitution** | **The Rule of Law.** Defines the project's immutable laws, coding standards, and security policies. It acts as the "Global System Prompt" that applies to every interaction, ensuring consistency across all agents.                                                     | .github/copilot-instructions.md |
-| **L2** | **Skills**       | **Standardized Procedures (SOPs).** A library of reusable prompt patterns for specific tasks (e.g., Planning, Testing, Refactoring). These ensure that routine tasks are executed with high precision and uniform quality, regardless of the user.                       | .github/prompts/\*.prompt.md    |
-| **L3** | **Knowledge**    | **Explicit Context / The Brain.** A standardized, machine-readable summary of the project (using the AGENTS.md format). This converts scattered docs into a high-density information source that agents can query to understand the "Big Picture" without hallucinating. | AGENTS.md (Markdown)            |
-| **L4** | **Agents**       | **The Workforce.** A team of specialized AI personas. Unlike a general chatbot, these agents have narrow scopes, specific tools, and strict authority boundaries. They prevent the "One AI fits all" problem.                                                            | .github/agents/\*.agent.md      |
+| Layer  | Component        | Description & Strategic Value                                                                                                                                                                                                                      | Tech Stack                   |
+| :----- | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------- |
+| **L1** | **Constitution** | **The Rule of Law.** Defines the project's immutable laws, coding standards, and security policies. It acts as the "Global System Prompt" that applies to every interaction, ensuring consistency across all agents.                               | AGENTS.md                    |
+| **L2** | **Skills**       | **Standardized Procedures (SOPs).** A library of reusable prompt patterns for specific tasks (e.g., Planning, Testing, Refactoring). These ensure that routine tasks are executed with high precision and uniform quality, regardless of the user. | .github/prompts/\*.prompt.md |
+| **L3** | **Knowledge**    | **Explicit Context / The Brain.** A standardized, machine-readable summary of the project. This converts scattered docs into a high-density information source that agents can query to understand the "Big Picture" without hallucinating.        | agents-docs/\*               |
+| **L4** | **Agents**       | **The Workforce.** A team of specialized AI personas. Unlike a general chatbot, these agents have narrow scopes, specific tools, and strict authority boundaries. They prevent the "One AI fits all" problem.                                      | .github/agents/\*.agent.md   |
 
 ## **4\. Architecture: The Specialized Seven (L4 Agents)**
 
@@ -103,17 +103,18 @@ We selected this specific implementation path to create a GUI-driven, guided exp
 ## **6\. Repository Structure**
 
 terraformer/  
-├── .github/  
-│ ├── copilot-instructions.md # L1: Constitution - Immutable project rules  
+├── .github/
+
 │ ├── prompts/  
 │ │ ├── terraformer.prompt.md # The Meta-Engine. Generates agents & skills.  
 │ │ └── terraform-context.prompt.md # Generates AGENTS.md context map.  
 │ └── templates/  
-│ ├── *.agent.template.md # L4: Agent templates (7 roles)  
-│ └── skills/_.prompt.template.md # L2: Skill templates (plan, refactor, test)  
+│ ├── \*.agent.template.md # L4: Agent templates (7 roles)  
+│ └── skills/\_.prompt.template.md # L2: Skill templates (plan, refactor, test)  
 ├── docs/  
 │ ├── PROJECT_CHARTER.md # The "Constitution" of this project. Detailed definition of ANTP v1.4.  
 │ └── DEVELOPMENT_CONTEXT.md # This file. The ADR and single source of truth for AI context.  
+└── AGENTS.md # L1: Constitution & L3: Knowledge Hub
 └── README.md # Entry point for human users.
 
 ## **7\. Future Roadmap**

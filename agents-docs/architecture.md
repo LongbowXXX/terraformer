@@ -10,7 +10,7 @@ Terraformer is a **Meta-Engine** that implements the **AI-Native Transformation 
 
 The system is built on the **Roles & Skills Architecture**, consisting of four layers:
 
-1.  **L1: Constitution** (`.github/copilot-instructions.md`)
+1.  **L1: Constitution** (`AGENTS.md`)
 
     - Defines immutable rules and behavioral guardrails for all agents.
     - Ensures safety and alignment with the project's core philosophy.
@@ -20,7 +20,7 @@ The system is built on the **Roles & Skills Architecture**, consisting of four l
     - Standardized Operating Procedures (SOPs) encapsulated as prompt files.
     - Executable by agents to perform specific tasks (e.g., `/plan`, `/refactor`, `/test`).
 
-3.  **L3: Knowledge** (`AGENTS.md`)
+3.  **L3: Knowledge** (`agents-docs/*`)
 
     - A high-density context map of the project.
     - Serves as the "shared brain" for all agents, providing architectural context, tech stack details, and domain knowledge.

@@ -19,9 +19,9 @@ Terraformer implements the **Roles & Skills Architecture**. It doesn't just give
 
 | Component            | Function                         | Implementation                    |
 | :------------------- | :------------------------------- | :-------------------------------- |
-| **L1: Constitution** | Immutable Rules                  | `.github/copilot-instructions.md` |
+| **L1: Constitution** | Immutable Rules                  | [`AGENTS.md`](./AGENTS.md)        |
 | **L2: Skills**       | Standardized Procedures (SOPs)   | `.github/prompts/*.prompt.md`     |
-| **L3: Knowledge**    | Explicit Context Map             | [`AGENTS.md`](./AGENTS.md)        |
+| **L3: Knowledge**    | Explicit Context Map             | [`agents-docs/*`](./agents-docs/) |
 | **L4: Agents**       | Specialized Roles with Authority | `.github/agents/*.agent.md`       |
 
 ## 🛠️ How to Use (Installation)
@@ -56,7 +56,7 @@ cp -r terraformer/.github/templates ./my-legacy-project/.github/
     - **Agent Definitions** (e.g., `architect.agent.md`) customized for your tech stack.
     - **Standard Skills** (`plan.prompt.md`, `refactor.prompt.md`, etc.).
 5.  Save the outputs to `.github/agents/` and `.github/prompts/`.
-    - *Note: You can re-run `/terraformer` at any time to update your agents and skills if the project context changes.*
+    - _Note: You can re-run `/terraformer` at any time to update your agents and skills if the project context changes._
 
 ## 👥 The Specialized Agents (Agents & Skills)
 
@@ -81,6 +81,7 @@ For rapid prototyping or idea validation, you can explicitly request **"Prototyp
 > "Build a prototype for [Feature] (Prototype Mode)"
 
 In this mode:
+
 - `@Developer` skips formal spec checks.
 - `@QualityGuard` relaxes review criteria.
 - Generated code is marked with `/* PROTOTYPE */` and is **not production-ready**.

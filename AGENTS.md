@@ -37,18 +37,19 @@ terraformer/
 │   └── templates/                  # Agent & Skill templates
 ├── docs/                           # PROJECT_CHARTER.md, DEVELOPMENT_CONTEXT.md
 ├── agents-docs/                    # AI-oriented documentation
-└── AGENTS.md                       # This file (L3: Knowledge)
+└── AGENTS.md                       # This file (L1: Constitution & L3: Knowledge Hub)
 ```
 
 ## 4. Key Concepts (Ubiquitous Language)
 
-| Term                    | Definition                                            |
-| ----------------------- | ----------------------------------------------------- |
-| **Context Debt**        | Implicit knowledge causing AI failures                |
-| **ANTP**                | AI-Native Transformation Protocol (4-layer framework) |
-| **Handoffs**            | YAML property for workflow transitions between agents |
-| **Specification Drift** | AI "fixing" code without updating documentation       |
-| **{{TECH_STACK}}**      | Template placeholder replaced during generation       |
+→ **Details**: [agents-docs/glossary.md](./agents-docs/glossary.md)
+
+This section defines the core terminology used across the project. For the full list of definitions, please refer to the detailed Glossary document linked above.
+
+| Term             | Definition                                            |
+| ---------------- | ----------------------------------------------------- |
+| **Context Debt** | Implicit knowledge causing AI failures                |
+| **ANTP**         | AI-Native Transformation Protocol (4-layer framework) |
 
 ## 5. Entry Points & Key Flows
 

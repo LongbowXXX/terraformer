@@ -34,12 +34,12 @@ By analyzing a target project, Terraformer provides a complete package:
 
 The protocol establishes four integrated layers within a project:
 
-| Layer  | Name             | Role                                                                             | Implementation                    |
-| :----- | :--------------- | :------------------------------------------------------------------------------- | :-------------------------------- |
-| **L1** | **Constitution** | Project Rules & Laws                                                             | `.github/copilot-instructions.md` |
-| **L2** | **Skills**       | **(New)** Standardized Task Procedures<br>(e.g., Planning, Testing, Refactoring) | `.github/prompts/*.prompt.md`     |
-| **L3** | **Knowledge**    | Explicit Context Map                                                             | `AGENTS.md`                       |
-| **L4** | **Agents**       | Specialized Roles with Authority                                                 | `.github/agents/*.agent.md`       |
+| Layer  | Name             | Role                                                                             | Implementation                |
+| :----- | :--------------- | :------------------------------------------------------------------------------- | :---------------------------- |
+| **L1** | **Constitution** | Project Rules & Laws                                                             | `AGENTS.md`                   |
+| **L2** | **Skills**       | **(New)** Standardized Task Procedures<br>(e.g., Planning, Testing, Refactoring) | `.github/prompts/*.prompt.md` |
+| **L3** | **Knowledge**    | Explicit Context Map                                                             | `agents-docs/*`               |
+| **L4** | **Agents**       | Specialized Roles with Authority                                                 | `.github/agents/*.agent.md`   |
 
 ## 5. Architecture: Roles & Skills Matrix
 
@@ -78,11 +78,13 @@ In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into
 To balance the need for high-quality production code with the reality of rapid experimentation, ANTP v1.4 supports two distinct development modes.
 
 ### A. Standard Mode (Default)
+
 - **Philosophy:** "Slow is Smooth, Smooth is Fast."
 - **Process:** Strict adherence to the Roles & Skills Matrix. No code without specs.
 - **Goal:** Maintainability, Security, and Long-term Stability.
 
 ### B. Prototype Mode (Opt-in)
+
 - **Philosophy:** "Move Fast and Break Things (Temporarily)."
 - **Process:** Explicitly requested by the user. `@Developer` can implement without formal specs. `@QualityGuard` relaxes checks.
 - **Goal:** Idea Validation, PoC, Temporary Solutions.
@@ -110,13 +112,17 @@ This allows users to acquire a **"Team of Agents equipped with Senior Engineer t
 To ensure that AI and human collaboration is effective and auditable, we enforce strict documentation standards.
 
 ### Standardized Templates
+
 We use standard templates (e.g., `specification.template.md`, `review_report.template.md`) for all key deliverables.
+
 - **Consistency**: Ensures all agents and humans provide the same level of detail.
 - **Evidence**: Acts as a permanent record of decisions and agreements.
 - **Quality**: Enforces a "checklist" approach to ensure no sections are missed.
 
 ### Traceability
+
 We maintain explicit links between documents (e.g., Specification links to Requirements).
+
 - **Impact Analysis**: Allows us to see which specs are affected if a requirement changes.
 - **Verification**: Ensures every requirement has a corresponding spec and test.
 - **Auditability**: Provides a clear chain of custody from idea to implementation.
