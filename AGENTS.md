@@ -97,25 +97,26 @@ Manual verification via test projects; automated CI planned.
 
 ### Agents (The Specialized Seven)
 
-| Agent              | Authority      | Constraint             |
-| ------------------ | -------------- | ---------------------- |
-| `@Architect`       | Design & Specs | —                      |
-| `@BusinessAnalyst` | Requirements   | No code                |
-| `@QualityGuard`    | Merge Approval | —                      |
-| `@Librarian`       | Documentation  | —                      |
-| `@Gardener`        | Refactoring    | —                      |
-| `@Debugger`        | Bug Analysis   | Must escalate spec bugs|
-| `@Developer`       | **None**       | Must escalate blockers |
+| Agent              | Authority      | Constraint              |
+| ------------------ | -------------- | ----------------------- |
+| `@Architect`       | Design & Specs | —                       |
+| `@BusinessAnalyst` | Requirements   | No code                 |
+| `@QualityGuard`    | Merge Approval | —                       |
+| `@Librarian`       | Documentation  | —                       |
+| `@Gardener`        | Refactoring    | —                       |
+| `@Debugger`        | Bug Analysis   | Must escalate spec bugs |
+| `@Developer`       | **None**       | Must escalate blockers  |
 
 ### Skills
 
-| Skill       | Purpose                    |
-| ----------- | -------------------------- |
-| `/plan`     | Impact analysis & planning |
-| `/refactor` | Safe refactoring           |
-| `/test`     | TDD-based test generation  |
-| `/debug`    | Root cause analysis & fix  |
-| `/doc-sync` | Documentation sync         |
+| Skill                    | Purpose                    |
+| ------------------------ | -------------------------- |
+| `/plan`                  | Impact analysis & planning |
+| `/refactor`              | Safe refactoring           |
+| `/test`                  | TDD-based test generation  |
+| `/debug`                 | Root cause analysis & fix  |
+| `/doc-sync`              | Documentation sync         |
+| `/check-doc-consistency` | Verify doc consistency     |
 
 ---
 
