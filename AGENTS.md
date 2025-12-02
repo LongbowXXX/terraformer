@@ -114,6 +114,7 @@ Manual verification via test projects; automated CI planned.
 | `/plan`                  | Impact analysis & planning |
 | `/refactor`              | Safe refactoring           |
 | `/test`                  | TDD-based test generation  |
+| `/implement`             | Implementation from specs  |
 | `/debug`                 | Root cause analysis & fix  |
 | `/doc-sync`              | Documentation sync         |
 | `/check-doc-consistency` | Verify doc consistency     |
