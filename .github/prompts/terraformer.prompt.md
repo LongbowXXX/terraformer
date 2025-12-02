@@ -15,7 +15,9 @@ Your goal is to implement the **AI-Native Transformation Protocol (ANTP)** by ge
 1.  **Check for `AGENTS.md`**:
     *   If `AGENTS.md` does **NOT** exist in the root, **STOP IMMEDIATELY**.
     *   Tell the user: "⚠️ **Missing Context**: Please run `/terraform-context` first to generate the project map (`AGENTS.md`)."
-2.  **Fetch Latest Docs**: `https://code.visualstudio.com/docs/copilot/customization/custom-agents` (for valid YAML syntax).
+2.  **Fetch Latest Docs**: 
+    *   `https://code.visualstudio.com/docs/copilot/customization/custom-agents` (for agent file structure).
+    *   `https://code.visualstudio.com/docs/copilot/customization/prompt-files` (for prompt file structure).
 
 ## 🎯 Objective
 1.  Generate or Update Agent definitions (`.github/agents/*.agent.md`).
