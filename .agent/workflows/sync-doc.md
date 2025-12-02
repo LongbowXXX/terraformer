@@ -18,6 +18,7 @@ In large-scale projects, to ensure AI agents correctly understand the design and
 5.  **Tech Stack and Dependencies** - Technologies used and external integrations
 6.  **Testing Strategy and Guide** - Test configuration, execution methods, and best practices
 7.  **Technical Constraints and Gotchas** - Performance, security, and known issues
+8.  **Glossary & Ubiquitous Language** - Key Terms, Domain Concepts, Acronyms
 
 ## Execution Steps
 
@@ -26,21 +27,24 @@ In large-scale projects, to ensure AI agents correctly understand the design and
 First, use the following tools to grasp the overall picture of the project:
 
 1.  **Identify Entry Points**
-    -   Use `list_dir` to check files in the root directory.
-    -   Look for main files like `main.py`, `index.ts`, `App.tsx`.
-    -   Use `view_file` to read package manager settings (`package.json`, `pyproject.toml`, `pom.xml`, etc.).
+
+    - Use `list_dir` to check files in the root directory.
+    - Look for main files like `main.py`, `index.ts`, `App.tsx`.
+    - Use `view_file` to read package manager settings (`package.json`, `pyproject.toml`, `pom.xml`, etc.).
 
 2.  **Understand Directory Structure**
-    -   Use `list_dir` recursively (or on major subdirectories) to understand the structure.
-    -   Identify the roles of `src/`, `lib/`, `tests/`, etc.
+
+    - Use `list_dir` recursively (or on major subdirectories) to understand the structure.
+    - Identify the roles of `src/`, `lib/`, `tests/`, etc.
 
 3.  **Check Dependencies**
-    -   Identify frameworks and libraries from configuration files or import statements in source code.
-    -   Look for traces of integration with external services (API, database, etc.).
+
+    - Identify frameworks and libraries from configuration files or import statements in source code.
+    - Look for traces of integration with external services (API, database, etc.).
 
 4.  **Check Existing Documentation**
-    -   Use `list_dir` to search for `docs/` or `agents-docs/`.
-    -   Use `view_file` to read `README.md`, `ARCHITECTURE.md`.
+    - Use `list_dir` to search for `docs/` or `agents-docs/`.
+    - Use `view_file` to read `README.md`, `ARCHITECTURE.md`.
 
 ### Step 2: Documentation Generation
 
@@ -192,8 +196,8 @@ Always add the following comment to the beginning of each document:
 
 ## Major Dependencies
 
-| Library | Version | Usage |
-| ------- | ------- | ----- |
+| Library | Version   | Usage         |
+| ------- | --------- | ------------- |
 | [Name]  | [Version] | [Description] |
 
 ## Integration with External Services
@@ -281,18 +285,46 @@ Always add the following comment to the beginning of each document:
 [Technical limitations, license constraints, etc.]
 ```
 
+#### 8. `agents-docs/glossary.md` - Glossary & Ubiquitous Language
+
+```markdown
+<!-- This document is generated/updated by the sync-doc workflow -->
+
+# Glossary & Ubiquitous Language
+
+## Key Concepts
+
+| Term   | Definition   |
+| ------ | ------------ |
+| [Term] | [Definition] |
+
+## Domain Terminology
+
+| Term   | Definition   |
+| ------ | ------------ |
+| [Term] | [Definition] |
+
+## Acronyms
+
+| Acronym   | Full Name   | Description   |
+| --------- | ----------- | ------------- |
+| [Acronym] | [Full Name] | [Description] |
+```
+
 ### Step 3: Consistency Check with Implementation
 
 Verify that the generated documentation matches the implementation:
 
 1.  **Check against Code**
-    -   Use `view_file` to check the generated documentation and compare it with the actual file structure and code.
+
+    - Use `view_file` to check the generated documentation and compare it with the actual file structure and code.
 
 2.  **Check Recency**
-    -   Confirm that recent changes are reflected in the documentation.
+
+    - Confirm that recent changes are reflected in the documentation.
 
 3.  **Evaluate Completeness**
-    -   Confirm that all major features are covered.
+    - Confirm that all major features are covered.
 
 ### Step 4: Maintenance Guidelines Proposal
 

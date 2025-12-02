@@ -14,7 +14,7 @@ Analyze the current workspace and generate/update documentation files in the `ag
 
 ## 📁 Output Files
 
-Generate the following 7 documentation files:
+Generate the following 8 documentation files:
 
 | File                         | Purpose                              | Key Sections                                        |
 | ---------------------------- | ------------------------------------ | --------------------------------------------------- |
@@ -25,6 +25,7 @@ Generate the following 7 documentation files:
 | `tech-stack.md`              | Technology choices and dependencies  | Languages, Frameworks, External Services            |
 | `testing.md`                 | Test strategy and patterns           | Test Types, Coverage Goals, Running Tests           |
 | `constraints-and-gotchas.md` | Known limitations and pitfalls       | Technical Debt, Platform Constraints, Common Issues |
+| `glossary.md`                | Ubiquitous Language & Definitions    | Key Terms, Domain Concepts, Acronyms                |
 
 ## 🛠️ Generation Process
 
