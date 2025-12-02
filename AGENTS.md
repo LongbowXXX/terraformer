@@ -33,7 +33,6 @@ This file provides context and instructions for AI coding agents working on this
 ```
 terraformer/
 ├── .github/
-│   ├── copilot-instructions.md    # L1: Constitution
 │   ├── prompts/                    # Engine (/terraformer, /terraform-context)
 │   └── templates/                  # Agent & Skill templates
 ├── docs/                           # PROJECT_CHARTER.md, DEVELOPMENT_CONTEXT.md
