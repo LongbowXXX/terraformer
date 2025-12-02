@@ -18,7 +18,7 @@ Move from "Something is broken" to "Here is exactly why and how to fix it".
 2.  **Hypothesis**: What could cause this? (Null pointer, logic error, API change)
 3.  **Experiment (Reproduction)**:
     - Can I reproduce this with a script?
-    - *Action*: Create a reproduction test case if possible.
+    - _Action_: Create a reproduction test case if possible.
 4.  **Analysis**:
     - Trace the execution flow.
     - Check variable states.
@@ -31,21 +31,25 @@ Use the standard template: `.github/templates/docs/bug_fix_plan.md`
 
 **File Name**: `docs/bug_fixes/fix-[short-description].md`
 
-```markdown
+````markdown
 # Bug Fix Plan: [Title]
 
 ## 1. Problem Description
+
 [Concise description of the issue]
 
 ## 2. Reproduction Steps
+
 1. Run `...`
 2. Observe error `...`
 
 ## 3. Root Cause Analysis
+
 - **Location**: `src/path/to/file.ts:L123`
 - **Cause**: [Explanation of the logic error]
 
 ## 4. Proposed Fix
+
 [Description of the change]
 
 ```diff
@@ -54,6 +58,7 @@ Use the standard template: `.github/templates/docs/bug_fix_plan.md`
 ```
 
 ## 5. Verification Plan
+
 - [ ] Run reproduction script (should pass)
 - [ ] Run existing tests (should pass)
-```
+````

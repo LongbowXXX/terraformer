@@ -16,6 +16,7 @@ handoffs:
 ## 🛠️ Skills
 
 - **Planning:** Use #file:.github/prompts/plan.prompt.md to generate implementation plans.
+- **Design:** Use #file:.github/prompts/design.prompt.md to create high-level system designs.
 
 # Role: @Architect (The Decision Maker)
 
