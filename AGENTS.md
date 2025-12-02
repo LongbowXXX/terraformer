@@ -76,6 +76,17 @@ terraformer/
 - `@Developer` making specification changes
 - Generic AI interactions without role assignment
 
+### Agent/Skill Maintenance
+
+- When adding or updating Agents or Skills, please ensure to check the latest specifications at the URLs below.
+  - https://code.visualstudio.com/docs/copilot/customization/prompt-files
+  - https://code.visualstudio.com/docs/copilot/customization/custom-agents
+
+### Language Guidelines
+
+- **Documentation**: All documents managed in git must be written in English.
+- **Chat Interaction**: Interact with the user in their preferred language.
+
 ## 7. Testing
 
 → **Details**: [agents-docs/testing.md](./agents-docs/testing.md)
