@@ -4,218 +4,59 @@
 
 ## System Overview
 
-**Terraformer** is a **Meta-Engine** that transforms legacy codebases into AI-Native environments. It implements the AI-Native Transformation Protocol (ANTP v1.4) and automatically generates specialized AI agents and skills (SOPs: Standard Operating Procedures) tailored to target projects.
+Terraformer is a **Meta-Engine** that implements the **AI-Native Transformation Protocol (ANTP v1.4)**. Its purpose is to transform legacy "human-only" software projects into "AI-Ready" ecosystems. It achieves this not by adding runtime code to the application, but by injecting a configuration layer (Context, Agents, Skills) that enables GitHub Copilot to function as a specialized team of agents.
 
-### Core Concept: Context Debt
+## Key Components
 
-Traditional projects rely on implicit knowledge (Tribal Knowledge). When generic AI is introduced to these environments:
+The system is built on the **Roles & Skills Architecture**, consisting of four layers:
 
-- **Hallucinations**: AI guessing business rules
-- **Specification Drift**: AI "fixing" code without updating documentation
-- **Quality Degradation**: Inconsistent coding styles and security gaps
+1.  **L1: Constitution** (`.github/copilot-instructions.md`)
 
-Terraformer solves this by **making implicit context explicit and machine-readable**.
+    - Defines immutable rules and behavioral guardrails for all agents.
+    - Ensures safety and alignment with the project's core philosophy.
 
-## Development Modes
+2.  **L2: Skills** (`.github/prompts/*.prompt.md`)
 
-Terraformer supports two distinct development modes to balance speed and quality:
+    - Standardized Operating Procedures (SOPs) encapsulated as prompt files.
+    - Executable by agents to perform specific tasks (e.g., `/plan`, `/refactor`, `/test`).
 
-### 1. Standard Mode (Default)
+3.  **L3: Knowledge** (`AGENTS.md`)
 
-- **Priority**: Quality, Maintainability, Documentation
-- **Process**: Strict adherence to the ANTP workflow (Design -> Review -> Implement -> Verify).
-- **Deliverables**: Production-ready code, comprehensive documentation, full test coverage.
+    - A high-density context map of the project.
+    - Serves as the "shared brain" for all agents, providing architectural context, tech stack details, and domain knowledge.
 
-### 2. Prototype Mode
+4.  **L4: Agents** (`.github/agents/*.agent.md`)
+    - Specialized personas with defined roles, authorities, and constraints.
+    - Examples: `@Architect` (Design), `@Developer` (Implementation), `@QualityGuard` (Review).
 
-- **Priority**: Speed, Exploration, Feedback
-- **Process**: Relaxed workflow. Steps like formal design reviews or comprehensive testing may be skipped or simplified.
-- **Deliverables**: Working software marked as **Prototype**.
-- **Constraint**: Prototype code must be refactored or rewritten before production use.
-
-## Main Components
-
-### ANTP Four-Layer Stack
-
-| Layer  | Name         | Purpose                              | Implementation                    |
-| ------ | ------------ | ------------------------------------ | --------------------------------- |
-| **L1** | Constitution | Immutable project rules              | `.github/copilot-instructions.md` |
-| **L2** | Skills       | Standard Operating Procedures (SOPs) | `.github/prompts/*.prompt.md`     |
-| **L3** | Knowledge    | Explicit context map                 | `AGENTS.md`                       |
-| **L4** | Agents       | Specialized AI roles                 | `.github/agents/*.agent.md`       |
-
-## Architecture Diagrams
-
-### Overall Structure
-
-```mermaid
-graph TB
-    subgraph "Terraformer Engine"
-        TE[/terraformer<br/>Prompt File/]
-        TC[/terraform-context<br/>Prompt File/]
-    end
-
-    subgraph "Templates"
-        AT[Agent Templates<br/>7 Roles]
-        ST[Skill Templates<br/>7 SOPs]
-    end
-
-    subgraph "Generated Output (Target Project)"
-        subgraph "L4: Agents"
-            AR["@Architect"]
-            BA["@BusinessAnalyst"]
-            QG["@QualityGuard"]
-            LB["@Librarian"]
-            GD["@Gardener"]
-            DB["@Debugger"]
-            DV["@Developer"]
-        end
-
-        subgraph "L2: Skills"
-            SP["/plan"]
-            SR["/refactor"]
-            STT["/test"]
-            DS["/doc-sync"]
-            RQ["/requirements"]
-            AU["/audit"]
-            DBG["/debug"]
-        end
-
-        L3[L3: AGENTS.md]
-        L1[L1: copilot-instructions.md]
-    end
-
-    TE --> AT
-    TE --> ST
-    AT --> AR
-    AT --> BA
-    AT --> QG
-    AT --> LB
-    AT --> GD
-    AT --> DB
-    AT --> DV
-    ST --> SP
-    ST --> SR
-    ST --> STT
-    ST --> DS
-    ST --> RQ
-    ST --> AU
-    ST --> DBG
-    ST --> DBG
-    TC --> L3
-    L3 --> TE
-```
-
-### Agent Authority Hierarchy
+## Architecture Diagram
 
 ```mermaid
 graph TD
-    subgraph "Management Layer"
-        AR[🏛️ @Architect<br/>Design Authority]
-        BA[📋 @BusinessAnalyst<br/>Requirements Authority]
-        QG[🛡️ @QualityGuard<br/>Merge Approval Authority]
-        LB[📚 @Librarian<br/>Documentation Authority]
-        GD[🌱 @Gardener<br/>Refactoring Authority]
-        DB[🐞 @Debugger<br/>Bug Analysis Authority]
+    User[User / Developer] -->|Interacts via Chat| Copilot[GitHub Copilot]
+    Copilot -->|Reads| L1[L1: Constitution]
+    Copilot -->|Reads| L3[L3: Knowledge Map]
+    Copilot -->|Adopts Persona| L4[L4: Agents]
+    L4 -->|Executes| L2[L2: Skills]
+    L2 -->|Generates/Modifies| Code[Project Codebase]
+
+    subgraph Terraformer Engine
+        L1
+        L2
+        L3
+        L4
     end
-
-    subgraph "Execution Layer"
-        DV[⚡ @Developer<br/>❌ NO Spec Change Authority]
-    end
-
-    AR -->|Design Complete| DV
-    DV -->|Spec Gap Found| AR
-    BA -->|Requirements Finalized| AR
-    AR -->|Technical Ambiguity| BA
-    DV -->|Implementation Complete| QG
-    QG -->|Request Fixes| DV
-    QG -->|Approved| LB
-    LB -->|Complete| AR
-    GD -->|Refactoring Complete| QG
-    DB -->|Bug Fix Plan| DV
-```
-
-### Workflow (Handoffs Mechanism)
-
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant BA as @BusinessAnalyst
-    participant AR as @Architect
-    participant DV as @Developer
-    participant QG as @QualityGuard
-    participant LB as @Librarian
-
-    U->>BA: Explain requirements
-    BA->>BA: Create User Story
-    BA->>AR: 📐 Request Technical Design
-    AR->>AR: Design & Impact Analysis
-    AR->>DV: 🚀 Start Implementation
-
-    alt Spec Gap Found
-        DV->>AR: 🛑 Escalate to Architect
-        AR->>AR: Fix Specification
-        AR->>DV: 🚀 Re-implement
-    end
-
-    DV->>QG: Request Code Review
-
-    alt Review Failed
-        QG->>DV: 🛠️ Request Fixes
-    else Review Passed
-        QG->>LB: ✅ Approve & Merge
-    end
-
-    LB->>LB: Update Documentation
-    LB->>AR: 🏁 Task Complete
 ```
 
 ## Data Flow
 
-### Generation Flow
+1.  **Context Loading**: When a user invokes an agent (e.g., `@Architect`), Copilot loads the agent definition (L4), the Constitution (L1), and the Knowledge Map (L3).
+2.  **Skill Execution**: The agent may invoke a skill (e.g., `/plan`). Copilot loads the corresponding prompt file (L2).
+3.  **Generation**: The agent generates a response or code modification based on the combined context of L1-L4 and the user's request.
+4.  **Context Update**: Changes to the codebase or documentation are reflected in the project, which effectively updates the "Knowledge" for future interactions (especially if `AGENTS.md` is updated).
 
-1. **Input**: Target project's `AGENTS.md` (generated by `/terraform-context`)
-2. **Analysis**: `/terraformer` detects tech stack (`{{TECH_STACK}}`) from `AGENTS.md`
-3. **Template Loading**: Read templates from `.github/templates/`
-4. **Placeholder Replacement**: Replace `{{TECH_STACK}}` with actual tech stack
-5. **Output**: Customized agent definitions and skill files
+## Design Background and Rationale
 
-### Handoffs Mechanism
-
-The `handoffs:` property defined in each agent's YAML frontmatter:
-
-- Displays UI buttons in VS Code Copilot Chat
-- Automatically passes context to the next agent on click
-- **Systemically enforces** workflow transitions
-
-## Design Rationale
-
-### Anti-Generalist Principle
-
-**Decision**: Give `@Developer` agent **zero** authority to change specifications
-
-**Rationale**:
-
-- Generic AI tends to be "too helpful" and fixes spec-code gaps on its own
-- This causes "Specification Drift" where documentation becomes obsolete
-- Implementers must faithfully implement specs and **immediately escalate** when issues are found
-
-### File-Based Configuration
-
-**Decision**: Implement using only Markdown files, not Python scripts or custom extensions
-
-**Rationale**:
-
-- **Zero Friction Adoption**: Instant adoption without complex installation procedures
-- Leverages GitHub Copilot's native features (Custom Agents, Prompt Files)
-- End users can build AI-Native environments just by copying files
-
-### Template Variable System
-
-**Decision**: Dynamic replacement using `{{TECH_STACK}}` placeholder
-
-**Rationale**:
-
-- Same template can be applied to different tech stacks (TypeScript, Python, Java, etc.)
-- Generates prompts optimized for target project at generation time
-- Reduces maintenance burden (7 templates × N tech stacks → just 7 templates)
+- **Context Debt**: Legacy projects lack the explicit context AI needs. Terraformer bridges this gap.
+- **Anti-Generalist Principle**: Generic AI assistants often fail due to lack of constraints. Specialized agents with defined roles (e.g., `@Developer` cannot change specs) prevent "Specification Drift" and ensure higher quality.
+- **No-Code Runtime**: By leveraging the existing GitHub Copilot infrastructure, Terraformer avoids the need for complex local runtime environments or external API dependencies.
