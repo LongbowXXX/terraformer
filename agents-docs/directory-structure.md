@@ -10,7 +10,7 @@ The Terraformer project is structured as a configuration repository that is mean
 terraformer/
 ├── .agent/                 # Agent workflows and internal configurations
 ├── .github/                # The core engine (to be copied to target)
-│   ├── agents/             # Generated Agent definitions (L4)
+│   ├── agents/             # Generated Agent definitions (L4) [Generated in Target]
 │   ├── prompts/            # Skill definitions (L2)
 │   ├── templates/          # Source templates for Agents and Skills
 
