@@ -78,3 +78,38 @@ sequenceDiagram
 1.  **Planning**: `@Architect` uses `/plan` to create a detailed implementation plan.
 2.  **Implementation**: `@Developer` uses `/implement` to write code. **Constraint**: Cannot change specs.
 3.  **Review**: `@QualityGuard` uses `/audit` to verify the implementation against the plan and coding standards.
+
+## Use Case 3: Extending the Environment (Customization)
+
+### Overview
+
+Creating project-specific skills to handle unique workflows or requirements not covered by the standard ANTP set.
+
+### Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Arch as @Architect
+    participant FileSys as File System
+
+    User->>Arch: /create-custom-prompt
+    Arch->>User: "What is the goal of this prompt?"
+    User->>Arch: "Automate database migration scripts"
+    Arch->>Arch: Analyze Goal & Infer Settings
+    Arch->>User: Propose Prompt Content
+    User->>Arch: Approve
+    Arch->>FileSys: Create .github/prompts/migration.prompt.md
+    User->>User: Use /migration
+```
+
+### Related Files
+
+- `.github/templates/skills/create-custom-prompt.prompt.template.md`
+
+### Processing Flow
+
+1.  **Initiation**: User invokes `/create-custom-prompt`.
+2.  **Interview**: `@Architect` interviews the user to understand the specific need.
+3.  **Generation**: The agent generates a new `.prompt.md` file following best practices.
+4.  **Usage**: The new skill becomes immediately available to the team (e.g., `/migration`).

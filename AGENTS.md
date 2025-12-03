@@ -121,6 +121,7 @@ Manual verification via test projects; automated CI planned.
 | `/debug`                 | Root cause analysis & fix   |
 | `/doc-sync`              | Documentation sync          |
 | `/check-doc-consistency` | Verify doc consistency      |
+| `/create-custom-prompt`  | Create custom skill prompt  |
 
 ---
 

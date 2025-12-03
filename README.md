@@ -83,6 +83,11 @@ Once generated, you can invoke these agents via `@Name`. They come equipped with
 
 > **The Anti-Generalist Principle:** `@Developer` is strictly prohibited from changing specifications. If a blocker is found, it must escalate to `@Architect`.
 
+### 🧩 Extensibility (Custom Skills)
+
+Terraformer is designed to be **extensible**. You are not limited to the default skills.
+Use **`/create-custom-prompt`** to generate project-specific skills (e.g., `/migration`, `/deploy`, `/api-gen`) tailored to your unique workflow.
+
 ### ⚡ Prototype Mode (Speed > Strictness)
 
 For rapid prototyping or idea validation, you can explicitly request **"Prototype Mode"**.
