@@ -4,45 +4,33 @@
 
 ## Test Configuration
 
-Since Terraformer is a configuration engine, "testing" primarily involves verifying that the generated prompts and agents behave as expected when invoked in a target environment.
+Since Terraformer is a set of prompts and templates, "Testing" involves verifying that these prompts generate high-quality, correct outputs when executed by GitHub Copilot.
 
 ## Types of Tests
 
-### Prompt Verification (Unit Tests)
+### Manual Verification (The "Test Project" Approach)
 
-- **Goal**: Ensure individual skills (e.g., `/plan`) produce consistent, high-quality outputs.
-- **Method**: Run the prompt against a known set of inputs (e.g., "Plan a login feature") and evaluate the response against a rubric.
+The primary method of testing is to apply Terraformer to a "Test Project" (a dummy legacy codebase).
 
-### Agent Interaction (Integration Tests)
+1.  **Setup**: Create a dummy project (e.g., a simple To-Do app in Python or React).
+2.  **Install**: Copy the `.github` folder from Terraformer to the dummy project.
+3.  **Execute**: Run `/terraform-context` and `/terraformer`.
+4.  **Verify**: Check if the generated `AGENTS.md`, agents, and skills are correct and relevant to the dummy project.
 
-- **Goal**: Verify that agents correctly hand off tasks and respect constraints.
-- **Method**: Simulate a full workflow (e.g., User -> Architect -> Developer) and check if the `@Developer` refuses to change specs.
+### Regression Testing
 
-### End-to-End (E2E) Tests
+When modifying a prompt (e.g., `terraformer.prompt.md`):
 
-- **Goal**: Verify the entire "Terraforming" process.
-- **Method**:
-  1.  Create a blank "legacy" project.
-  2.  Run `/terraformer`.
-  3.  Verify that `.github/` is populated correctly.
-  4.  Verify that `AGENTS.md` is generated.
-
-## Test Execution Method
-
-Currently, testing is primarily **manual**.
-
-1.  Open a test workspace.
-2.  Copy the `.github` folder from the source.
-3.  Open Copilot Chat.
-4.  Execute the command/skill.
-5.  Review the output.
+- Run the modified prompt against a known codebase.
+- Compare the output with previous outputs.
+- Ensure no "hallucinations" or syntax errors in the generated files.
 
 ## Coverage Goals
 
-- **Critical Skills**: `/plan`, `/implement`, `/refactor` must be verified for every major release.
-- **Safety Constraints**: The "Anti-Generalist" constraints must be tested to ensure they are active.
+- **Core Flows**: Ensure `/terraform-context` and `/terraformer` work 100% of the time.
+- **Template Validity**: Ensure all templates in `.github/templates/` are valid Markdown and have correct placeholders.
 
 ## Testing Best Practices
 
-- **Use Clean Context**: Always test in a fresh session or window to avoid context contamination.
-- **Record Outputs**: Save the chat logs of successful tests as "Golden Records" for regression testing.
+- **Clean State**: Always test in a fresh VS Code window or a clean repo to avoid context pollution.
+- **Model Variance**: Be aware that LLM outputs can vary. Run tests multiple times if results are inconsistent.

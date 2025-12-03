@@ -4,33 +4,53 @@
 
 ## Design Principles
 
-1.  **AI-Native First**: All configuration must be optimized for consumption by LLMs (clear context, structured data).
-2.  **Anti-Generalist Principle**: Agents must have clearly defined scopes. `@Developer` must never make specification decisions.
-3.  **Context Over Code**: The value of Terraformer is in the _context_ it provides (L3), not just the prompts (L2).
-4.  **Immutable Constitution**: The L1 Constitution is the supreme law. It cannot be overridden by L2 or L4.
+### 1. The Anti-Generalist Principle
 
-## Adopted Design Patterns
+We do not believe in "One AI to rule them all."
 
-- **Persona Pattern**: Encapsulating capabilities and constraints into "Agents" (e.g., `@Architect`).
-- **Chain of Thought (CoT)**: Prompts are designed to encourage step-by-step reasoning (e.g., `/plan` requires Impact Analysis before Implementation).
-- **Template Method**: Using Jinja2/Liquid templates to generate specific agent instances from generic definitions.
+- **Rule**: Agents must have specialized roles and clear boundaries.
+- **Example**: `@Developer` is strictly prohibited from making specification decisions. If a requirement is unclear, it MUST escalate to `@Architect` or `@BusinessAnalyst`.
+
+### 2. Context Debt Elimination
+
+The primary cause of AI failure is lack of context.
+
+- **Rule**: All implicit knowledge must be made explicit in `AGENTS.md` or `agents-docs/`.
+- **Practice**: Never "fix it in chat." If the AI needs context, update the documentation first.
+
+### 3. Text-as-Software
+
+We treat Prompts and Documentation as code.
+
+- **Rule**: All prompts and agents are version-controlled.
+- **Practice**: Use Semantic Versioning for the protocol (ANTP v1.4).
 
 ## Naming Conventions
 
-- **Agent Files**: `.github/agents/[role].agent.md` (e.g., `architect.agent.md`)
-- **Skill Files**: `.github/prompts/[skill].prompt.md` (e.g., `plan.prompt.md`)
-- **Template Files**: `.github/templates/[name].template.md`
-- **Slash Commands**: `/command-name` (kebab-case)
-- **Agent Handles**: `@AgentName` (PascalCase)
+### Files
 
-## Code Style
+- **Prompts (Skills)**: `kebab-case.prompt.md` (e.g., `plan.prompt.md`)
+- **Agents**: `snake_case.agent.md` (e.g., `quality_guard.agent.md`)
+- **Templates**: `filename.template.md` (e.g., `architect.agent.template.md`)
+- **Documentation**: `kebab-case.md` (e.g., `directory-structure.md`)
 
-- **Markdown**: GitHub Flavored Markdown (GFM).
-- **Frontmatter**: YAML format for metadata (version, description, handoffs).
-- **Placeholders**: `{{VARIABLE_NAME}}` for template substitution.
+### Variables (in Templates)
+
+- **Format**: `{{VARIABLE_NAME}}`
+- **Common Variables**:
+  - `{{TECH_STACK}}`: The project's technology stack.
+  - `{{PROJECT_NAME}}`: The name of the project.
+
+## Code Style (Markdown/Prompts)
+
+- **Frontmatter**: Use YAML frontmatter for metadata (description, version).
+- **Sections**: Use clear H1/H2 headers to structure instructions.
+- **Directives**: Use blockquotes (`>`) or bold text for critical instructions.
+- **Examples**: Always provide few-shot examples in prompts to guide the AI.
 
 ## Testing Policy
 
-- **Prompt Testing**: Verify that prompts yield consistent results across different LLM models (if applicable).
-- **Integration Testing**: Verify that generated agents correctly reference their skills and follow the Constitution.
-- **Manual Verification**: Use the `/test` skill to generate verification steps for any changes.
+Since this is a prompt-based system:
+
+- **Verification**: Manual verification using "Test Projects" (applying Terraformer to a dummy project).
+- **Regression**: Check if new prompts cause hallucinations or degradation in output quality.

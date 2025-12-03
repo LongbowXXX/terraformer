@@ -2,114 +2,63 @@
 
 # Key Feature Flows
 
-## Entry Point
+## Entry Point: Installation
 
-The primary entry point for using Terraformer is the **GitHub Copilot Chat** interface in VS Code.
+The user installs Terraformer by copying the `.github` directory into their project root.
 
-## Use Case 1: Initial Setup (Terraforming)
-
-### Overview
-
-Transforming a legacy project into an AI-Ready environment by generating the initial configuration.
-
-### Sequence Diagram
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant Copilot
-    participant Terraformer as /terraformer
-
-    User->>Copilot: /terraformer
-    Copilot->>Terraformer: Invoke Skill
-    Terraformer->>Terraformer: Analyze Project Structure
-    Terraformer->>Terraformer: Detect Tech Stack
-    Terraformer->>User: Generate Agents & Skills
-    User->>User: Save files to .github/
-```
-
-### Related Files
-
-- `.github/prompts/terraformer.prompt.md` - The meta-skill logic.
-- `.github/templates/*.template.md` - The blueprints used for generation.
-
-### Processing Flow
-
-1.  User runs `/terraformer`.
-2.  The skill analyzes the workspace to identify languages and frameworks.
-3.  It reads the templates from `.github/templates/`.
-4.  It populates the templates with project-specific context.
-5.  It outputs the content for `AGENTS.md`, `.github/agents/*`, and `.github/prompts/*`.
-
-## Use Case 2: Feature Implementation
+## Flow 1: Context Generation (`/terraform-context`)
 
 ### Overview
 
-Implementing a new feature using the specialized agent team.
-
-### Sequence Diagram
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant Arch as @Architect
-    participant Dev as @Developer
-    participant QG as @QualityGuard
-
-    User->>Arch: "I need feature X"
-    Arch->>Arch: /plan (Impact Analysis)
-    Arch->>User: Proposed Spec & Plan
-    User->>Arch: Approve
-    User->>Dev: "Implement feature X based on plan"
-    Dev->>Dev: /implement
-    Dev->>User: Code Changes
-    User->>QG: /audit
-    QG->>User: Review Report
-```
-
-### Related Files
-
-- `.github/prompts/plan.prompt.md`
-- `.github/prompts/implement.prompt.md`
-- `.github/prompts/audit.prompt.md`
+Analyzes the legacy codebase to generate the "Constitution" (`AGENTS.md`).
 
 ### Processing Flow
 
-1.  **Planning**: `@Architect` uses `/plan` to create a detailed implementation plan.
-2.  **Implementation**: `@Developer` uses `/implement` to write code. **Constraint**: Cannot change specs.
-3.  **Review**: `@QualityGuard` uses `/audit` to verify the implementation against the plan and coding standards.
+1.  User invokes `/terraform-context` in Copilot Chat.
+2.  Copilot executes `.github/prompts/terraform-context.prompt.md`.
+3.  **Analysis**: Scans root files, `package.json`, `README.md`, etc.
+4.  **Generation**: Produces a high-density summary of the project.
+5.  **Output**: User saves the output as `AGENTS.md`.
 
-## Use Case 3: Extending the Environment (Customization)
+## Flow 2: Team Generation (`/terraformer`)
 
 ### Overview
 
-Creating project-specific skills to handle unique workflows or requirements not covered by the standard ANTP set.
-
-### Sequence Diagram
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant Arch as @Architect
-    participant FileSys as File System
-
-    User->>Arch: /create-custom-prompt
-    Arch->>User: "What is the goal of this prompt?"
-    User->>Arch: "Automate database migration scripts"
-    Arch->>Arch: Analyze Goal & Infer Settings
-    Arch->>User: Propose Prompt Content
-    User->>Arch: Approve
-    Arch->>FileSys: Create .github/prompts/migration.prompt.md
-    User->>User: Use /migration
-```
-
-### Related Files
-
-- `.github/templates/skills/create-custom-prompt.prompt.template.md`
+Generates the specialized Agents and Skills based on the project context.
 
 ### Processing Flow
 
-1.  **Initiation**: User invokes `/create-custom-prompt`.
-2.  **Interview**: `@Architect` interviews the user to understand the specific need.
-3.  **Generation**: The agent generates a new `.prompt.md` file following best practices.
-4.  **Usage**: The new skill becomes immediately available to the team (e.g., `/migration`).
+1.  User invokes `/terraformer` in Copilot Chat.
+2.  Copilot executes `.github/prompts/terraformer.prompt.md`.
+3.  **Context Loading**: Reads `AGENTS.md` to understand the tech stack and rules.
+4.  **Template Selection**: Reads templates from `.github/templates/`.
+5.  **Customization**: Injects project-specific variables (e.g., `{{TECH_STACK}}`) into templates.
+6.  **Output**: Generates/Updates:
+    - `.github/agents/*.agent.md`
+    - `.github/prompts/*.prompt.md`
+
+## Flow 3: Custom Skill Creation (`/create-custom-prompt`)
+
+### Overview
+
+Allows users to extend the system with their own workflows.
+
+### Processing Flow
+
+1.  User invokes `/create-custom-prompt`.
+2.  Copilot asks for the Skill Name and Purpose.
+3.  Copilot generates a new `.prompt.md` file in `.github/prompts/` based on the standard skill template.
+4.  User can now invoke this skill via `/skill-name`.
+
+## Flow 4: Documentation Sync (`/sync-doc`)
+
+### Overview
+
+Ensures `agents-docs/` remains up-to-date with the codebase.
+
+### Processing Flow
+
+1.  User invokes `/sync-doc`.
+2.  Copilot analyzes the project structure and existing docs.
+3.  Copilot generates or updates the standard documentation suite (`architecture.md`, `key-flows.md`, etc.).
+4.  User reviews and saves the changes.

@@ -4,28 +4,27 @@
 
 ## Major Tech Stack
 
-- **Runtime Environment**: GitHub Copilot (VS Code Extension)
-- **Configuration Language**: Markdown + YAML Frontmatter
-- **Templating Engine**: Jinja2 / Liquid (implied by Copilot's template processing)
-- **Diagramming**: Mermaid.js
+Terraformer is a "Meta-Application" that runs inside an IDE.
+
+- **Runtime Environment**: Visual Studio Code
+- **AI Engine**: GitHub Copilot Chat
+- **Configuration Language**: Markdown (GFM) + YAML Frontmatter
+- **Protocol**: ANTP v1.4 (AI-Native Transformation Protocol)
 
 ## Major Dependencies
 
-| Component               | Usage                                         |
-| ----------------------- | --------------------------------------------- |
-| **VS Code**             | The IDE hosting the agent interactions.       |
-| **GitHub Copilot Chat** | The AI engine executing the prompts.          |
-| **Git**                 | Version control for configuration management. |
+| Component               | Requirement   | Usage                                    |
+| ----------------------- | ------------- | ---------------------------------------- |
+| **VS Code**             | Latest Stable | The host IDE.                            |
+| **GitHub Copilot**      | Extension     | The AI engine that executes the prompts. |
+| **GitHub Copilot Chat** | Extension     | The interface for invoking commands.     |
 
 ## Integration with External Services
 
-- **GitHub API**: Implicitly used by Copilot to read repository context.
-- **LLM Model**: GPT-4o / Claude 3.5 Sonnet (via Copilot).
+- **GitHub API**: Used by Copilot to fetch context and code.
+- **LLM (e.g., GPT-4)**: The underlying model used by Copilot.
 
 ## Development Tools
 
-- **Editor**: Visual Studio Code
-- **Extensions**:
-  - GitHub Copilot
-  - GitHub Copilot Chat
-  - Markdown All in One (recommended)
+- **Git**: Version control.
+- **Mermaid**: For diagramming within Markdown.

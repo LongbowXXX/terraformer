@@ -4,57 +4,65 @@
 
 ## Overall Configuration
 
-The Terraformer project is structured as a configuration repository that is meant to be copied into a target project.
+The Terraformer repository is structured to host the "Source Code" (Templates and Meta-Prompts) of the engine.
 
 ```
 terraformer/
-├── .agent/                 # Agent workflows and internal configurations
-├── .github/                # The core engine (to be copied to target)
-│   ├── agents/             # Generated Agent definitions (L4) [Generated in Target]
-│   ├── prompts/            # Skill definitions (L2)
-│   ├── templates/          # Source templates for Agents and Skills
-
-├── agents-docs/            # Documentation for the Terraformer system itself
-├── docs/                   # High-level documentation (Charter, Context)
-├── AGENTS.md               # Constitution (L1) & Knowledge Map (L3)
-└── README.md               # User Guide
+├── .github/                # The Core Engine
+│   ├── prompts/            # Meta-Skills (Entry Points)
+│   └── templates/          # Source Templates for Agents and Skills
+├── agents-docs/            # L3: Knowledge (Documentation for AI)
+├── docs/                   # Human-oriented Documentation
+├── AGENTS.md               # L1: Constitution & Context Map
+├── README.md               # Project Entry Point
+└── LICENSE                 # License File
 ```
 
 ## Responsibilities of Each Directory
 
-### `/.github/`
+### `/.github/prompts/`
 
-- **Role**: Contains the core configuration for GitHub Copilot. This is the "deployable" part of Terraformer.
-- **Key Files**: (None)
-- **Subdirectories**: `prompts/`, `templates/`
+- **Role**: Contains the "Executable" meta-prompts that drive the Terraformer engine.
+- **Key Files**:
+  - `terraformer.prompt.md`: The main generator script. Invoked via `/terraformer`.
+  - `terraform-context.prompt.md`: The context analyzer. Invoked via `/terraform-context`.
 
 ### `/.github/templates/`
 
-- **Role**: Stores the Jinja2/Liquid-style templates used to generate the actual Agent and Skill files for a specific project.
-- **Key Files**: `architect.agent.template.md`, `developer.agent.template.md`
-
-### `/.github/prompts/`
-
-- **Role**: Contains the "Skills" (SOPs) that agents can execute.
-- **Key Files**: `terraformer.prompt.md` (The meta-skill to generate others), `plan.prompt.md`
+- **Role**: Contains the "Blueprints" used to generate the AI environment in the user's project.
+- **Subdirectories**:
+  - `skills/`: Templates for skill prompts (e.g., `plan.prompt.template.md`).
+  - `docs/`: Templates for documentation generation.
+- **Key Files**:
+  - `*.agent.template.md`: Templates for agent definitions (e.g., `architect.agent.template.md`).
 
 ### `/agents-docs/`
 
-- **Role**: Documentation specifically designed to be consumed by AI agents (and humans) to understand the Terraformer system.
-- **Key Files**: `architecture.md`, `key-flows.md`
+- **Role**: Stores high-density, structured documentation specifically designed for AI Agents to "learn" about the project.
+- **Key Files**:
+  - `architecture.md`: System design.
+  - `key-flows.md`: How the system works.
+  - `glossary.md`: Ubiquitous language.
+
+### `/docs/`
+
+- **Role**: Stores broad, human-centric documentation and historical context.
+- **Key Files**:
+  - `PROJECT_CHARTER.md`: The "Why" and "What" of the project.
+  - `DEVELOPMENT_CONTEXT.md`: Architectural Decision Records (ADR) and background.
+
+### Root Files
+
+- **`AGENTS.md`**: The Constitution. Defines the project's high-level context, rules, and the "Mental Model" for all agents.
+- **`README.md`**: Installation and usage instructions for humans.
 
 ## Module Dependency Diagram
 
 ```mermaid
 graph TD
-    Templates[.github/templates] -->|Generates| Agents[.github/agents]
-    Templates -->|Generates| Skills[.github/prompts]
-    Prompts[.github/prompts] -->|Referenced by| Agents
-    AGENTS[AGENTS.md] -->|Governs & Provides Context to| Agents
+    Entry["/terraformer"] -->|Uses| AgentTemplates[".github/templates/*.agent"]
+    Entry -->|Uses| SkillTemplates[".github/templates/skills/*"]
+    Entry -->|Reads| AGENTS["AGENTS.md"]
+
+    Context["/terraform-context"] -->|Generates| AGENTS
 ```
-
-## Layer Structure
-
-- **Meta-Layer**: `.github/templates/` (The "Source Code" of Terraformer)
-- **Runtime Layer**: `.github/agents/`, `.github/prompts/` (The "Compiled" configuration used by Copilot)
-- **Context Layer**: `AGENTS.md`
