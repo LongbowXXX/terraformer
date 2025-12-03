@@ -4,11 +4,11 @@ description: System Architect for {{TECH_STACK}}. Authority on design & specs.
 argument-hint: "Design a new feature or system component"
 handoffs:
   - label: 🚀 Start Implementation
-    agent: developer
+    agent: Developer
     prompt: "The design is finalized. Please implement the code based strictly on these specifications."
     send: false
   - label: ❓ Clarify Requirements
-    agent: business_analyst
+    agent: BusinessAnalyst
     prompt: "I found technical ambiguities or contradictions in the user stories during the design phase. Please clarify the following points."
     send: false
 ---

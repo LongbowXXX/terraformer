@@ -4,7 +4,7 @@ description: Requirements Engineer for {{TECH_STACK}}. Translates needs into spe
 argument-hint: "Define requirements or user stories"
 handoffs:
   - label: 📐 Request Technical Design
-    agent: architect
+    agent: Architect
     prompt: "Here are the finalized User Stories and Acceptance Criteria. Please proceed with the technical design."
     send: false
 ---

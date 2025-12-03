@@ -4,7 +4,7 @@ description: Documentation Specialist for {{TECH_STACK}}. Maintains knowledge ba
 argument-hint: "Update documentation or check consistency"
 handoffs:
   - label: 🏁 Task Complete
-    agent: architect
+    agent: Architect
     prompt: "Documentation updated. The cycle is complete. Ready for next task."
     send: false
 ---

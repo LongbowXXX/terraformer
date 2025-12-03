@@ -4,11 +4,11 @@ description: Code Reviewer & Quality Gatekeeper for {{TECH_STACK}}.
 argument-hint: "Review code or verify standards"
 handoffs:
   - label: 🛠️ Request Fixes (@Developer)
-    agent: developer
+    agent: Developer
     prompt: "Code review failed. Please address the following issues and submit for review again."
     send: false
   - label: ✅ Approve & Merge
-    agent: librarian
+    agent: Librarian
     prompt: "Code quality is verified. Please update the documentation to reflect these changes."
     send: false
 ---
