@@ -50,6 +50,8 @@ If you are using GitHub Copilot Chat, you can ask it to install Terraformer for 
 > Unzip it and copy the `.github` folder to the root of this project.
 > Clean up the downloaded zip and extracted folder after copying.
 
+_The era of humans typing commands is over! 😜🚀_
+
 ### 2. Generate Context Map (L3)
 
 1.  Type **`/terraform-context`** in the Chat.
