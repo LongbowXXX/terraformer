@@ -45,16 +45,9 @@ Generate or **Update** **ALL** skill files by reading their templates from `.git
 - `.github/prompts/test.prompt.md` (from `test.prompt.template.md`)
 - ... (Process all other templates similarly)
 
-### 3. Agent Generation (With Skill Injection)
+### 3. Agent Generation
 
 Generate agents using `.github/templates/*.agent.template.md`.
-**Injection:** Append references to the generated skills in the System Prompt.
-
-**Representative Examples:**
-
-- **@Architect:** "Use `/plan` for detailed design tasks."
-- **@Developer:** "Use `/test` for TDD and verification."
-- ... (Inject appropriate skills for other agents similarly)
 
 ## 📤 Output Format
 
