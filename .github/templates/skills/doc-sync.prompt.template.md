@@ -127,3 +127,5 @@ When updating existing documentation:
 - **Specificity**: Use actual file paths, class names, and function names from the project
 - **No Placeholders**: Replace all placeholders with detected technologies from [Tech Stack](file:agents-docs/tech-stack.md)
 - **Mermaid Syntax**: Ensure all diagrams use valid Mermaid syntax
+- **DRY Principle**: Adhere to the DRY (Don't Repeat Yourself) principle.
+- **Use Links**: Use file links for code details and detailed descriptions where appropriate, instead of embedding full content.

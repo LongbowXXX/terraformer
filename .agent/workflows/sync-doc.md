@@ -57,6 +57,11 @@ Always add the following comment to the beginning of each document:
 <!-- This document is generated/updated by the sync-doc workflow -->
 ```
 
+### General Guidelines
+
+- **DRY Principle**: Adhere to the DRY (Don't Repeat Yourself) principle.
+- **Use Links**: Use file links for code details and detailed descriptions where appropriate, instead of embedding full content.
+
 #### 1. `agents-docs/architecture.md` - Architecture Overview
 
 ```markdown
