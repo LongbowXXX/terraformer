@@ -50,6 +50,15 @@ Detect architectural patterns:
 - Event Sourcing, CQRS
 - Microservices, Monolith, Modular Monolith
 
+### Step 4: Documentation Generation
+
+Generate the following initial documentation files in the `agents-docs/` directory. Use the detected tech stack and context to populate them.
+
+Generate the initial documentation files in the `agents-docs/` directory.
+Refer to `.github/templates/skills/doc-sync.prompt.template.md` for the list of files to generate and their expected content structure.
+
+_Note: Create these files with initial content based on your analysis. They will be refined by the @Librarian later._
+
 ## 📤 Output Format (`AGENTS.md`)
 
 Generate the content for `AGENTS.md` following this structure. **Output in English.**
@@ -149,6 +158,12 @@ This file provides context and instructions for AI coding agents working on this
 | Project Rules | `.github/copilot-instructions.md` |
 | Architecture  | `docs/DEVELOPMENT_CONTEXT.md`     |
 | API Types     | `src/types/api.ts`                |
+
+## 8. Documentation Index
+
+For detailed information, refer to the following documents:
+
+List all documentation files in `agents-docs/` directory, linking to them
 
 ```
 
