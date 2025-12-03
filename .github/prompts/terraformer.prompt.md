@@ -49,6 +49,13 @@ Generate or **Update** **ALL** skill files by reading their templates from `.git
 
 Generate agents using `.github/templates/*.agent.template.md`.
 
+### 4. Final Validation
+
+**After** generating all files:
+
+1.  **Link Integrity Check**: Verify that all file links in the generated markdown files point to existing files.
+2.  **Auto-Correction**: If any broken links are found, **fix them** before outputting the final result.
+
 ## 📤 Output Format
 
 Output each file content inside a code block with its filename.
