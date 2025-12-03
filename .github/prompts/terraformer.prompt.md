@@ -32,12 +32,11 @@ Your goal is to implement the **AI-Native Transformation Protocol (ANTP)** by ge
 
 **Read `AGENTS.md`** to determine:
 
-- **{{TECH_STACK}}**: The primary frameworks and tools (e.g., "Next.js + TypeScript", "Python + Django").
 - **Primary Language**: The main programming language used.
 
 ### 2. Skill Generation (Standard Equipment)
 
-Generate or **Update** **ALL** skill files by reading their templates from `.github/templates/skills/` and replacing `{{TECH_STACK}}`.
+Generate or **Update** **ALL** skill files by reading their templates from `.github/templates/skills/`.
 **IMPORTANT**: If the file already exists, **UPDATE** it to match the latest template and `AGENTS.md` context.
 
 **Representative Examples:**
