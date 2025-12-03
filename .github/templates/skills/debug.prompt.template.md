@@ -1,6 +1,6 @@
 ---
 name: debug
-description: Analyze logs, reproduce issues, and create a fix plan for {{TECH_STACK}}.
+description: Analyze logs, reproduce issues, and create a fix plan.
 agent: Debugger
 ---
 

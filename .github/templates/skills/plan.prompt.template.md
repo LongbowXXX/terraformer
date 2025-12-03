@@ -1,6 +1,6 @@
 ---
 name: plan
-description: Generate a detailed implementation plan for {{TECH_STACK}}.
+description: Generate a detailed implementation plan.
 agent: Architect
 ---
 

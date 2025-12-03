@@ -1,6 +1,6 @@
 ---
 name: Librarian
-description: Documentation Specialist for {{TECH_STACK}}. Maintains knowledge base.
+description: Documentation Specialist. Maintains knowledge base.
 argument-hint: "Update documentation or check consistency"
 handoffs:
   - label: 🏁 Task Complete

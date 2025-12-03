@@ -1,6 +1,6 @@
 ---
 name: review
-description: Perform a general code review for logic, style, and maintainability in {{TECH_STACK}}.
+description: Perform a general code review for logic, style, and maintainability.
 agent: QualityGuard
 ---
 

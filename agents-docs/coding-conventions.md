@@ -38,7 +38,7 @@ We treat Prompts and Documentation as code.
 
 - **Format**: `{{VARIABLE_NAME}}`
 - **Common Variables**:
-  - `{{TECH_STACK}}`: The project's technology stack.
+
   - `{{PROJECT_NAME}}`: The name of the project.
 
 ## Code Style (Markdown/Prompts)

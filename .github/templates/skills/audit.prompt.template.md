@@ -1,6 +1,6 @@
 ---
 name: audit
-description: Conduct a comprehensive code review and security audit for {{TECH_STACK}}.
+description: Conduct a comprehensive code review and security audit.
 agent: QualityGuard
 ---
 
@@ -36,19 +36,24 @@ Use the standard template: `.github/templates/docs/review_report.template.md`
 # Audit Report
 
 ## 1. Summary
+
 [Brief summary of the audit findings, including overall quality assessment.]
 
 ## 2. Critical Issues (Must Fix)
+
 - [ ] **Security**: [Description of security issue] (File: `path/to/file.ts:L10`)
 - [ ] **Bug**: [Description of critical bug]
 
 ## 3. Warnings (Should Fix)
+
 - [ ] **Performance**: [Description of performance issue]
 - [ ] **Style**: [Description of style violation]
 
 ## 4. Suggestions (Nice to Have)
+
 - [ ] [Suggestion for improvement]
 
 ## 5. Conclusion
+
 [Final recommendation: Approve / Request Changes]
 ```

@@ -1,6 +1,6 @@
 ---
 name: design
-description: Create high-level system design and architecture diagrams for {{TECH_STACK}}.
+description: Create high-level system design and architecture diagrams.
 agent: Architect
 ---
 

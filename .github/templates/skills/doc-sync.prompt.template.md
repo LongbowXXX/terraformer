@@ -1,6 +1,6 @@
 ---
 name: doc-sync
-description: Generate or update project documentation for {{TECH_STACK}} in agents-docs/ directory.
+description: Generate or update project documentation in agents-docs/ directory.
 agent: Librarian
 ---
 
@@ -41,7 +41,7 @@ Gather information from:
 
 ### 2. Tech Stack Detection
 
-Identify the following for `{{TECH_STACK}}`:
+Identify the following for the [Tech Stack](file:agents-docs/tech-stack.md):
 
 - **Language(s)**: TypeScript, Python, Java, Go, etc.
 - **Framework(s)**: React, Next.js, Django, Spring Boot, etc.
@@ -125,5 +125,5 @@ When updating existing documentation:
 
 - **Language**: Output documentation in **English** (unless explicitly requested otherwise)
 - **Specificity**: Use actual file paths, class names, and function names from the project
-- **No Placeholders**: Replace all `{{TECH_STACK}}` with detected technologies
+- **No Placeholders**: Replace all placeholders with detected technologies from [Tech Stack](file:agents-docs/tech-stack.md)
 - **Mermaid Syntax**: Ensure all diagrams use valid Mermaid syntax

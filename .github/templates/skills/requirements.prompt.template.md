@@ -1,6 +1,6 @@
 ---
 name: requirements
-description: Analyze requests and generate user stories for {{TECH_STACK}}.
+description: Analyze requests and generate user stories.
 agent: BusinessAnalyst
 ---
 
@@ -29,27 +29,33 @@ Use the standard template: `.github/templates/docs/requirements.template.md`
 # Requirements Specification
 
 ## 1. Context
+
 [Brief background and context of the request.]
 
 ## 2. User Stories
 
 ### Story 1: [Title]
+
 **As a** [Role]
 **I want to** [Action]
 **So that** [Benefit]
 
 **Acceptance Criteria:**
+
 - [ ] Criterion 1
 - [ ] Criterion 2
 - [ ] Edge case handling
 
 ### Story 2: [Title]
+
 ...
 
 ## 3. Non-Functional Requirements
+
 - **Performance**: ...
 - **Security**: ...
 
 ## 4. Open Questions
+
 - [ ] Question 1?
 ```

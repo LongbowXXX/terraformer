@@ -32,7 +32,7 @@ Generates the specialized Agents and Skills based on the project context.
 2.  Copilot executes `.github/prompts/terraformer.prompt.md`.
 3.  **Context Loading**: Reads `AGENTS.md` to understand the tech stack and rules.
 4.  **Template Selection**: Reads templates from `.github/templates/`.
-5.  **Customization**: Injects project-specific variables (e.g., `{{TECH_STACK}}`) into templates.
+5.  **Customization**: Injects project-specific variables into templates.
 6.  **Output**: Generates/Updates:
     - `.github/agents/*.agent.md`
     - `.github/prompts/*.prompt.md`

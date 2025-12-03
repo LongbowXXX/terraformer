@@ -69,7 +69,6 @@ This section defines the core terminology used across the project. For the full 
 ### Must Follow
 
 - `@Developer` must **immediately escalate** spec gaps (Anti-Drift Lock)
-- Templates must use `{{TECH_STACK}}` placeholder
 
 ### Must Avoid
 
