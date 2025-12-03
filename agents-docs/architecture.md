@@ -4,77 +4,63 @@
 
 ## System Overview
 
-**Terraformer** is a **Meta-Engine** implementation of the **AI-Native Transformation Protocol (ANTP v1.4)**. Its purpose is to transform legacy "human-only" software projects into "AI-Ready" ecosystems.
-
-Unlike traditional software, Terraformer does not have a compiled runtime binary. Instead, it operates as a set of **Prompt Definitions** and **Templates** that run within the **GitHub Copilot** environment in VS Code. It acts as a "Configuration Generator" that analyzes a project's codebase and produces a specialized team of AI Agents and Standard Operating Procedures (Skills).
+Terraformer is a meta-engine and reference implementation of the **AI-Native Transformation Protocol (ANTP)**. Its primary purpose is to transform legacy "human-only" software projects into "AI-Ready" environments. It achieves this not by adding runtime code, but by injecting a structured configuration layer that enables GitHub Copilot to function as a specialized team of AI agents.
 
 ## Key Components
 
-The system is built upon the **Roles & Skills Architecture** (ANTP), consisting of four layers:
+The system is built upon the **Roles & Skills Architecture**, consisting of four distinct layers:
 
-1.  **L1: Constitution (`AGENTS.md`)**
+1.  **L1: Constitution (Immutable Rules)**
 
-    - The immutable core rules and context map of the project.
-    - Defines the "Context Debt" to be eliminated.
-    - Acts as the single source of truth for all agents.
+    - **File**: `AGENTS.md`
+    - **Responsibility**: Defines the high-level rules, agent roles, and authority boundaries (e.g., the "Anti-Generalist Principle").
 
-2.  **L2: Skills (`.github/prompts/*.prompt.md`)**
+2.  **L2: Skills (Standard Operating Procedures)**
 
-    - Standardized Operating Procedures (SOPs) encapsulated as prompt files.
-    - Executable capabilities that agents (or users) can invoke (e.g., `/plan`, `/refactor`).
-    - In Terraformer's source, these exist as **Templates** in `.github/templates/skills/`.
+    - **Files**: `.github/prompts/*.prompt.md`
+    - **Responsibility**: Provides reusable, standardized instructions (SOPs) for specific tasks like planning, refactoring, and testing.
 
-3.  **L3: Knowledge (`agents-docs/*`)**
+3.  **L3: Knowledge (Explicit Context Map)**
 
-    - Explicit, structured documentation designed for AI consumption.
-    - Covers architecture, directory structure, flows, and conventions.
+    - **Files**: `agents-docs/*`
+    - **Responsibility**: Stores detailed, AI-consumable documentation about the project's architecture, directory structure, and conventions.
 
-4.  **L4: Agents (`.github/agents/*.agent.md`)**
-    - Specialized personas with defined roles, authorities, and constraints.
-    - In Terraformer's source, these exist as **Templates** in `.github/templates/*.agent.template.md`.
+4.  **L4: Agents (Specialized Roles)**
+    - **Files**: `.github/agents/*.agent.md` (conceptually defined in `AGENTS.md`)
+    - **Responsibility**: Defines the persona, authority, and constraints for specific AI roles (e.g., `@Architect`, `@Developer`).
 
 ## Architecture Diagram
 
 ```mermaid
 graph TD
-    User["User (Developer)"] -->|Invokes| Copilot["GitHub Copilot Chat"]
+    User[User / Developer] -->|Interacts via Chat| Copilot[GitHub Copilot]
+    Copilot -->|Reads| L1["L1: Constitution (AGENTS.md)"]
+    Copilot -->|Reads| L4["L4: Agents (.github/agents)"]
+    Copilot -->|Executes| L2["L2: Skills (.github/prompts)"]
+    Copilot -->|References| L3["L3: Knowledge (agents-docs)"]
 
-    subgraph Terraformer Engine
-        MetaPrompts[Meta-Prompts]
-        Templates[Templates]
+    subgraph "Terraformer (ANTP)"
+        L1
+        L4
+        L2
+        L3
     end
 
-    Copilot -->|Reads| MetaPrompts
-    MetaPrompts -->|Reads| Templates
-    MetaPrompts -->|Analyzes| LegacyCode["Legacy Project Code"]
-
-    Copilot -->|Generates| AIEnv["AI-Native Environment"]
-
-    subgraph AIEnv
-        Agents["Agents (.github/agents)"]
-        Skills["Skills (.github/prompts)"]
-        Context["Context (AGENTS.md)"]
-    end
-
-    MetaPrompts -.->|Contains| TerraformPrompt["/terraformer"]
-    MetaPrompts -.->|Contains| ContextPrompt["/terraform-context"]
+    L2 -->|Generates/Modifies| Codebase[Target Project Codebase]
 ```
 
 ## Data Flow
 
-1.  **Initialization**: User invokes `/terraform-context`.
-    - Engine analyzes project structure.
-    - Generates `AGENTS.md` (L1).
-2.  **Generation**: User invokes `/terraformer`.
-    - Engine reads `AGENTS.md` and Project Code.
-    - Engine selects appropriate Templates.
-    - Engine generates `.github/agents/*` and `.github/prompts/*`.
-3.  **Operation**: User interacts with generated Agents (e.g., `@Architect`).
-    - Agent reads `AGENTS.md` and `agents-docs/`.
-    - Agent executes Skills (e.g., `/plan`).
+1.  **Initialization**: The user installs Terraformer (copies `.github` folder).
+2.  **Context Generation**: User runs `/terraform-context` to generate `AGENTS.md` (L1 & L3 summary).
+3.  **Agent Activation**: User invokes an agent (e.g., `@Architect`) in Copilot Chat.
+4.  **Skill Execution**: The agent executes a skill (e.g., `/plan`).
+5.  **Output**: Copilot generates code, plans, or documentation based on the definitions and context.
 
 ## Design Background and Rationale
 
-- **Zero-Install**: Leverages existing VS Code + Copilot infrastructure. No npm/pip packages to install.
-- **Text-as-Software**: The entire logic is defined in Markdown/Prompts, making it easy to inspect and modify.
-- **Context-First**: Prioritizes the creation of `AGENTS.md` to solve the "Context Debt" problem which is the primary cause of AI hallucinations in large projects.
+**The Problem: Context Debt**
+Traditional projects rely on implicit knowledge that AI cannot access. This leads to hallucinations, specification drift, and low-quality code when using generic AI assistants.
+
+**The Solution: Explicit Context**
+Terraformer solves this by making context explicit and structured. By defining roles and skills as code (configuration), it ensures that AI agents operate within safe boundaries and follow established patterns, effectively treating the development process itself as a programmable entity.

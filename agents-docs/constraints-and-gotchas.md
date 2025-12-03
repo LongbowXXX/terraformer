@@ -4,25 +4,27 @@
 
 ## Performance Requirements
 
-- **Latency**: Prompt execution depends on the Copilot API latency. Complex prompts like `/terraformer` may take 30-60 seconds to complete.
-- **Context Window**: Be mindful of the LLM's context window. Very large `AGENTS.md` files might be truncated.
+- **Latency**: Copilot responses depend on the LLM's load. Complex prompts (like `/plan`) may take longer to generate.
+- **Context Window**: There is a limit to how much context Copilot can read. Keep `AGENTS.md` and `agents-docs/` concise and high-density.
 
 ## Security Considerations
 
-- **Prompt Injection**: Since prompts are text, they could theoretically be manipulated. However, they run locally in the user's IDE, mitigating remote risks.
-- **Secrets**: Agents should NOT be given access to real secrets (API keys, passwords) in the prompts or `AGENTS.md`.
+- **No Secrets**: Never put API keys, passwords, or sensitive data in `AGENTS.md` or Prompts. These are sent to the LLM.
+- **Code Safety**: AI-generated code must always be reviewed. `@QualityGuard` is a safeguard, not a guarantee.
 
 ## Known Technical Debt
 
-- **Template Duplication**: Some instructions might be repeated across multiple agent templates.
-- **Manual Sync**: Keeping `agents-docs/` in sync with the actual prompts requires manual effort (or running `/sync-doc`).
+- **Prompt Fragility**: LLMs are non-deterministic. A prompt that works today might behave slightly differently tomorrow.
+- **Context Drift**: If `AGENTS.md` is not updated, the AI will make decisions based on outdated info.
 
 ## Common Troubles and Solutions
 
-- **"I don't know how to do that"**: If Copilot refuses a command, ensure the `.github/prompts` folder is correctly placed and VS Code has indexed it.
-- **Partial Generation**: If output stops mid-way, type "continue" to ask Copilot to finish.
+- **"I don't know about X"**: The AI claims ignorance.
+  - _Solution_: Check if "X" is documented in `AGENTS.md` or `agents-docs/`. If not, add it.
+- **Agent breaks character**: `@Developer` starts designing architecture.
+  - _Solution_: Remind the agent of its role or re-run `/terraform-context` to refresh `AGENTS.md`.
 
 ## Constraints
 
-- **No Runtime**: Terraformer cannot "execute" code itself; it only generates it.
-- **Human-in-the-Loop**: All AI-generated code MUST be reviewed by a human (`@QualityGuard` role).
+- **Text-Only**: Copilot Chat is primarily text-based. It cannot "see" images or run binary executables.
+- **No File System Access**: Agents cannot _directly_ create files without user confirmation (they propose changes).

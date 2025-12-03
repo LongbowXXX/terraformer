@@ -4,27 +4,25 @@
 
 ## Major Tech Stack
 
-Terraformer is a "Meta-Application" that runs inside an IDE.
-
-- **Runtime Environment**: Visual Studio Code
-- **AI Engine**: GitHub Copilot Chat
-- **Configuration Language**: Markdown (GFM) + YAML Frontmatter
-- **Protocol**: ANTP v1.4 (AI-Native Transformation Protocol)
+- **Runtime**: GitHub Copilot (VS Code Extension)
+- **Configuration Language**: Markdown + YAML Frontmatter
+- **Diagramming**: Mermaid.js
 
 ## Major Dependencies
 
-| Component               | Requirement   | Usage                                    |
-| ----------------------- | ------------- | ---------------------------------------- |
-| **VS Code**             | Latest Stable | The host IDE.                            |
-| **GitHub Copilot**      | Extension     | The AI engine that executes the prompts. |
-| **GitHub Copilot Chat** | Extension     | The interface for invoking commands.     |
+Since Terraformer is a configuration engine, it does not have runtime library dependencies (like npm or pip packages). Its "dependencies" are the environment it runs in.
+
+| Component          | Requirement   | Usage              |
+| :----------------- | :------------ | :----------------- |
+| **VS Code**        | Latest Stable | The IDE platform   |
+| **GitHub Copilot** | Subscription  | The AI engine      |
+| **Copilot Chat**   | Extension     | The chat interface |
 
 ## Integration with External Services
 
-- **GitHub API**: Used by Copilot to fetch context and code.
-- **LLM (e.g., GPT-4)**: The underlying model used by Copilot.
+- **GitHub API**: Used implicitly by Copilot to fetch context and codebase information.
 
 ## Development Tools
 
-- **Git**: Version control.
-- **Mermaid**: For diagramming within Markdown.
+- **Version Control**: Git
+- **Editor**: VS Code

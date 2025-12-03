@@ -4,53 +4,44 @@
 
 ## Design Principles
 
-### 1. The Anti-Generalist Principle
+1.  **Anti-Generalist Principle**:
 
-We do not believe in "One AI to rule them all."
+    - AI Agents must have specialized roles.
+    - `@Developer` is strictly prohibited from making specification changes without `@Architect` approval.
+    - This prevents "Specification Drift" where AI fixes code but breaks business logic.
 
-- **Rule**: Agents must have specialized roles and clear boundaries.
-- **Example**: `@Developer` is strictly prohibited from making specification decisions. If a requirement is unclear, it MUST escalate to `@Architect` or `@BusinessAnalyst`.
+2.  **Explicit Context**:
 
-### 2. Context Debt Elimination
+    - Do not rely on implicit knowledge. All context must be explicitly documented in `AGENTS.md` or `agents-docs/`.
 
-The primary cause of AI failure is lack of context.
+3.  **DRY (Don't Repeat Yourself)**:
 
-- **Rule**: All implicit knowledge must be made explicit in `AGENTS.md` or `agents-docs/`.
-- **Practice**: Never "fix it in chat." If the AI needs context, update the documentation first.
+    - Avoid duplicating information across prompts. Reference shared documentation in `agents-docs/` instead.
 
-### 3. Text-as-Software
+4.  **Human-in-the-Loop**:
+    - All AI-generated code must be reviewed by a human (or `@QualityGuard`).
 
-We treat Prompts and Documentation as code.
+## Adopted Design Patterns
 
-- **Rule**: All prompts and agents are version-controlled.
-- **Practice**: Use Semantic Versioning for the protocol (ANTP v1.4).
+- **Meta-Prompting**: Using prompts to generate other prompts (e.g., `/terraformer`).
+- **Chain of Thought**: Encouraging agents to plan before executing (`/plan`).
+- **Role-Based Access Control (RBAC)**: Simulating authority levels via prompt instructions.
 
 ## Naming Conventions
 
-### Files
+- **Agents**: PascalCase with `@` prefix (e.g., `@Architect`, `@QualityGuard`).
+- **Skills**: kebab-case with `/` prefix (e.g., `/plan`, `/doc-sync`).
+- **Agent Files**: `[agent-name].agent.md` (e.g., `architect.agent.md`).
+- **Skill Files**: `[skill-name].prompt.md` (e.g., `plan.prompt.md`).
+- **Documentation**: kebab-case (e.g., `coding-conventions.md`).
 
-- **Prompts (Skills)**: `kebab-case.prompt.md` (e.g., `plan.prompt.md`)
-- **Agents**: `snake_case.agent.md` (e.g., `quality_guard.agent.md`)
-- **Templates**: `filename.template.md` (e.g., `architect.agent.template.md`)
-- **Documentation**: `kebab-case.md` (e.g., `directory-structure.md`)
+## Code Style
 
-### Variables (in Templates)
-
-- **Format**: `{{VARIABLE_NAME}}`
-- **Common Variables**:
-
-  - `{{PROJECT_NAME}}`: The name of the project.
-
-## Code Style (Markdown/Prompts)
-
-- **Frontmatter**: Use YAML frontmatter for metadata (description, version).
-- **Sections**: Use clear H1/H2 headers to structure instructions.
-- **Directives**: Use blockquotes (`>`) or bold text for critical instructions.
-- **Examples**: Always provide few-shot examples in prompts to guide the AI.
+- **Format**: GitHub Flavored Markdown (GFM).
+- **Language**: English (US) for all documentation and comments.
+- **Diagrams**: Mermaid.js for all diagrams.
 
 ## Testing Policy
 
-Since this is a prompt-based system:
-
-- **Verification**: Manual verification using "Test Projects" (applying Terraformer to a dummy project).
-- **Regression**: Check if new prompts cause hallucinations or degradation in output quality.
+- **Prompt Testing**: Prompts are tested by running them against reference projects and verifying the output.
+- **Regression Testing**: Ensure new skills do not break existing agent behaviors.

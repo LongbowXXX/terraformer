@@ -4,33 +4,44 @@
 
 ## Test Configuration
 
-Since Terraformer is a set of prompts and templates, "Testing" involves verifying that these prompts generate high-quality, correct outputs when executed by GitHub Copilot.
+Since Terraformer is a configuration engine for AI agents, "testing" primarily involves verifying that the prompts and agent definitions produce the desired behavior in GitHub Copilot.
 
 ## Types of Tests
 
-### Manual Verification (The "Test Project" Approach)
+### Prompt Logic Tests (Unit Tests)
 
-The primary method of testing is to apply Terraformer to a "Test Project" (a dummy legacy codebase).
+- **Goal**: Verify that a specific Skill (e.g., `/plan`) follows its instructions.
+- **Method**:
+  1.  Open a test file.
+  2.  Invoke the skill.
+  3.  Verify the output format and content against the prompt's requirements.
 
-1.  **Setup**: Create a dummy project (e.g., a simple To-Do app in Python or React).
-2.  **Install**: Copy the `.github` folder from Terraformer to the dummy project.
-3.  **Execute**: Run `/terraform-context` and `/terraformer`.
-4.  **Verify**: Check if the generated `AGENTS.md`, agents, and skills are correct and relevant to the dummy project.
+### Agent Interaction Tests (Integration Tests)
 
-### Regression Testing
+- **Goal**: Verify that Agents respect their roles and boundaries.
+- **Method**:
+  1.  Ask `@Developer` to change a requirement.
+  2.  **Expected Result**: Refusal and escalation to `@Architect`.
+  3.  Ask `@Architect` to plan a feature.
+  4.  **Expected Result**: A detailed plan in the correct format.
 
-When modifying a prompt (e.g., `terraformer.prompt.md`):
+## Test Execution Method
 
-- Run the modified prompt against a known codebase.
-- Compare the output with previous outputs.
-- Ensure no "hallucinations" or syntax errors in the generated files.
+Currently, testing is manual.
 
-## Coverage Goals
-
-- **Core Flows**: Ensure `/terraform-context` and `/terraformer` work 100% of the time.
-- **Template Validity**: Ensure all templates in `.github/templates/` are valid Markdown and have correct placeholders.
+1.  **Setup**: Install the `.github` folder into a clean "Test Project".
+2.  **Execution**: Run through the Key Flows defined in `key-flows.md`.
+3.  **Validation**: Check if the AI's responses match the "Expected Behavior" defined in the Skill/Agent files.
 
 ## Testing Best Practices
 
-- **Clean State**: Always test in a fresh VS Code window or a clean repo to avoid context pollution.
-- **Model Variance**: Be aware that LLM outputs can vary. Run tests multiple times if results are inconsistent.
+- **Clear Context**: Always ensure `AGENTS.md` is up-to-date before testing.
+- **Isolation**: Test one skill at a time to isolate issues.
+- **Edge Cases**: Test with ambiguous requests to see if the Agent asks for clarification.
+
+## Common Testing Issues
+
+- **Hallucination**: The AI invents facts not in the context.
+  - _Solution_: Add explicit constraints to the Prompt or `AGENTS.md`.
+- **Ignoring Instructions**: The AI skips a step in the SOP.
+  - _Solution_: Use stronger language (e.g., "You MUST...") or break the prompt into smaller steps.
