@@ -41,6 +41,15 @@ cp -r terraformer/.github/prompts ./my-legacy-project/.github/
 cp -r terraformer/.github/templates ./my-legacy-project/.github/
 ```
 
+### Alternative: Install via Copilot Chat
+
+If you are using GitHub Copilot Chat, you can ask it to install Terraformer for you. Paste the following prompt into the Chat:
+
+> Check the latest release on https://github.com/LongbowXXX/terraformer/releases.
+> Download the Source code (zip) of the latest version.
+> Unzip it and copy the `.github` folder to the root of this project.
+> Clean up the downloaded zip and extracted folder after copying.
+
 ### 2. Generate Context Map (L3)
 
 1.  Type **`/terraform-context`** in the Chat.
