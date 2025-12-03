@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.4] - 2025-12-03
+
+### Added
+
+- **Documentation**: Added humorous comment to `README.md`.
+- **Workflows**: Added markdown link check to `doc-sync` workflow.
+
+### Changed
+
+- **Prompts**: Updated `doc-sync` prompt principles to emphasize DRY and file links.
+- **Documentation**: Regenerated agent documentation with new principles.
+
 ## [0.0.3] - 2025-12-03
 
 ### Added
