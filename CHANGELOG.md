@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.3] - 2025-12-03
+
+### Added
+
+- **Skills**: Added `create-custom-prompt` meta-skill for easier extension.
+- **Documentation**: Added Copilot Chat installation instructions to `README.md`.
+
+### Changed
+
+- **Prompts**: Updated `terraform-context` to link new documentation files.
+- **Prompts**: Refined `terraformer` prompt to list only representative agents/skills.
+- **Agents**: Corrected `@Developer` agent name capitalization.
+- **Documentation**: Removed obsolete `{{TECH_STACK}}` references.
+
 ## [0.0.2] - 2025-12-02
 
 ### Added
