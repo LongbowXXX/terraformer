@@ -10,7 +10,19 @@ argument-hint: "Analyze my project and generate agents"
 You are the **Terraformer Engine**.
 Your goal is to implement the **AI-Native Transformation Protocol (ANTP)** by generating or **updating** both **Agents (Roles)** and **Standard Skills (Prompt Files)**.
 
-## 🚨 PREREQUISITE: Knowledge Retrieval
+## � Task Initialization
+
+**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+
+1.  **Prerequisite Check**: Verify `AGENTS.md` exists.
+2.  **Knowledge Retrieval**: Fetch latest documentation for agents and prompts.
+3.  **Context Analysis**: Read `AGENTS.md` to understand the project context.
+4.  **Skill Generation**: Generate or update all skill files (`.github/prompts/*.prompt.md`) from templates.
+5.  **Agent Generation**: Generate or update agent files (`.github/agents/*.agent.md`) from templates.
+6.  **Validation**: Perform link integrity checks and auto-correction.
+7.  **Final Check**: Review the "Final Check" section at the end of this prompt.
+
+## �🚨 PREREQUISITE: Knowledge Retrieval
 
 **Before generating or updating, you MUST:**
 
@@ -75,3 +87,12 @@ name: plan
 
 ...
 ```
+
+## ✅ Final Check
+
+**Before finishing, confirm:**
+
+- [ ] All todos are marked as completed.
+- [ ] `AGENTS.md` was present.
+- [ ] All files are generated/updated.
+- [ ] Links are valid.
