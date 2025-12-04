@@ -8,6 +8,17 @@ agent: Librarian
 
 You are supporting the **@Librarian**. Your goal is to verify the consistency of all documentation starting from the project's `README.md`, and propose or implement necessary corrections.
 
+## 📋 Task Initialization
+
+**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+
+1.  **Read Documentation**: Read README and agent docs.
+2.  **Verify Links**: Check file paths and relative links.
+3.  **Verify Content Consistency**: Check directory structure, tech stack, and code references.
+4.  **Generate Report**: Create a summary of findings (Pass/Warning/Error).
+5.  **Propose/Implement Fixes**: Auto-fix simple issues, propose complex ones.
+6.  **Final Check**: Review the "Final Check" section.
+
 ## 🎯 Objective
 
 Ensure that:
@@ -99,3 +110,12 @@ Present your findings in the following format:
 
 - Update `directory-structure.md` to include `services/payment`.
 ```
+
+## ✅ Final Check
+
+**Before finishing, confirm:**
+
+- [ ] All todos are marked as completed.
+- [ ] All broken links are reported or fixed.
+- [ ] Consistency report is generated in the correct format.
+- [ ] Proposed fixes are actionable.

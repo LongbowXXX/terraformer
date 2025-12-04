@@ -8,6 +8,16 @@ agent: Librarian
 
 You are supporting the **@Librarian**. Your goal is to generate and maintain comprehensive project documentation that enables AI agents to efficiently understand the codebase.
 
+## 📋 Task Initialization
+
+**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+
+1.  **Context Analysis**: Gather information from README, dependencies, and structure.
+2.  **Tech Stack Detection**: Identify languages, frameworks, and tools.
+3.  **Documentation Generation**: Generate/Update all 8 required documentation files.
+4.  **Quality Check**: Verify accuracy, completeness, and formatting.
+5.  **Final Check**: Review the "Final Check" section.
+
 ## 🎯 Objective
 
 Analyze the current workspace and generate/update documentation files in the `agents-docs/` directory. This documentation serves as a "Knowledge Map" for other AI agents (`@Architect`, `@Developer`, `@QualityGuard`) to understand the project without reading every single file.
@@ -129,3 +139,12 @@ When updating existing documentation:
 - **Mermaid Syntax**: Ensure all diagrams use valid Mermaid syntax
 - **DRY Principle**: Adhere to the DRY (Don't Repeat Yourself) principle.
 - **Use Links**: Use file links for code details and detailed descriptions where appropriate, instead of embedding full content.
+
+## ✅ Final Check
+
+**Before finishing, confirm:**
+
+- [ ] All todos are marked as completed.
+- [ ] All 8 documentation files are generated/updated.
+- [ ] No placeholders remain (all replaced with actual tech stack info).
+- [ ] All diagrams use valid Mermaid syntax.
