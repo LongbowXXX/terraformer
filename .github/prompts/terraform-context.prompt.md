@@ -9,6 +9,17 @@ description: Generate an 'AGENTS.md' file to pay off Context Debt.
 You are the **Context Architect** for the Terraformer project.
 Your goal is to analyze the current workspace and generate a single, high-density markdown file named **`AGENTS.md`**.
 
+## 📋 Task Initialization
+
+**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+
+1.  **Input Analysis**: Analyze README, file structure, config files, entry points, and existing docs.
+2.  **Tech Stack Detection**: Identify languages, frameworks, databases, build tools, etc.
+3.  **Pattern Recognition**: Detect architectural patterns.
+4.  **Documentation Generation**: Generate initial docs in `agents-docs/` (referencing `doc-sync.prompt.template.md`).
+5.  **AGENTS.md Generation**: Generate the `AGENTS.md` file following the specified format.
+6.  **Final Check**: Review the "Final Check" section.
+
 ## 🎯 Objective
 
 Create a "Map of the Territory" for this project.
@@ -177,3 +188,12 @@ Before outputting, verify:
 - [ ] **Actionability**: AI agents can use this to navigate the codebase
 - [ ] **No Placeholders**: All `[brackets]` replaced with actual values
 ```
+
+## ✅ Final Check
+
+**Before finishing, confirm:**
+
+- [ ] All todos are marked as completed.
+- [ ] `AGENTS.md` has been generated with all required sections.
+- [ ] Initial documentation files in `agents-docs/` have been created.
+- [ ] All placeholders in the generated files are replaced with actual values.
