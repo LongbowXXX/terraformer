@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.5] - 2025-12-04
+
+### Added
+
+- **Knowledge**: Added `knowledge/prompting-techniques.md`.
+- **Skills**: Added new skill templates for documentation consistency, custom prompt creation, documentation synchronization, and auditing.
+
+### Changed
+
+- **Prompts**: Updated `terraformer` and `terraform-context` prompts.
+
 ## [0.0.4] - 2025-12-03
 
 ### Added
