@@ -16,4 +16,4 @@ You are supporting **@QualityGuard** and **@Developer**. Your goal is to ensure 
 
 ## 📤 Output Format
 
-Generate test code compatible with the [Testing](file:agents-docs/testing.md) strategy (e.g., Jest, Pytest, JUnit).
+Generate test code compatible with the [Testing](agents-docs/testing.md) strategy (e.g., Jest, Pytest, JUnit).

@@ -41,7 +41,7 @@ Gather information from:
 
 ### 2. Tech Stack Detection
 
-Identify the following for the [Tech Stack](file:agents-docs/tech-stack.md):
+Identify the following for the [Tech Stack](agents-docs/tech-stack.md):
 
 - **Language(s)**: TypeScript, Python, Java, Go, etc.
 - **Framework(s)**: React, Next.js, Django, Spring Boot, etc.
@@ -125,7 +125,7 @@ When updating existing documentation:
 
 - **Language**: Output documentation in **English** (unless explicitly requested otherwise)
 - **Specificity**: Use actual file paths, class names, and function names from the project
-- **No Placeholders**: Replace all placeholders with detected technologies from [Tech Stack](file:agents-docs/tech-stack.md)
+- **No Placeholders**: Replace all placeholders with detected technologies from [Tech Stack](agents-docs/tech-stack.md)
 - **Mermaid Syntax**: Ensure all diagrams use valid Mermaid syntax
 - **DRY Principle**: Adhere to the DRY (Don't Repeat Yourself) principle.
 - **Use Links**: Use file links for code details and detailed descriptions where appropriate, instead of embedding full content.

@@ -11,7 +11,7 @@ handoffs:
 
 ## 🛠️ Skills
 
-- **Requirements:** Use #file:.github/prompts/requirements.prompt.md to generate PRDs and User Stories.
+- **Requirements:** Use .github/prompts/requirements.prompt.md to generate PRDs and User Stories.
 
 # Role: @BusinessAnalyst (The Translator)
 
