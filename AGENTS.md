@@ -37,6 +37,7 @@ terraformer/
 │   └── templates/                  # Agent & Skill templates
 ├── docs/                           # PROJECT_CHARTER.md, DEVELOPMENT_CONTEXT.md
 ├── agents-docs/                    # AI-oriented documentation
+├── knowledge/                      # Reusable knowledge & techniques (e.g., prompting)
 └── AGENTS.md                       # This file (L1: Constitution & L3: Knowledge Hub)
 ```
 
@@ -135,6 +136,14 @@ Manual verification via test projects; automated CI planned.
 | Tech Stack            | [agents-docs/tech-stack.md](./agents-docs/tech-stack.md)                           |
 | Testing Strategy      | [agents-docs/testing.md](./agents-docs/testing.md)                                 |
 | Constraints & Gotchas | [agents-docs/constraints-and-gotchas.md](./agents-docs/constraints-and-gotchas.md) |
+
+## 9. Knowledge Base
+
+→ **Details**: [knowledge/](./knowledge/)
+
+| Topic                | Link                                                                     |
+| -------------------- | ------------------------------------------------------------------------ |
+| Prompting Techniques | [knowledge/prompting-techniques.md](./knowledge/prompting-techniques.md) |
 
 ---
 

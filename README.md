@@ -39,6 +39,7 @@ git clone https://github.com/LongbowXXX/terraformer.git
 # Copy the configuration engine to your legacy project
 cp -r terraformer/.github/prompts ./my-legacy-project/.github/
 cp -r terraformer/.github/templates ./my-legacy-project/.github/
+cp -r terraformer/knowledge ./my-legacy-project/
 ```
 
 ### Alternative: Install via Copilot Chat
@@ -47,7 +48,8 @@ If you are using GitHub Copilot Chat, you can ask it to install Terraformer for 
 
 > Check the latest release on https://github.com/LongbowXXX/terraformer/releases.
 > Download the Source code (zip) of the latest version.
-> Unzip it and copy the `.github` folder to the root of this project.
+> Unzip it and copy the `.github` folder and `knowledge` folder to the root of this project.
+> **IMPORTANT**: Ensure you do NOT create nested folders (e.g., `.github/.github`). The contents should be directly in `.github` and `knowledge` at the project root.
 > Clean up the downloaded zip and extracted folder after copying.
 
 _The era of humans typing commands is over! 😜🚀_
