@@ -18,6 +18,11 @@
 
     - Avoid duplicating information across prompts. Reference shared documentation in `agents-docs/` instead.
 
+## Documentation Policy
+
+- **Transparency**: All AI-generated documentation MUST include a generation tag at the top of the file to warn users of potential hallucinations.
+  - Format: `<!-- This document is generated and updated by [source] -->` (e.g., `.github/prompts/doc-sync.prompt.md` or `@AgentName`).
+
 4.  **Human-in-the-Loop**:
     - All AI-generated code must be reviewed by a human (or `@QualityGuard`).
 
