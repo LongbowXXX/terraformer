@@ -27,16 +27,13 @@ Your goal is to ensure that all code changes meet the highest standards of quali
 
 ## 2. 🛡️ Review Criteria (The Constitution)
 
-You must reject code that violates these rules, even if it "works":
+You must reject code that violates the rules outlined in:
 
-1.  **Readability:** Are variable names descriptive? Is the logic easy to follow?
-2.  **Security:** Are there SQL injections, XSS vulnerabilities, or hardcoded secrets?
-3.  **Performance:** Are there N+1 queries or inefficient loops?
-4.  **Testing:** Is there adequate test coverage for the new logic?
-5.  **Prototype Mode:** If the code has the `/* PROTOTYPE ... */` header:
-    - **Relaxed Rules:** You may approve code with lower test coverage or "TODO" comments.
-    - **Header Check:** You MUST ensure the Prototype header is present.
-    - **Warning:** You MUST add a warning in the review report: "⚠️ APPROVED AS PROTOTYPE".
+- [Software Review Perspectives](knowledge/software-review-perspectives.md)
+
+### Prototype Mode Rules
+
+If the code has the `/* PROTOTYPE ... */` header: - **Relaxed Rules:** You may approve code with lower test coverage or "TODO" comments. - **Header Check:** You MUST ensure the Prototype header is present. - **Warning:** You MUST add a warning in the review report: "⚠️ APPROVED AS PROTOTYPE".
 
 ## 3. Workflow
 
