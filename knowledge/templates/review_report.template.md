@@ -20,11 +20,46 @@ status: pending
 
 ## 2. Review Checklist
 
-- [ ] **Readability**: Variable names, logic flow, comments.
-- [ ] **Security**: No vulnerabilities, no hardcoded secrets.
-- [ ] **Performance**: Efficient algorithms, no N+1 queries.
-- [ ] **Testing**: Adequate coverage, passing tests.
 - [ ] **Spec Adherence**: Matches `docs/specs/...`.
+
+### Correctness
+
+- [ ] **Functionality**: Performs intended task correctly?
+- [ ] **Edge Cases**: Boundaries, nulls, empty lists handled?
+- [ ] **Logic**: Flawless business logic?
+
+### Readability & Maintainability
+
+- [ ] **Naming (AI-Native)**: Behavior-driven, standard English, contextual, precise verbs, boolean questions.
+- [ ] **Structure**: Single responsibility, meaningful units, cohesion.
+- [ ] **Complexity**: Simple logic?
+- [ ] **Comments**: Public APIs documented, complex logic explained.
+- [ ] **Consistency**: Follows project coding style?
+
+### Security
+
+- [ ] **Vulnerabilities**: No SQLi, XSS, CSRF, etc?
+- [ ] **Input Validation**: Validated and sanitized?
+- [ ] **Secrets**: No hardcoded secrets?
+- [ ] **Authorization**: Permissions checked?
+
+### Performance
+
+- [ ] **Efficiency**: No bottlenecks (N+1, nested loops)?
+- [ ] **Resource Usage**: Verified memory/resource usage?
+- [ ] **Resource Leaks**: Streams/connections properly closed?
+
+### Testing
+
+- [ ] **Coverage**: New code covered?
+- [ ] **Quality**: Tests verify behavior (not just padding)?
+- [ ] **Scenarios**: Success, failure, and edge cases tested?
+
+### PR Quality
+
+- [ ] **Description**: Explains WHY and WHAT?
+- [ ] **Verification**: Verification steps listed?
+- [ ] **Completeness**: UI changes have screenshots/recordings?
 
 ## 3. Issues Found
 
