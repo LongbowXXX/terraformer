@@ -141,9 +141,11 @@ Manual verification via test projects; automated CI planned.
 
 → **Details**: [knowledge/](./knowledge/)
 
-| Topic                | Link                                                                     |
-| -------------------- | ------------------------------------------------------------------------ |
-| Prompting Techniques | [knowledge/prompting-techniques.md](./knowledge/prompting-techniques.md) |
+| Topic                        | Link                                                                                     |
+| ---------------------------- | ---------------------------------------------------------------------------------------- |
+| PR Creation Guidelines       | [knowledge/pr-creation-guidelines.md](./knowledge/pr-creation-guidelines.md)             |
+| Prompting Techniques         | [knowledge/prompting-techniques.md](./knowledge/prompting-techniques.md)                 |
+| Software Review Perspectives | [knowledge/software-review-perspectives.md](./knowledge/software-review-perspectives.md) |
 
 ---
 
