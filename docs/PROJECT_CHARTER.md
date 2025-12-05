@@ -132,3 +132,16 @@ We maintain explicit links between documents (e.g., Specification links to Requi
 1.  **Validation:** Field testing of `handoffs` and Prompt File integration in VS Code environments.
 2.  **Skill Library Expansion:** Develop extended skill templates (Release, Debug, Security Audit).
 3.  **CI/CD Integration:** Research workflows to automatically trigger `@QualityGuard` within GitHub Actions.
+
+## 11. AI Collaboration Policy
+
+Since we utilize AI, it is currently difficult to completely eliminate hallucinations.
+However, requiring perfect human review for all AI outputs contradicts the goal of using AI to improve efficiency and ease of work.
+We recommend working with the policy: **"Good Enough is Better Than Perfect!"**
+
+1.  **Hallucination Tolerance:** We accept a certain degree of hallucination if it does not constitute a critical issue.
+2.  **Transparency:** AI-generated documentation must include a tag indicating "AI Generated" to warn users of potential hallucinations.
+3.  **Quality Expectations:**
+    - **Code:** Quality is assured to a certain extent through automated testing.
+    - **Documentation:** Rigorous quality assurance is difficult. We should treat the AI as a "junior" employee with a few years of experience—minor mistakes should be forgiven with a laugh.
+    - **Philosophy:** "Let him who has never made a mistake cast the first stone at the AI."
