@@ -67,8 +67,9 @@ Generate agents using `.github/templates/*.agent.template.md`.
 
 **After** generating all files:
 
-1.  **Link Integrity Check**: Verify that all file links in the generated markdown files point to existing files.
-2.  **Auto-Correction**: If any broken links are found, **fix them** before outputting the final result.
+1.  **Link Integrity Check**: Verify that all **Markdown formatted file links** (e.g., `[label](path)`) in the generated markdown files point to existing files. **Ignore** plain text filenames that are not part of a link.
+2.  **Relative Path Check**: Ensure all **Markdown formatted file links** are specified using relative paths (e.g., `../agents/foo.agent.md` or `./bar.md`).
+3.  **Auto-Correction**: If any broken links or absolute paths are found in **Markdown links**, **fix them** before outputting the final result.
 
 ## 📤 Output Format
 
@@ -97,4 +98,4 @@ name: plan
 - [ ] All todos are marked as completed.
 - [ ] `AGENTS.md` was present.
 - [ ] All files are generated/updated.
-- [ ] Links are valid.
+- [ ] Links are valid and use relative paths.
