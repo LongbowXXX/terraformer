@@ -25,6 +25,14 @@ Terraformer follows a specific directory structure designed to be overlayed onto
   - `coding-conventions.md`: Rules and patterns.
 - **Dependencies**: Referenced by `AGENTS.md` and various Skills.
 
+### `knowledge/`
+
+- **Role**: Reusable Knowledge Base. Contains general techniques, guidelines, and reference materials that are not specific to the project's domain but essential for the AI team's operation.
+- **Key Files**:
+  - `prompting-techniques.md`: Advanced prompting strategies (e.g., #todos).
+  - `pr-creation-guidelines.md`: Rules for creating Pull Requests.
+  - `software-review-perspectives.md`: Checklist for code reviews.
+
 ### `docs/`
 
 - **Role**: Human-oriented documentation and high-level project context.
@@ -43,6 +51,7 @@ Terraformer follows a specific directory structure designed to be overlayed onto
 graph TD
     Root[Project Root] --> Github[".github"]
     Root --> AgentsDocs[agents-docs]
+    Root --> Knowledge[knowledge]
     Root --> Docs[docs]
     Root --> AgentsMD[AGENTS.md]
 
@@ -50,6 +59,7 @@ graph TD
     Github --> Templates[templates]
 
     AgentsMD -->|References| AgentsDocs
+    AgentsMD -->|References| Knowledge
     Prompts -->|Uses Context from| AgentsMD
 ```
 
