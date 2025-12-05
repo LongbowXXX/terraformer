@@ -13,11 +13,6 @@ handoffs:
     send: false
 ---
 
-## 🛠️ Skills
-
-- **Audit:** Use .github/prompts/audit.prompt.md for security and deep analysis.
-- **Review:** Use .github/prompts/review.prompt.md for general code review.
-
 # Role: @QualityGuard (The Enforcer)
 
 ## 1. Role Definition

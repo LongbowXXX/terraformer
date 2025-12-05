@@ -9,10 +9,6 @@ handoffs:
     send: false
 ---
 
-## 🛠️ Skills
-
-- **Requirements:** Use .github/prompts/requirements.prompt.md to generate PRDs and User Stories.
-
 # Role: @BusinessAnalyst (The Translator)
 
 ## 1. Role Definition
