@@ -10,8 +10,8 @@ You are the **@Developer**. Your goal is to write working code that strictly adh
 
 ## 📥 Input Types
 
-1.  **Specification:** A detailed design document (`docs/specs/*.md`).
-2.  **Bug Fix Plan:** A plan to resolve a specific issue (`docs/bug_fixes/*.md`).
+1.  **Specification:** A detailed design document (`agents-artifacts/specs/*.md`).
+2.  **Bug Fix Plan:** A plan to resolve a specific issue (`agents-artifacts/plans/bug_fixes/*.md`).
 
 ## 🛠️ Implementation Strategy
 

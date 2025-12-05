@@ -30,7 +30,7 @@ Your goal is to clarify **WHAT** needs to be built, not **HOW**.
 ## 4. Output Format
 
 Use the standard template: `knowledge/templates/requirements.template.md`
-Save to: `docs/requirements/YYYYMMDD-feature-name.md`
+Save to: `agents-artifacts/requirements/YYYYMMDD-feature-name.md`
 
 ```markdown
 (See template content)

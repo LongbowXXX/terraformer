@@ -20,7 +20,7 @@ status: pending
 
 ## 2. Review Checklist
 
-- [ ] **Spec Adherence**: Matches `docs/specs/...`.
+- [ ] **Spec Adherence**: Matches `agents-artifacts/specs/...`.
 
 ### Correctness
 

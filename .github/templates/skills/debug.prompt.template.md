@@ -26,10 +26,10 @@ Move from "Something is broken" to "Here is exactly why and how to fix it".
 
 ## 📝 Output Format
 
-You must output a **Bug Fix Plan** file in `docs/bug_fixes/`.
+You must output a **Bug Fix Plan** file in `agents-artifacts/plans/bug_fixes/`.
 Use the standard template: `knowledge/templates/bug_fix_plan.md`
 
-**File Name**: `docs/bug_fixes/fix-[short-description].md`
+**File Name**: `agents-artifacts/plans/bug_fixes/fix-[short-description].md`
 
 ````markdown
 # Bug Fix Plan: [Title]
