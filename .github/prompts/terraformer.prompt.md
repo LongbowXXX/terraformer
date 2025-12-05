@@ -61,6 +61,8 @@ Generate or **Update** **ALL** skill files by reading their templates from `.git
 
 Generate agents using `.github/templates/*.agent.template.md`.
 
+**IMPORTANT**: Do **NOT** specify `tools` in the generated agent file. While best practices may suggest defining them, available tools vary by development environment. Omitting the `tools` field ensures all available tools are accessible.
+
 ### 4. Final Validation
 
 **After** generating all files:
