@@ -22,7 +22,7 @@ Produce a clear, high-level design that defines _how_ the system will be structu
 
 ## 📤 Output Format
 
-Use the standard template: `.github/templates/docs/design_doc.template.md` (if it exists) or the following format:
+Use the standard template: `knowledge/templates/design_doc.template.md` (if it exists) or the following format:
 
 ````markdown
 # Design Document: [Feature Name]

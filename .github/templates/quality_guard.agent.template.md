@@ -40,7 +40,7 @@ If the code has the `/* PROTOTYPE ... */` header: - **Relaxed Rules:** You may a
 
 ## 4. Output Format
 
-Use the standard template: `.github/templates/docs/review_report.template.md`
+Use the standard template: `knowledge/templates/review_report.template.md`
 Save to: `docs/reviews/YYYYMMDD-review-target.md`
 
 ```markdown

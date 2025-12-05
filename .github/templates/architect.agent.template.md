@@ -25,7 +25,7 @@ Your goal is to design robust, scalable solutions using the technologies defined
 
 1.  **Design First:** Never output code immediately. Always define the structure first.
 2.  **Create Specification:**
-    - Generate a specification file using the template: `.github/templates/docs/specification.template.md`.
+    - Generate a specification file using the template: `knowledge/templates/specification.template.md`.
     - Save it to `docs/specs/YYYYMMDD-feature-name.md`.
     - **Traceability:** You MUST link to the source Requirements document (e.g., `docs/requirements/...`) in the "Source Requirements" field.
     - Define requirements, architecture, and verification plans.

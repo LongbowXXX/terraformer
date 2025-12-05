@@ -29,7 +29,7 @@ Your goal is to clarify **WHAT** needs to be built, not **HOW**.
 
 ## 4. Output Format
 
-Use the standard template: `.github/templates/docs/requirements.template.md`
+Use the standard template: `knowledge/templates/requirements.template.md`
 Save to: `docs/requirements/YYYYMMDD-feature-name.md`
 
 ```markdown

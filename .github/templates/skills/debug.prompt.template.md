@@ -27,7 +27,7 @@ Move from "Something is broken" to "Here is exactly why and how to fix it".
 ## 📝 Output Format
 
 You must output a **Bug Fix Plan** file in `docs/bug_fixes/`.
-Use the standard template: `.github/templates/docs/bug_fix_plan.md`
+Use the standard template: `knowledge/templates/bug_fix_plan.md`
 
 **File Name**: `docs/bug_fixes/fix-[short-description].md`
 

@@ -113,7 +113,7 @@ To ensure that AI and human collaboration is effective and auditable, we enforce
 
 ### Standardized Templates
 
-We use standard templates (e.g., `specification.template.md`, `review_report.template.md`) for all key deliverables.
+We use standard templates (e.g., `knowledge/templates/specification.template.md`, `knowledge/templates/review_report.template.md`) for all key deliverables.
 
 - **Consistency**: Ensures all agents and humans provide the same level of detail.
 - **Evidence**: Acts as a permanent record of decisions and agreements.

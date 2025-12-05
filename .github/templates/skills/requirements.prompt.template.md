@@ -23,7 +23,7 @@ Clarify the "What" and "Why" before the "How". Ensure that the development team 
 ## 📝 Output Format
 
 You must output a set of **User Stories**.
-Use the standard template: `.github/templates/docs/requirements.template.md`
+Use the standard template: `knowledge/templates/requirements.template.md`
 
 ```markdown
 # Requirements Specification
