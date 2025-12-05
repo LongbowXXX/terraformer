@@ -176,6 +176,16 @@ For detailed information, refer to the following documents:
 
 List all documentation files in `agents-docs/` directory, linking to them
 
+## 9. Knowledge Base
+
+→ **Details**: [knowledge/](./knowledge/)
+
+List all files in the `knowledge/` directory.
+
+| Topic        | Link                                             |
+| ------------ | ------------------------------------------------ |
+| [Topic Name] | [knowledge/filename.md](./knowledge/filename.md) |
+
 ```
 
 ## 🔍 Quality Checklist
