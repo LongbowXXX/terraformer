@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.7] - 2025-12-05
+
+### Added
+
+- **Prompts**: Added `terraformer` agent prompt for ANTP v1.4.
+- **Agents**: Added agent templates for Architect, Business Analyst, and Quality Guard roles.
+
 ## [0.0.6] - 2025-12-05
 
 ### Added
