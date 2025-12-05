@@ -56,13 +56,12 @@ This document outlines the key perspectives for conducting effective code review
 
 ## 2. PR Quality Checklist
 
-When reviewing the Pull Request itself, ensure the following:
+When reviewing the Pull Request itself, ensure it adheres to the strict guidelines defined in:
 
-- **Title:** Is the title clear, concise, and follows the conventional commit format if applicable?
-- **Description:**
-  - Does it explain **WHY** the change is needed, not just **WHAT** changed?
-  - Does it provide context for the reviewer?
-  - Are there screenshots or recordings for UI changes?
-  - Are related issues linked?
-- **Scope:** Is the PR focused on a single logical change? (Avoid "kitchen sink" PRs).
-- **Labels/Milestones:** Are appropriate metadata tags applied?
+- [PR Creation Guidelines](knowledge/pr-creation-guidelines.md)
+
+**Key Checks:**
+
+- **Description:** Does it explain **WHY** and **WHAT**?
+- **Verification:** Are manual/automated verification steps explicitly listed?
+- **Completeness:** Are screenshots/recordings included for UI changes?
