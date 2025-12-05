@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.6] - 2025-12-05
+
+### Added
+
+- **Agents**: Added QualityGuard agent template and comprehensive software review perspectives knowledge.
+- **Workflows**: Added `release-new-version` workflow.
+- **Context**: Added `terraform-context` prompt for generating project context.
+
+### Documentation
+
+- **Guidelines**: Added guidelines for PR creation and software review perspectives in `AGENTS.md`.
+- **Copilot**: Added custom prompting techniques for GitHub Copilot.
+
 ## [0.0.5] - 2025-12-04
 
 ### Added
