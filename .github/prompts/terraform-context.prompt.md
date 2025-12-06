@@ -74,7 +74,7 @@ _Note: Create these files with initial content based on your analysis. They will
 
 Generate the content for `AGENTS.md` following this structure. **Output in English.**
 
-```markdown
+````markdown
 # AGENTS.md - [Project Name]
 
 > One-line description of what this project does.
@@ -103,6 +103,7 @@ This file provides context and instructions for AI coding agents working on this
 - **[Pattern Name]**: [How it's applied in this project]
 
 ## 3. Directory Structure
+
 ```
 
 [Project Root]/
@@ -111,46 +112,51 @@ This file provides context and instructions for AI coding agents working on this
 │ └── [file] # [Purpose]
 └── [dir]/ # [Purpose]
 
-````
+```
 
 ### Key Directories
-| Directory | Purpose | Key Files |
-|-----------|---------|-----------|
-| `src/core` | Core business logic | `domain.ts`, `services/` |
-| `src/infra` | External adapters | `database.ts`, `api/` |
+
+| Directory   | Purpose             | Key Files                |
+| ----------- | ------------------- | ------------------------ |
+| `src/core`  | Core business logic | `domain.ts`, `services/` |
+| `src/infra` | External adapters   | `database.ts`, `api/`    |
 
 ## 4. Key Concepts (Ubiquitous Language)
 
-| Term | Definition | Example |
-|------|------------|---------|
-| **[Domain Term]** | [Clear definition] | [Usage example] |
+| Term                 | Definition         | Example         |
+| -------------------- | ------------------ | --------------- |
+| **[Domain Term]**    | [Clear definition] | [Usage example] |
 | **[Technical Term]** | [Clear definition] | [Usage example] |
 
 ## 5. Entry Points
 
-| Entry Point | Location | Purpose |
-|-------------|----------|---------|
-| Main | `src/index.ts` | Application bootstrap |
-| API Routes | `src/routes/` | HTTP endpoints |
-| CLI | `src/cli.ts` | Command-line interface |
+| Entry Point | Location       | Purpose                |
+| ----------- | -------------- | ---------------------- |
+| Main        | `src/index.ts` | Application bootstrap  |
+| API Routes  | `src/routes/`  | HTTP endpoints         |
+| CLI         | `src/cli.ts`   | Command-line interface |
 
 ## 6. Development Rules (Constitution Summary)
 
 ### Must Follow
+
 - [e.g., All database access through Repository layer]
 - [e.g., No direct DOM manipulation outside React components]
 
 ### Must Avoid
+
 - [e.g., Inline SQL queries in business logic]
 - [e.g., Synchronous file operations in request handlers]
 
 ### Patterns to Use
+
 - [e.g., Factory pattern for complex object creation]
 - [e.g., Strategy pattern for algorithm selection]
 
 ## 7. Quick Reference
 
 ### Common Commands
+
 ```bash
 # Development
 [command]  # [description]
@@ -160,7 +166,7 @@ This file provides context and instructions for AI coding agents working on this
 
 # Build
 [command]  # [description]
-````
+```
 
 ### Important Files for AI Agents
 
@@ -185,8 +191,7 @@ List all files in the `knowledge/` directory.
 | Topic        | Link                                             |
 | ------------ | ------------------------------------------------ |
 | [Topic Name] | [knowledge/filename.md](./knowledge/filename.md) |
-
-```
+````
 
 ## 🔍 Quality Checklist
 
@@ -197,6 +202,7 @@ Before outputting, verify:
 - [ ] **Conciseness**: No redundant information
 - [ ] **Actionability**: AI agents can use this to navigate the codebase
 - [ ] **No Placeholders**: All `[brackets]` replaced with actual values
+
 ```
 
 ## ✅ Final Check
@@ -207,3 +213,4 @@ Before outputting, verify:
 - [ ] `AGENTS.md` has been generated with all required sections.
 - [ ] Initial documentation files in `agents-docs/` have been created.
 - [ ] All placeholders in the generated files are replaced with actual values.
+```
