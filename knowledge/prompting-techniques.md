@@ -171,12 +171,12 @@ If you cannot identify the root cause after **3 attempts** or if the fix require
 
 ### Problem
 
-Official GitHub Copilot best practices suggest explicitly defining the `tools` available to an agent or prompt. However, developers' environments vary significantly. Users may have installed:
+Official GitHub Copilot best practices suggest explicitly defining the `tools` available to an agent or prompt. However, this approach has significant downsides when generating prompts automatically:
 
-- Different VS Code Extensions that provide tools.
-- Various MCP (Model Context Protocol) servers that expose custom capabilities.
+- **Environment Variability**: Developers' environments vary significantly (different Extensions, MCP servers). Hardcoding tools inadvertently disables access to context-specific tools that the user might have installed.
+- **Hallucinations**: AI models frequently hallucinate tool names that do not exist explicitly or use incorrect names, leading to broken prompts or errors.
 
-If an AI-generated prompt explicitly hardcodes a list of `tools`, it effectively "allows only" those tools, inadvertently disabling access to other useful tools present in the user's specific environment.
+If an AI-generated prompt explicitly hardcodes a list of `tools`, it limits flexibility and increases the risk of including invalid tools.
 
 ### Solution
 
@@ -210,7 +210,6 @@ tools: ["search", "fetch"]
 ---
 name: My Flexible Agent
 description: An agent that can use whatever tools the user has installed.
-# tools property is omitted intentionally to allow all available tools
 ---
 ```
 
