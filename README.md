@@ -121,6 +121,18 @@ It provides resources such as:
 - [AI-Oriented Docs](./agents-docs/) - Detailed documentation for AI agents and developers.
 - [Context Map for Agents](./AGENTS.md) - High-density project summary for AI coding agents.
 
+## 📓 Interactive Guide (Google NotebookLM)
+
+We have published a Google NotebookLM workspace pre-loaded with this repository.
+**Note: The content inside this Notebook is in Japanese.**
+
+You can use it to:
+
+- Ask questions about the project using the Chat interface.
+- Listen to / Watch the generated introductory content (Audio Overview).
+
+🔗 [Open Google NotebookLM](https://notebooklm.google.com/notebook/19713d26-a3bd-4f4f-9bb7-78c52829c660)
+
 ## 🤖 Meet Our Mascot: ANTP-Bot ("Ant")
 
 Terraformer isn't just a tool; it's a mission to cultivate legacy code.
