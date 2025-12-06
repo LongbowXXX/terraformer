@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.8] - 2025-12-06
+
+### Added
+
+- **Knowledge**: Added AI Literacy section and human AI-readiness documentation.
+- **Prompts**: Added prompt for generating `AGENTS.md` context file.
+- **Documentation**: Added `knowledge/` directory description to `README.md`.
+- **Agents**: Introduced core AI agent roles and skill prompt templates.
+- **Workflows**: Added workflow for creating new custom prompt skills.
+
 ## [0.0.7] - 2025-12-05
 
 ### Added
