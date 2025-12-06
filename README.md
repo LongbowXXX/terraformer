@@ -112,6 +112,7 @@ It provides resources such as:
 - **Prompting Techniques**: Best practices for interacting with AI agents.
 - **Review Guidelines**: Standardized perspectives for code reviews.
 - **Templates**: Reusable patterns for documentation and workflows.
+- **AI Literacy**: Resources to make _humans_ AI-Ready and effective at using AI agents.
 
 ## 📄 Documentation
 
