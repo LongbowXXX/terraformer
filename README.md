@@ -104,6 +104,15 @@ In this mode:
 - `@QualityGuard` relaxes review criteria.
 - Generated code is marked with `/* PROTOTYPE */` and is **not production-ready**.
 
+## 📚 Universal Knowledge (`knowledge/`)
+
+This directory contains universally available knowledge and templates that do not depend on a specific project.
+It provides resources such as:
+
+- **Prompting Techniques**: Best practices for interacting with AI agents.
+- **Review Guidelines**: Standardized perspectives for code reviews.
+- **Templates**: Reusable patterns for documentation and workflows.
+
 ## 📄 Documentation
 
 - [Project Charter (ANTP v1.4)](./docs/PROJECT_CHARTER.md) - The core philosophy.
