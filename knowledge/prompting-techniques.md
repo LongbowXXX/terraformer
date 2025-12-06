@@ -166,3 +166,56 @@ If you cannot identify the root cause after **3 attempts** or if the fix require
 - **Efficiency**: Prevents "flailing" where the agent burns tokens and time on bad paths.
 - **Safety**: Reduces the chance of hallucinated "fixes" breaking things further.
 - **Collaboration**: Brings the human back in the loop exactly when needed.
+
+## Environment-Agnostic Tool Support
+
+### Problem
+
+Official GitHub Copilot best practices suggest explicitly defining the `tools` available to an agent or prompt. However, developers' environments vary significantly. Users may have installed:
+
+- Different VS Code Extensions that provide tools.
+- Various MCP (Model Context Protocol) servers that expose custom capabilities.
+
+If an AI-generated prompt explicitly hardcodes a list of `tools`, it effectively "allows only" those tools, inadvertently disabling access to other useful tools present in the user's specific environment.
+
+### Solution
+
+**Deliberately ignore** the best practice of explicit tool specification when generating new custom prompts or agents. Instead, omit the `tools` property entirely. This allows the default behavior to take over, which generally permits access to all tools available in the current context (including those from Extensions and MCP servers).
+
+**Exception**: If you are basing a new prompt on a specific existing reference (e.g., copying a strict agent definition), it is acceptable to copy the `tools` list to maintain the intended behavior of that reference.
+
+### Implementation Steps
+
+1.  **Omit `tools` Property**:
+    When creating `.prompt.md` or `.agent.md` files, do not generate a `tools: [...]` section.
+
+2.  **User Delegation**:
+    If specific tools must be restricted or strictly managed, leave that configuration to the human user.
+
+### Example Template
+
+**Avoid this (unless copying strict reference):**
+
+```markdown
+---
+name: My Strict Agent
+description: An agent with hardcoded tools
+tools: ["search", "fetch"]
+---
+```
+
+**Prefer this (Environment-Agnostic):**
+
+```markdown
+---
+name: My Flexible Agent
+description: An agent that can use whatever tools the user has installed.
+# tools property is omitted intentionally to allow all available tools
+---
+```
+
+### Benefits
+
+- **Flexibility**: Automatically supports new tools added by extensions or MCP servers without code changes.
+- **Portability**: The prompt works across different developer setups without breaking due to missing or extra tools.
+- **Power**: Allows the agent to leverage the full capabilities of the user's IDE.
