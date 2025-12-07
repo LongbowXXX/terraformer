@@ -1,20 +1,25 @@
-# XML Structured Prompting Guide
+# XML + Markdown Structured Prompting Guide
 
-This guide explains how to use XML tags to improve the reliability and accuracy of Large Language Models (LLMs).
+This guide explains how to combine **XML tags** and **Markdown** to create prompts that are both machine-parseable and human-readable.
 
-## 1. The Problems with Standard Prompting
+## 1. The Power of XML + Markdown
 
-Using plain natural language for complex prompts often leads to:
+While XML provides strict structural boundaries that LLMs excel at parsing, Markdown proivdes semantic meaning and readability. combining them gives you the best of both worlds.
 
-- **Ambiguity**: The model confuses instructions with data (e.g., treating a user's email content as a new command).
-- **Context Bleeding**: It's unclear where one part of the prompt ends and another begins (e.g., mixing up history with current instructions).
-- **Unstable Output**: Difficulty in extracting specific answers programmatically.
+### Why this combination works:
 
-## 2. Benefits of Using XML Tags
+1.  **XML defines the "Container"**: It tells the model _where_ information looks like and _what_ it is (e.g., `<instruction>`, `<context>`). This prevents context bleeding.
+2.  **Markdown defines the "Content"**: It tells the model _how_ to interpret the text inside (e.g., **bold** for emphasis, `-` for lists, `###` for hierarchy).
 
-- **Hard Boundaries**: Tags like `<instruction>` and `<data>` clearly separate _what to do_ from _what to process_.
-- **Parseability**: Outputs wrapped in tags (e.g., `<answer>`) can be essentially extracted by code.
-- **Model Native**: LLMs are trained on vast amounts of HTML/XML, making them naturally good at understanding this structure.
+> **Concept**: Think of XML as the **envelope** and Markdown as the **formatted letter** inside.
+
+## 2. Benefits
+
+- **Clear Boundaries (XML)**: No confusion between instructions and data.
+- **Rich Semantics (Markdown)**: Lists, headers, and code blocks allow for complex instructions without massive blocks of plain text.
+- **Dual Readability**:
+  - **For AI**: It parses the XML structure first, then processes the Markdown semantics.
+  - **For Humans**: The prompt remains visually organized and easy to edit.
 
 ## 3. Common XML Tags Cheatsheet
 
@@ -34,9 +39,9 @@ Using plain natural language for complex prompts often leads to:
 |              | `<plan_style_guide>` | Specific formatting rules for the agent's output (e.g., plans).        |
 | **Output**   | `<output>`           | The final answer container.                                            |
 
-## 4. Practical Example
+## 4. Practical Example: XML + Markdown
 
-Here is a standard template for a robust prompt:
+Here is a standard template showing how Markdown organizes the content _within_ the XML tags:
 
 ```xml
 <system>
@@ -46,19 +51,24 @@ Here is a standard template for a robust prompt:
 <context>
     <documents>
         <document index="1">
+            ### Spec v1.0
             (Content of the first document...)
         </document>
     </documents>
 </context>
 
 <instruction>
-    Summarize the provided documents in 3 bullet points.
-    First, analyze the key points in a <thinking> block, then provide the final summary in an <output> block.
+    ### Your Task
+    Summarize the provided documents in **3 bullet points**.
+
+    ### Process
+    1.  **Analyze**: Look for key themes in the `<thinking>` block.
+    2.  **Draft**: Write the summary in the `<output>` block.
 </instruction>
 
 <constraints>
-    - Do not use technical jargon.
-    - Keep each bullet point under 20 words.
+    - **No Jargon**: Use simple language.
+    - **Length**: Keep each point under 20 words.
 </constraints>
 ```
 
