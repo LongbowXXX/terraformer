@@ -71,6 +71,8 @@ To lead effectively, you must know your team's strengths and weaknesses.
   - The open standard format for defining AI agent context used in this project.
 - [VS Code Repository](https://github.com/microsoft/vscode)
   - VS Code is developed using VS Code and Copilot. A great reference for settings and Copilot prompts.
+- [VS Code GitHub Copilot Extension](https://github.com/microsoft/vscode-copilot-chat)
+  - The official GitHub Copilot Chat extension for VS Code. Source code and implementation details.
 
 ---
 
