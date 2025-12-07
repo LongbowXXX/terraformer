@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.9] - 2025-12-07
+
+### Added
+
+- **Documentation**: Initial agent documentation covering architecture, conventions, and operational guidelines.
+- **Prompts**: AI agent prompts for project context generation and agent/skill management.
+- **Workflows**: Workflow to improve Copilot prompt files using XML structured prompting.
+- **Knowledge**: Guide on XML + Markdown structured prompting for LLMs.
+- **Documentation**: Google NotebookLM interactive guide and intro video link to README.
+- **Documentation**: GitHub Copilot Chat extension link to AI Literacy README.
+
 ## [0.0.8] - 2025-12-06
 
 ### Added
