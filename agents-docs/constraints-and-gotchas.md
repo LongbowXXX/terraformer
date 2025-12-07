@@ -4,27 +4,24 @@
 
 ## Performance Requirements
 
-- **Latency**: Copilot responses depend on the LLM's load. Complex prompts (like `/plan`) may take longer to generate.
-- **Context Window**: There is a limit to how much context Copilot can read. Keep `AGENTS.md` and `agents-docs/` concise and high-density.
+- **Token Usage**: Agents must be concise. `AGENTS.md` and skills are injected into the context window, so they must be kept as compact as possible to leave room for the actual codebase.
+- **Latency**: Agent responses (especially with GPT-4 class models) can take time. Users should be patient.
 
 ## Security Considerations
 
-- **No Secrets**: Never put API keys, passwords, or sensitive data in `AGENTS.md` or Prompts. These are sent to the LLM.
-- **Code Safety**: AI-generated code must always be reviewed. `@QualityGuard` is a safeguard, not a guarantee.
+- **Secrets**: Do NOT put secrets (API keys, passwords) in `AGENTS.md` or any prompt file. These are sent to the LLM.
+- **Code Execution**: The `@Developer` agent writes code, but it is the _user's_ responsibility to review and execute it. Agents should not be given autonomous access to dangerous terminals.
 
 ## Known Technical Debt
 
-- **Prompt Fragility**: LLMs are non-deterministic. A prompt that works today might behave slightly differently tomorrow.
-- **Context Drift**: If `AGENTS.md` is not updated, the AI will make decisions based on outdated info.
+- **Context "Compression"**: As a project grows, `AGENTS.md` might become too large. We need to implement a mechanism to split or summarize context (e.g., retrieval-augmented generation or RAG) in future ANTP versions.
+- **Model Dependency**: Some complex prompts (like `/plan`) are optimized for GPT-4 and might perform poorly on weaker models.
 
 ## Common Troubles and Solutions
 
-- **"I don't know about X"**: The AI claims ignorance.
-  - _Solution_: Check if "X" is documented in `AGENTS.md` or `agents-docs/`. If not, add it.
-- **Agent breaks character**: `@Developer` starts designing architecture.
-  - _Solution_: Remind the agent of its role or re-run `/terraform-context` to refresh `AGENTS.md`.
+- **"I don't know about file X"**: The agent might not have the file in its context. Open the file in the editor or reference it explicitly (`#file:path/to/file`) in the chat.
+- **Hallucinations**: If an agent invents a library function, check the `tech-stack.md` and ensure the library version is compatible.
 
 ## Constraints
 
-- **Text-Only**: Copilot Chat is primarily text-based. It cannot "see" images or run binary executables.
-- **No File System Access**: Agents cannot _directly_ create files without user confirmation (they propose changes).
+- **Anti-Generalist Principle**: `@Developer` will REFUSE to make changes that contradict the `implementation_plan.md`. This is a feature, not a bug. If you need to change the spec, ask `@Architect`.

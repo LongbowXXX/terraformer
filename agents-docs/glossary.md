@@ -4,28 +4,26 @@
 
 ## Key Concepts
 
-| Term                  | Definition                                                                                                        |
-| :-------------------- | :---------------------------------------------------------------------------------------------------------------- |
-| **ANTP**              | **AI-Native Transformation Protocol**. The methodology for converting legacy projects into AI-ready environments. |
-| **Context Debt**      | The implicit, undocumented knowledge in a project that causes AI agents to fail.                                  |
-| **Terraformer**       | The meta-engine that implements ANTP.                                                                             |
-| **Constitution (L1)** | The immutable rules and high-level context defined in `AGENTS.md`.                                                |
-| **Skill (L2)**        | A standardized operating procedure (SOP) defined as a Prompt (`.github/prompts/*.prompt.md`).                     |
-| **Knowledge (L3)**    | Explicit documentation formatted for AI consumption (`agents-docs/*`).                                            |
-| **Agent (L4)**        | A specialized persona with specific authority and skills (`.github/agents/*.agent.md`).                           |
+| Term                          | Definition                                                                                                                                                 |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Context Debt**              | The invisible accumulation of implicit knowledge (tribal knowledge) in a project that makes it difficult for AI (and new humans) to understand the system. |
+| **ANTP**                      | **AI-Native Transformation Protocol**. A methodology to restructure legacy projects into environments where humans and AI can collaborate effectively.     |
+| **Meta-Engine**               | A system (like Terraformer) that generates configuration and agents for _other_ systems.                                                                   |
+| **Anti-Generalist Principle** | The rule that AI agents should have specialized roles and authority limits, rather than being generic "do-it-all" chatbots.                                |
 
 ## Domain Terminology
 
-| Term                | Definition                                                                            |
-| :------------------ | :------------------------------------------------------------------------------------ |
-| **Anti-Generalist** | The principle that AI agents should have narrow, specialized roles to prevent errors. |
-| **Meta-Prompt**     | A prompt used to generate other prompts or configurations (e.g., `/terraformer`).     |
-| **SOP**             | Standard Operating Procedure. A step-by-step guide for a specific task.               |
+| Term             | Definition                                                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Agent**        | A specialized persona (e.g., `@Architect`) defined by a system prompt and a set of allowed tools/skills.     |
+| **Skill**        | A specific capability or Standard Operating Procedure (SOP) defined as a prompt file (e.g., `/plan`).        |
+| **Constitution** | The `AGENTS.md` file that defines the high-level rules and context for all agents.                           |
+| **Context Map**  | A structured document (`AGENTS.md`) that maps the project's architecture, rules, and terminology for the AI. |
 
 ## Acronyms
 
-| Acronym | Full Name                     | Description                                               |
-| :------ | :---------------------------- | :-------------------------------------------------------- |
-| **LLM** | Large Language Model          | The underlying AI technology (e.g., GPT-4).               |
-| **PRD** | Product Requirement Document  | A document describing the requirements for a feature.     |
-| **ADR** | Architectural Decision Record | A document capturing an important architectural decision. |
+| Acronym | Full Name                    | Description                                                               |
+| ------- | ---------------------------- | ------------------------------------------------------------------------- |
+| **SOP** | Standard Operating Procedure | A step-by-step guide for performing a specific task (encoded as a Skill). |
+| **ADR** | Architecture Decision Record | A document capturing an important architectural decision.                 |
+| **LLM** | Large Language Model         | The underlying AI model (e.g., GPT-4) powering the agents.                |

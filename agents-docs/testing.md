@@ -4,44 +4,33 @@
 
 ## Test Configuration
 
-Since Terraformer is a configuration engine for AI agents, "testing" primarily involves verifying that the prompts and agent definitions produce the desired behavior in GitHub Copilot.
+Since Terraformer is a "Prompt Engineering" project, "tests" are primarily manual verifications of the generated output (LLM responses).
 
-## Types of Tests
+## Types of Testing
 
-### Prompt Logic Tests (Unit Tests)
+### Verification (Human-in-the-Loop)
 
-- **Goal**: Verify that a specific Skill (e.g., `/plan`) follows its instructions.
-- **Method**:
-  1.  Open a test file.
-  2.  Invoke the skill.
-  3.  Verify the output format and content against the prompt's requirements.
+- **Scope**: All agent outputs.
+- **Method**: User explicitly follows the flow: `@Architect` -> User Approval -> `@Developer`.
+- **Criteria**: Does the generated code match the generated plan?
 
-### Agent Interaction Tests (Integration Tests)
+### Prototype Mode Testing
 
-- **Goal**: Verify that Agents respect their roles and boundaries.
-- **Method**:
-  1.  Ask `@Developer` to change a requirement.
-  2.  **Expected Result**: Refusal and escalation to `@Architect`.
-  3.  Ask `@Architect` to plan a feature.
-  4.  **Expected Result**: A detailed plan in the correct format.
+- **Target**: Rapid prototyping sessions.
+- **Method**: User adds "(Prototype Mode)" to the request.
+- **Expectation**: Lower strictness, faster output. Code may contain `TODO` or simplifications.
 
-## Test Execution Method
+### Regression Testing (for Prompts)
 
-Currently, testing is manual.
+- **Target**: Core skills like `/plan` and `/refactor`.
+- **Method**: Re-running standard prompts against a known "Golden" codebase (e.g., the `terraformer` repo itself) and checking if the output structure remains consistent.
 
-1.  **Setup**: Install the `.github` folder into a clean "Test Project".
-2.  **Execution**: Run through the Key Flows defined in `key-flows.md`.
-3.  **Validation**: Check if the AI's responses match the "Expected Behavior" defined in the Skill/Agent files.
+## Test Data Management
+
+- **Golden Project**: The `terraformer` repository itself serves as the primary test case.
+- **Test Projects**: Create varying "legacy" projects (e.g., a messy Python script, a monolithic Java app) to test the `/terraform-context` generation capabilities.
 
 ## Testing Best Practices
 
-- **Clear Context**: Always ensure `AGENTS.md` is up-to-date before testing.
-- **Isolation**: Test one skill at a time to isolate issues.
-- **Edge Cases**: Test with ambiguous requests to see if the Agent asks for clarification.
-
-## Common Testing Issues
-
-- **Hallucination**: The AI invents facts not in the context.
-  - _Solution_: Add explicit constraints to the Prompt or `AGENTS.md`.
-- **Ignoring Instructions**: The AI skips a step in the SOP.
-  - _Solution_: Use stronger language (e.g., "You MUST...") or break the prompt into smaller steps.
+- **Atomic Prompts**: Test skills with simple, atomic requests first.
+- **Context Overload Checks**: Verify that agents don't crash or get confused when `AGENTS.md` is large.

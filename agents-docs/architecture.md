@@ -4,63 +4,71 @@
 
 ## System Overview
 
-Terraformer is a meta-engine and reference implementation of the **AI-Native Transformation Protocol (ANTP)**. Its primary purpose is to transform legacy "human-only" software projects into "AI-Ready" environments. It achieves this not by adding runtime code, but by injecting a structured configuration layer that enables GitHub Copilot to function as a specialized team of AI agents.
+**Terraformer** is a Meta-Engine and reference implementation of the **AI-Native Transformation Protocol (ANTP)**.
+Its primary purpose is to transform existing "human-centric" software projects into **AI-Native ecosystems** where humans and AI agents can collaborate seamlessly.
+
+Unlike typical AI coding assistants that simply autocomplete code, Terraformer operates as a **configuration engine**. It analyzes the target project and generates a "Context Map" and a specialized "AI Team" (Agents and Skills) tailored to that project. This eliminates "Context Debt"—the invisible knowledge gap that causes AI to hallucinate or drift from specifications.
 
 ## Key Components
 
-The system is built upon the **Roles & Skills Architecture**, consisting of four distinct layers:
+The system is built upon the **Roles & Skills Architecture** (ANTP v1.4), comprising four distinct layers:
 
-1.  **L1: Constitution (Immutable Rules)**
+### L1: Constitution (Immutable Rules)
 
-    - **File**: `AGENTS.md`
-    - **Responsibility**: Defines the high-level rules, agent roles, and authority boundaries (e.g., the "Anti-Generalist Principle").
+- **Role**: Defines the fundamental laws and operating principles of the AI agents.
+- **Key Artifact**: `AGENTS.md`
+- **Responsibility**: ensuring all agents adhere to the "Anti-Generalist Principle" and respect role boundaries.
 
-2.  **L2: Skills (Standard Operating Procedures)**
+### L2: Skills (Standard Operating Procedures)
 
-    - **Files**: `.github/prompts/*.prompt.md`
-    - **Responsibility**: Provides reusable, standardized instructions (SOPs) for specific tasks like planning, refactoring, and testing.
+- **Role**: Provides agents with specific, executable capabilities.
+- **Key Artifacts**: `.github/prompts/*.prompt.md`
+- **Responsibility**: Enabling agents to perform complex tasks like "Refactoring", "Planning", or "Auditing" using standardized, best-practice workflows.
 
-3.  **L3: Knowledge (Explicit Context Map)**
+### L3: Knowledge (Explicit Context Map)
 
-    - **Files**: `agents-docs/*`
-    - **Responsibility**: Stores detailed, AI-consumable documentation about the project's architecture, directory structure, and conventions.
+- **Role**: Acts as the external long-term memory for the project.
+- **Key Artifacts**: `agents-docs/`, `knowledge/`
+- **Responsibility**: Storing architectural decisions, coding conventions, domain terminology, and guidelines that are too voluminous to fit in a single prompt context but essential for high-quality output.
 
-4.  **L4: Agents (Specialized Roles)**
-    - **Files**: `.github/agents/*.agent.md` (conceptually defined in `AGENTS.md`)
-    - **Responsibility**: Defines the persona, authority, and constraints for specific AI roles (e.g., `@Architect`, `@Developer`).
+### L4: Agents (Specialized Roles)
+
+- **Role**: The active participants that execute tasks.
+- **Key Artifacts**: `.github/agents/*.agent.md` (implied/generated via Copilot Custom Agents or templates)
+- **Responsibility**: Each agent (e.g., `@Architect`, `@Developer`) has a specific scope of authority and a defined set of allowed skills.
 
 ## Architecture Diagram
 
 ```mermaid
 graph TD
-    User[User / Developer] -->|Interacts via Chat| Copilot[GitHub Copilot]
-    Copilot -->|Reads| L1["L1: Constitution (AGENTS.md)"]
-    Copilot -->|Reads| L4["L4: Agents (.github/agents)"]
-    Copilot -->|Executes| L2["L2: Skills (.github/prompts)"]
-    Copilot -->|References| L3["L3: Knowledge (agents-docs)"]
+    User[User / Developer] -->|Interacts via| Chat[Copilot Chat]
+    Chat -->|Invokes| Agent["Specialized Agent (L4)"]
 
-    subgraph "Terraformer (ANTP)"
-        L1
-        L4
-        L2
-        L3
+    subgraph "Terraformer Engine (ANTP)"
+        Agent -->|Follows| Const["Constitution (L1)"]
+        Agent -->|Uses| Skill["Skill / Prompt (L2)"]
+        Agent -->|Reads| Know["Knowledge / Docs (L3)"]
+
+        Skill -->|References| Know
     end
 
-    L2 -->|Generates/Modifies| Codebase[Target Project Codebase]
+    Agent -->|Modifies| Code[Project Codebase]
 ```
 
 ## Data Flow
 
-1.  **Initialization**: The user installs Terraformer (copies `.github` folder).
-2.  **Context Generation**: User runs `/terraform-context` to generate `AGENTS.md` (L1 & L3 summary).
-3.  **Agent Activation**: User invokes an agent (e.g., `@Architect`) in Copilot Chat.
-4.  **Skill Execution**: The agent executes a skill (e.g., `/plan`).
-5.  **Output**: Copilot generates code, plans, or documentation based on the definitions and context.
+1.  **Context Injection**: When a user invokes an agent (e.g., `@Architect`), the `AGENTS.md` (L1) is loaded into the context.
+2.  **Instruction Execution**: The agent receives the user's prompt and selects the appropriate Skill (L2) (e.g., `/plan`).
+3.  **Knowledge Retrieval**: The skill may reference specific documents in `agents-docs` or `knowledge` (L3) to ground its response in the project's actual standards.
+4.  **Output Generation**: The agent generates a response (code, plan, or answer) that is strictly aligned with the retrieved context.
 
 ## Design Background and Rationale
 
-**The Problem: Context Debt**
-Traditional projects rely on implicit knowledge that AI cannot access. This leads to hallucinations, specification drift, and low-quality code when using generic AI assistants.
+The primary design philosophy is the **Anti-Generalist Principle**.
+Generic AI models fail at complex software engineering tasks because they lack "context" and "accountability".
 
-**The Solution: Explicit Context**
-Terraformer solves this by making context explicit and structured. By defining roles and skills as code (configuration), it ensures that AI agents operate within safe boundaries and follow established patterns, effectively treating the development process itself as a programmable entity.
+Terraformer addresses this by:
+
+1.  **Specialization**: Splitting the "AI" into distinct roles (Planning vs. Implementation vs. OA).
+2.  **Explicit Context**: Forcing implicit knowledge (formatting rules, architectural patterns) into explicit documentation that the AI _must_ read.
+3.  **Strict Boundaries**: Preventing implementation agents (`@Developer`) from making design decisions, mirroring a healthy human engineering team structure.

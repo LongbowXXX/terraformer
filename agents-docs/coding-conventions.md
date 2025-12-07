@@ -4,49 +4,35 @@
 
 ## Design Principles
 
-1.  **Anti-Generalist Principle**:
-
-    - AI Agents must have specialized roles.
-    - `@Developer` is strictly prohibited from making specification changes without `@Architect` approval.
-    - This prevents "Specification Drift" where AI fixes code but breaks business logic.
-
-2.  **Explicit Context**:
-
-    - Do not rely on implicit knowledge. All context must be explicitly documented in `AGENTS.md` or `agents-docs/`.
-
-3.  **DRY (Don't Repeat Yourself)**:
-
-    - Avoid duplicating information across prompts. Reference shared documentation in `agents-docs/` instead.
-
-## Documentation Policy
-
-- **Transparency**: All AI-generated documentation MUST include a generation tag at the top of the file to warn users of potential hallucinations.
-  - Format: `<!-- This document is generated and updated by [source] -->` (e.g., `.github/prompts/doc-sync.prompt.md` or `@AgentName`).
-
-4.  **Human-in-the-Loop**:
-    - All AI-generated code must be reviewed by a human (or `@QualityGuard`).
+- **Anti-Generalist Principle**: AI agents must have narrow, well-defined responsibilities. No agent should be a "jack of all trades".
+- **Explicit Context Over Implicit Knowledge**: All rules must be written down in `knowledge/` or `agents-docs/`. Do not assume the AI knows your preferences.
+- **Single Source of Truth**: `AGENTS.md` is the single entry point that orchestrates the entire system.
 
 ## Adopted Design Patterns
 
-- **Meta-Prompting**: Using prompts to generate other prompts (e.g., `/terraformer`).
-- **Chain of Thought**: Encouraging agents to plan before executing (`/plan`).
-- **Role-Based Access Control (RBAC)**: Simulating authority levels via prompt instructions.
+- **Roles & Skills Architecture**: Decoupling the "Who" (Agent) from the "How" (Skill).
+- **Meta-Prompting**: Using prompts to generate other prompts (e.g., `/terraformer`, `/create-custom-prompt`).
+- **XML Structured Prompting**: Using XML tags to structure prompt files for better machine readability.
 
 ## Naming Conventions
 
-- **Agents**: PascalCase with `@` prefix (e.g., `@Architect`, `@QualityGuard`).
-- **Skills**: kebab-case with `/` prefix (e.g., `/plan`, `/doc-sync`).
-- **Agent Files**: `[agent-name].agent.md` (e.g., `architect.agent.md`).
-- **Skill Files**: `[skill-name].prompt.md` (e.g., `plan.prompt.md`).
-- **Documentation**: kebab-case (e.g., `coding-conventions.md`).
+### File Names
 
-## Code Style
+- **Prompts (Skills)**: `kebab-case.prompt.md` (e.g., `terraform-context.prompt.md`)
+- **Agents**: `PascalCase.agent.md` (e.g., `Architect.agent.md`) - _Note: The file extension is important for VS Code recognition._
+- **Documentation**: `kebab-case.md` (e.g., `coding-conventions.md`)
 
-- **Format**: GitHub Flavored Markdown (GFM).
-- **Language**: English (US) for all documentation and comments.
-- **Diagrams**: Mermaid.js for all diagrams.
+### Workflow Names
+
+- **Slash Commands**: `/command-name` (e.g., `/sync-doc`, `/plan`).
+
+## Code Style (Prompt Engineering)
+
+- **Frontmatter**: All prompt files must start with YAML frontmatter defining `name`, `description`, etc.
+- **XML Structure**: Use `<system>`, `<user>`, `<instruction>` tags to clearly delimit sections.
+- **Variables**: Use `{{ variable_name }}` syntax for template placeholders (Liquid-style).
 
 ## Testing Policy
 
-- **Prompt Testing**: Prompts are tested by running them against reference projects and verifying the output.
-- **Regression Testing**: Ensure new skills do not break existing agent behaviors.
+- **Prompt Validation**: New prompts should be tested against a set of "golden queries" to ensure they don't hallucinate.
+- **Prototype Mode**: Use "Prototype Mode" to bypass strict specification checks for rapid iteration.

@@ -4,64 +4,65 @@
 
 ## Entry Point
 
-The primary entry point for the user is **GitHub Copilot Chat** in VS Code. The user interacts with the system by invoking Agents (`@Name`) or running Skills (`/command`).
+The entry point for any project using Terraformer is the generation of the Context Map.
 
-## Use Case 1: Initializing a Project
-
-### Overview
-
-Transforming a legacy project into an AI-Ready environment.
-
-### Processing Flow
-
-1.  **Install**: User copies `.github` folder to the target project.
-2.  **Context**: User runs `/terraform-context`.
-    - Terraformer analyzes the project structure.
-    - Generates `AGENTS.md` with a high-density summary.
-3.  **Team Gen**: User runs `/terraformer`.
-    - Terraformer reads `AGENTS.md`.
-    - Generates customized `.github/agents/*.agent.md`.
-    - Generates standard `.github/prompts/*.prompt.md`.
-
-## Use Case 2: Implementing a Feature
+## Flow 1: Context Map Generation (`/terraform-context`)
 
 ### Overview
 
-Standard flow for adding a new feature using the specialized agent team.
+Analyzes the existing project structure and generates `AGENTS.md` to serve as the "Constitution" and "Knowledge Hub" for the AI agents.
 
 ### Sequence Diagram
 
 ```mermaid
 sequenceDiagram
-    actor User
-    participant Arch as @Architect
-    participant Dev as @Developer
-    participant QG as @QualityGuard
+    participant User
+    participant Copilot as Copilot Chat
+    participant Engine as Terraformer Engine
 
-    User->>Arch: "We need feature X"
-    Arch->>Arch: /plan (Analyze Impact)
-    Arch-->>User: Proposes Implementation Plan
-    User->>Arch: Approves Plan
-
-    User->>Dev: "Implement feature X based on plan"
-    Dev->>Dev: /implement (Write Code)
-    Dev-->>User: "Implementation Complete"
-
-    User->>QG: "Review changes"
-    QG->>QG: /audit (Code Review)
-    QG-->>User: "Approved / Changes Requested"
+    User->>Copilot: /terraform-context
+    Copilot->>Engine: specifices .github/prompts/terraform-context.prompt.md
+    Engine->>Engine: Analyze file structure
+    Engine->>Engine: Analyze dependencies
+    Engine->>Copilot: Generate AGENTS.md content
+    Copilot->>User: Display AGENTS.md
+    User->>User: Save to project root
 ```
 
-## Use Case 3: Prototype Mode
+## Flow 2: AI Team Generation (`/terraformer`)
 
 ### Overview
 
-Rapid development where strict checks are relaxed.
+Based on the `AGENTS.md` context, generates specialized AI agents (e.g., `@Architect`, `@Developer`) and their skills.
+
+### Process Flow
+
+1.  **User** ensures `AGENTS.md` is open or in context.
+2.  **User** types `/terraformer` in Copilot Chat.
+3.  **Engine** analyzes the tech stack defined in `AGENTS.md`.
+4.  **Engine** selects appropriate templates from `.github/templates/`.
+5.  **Engine** generates:
+    - `.github/agents/*.agent.md` (Agent Definitions)
+    - `.github/prompts/*.prompt.md` (Skill Definitions)
+6.  **User** saves these files.
+
+## Flow 3: Task Execution (The "Anti-Generalist" Flow)
+
+### Overview
+
+How a user interacts with the generated agents to build a feature.
+
+### Related Files
+
+- `.github/agents/Architect.agent.md`
+- `.github/agents/Developer.agent.md`
+- `.github/prompts/plan.prompt.md`
 
 ### Processing Flow
 
-1.  User requests: "Build a prototype for [Feature] (Prototype Mode)".
-2.  `@Developer` acknowledges "Prototype Mode".
-3.  `@Developer` implements code without requiring a formal spec from `@Architect`.
-4.  Generated code is marked with `/* PROTOTYPE */`.
-5.  `@QualityGuard` performs a lightweight review.
+1.  **User** asks `@Architect` to "Plan feature X".
+2.  **@Architect** uses `/plan` skill to generate `implementation_plan.md`.
+3.  **User** reviews and approves the plan.
+4.  **User** asks `@Developer` to "Implement feature X based on the plan".
+5.  **@Developer** reads the plan and implements code. _Note: Developer cannot change the plan._
+6.  **User** asks `@QualityGuard` to "Review the changes".

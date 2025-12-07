@@ -4,70 +4,71 @@
 
 ## Overall Configuration
 
-Terraformer follows a specific directory structure designed to be overlayed onto existing projects. It separates configuration (prompts, agents) from documentation and the actual project code.
+Terraformer uses a specific directory structure to organize its components. Since it is a "Meta-Engine" installed into other projects, its structure is designed to be overlay-friendly.
+
+```
+terraformer/
+├── .agent/                 # Antigravity specific definitions (Workflows, etc.)
+├── .github/                # The Core Engine (Prompts, Templates)
+│   ├── agents/             # Generated Agent Definitions (L4)
+│   ├── prompts/            # Skill Definitions (L2)
+│   └── templates/          # Source templates for generating agents/skills
+├── agents-docs/            # Documentation written FOR Agents (L3)
+├── docs/                   # Human-oriented documentation (Project Charter, ADRs)
+├── knowledge/              # Universal/Reusable Knowledge (Not project-specific)
+├── AGENTS.md               # The Constitution & Context Map Entry Point (L1)
+└── README.md               # Project Introduction
+```
 
 ## Responsibilities of Each Directory
 
-### `.github/`
+### `/.github/prompts/`
 
-- **Role**: The core engine of Terraformer. Contains all the configuration files that drive GitHub Copilot's behavior.
-- **Key Subdirectories**:
-  - `prompts/`: Contains Skill definitions (`*.prompt.md`). These are the executable instructions for agents.
-  - `templates/`: Contains templates for creating new agents and skills.
-  - `agents/`: (In target projects) Contains the specific Agent definitions (`*.agent.md`).
+- **Role**: Contains the "Skills" (SOPs) available to agents.
+- **Key Files**: `terraformer.prompt.md`, `terraform-context.prompt.md`
+- **Dependencies**: These files are referenced by Copilot Custom Prompts (commands).
 
-### `agents-docs/`
+### `/.github/templates/`
 
-- **Role**: The Knowledge Layer (L3). Contains detailed documentation specifically formatted for AI consumption.
-- **Key Files**:
-  - `architecture.md`: System overview.
-  - `key-flows.md`: Important workflows.
-  - `coding-conventions.md`: Rules and patterns.
+- **Role**: Stores the blueprints used by the `/terraformer` command to generate project-specific assets.
+- **Key Files**: Agent definitions, skill templates.
+- **Dependencies**: Used by the Terraformer meta-prompt.
+
+### `/agents-docs/`
+
+- **Role**: Stores documentation specifically designed to be read by AI agents to understand the specific project's context.
+- **Key Files**: `architecture.md`, `tech-stack.md`, etc.
 - **Dependencies**: Referenced by `AGENTS.md` and various Skills.
 
-### `knowledge/`
+### `/knowledge/`
 
-- **Role**: Reusable Knowledge Base. Contains general techniques, guidelines, and reference materials that are not specific to the project's domain but essential for the AI team's operation.
-- **Key Files**:
-  - `prompting-techniques.md`: Advanced prompting strategies (e.g., #todos).
-  - `pr-creation-guidelines.md`: Rules for creating Pull Requests.
-  - `software-review-perspectives.md`: Checklist for code reviews.
+- **Role**: A library of "Universal Knowledge" that applies across multiple projects. Contains best practices, prompting guides, and review checklists.
+- **Key Files**: `prompting-techniques.md`, `xml-structured-prompting.md`.
+- **Dependencies**: Can be symlinked or copied to other projects.
 
-### `docs/`
+### `/docs/`
 
-- **Role**: Human-oriented documentation and high-level project context.
-- **Key Files**:
-  - `PROJECT_CHARTER.md`: The mission and core philosophy.
-  - `DEVELOPMENT_CONTEXT.md`: Architectural Decision Records (ADR) and background.
-
-### Root Files
-
-- `AGENTS.md`: The Constitution (L1). Serves as the entry point and context map for AI agents.
-- `README.md`: General project introduction and installation guide.
+- **Role**: Contains high-level documentation primarily for human readers, though agents can also read them.
+- **Key Files**: `PROJECT_CHARTER.md` (Mission), `DEVELOPMENT_CONTEXT.md` (ADRs).
 
 ## Module Dependency Diagram
 
 ```mermaid
 graph TD
-    Root[Project Root] --> Github[".github"]
+    Root[Root] --> Github[.github]
     Root --> AgentsDocs[agents-docs]
     Root --> Knowledge[knowledge]
     Root --> Docs[docs]
-    Root --> AgentsMD[AGENTS.md]
 
-    Github --> Prompts["prompts (Skills)"]
+    Github --> Prompts[prompts]
     Github --> Templates[templates]
 
-    AgentsMD -->|References| AgentsDocs
-    AgentsMD -->|References| Knowledge
-    Prompts -->|Uses Context from| AgentsMD
+    Prompts -->|Reads| AgentsDocs
+    Prompts -->|Reads| Knowledge
 ```
 
 ## Layer Structure
 
-The directory structure directly maps to the ANTP layers:
-
-- **L1 (Constitution)**: `AGENTS.md` (Root)
-- **L2 (Skills)**: `.github/prompts/`
-- **L3 (Knowledge)**: `agents-docs/`
-- **L4 (Agents)**: `.github/agents/` (and `AGENTS.md` definitions)
+1.  **Configuration Layer**: `.github/` - Defines HOW the system works.
+2.  **Context Layer**: `agents-docs/`, `AGENTS.md` - Defines WHAT the system works on.
+3.  **Reference Layer**: `knowledge/`, `docs/` - Defines WHY and HOW-TO mechanisms.

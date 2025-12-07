@@ -4,25 +4,25 @@
 
 ## Major Tech Stack
 
-- **Runtime**: GitHub Copilot (VS Code Extension)
+- **Runtime Environment**: Visual Studio Code (latest) + GitHub Copilot Chat Extension
 - **Configuration Language**: Markdown + YAML Frontmatter
-- **Diagramming**: Mermaid.js
+- **Templating Engine**: Liquid (used in templates)
+- **Diagramming Tool**: Mermaid.js (rendered natively in GitHub/VS Code)
 
 ## Major Dependencies
 
-Since Terraformer is a configuration engine, it does not have runtime library dependencies (like npm or pip packages). Its "dependencies" are the environment it runs in.
-
-| Component          | Requirement   | Usage              |
-| :----------------- | :------------ | :----------------- |
-| **VS Code**        | Latest Stable | The IDE platform   |
-| **GitHub Copilot** | Subscription  | The AI engine      |
-| **Copilot Chat**   | Extension     | The chat interface |
+| Component                | Usage                                                                            |
+| ------------------------ | -------------------------------------------------------------------------------- |
+| **GitHub Copilot**       | The LLM engine driving the agents.                                               |
+| **VS Code Copilot Chat** | The interface for user-agent interaction.                                        |
+| **Antigravity (Google)** | The advanced agentic coding environment (for development of Terraformer itself). |
 
 ## Integration with External Services
 
-- **GitHub API**: Used implicitly by Copilot to fetch context and codebase information.
+- **GitHub Release API**: Used by `/release-new-version` (via simple git commands).
+- **Google NotebookLM**: Used for interactive documentation (external link).
 
 ## Development Tools
 
-- **Version Control**: Git
-- **Editor**: VS Code
+- **Linter**: Markdownlint (recommended for editing `.md` files).
+- **Version Control**: Git (Standard GitHub flow).
