@@ -132,7 +132,8 @@ You can use it to:
 - Ask questions about the project using the Chat interface.
 - Listen to / Watch the generated introductory content (Audio Overview).
 
-🔗 [Open Google NotebookLM](https://notebooklm.google.com/notebook/19713d26-a3bd-4f4f-9bb7-78c52829c660)
+> [!IMPORTANT]  
+> 🔗 [Open Google NotebookLM](https://notebooklm.google.com/notebook/19713d26-a3bd-4f4f-9bb7-78c52829c660)
 
 ## 🤖 Meet Our Mascot: ANTP-Bot ("Ant")
 
