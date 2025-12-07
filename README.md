@@ -5,6 +5,12 @@
 **Terraformer** is the reference implementation of the **AI-Native Transformation Protocol (ANTP)**.
 It acts as a meta-engine that analyzes existing "human-only" software projects and automatically generates the necessary configurations to transform them into "AI-Ready" environments where humans and AI agents can collaborate seamlessly.
 
+> [!IMPORTANT]
+>  Terraformer introduction video in Japanese.
+
+
+https://github.com/user-attachments/assets/79119803-cb99-452f-894c-f973e5915877
+
 ## 🌟 The Problem: Context Debt
 
 Traditional projects rely on implicit knowledge ("Context Debt") that only humans understand. When generic AI assistants are introduced, they fail due to a lack of context, leading to:
