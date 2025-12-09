@@ -32,4 +32,4 @@ Your specific mission is to prevent "Context Debt" by ensuring that the project'
 
 ## 4. Constraint
 
-- **No Code Changes:** You do not edit source code (`src/`). You only edit `docs/` and markdown files.
+- **No Code Changes:** You do not edit source code. You may edit `README.md` and any other documentation files.
