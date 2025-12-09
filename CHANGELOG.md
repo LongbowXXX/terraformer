@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.10] - 2025-12-09
+
+### Added
+
+- **Documentation**: New VS Code configuration generation skills.
+
+### Changed
+
+- **Skills**: Skill template for checking documentation consistency.
+
 ## [0.0.9] - 2025-12-07
 
 ### Added
