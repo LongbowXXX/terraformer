@@ -12,21 +12,24 @@ You are supporting the **@Librarian**. Your goal is to verify the consistency of
 
 **IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
 
-1.  **Read Documentation**: Read README and agent docs.
-2.  **Verify Links**: Check file paths and relative links.
+1.  **Read Documentation**: Read project root `README.md` and agent docs.
+2.  **Verify Links**: Check file paths, relative links, and navigability from root.
 3.  **Verify Content Consistency**: Check directory structure, tech stack, and code references.
-4.  **Generate Report**: Create a summary of findings (Pass/Warning/Error).
-5.  **Propose/Implement Fixes**: Auto-fix simple issues, propose complex ones.
-6.  **Final Check**: Review the "Final Check" section.
+4.  **Verify Onboarding**: Check flow from Setup -> Build -> Usage -> Architecture.
+5.  **Generate Report**: Create a summary of findings (Pass/Warning/Error).
+6.  **Propose/Implement Fixes**: Auto-fix simple issues, propose complex ones.
+7.  **Final Check**: Review the "Final Check" section.
 
 ## 🎯 Objective
 
 Ensure that:
 
-1.  **Structure is Complete**: `README.md` acts as a proper entry point and all links work.
+1.  **Structure is Complete**: The project root `README.md` acts as a proper entry point and all links work.
 2.  **Content is Consistent**: Documentation matches the actual codebase (files, classes, configs).
 3.  **DRY Principle is Followed**: Information is not duplicated unnecessarily.
 4.  **Project Rules are Met**: Documentation follows `agents-docs/` structure and other project conventions.
+5.  **Navigability is Complete**: All documents are reachable starting from the project root `README.md`.
+6.  **Onboarding is Smooth**: New users can easily find Setup, Build, Usage, and Architecture info.
 
 ## 🛠️ Execution Steps
 
@@ -34,28 +37,33 @@ Ensure that:
 
 1.  **Read Entry Point**:
 
-    - Use `view_file` to read `README.md`.
+    - Read the project root `README.md`.
     - Identify key sections and links to other documents.
 
 2.  **Read Agent Documentation**:
-    - Use `list_dir` to list files in `agents-docs/`.
-    - Use `view_file` to read key documents like `agents-docs/directory-structure.md`, `agents-docs/tech-stack.md`, and `agents-docs/key-flows.md`.
+    - List files in `agents-docs/`.
+    - Read key documents like `agents-docs/directory-structure.md`, `agents-docs/tech-stack.md`, and `agents-docs/key-flows.md`.
 
-### Step 2: Verify Links and References
+### Step 2: Verify Links and Navigability
 
 1.  **Extract Links**:
 
     - Identify all file paths and relative links in the read documents.
 
 2.  **Verify Existence**:
-    - Use `find_by_name` or `list_dir` to verify that linked files and directories actually exist.
+
+    - Verify that linked files and directories actually exist.
     - Check for broken images or dead links.
+
+3.  **Check Reachability**:
+    - Ensure every documentation file is reachable by following links starting from the project root `README.md`.
+    - Identify "orphan" documents that exists but are not linked.
 
 ### Step 3: Verify Content Consistency
 
 1.  **Directory Structure**:
 
-    - Compare `agents-docs/directory-structure.md` with the actual output of `list_dir` on the project root and key subdirectories.
+    - Compare `agents-docs/directory-structure.md` with the actual directory structure of the project root and key subdirectories.
     - Note any missing or obsolete directories in the documentation.
 
 2.  **Tech Stack & Config**:
@@ -64,7 +72,12 @@ Ensure that:
     - Ensure versions and dependencies match.
 
 3.  **Code References**:
-    - If documents mention specific classes or functions, use `grep_search` or `find_by_name` to confirm they still exist and are named correctly.
+
+    - If documents mention specific classes or functions, confirm they still exist and are named correctly.
+
+4.  **Onboarding Flow**:
+    - Verify that a new user can smoothly follow the path: **Environment Setup** -> **Build/Run** -> **Usage** -> **Architecture**.
+    - Ensure these sections are clearly visible and logically ordered.
 
 ### Step 4: Report and Fix
 
@@ -76,7 +89,7 @@ Ensure that:
       - ❌ **Error**: Broken links, missing files, or major contradictions.
 
 2.  **Propose/Implement Fixes**:
-    - **Auto-Fix**: For simple issues like typos or broken relative paths, use `replace_file_content` to fix them immediately.
+    - **Auto-Fix**: For simple issues like typos or broken relative paths, fix them immediately.
     - **Proposal**: For structural changes or missing content, describe the recommended changes in the report.
 
 ## 📤 Output Format
@@ -117,5 +130,7 @@ Present your findings in the following format:
 
 - [ ] All todos are marked as completed.
 - [ ] All broken links are reported or fixed.
+- [ ] Navigability from project root `README.md` is confirmed.
+- [ ] Onboarding flow (Setup->Build->Usage->Architecture) is verified.
 - [ ] Consistency report is generated in the correct format.
 - [ ] Proposed fixes are actionable.
