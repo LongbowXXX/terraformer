@@ -17,6 +17,9 @@ Enforce structured execution by explicitly registering tasks using the `#todos` 
 1.  **Task Initialization**:
     At the very beginning of the prompt (after the role definition), instruct Copilot to immediately use the `#todos` tool to register all high-level tasks.
 
+    > [!IMPORTANT]
+    > Ensure that the TODO items and the work Steps match. If they do not match, the AI may make mistakes when checking progress.
+
 2.  **Final Verification**:
     Add a "Final Check" section at the end of the prompt that requires Copilot to confirm all registered todos are completed.
 
