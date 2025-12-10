@@ -1,7 +1,7 @@
 # Project Charter: AI-Native Transformation Protocol (ANTP)
 
-**Version:** 1.4
-**Date:** November 30, 2025
+**Version:** 1.4.1
+**Date:** December 10, 2025
 **Status:** Prototype Phase (Roles & Skills Architecture Implemented)
 
 ## 1. Executive Summary
@@ -9,7 +9,35 @@
 This project aims to establish a **universal transition protocol (Meta-Plan)** to transform any existing software project into an "AI-Native" state.
 In ANTP v1.4, we evolve beyond simple role definitions. We introduce the **"Roles & Skills Architecture,"** where AI agents are not only assigned specific responsibilities (Roles) but are also equipped with standardized procedural knowledge (Skills/SOPs). This ensures a high-quality, autonomous **"AI Collaboration System"** generated automatically for any legacy codebase.
 
-## 2. Background and Problem Statement
+## 2. The AI-Native Manifesto
+
+We respect the values of Agile development, but as we welcome AI agents as members of our team, we declare a shift to the following new values (Paradigm Shift).
+
+### 1. Machine-Readable Context over Human-Only Documentation
+
+**Traditional Value:** Documentation is for humans to read, and kept to a minimum to avoid slowing down development.
+
+**Our Value:** Documentation is **"execution code (context) for AI agents"**. Since relying on AI to "read between the lines" risks hallucination, we define **"Quality"** as maintaining structured, explicit documentation (Markdown/XML), even if it seems redundant to humans.
+
+### 2. Verified Specifications over Trial-and-Error Coding
+
+**Traditional Value:** "Working software" is the primary measure of progress, and the correct solution is found while building.
+
+**Our Value:** Since AI can generate code instantly, coding itself is no longer the bottleneck. **"Verified Specifications"** are the true measure of progress. We enforce **"No Spec, No Code"** to prevent rapid rework.
+
+### 3. Explicit Written Protocols over Synchronous Conversation
+
+**Traditional Value:** Individuals and interactions over processes and tools (sharing tacit knowledge face-to-face).
+
+**Our Value:** AI cannot participate in water cooler chats. We consider only information recorded as **"Explicit Context"** to be the Single Source of Truth, rather than resolving issues through dialogue alone. Asynchronous and text-based communication enables collaboration with AI.
+
+### 4. Spec-Level Feedback over Code-Level Feedback
+
+**Traditional Value:** Write code, then test and get feedback (Fail Fast in Code).
+
+**Our Value:** Provide feedback on the "Plan" or "Spec" stage (**Fail Fast in Spec**). However, we do not require perfection in the specs (**Good Enough is Better Than Perfect**). Given the high speed of AI implementation, humans should review the **"Implementation Plan"** primarily to align on direction, avoiding excessive time spent on details before generating code.
+
+## 3. Background and Problem Statement
 
 ### Background
 
@@ -21,7 +49,7 @@ As Generative AI becomes integral to development, simply assigning a persona (e.
 2.  **Role-Capability Mismatch:** A "Senior Engineer" agent without access to specific testing or refactoring methodologies is prone to hallucination or low-quality output.
 3.  **Context Debt:** The persistent issue of implicit knowledge hindering AI understanding.
 
-## 3. Project Objective
+## 4. Project Objective
 
 **"To develop a Meta-Engine that generates the optimal 'AI Organization Chart' and 'Standard Operating Procedures (SOPs)'."**
 
@@ -30,7 +58,7 @@ By analyzing a target project, Terraformer provides a complete package:
 1.  **The Agents (Roles):** Specialized personas with strict authority boundaries (`.agent.md`).
 2.  **The Skills (SOPs):** Standardized thinking processes for specific tasks (`.prompt.md`).
 
-## 4. Deliverables: The AI Integration Stack
+## 5. Deliverables: The AI Integration Stack
 
 The protocol establishes four integrated layers within a project:
 
@@ -41,7 +69,7 @@ The protocol establishes four integrated layers within a project:
 | **L3** | **Knowledge**    | Explicit Context Map                                                             | `agents-docs/*`               |
 | **L4** | **Agents**       | Specialized Roles with Authority                                                 | `.github/agents/*.agent.md`   |
 
-## 5. Architecture: Roles & Skills Matrix
+## 6. Architecture: Roles & Skills Matrix
 
 In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into their system instructions.
 
@@ -73,7 +101,7 @@ In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into
     - **Equipped Skill:** **`/test`** (TDD-based test generation and verification).
     - **Constraint:** Must escalate to `@Architect` (using `/plan`) if implementation is blocked.
 
-## 6. Development Modes
+## 7. Development Modes
 
 To balance the need for high-quality production code with the reality of rapid experimentation, ANTP v1.4 supports two distinct development modes.
 
@@ -90,7 +118,7 @@ To balance the need for high-quality production code with the reality of rapid e
 - **Goal:** Idea Validation, PoC, Temporary Solutions.
 - **Constraint:** Code MUST be marked as `/* PROTOTYPE */` and is considered technical debt that must be paid down (refactored/rewritten) before production use.
 
-## 7. Technical Strategy: Skill Injection Mechanism
+## 8. Technical Strategy: Skill Injection Mechanism
 
 The Terraformer Engine bootstraps the project using the following logic:
 
@@ -101,13 +129,13 @@ The Terraformer Engine bootstraps the project using the following logic:
 
 This allows users to acquire a **"Team of Agents equipped with Senior Engineer thought processes"** simply by running `/terraformer` (after context generation).
 
-## 8. Expected Effects
+## 9. Expected Effects
 
 - **Quality Homogenization:** Regardless of who operates the AI, common procedures (Skills) are applied, stabilizing output quality.
 - **Rapid Onboarding:** New members can start immediately by relying on `@Architect` to plan and `@Developer` to implement using the correct procedures.
 - Maintainability: Workflows can be updated simply by editing the "Skill Files" (`.prompt.md`) rather than modifying complex Agent prompts.
 
-## 9. Documentation & Traceability
+## 10. Documentation & Traceability
 
 To ensure that AI and human collaboration is effective and auditable, we enforce strict documentation standards.
 
@@ -127,13 +155,13 @@ We maintain explicit links between documents (e.g., Specification links to Requi
 - **Verification**: Ensures every requirement has a corresponding spec and test.
 - **Auditability**: Provides a clear chain of custody from idea to implementation.
 
-## 10. Roadmap
+## 11. Roadmap
 
 1.  **Validation:** Field testing of `handoffs` and Prompt File integration in VS Code environments.
 2.  **Skill Library Expansion:** Develop extended skill templates (Release, Debug, Security Audit).
 3.  **CI/CD Integration:** Research workflows to automatically trigger `@QualityGuard` within GitHub Actions.
 
-## 11. AI Collaboration Policy
+## 12. AI Collaboration Policy
 
 Since we utilize AI, it is currently difficult to completely eliminate hallucinations.
 However, requiring perfect human review for all AI outputs contradicts the goal of using AI to improve efficiency and ease of work.
