@@ -6,8 +6,7 @@
 It acts as a meta-engine that analyzes existing "human-only" software projects and automatically generates the necessary configurations to transform them into "AI-Ready" environments where humans and AI agents can collaborate seamlessly.
 
 > [!IMPORTANT]
->  Terraformer introduction video in Japanese.
-
+> Terraformer introduction video in Japanese.
 
 https://github.com/user-attachments/assets/79119803-cb99-452f-894c-f973e5915877
 
@@ -29,6 +28,18 @@ Terraformer implements the **Roles & Skills Architecture**. It doesn't just give
 | **L2: Skills**       | Standardized Procedures (SOPs)   | `.github/prompts/*.prompt.md`     |
 | **L3: Knowledge**    | Explicit Context Map             | [`agents-docs/*`](./agents-docs/) |
 | **L4: Agents**       | Specialized Roles with Authority | `.github/agents/*.agent.md`       |
+
+## 🔄 The Paradigm Shift: From Agile to Document-Driven
+
+To make AI collaboration effective, we must invert traditional Agile values.
+
+| Traditional Agile (Human-Centric)       | ANTP / AI-Native (Agent-Centric)        | Why?                                                                                  |
+| :-------------------------------------- | :-------------------------------------- | :------------------------------------------------------------------------------------ |
+| **Tacit Knowledge** (Oral tradition)    | **Explicit Context** (Machine-readable) | AI cannot hear what you say in standups. It only knows what is written.               |
+| **Working Software** over Documentation | **Documentation IS the Code**           | Natural language specs are the "High-Level Source Code" that AI compiles into syntax. |
+| **Fail Fast in Code**                   | **Fail Fast in Spec**                   | Coding is cheap/instant. Debugging vague requirements is expensive.                   |
+
+In this paradigm, **Documentation is not a chore; it is the source code.**
 
 ## 🛠️ How to Use (Installation)
 
