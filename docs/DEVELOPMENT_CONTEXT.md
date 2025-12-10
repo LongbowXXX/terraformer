@@ -6,8 +6,8 @@
 
 - **Name:** Terraformer
 - **Core Concept:** AI-Native Transformation Protocol (ANTP)
-- **Vision:** To democratize "AI-Native" development by making it accessible to legacy codebases. We view legacy code not as trash to be discarded, but as a "hostile planet" that needs terraforming to support AI life.
-- **Objective:** To develop a powerful meta-engine that acts as a bridge between human-centric development and AI-centric assistance. This engine analyzes legacy ("human-only") software projects—characterized by implicit context and tribal knowledge—and automatically generates the necessary configuration files, role definitions, and documentation structures to transform them into "AI-Native" environments where humans and AI agents can collaborate seamlessly.
+- **Vision:** To democratize "AI-Native" development by making it accessible to legacy codebases. **We aim to shift the development paradigm from "Agile (Tacit Knowledge)" to "AI-Native (Explicit Context)," proving that rigorous documentation is the fastest way to build software in the AI era.**
+- **Objective:** To develop a powerful meta-engine that acts as a bridge between human-centric development and AI-centric assistance. This engine analyzes legacy ("human-only") software projects—characterized by implicit context and tribal knowledge—and automatically generates the necessary configuration files, role definitions, and documentation structures to transform them into "AI-Native" environments where humans and AI agents can collaborate seamlessly. **Furthermore, to establish a new "Document-Driven Development" methodology where documentation serves as the executable source code for AI agents.**
 
 ## **2\. The Core Problem: The "Context Debt" Crisis**
 
@@ -20,6 +20,32 @@ When generic, generalist AI assistants (like a raw LLM session) are introduced t
    - _Result:_ The code works, but the documentation becomes obsolete. The design intent is lost. The project becomes unmaintainable.
 
 - **The Solution:** We do not simply "add AI tools" to a broken process. We **refactor the project context itself**. By making implicit context explicit and machine-readable, we pay off the Context Debt, creating an environment where AI can operate safely and effectively.
+
+## **2.5. Strategic Pivot: From Agile to Document-Driven**
+
+### **Context & Decision**
+
+For decades, "Agile Development" has dominated the industry, valuing "Working Software over Comprehensive Documentation." While effective for human teams, this philosophy is catastrophic for AI collaboration.
+We have decided to fundamentally invert this value system for the Terraformer project.
+
+### **The Rationale (ADR)**
+
+1.  **Incompatibility of Tacit Knowledge:**
+
+    - _Agile_ relies on high-bandwidth, face-to-face communication (Standups, Pair Programming) to share context.
+    - _AI_ cannot participate in these synchronous channels. It only knows what is written.
+    - **Decision:** We shift from "Tacit Knowledge" (Oral tradition) to "Explicit Context" (Machine-readable text) as the primary communication protocol.
+
+2.  **Documentation IS the Code:**
+
+    - In an AI-Native workflow, natural language specifications are effectively "High-Level Source Code" that compiles into implementation languages (TS, Python, etc.).
+    - Therefore, neglecting documentation in favor of implementation is akin to neglecting the source code in favor of the compiled binary.
+    - **Decision:** We adopt **Document-Driven Development (DDD)**. We prioritize the quality and currency of `agents-docs/` and `AGENTS.md` above the implementation code itself.
+
+3.  **Shift-Left of Quality Assurance:**
+    - Traditional Agile iterates on code (`Red -> Green -> Refactor`).
+    - AI-Native development iterates on specs (`Draft Spec -> AI Critique -> Refined Spec -> Code`).
+    - **Decision:** We move the feedback loop upstream. The "Definition of Done" must include "Specification Verified," not just "Code Passed Tests."
 
 ## **3\. The Protocol: ANTP v1.4 Detailed Layers**
 
