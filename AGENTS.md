@@ -109,22 +109,23 @@ Manual verification via test projects; automated CI planned.
 
 ### Skills
 
-| Skill                    | Purpose                          |
-| ------------------------ | -------------------------------- |
-| `/requirements`          | PRD & User Story generation      |
-| `/design`                | System design & diagrams         |
-| `/plan`                  | Impact analysis & planning       |
-| `/refactor`              | Safe refactoring                 |
-| `/test`                  | TDD-based test generation        |
-| `/implement`             | Implementation from specs        |
-| `/review`                | General code review              |
-| `/debug`                 | Root cause analysis & fix        |
-| `/doc-sync`              | Documentation sync               |
-| `/check-doc-consistency` | Verify doc consistency           |
-| `/create-custom-prompt`  | Create custom skill prompt       |
-| `/vscode-tasks`          | Generate .vscode/tasks.json      |
-| `/vscode-settings`       | Generate .vscode/settings.json   |
-| `/vscode-extensions`     | Generate .vscode/extensions.json |
+| Skill                    | Purpose                            |
+| ------------------------ | ---------------------------------- |
+| `/requirements`          | PRD & User Story generation        |
+| `/design`                | System design & diagrams           |
+| `/plan`                  | Impact analysis & planning         |
+| `/refactor`              | Safe refactoring                   |
+| `/test`                  | TDD-based test generation          |
+| `/implement`             | Implementation from specs          |
+| `/review`                | General code review                |
+| `/debug`                 | Root cause analysis & fix          |
+| `/doc-sync`              | Documentation sync                 |
+| `/check-doc-consistency` | Verify doc consistency             |
+| `/create-custom-prompt`  | Create custom skill prompt         |
+| `/vscode-tasks`          | Generate .vscode/tasks.json        |
+| `/vscode-settings`       | Generate .vscode/settings.json     |
+| `/vscode-extensions`     | Generate .vscode/extensions.json   |
+| `/audit-spec`            | Audit spec documents (Spec Linter) |
 
 ---
 
