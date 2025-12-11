@@ -83,7 +83,7 @@ In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into
     - **Equipped Skill:** **`/requirements`** (Convert vague requests into User Stories).
 3.  **@QualityGuard (The Enforcer)**
     - **Authority:** Code review and merge approval.
-    - **Equipped Skill:** **`/audit`** (Security & Quality checklist execution).
+    - **Equipped Skill:** **`/audit`** (Security & Quality checklist execution), **`/test-spec`** (Test Plan generation).
 4.  **@Librarian (The Keeper)**
     - **Authority:** Documentation synchronization.
     - **Equipped Skill:** **`/doc-sync`** (Detect diffs between Code and Docs).
@@ -98,7 +98,7 @@ In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into
 
 7.  **@Developer (The Implementer)**
     - **Authority:** Implementation ONLY (Strictly prohibited from changing specs).
-    - **Equipped Skill:** **`/test`** (TDD-based test generation and verification).
+    - **Equipped Skill:** **`/test`** (Test Code implementation based on Test Specs).
     - **Constraint:** Must escalate to `@Architect` (using `/plan`) if implementation is blocked.
 
 ## 7. Development Modes

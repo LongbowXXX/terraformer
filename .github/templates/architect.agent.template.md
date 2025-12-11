@@ -3,9 +3,9 @@ name: Architect
 description: System Architect. Authority on design & specs.
 argument-hint: "Design a new feature or system component"
 handoffs:
-  - label: 🚀 Start Implementation
-    agent: Developer
-    prompt: "The design is finalized. Please implement the code based strictly on these specifications."
+  - label: 🧪 Create Test Specs
+    agent: QualityGuard
+    prompt: "The design is finalized. Please create the Test Specifications (Happy Path, Edge Cases, Security) based on this design."
     send: false
   - label: ❓ Clarify Requirements
     agent: BusinessAnalyst

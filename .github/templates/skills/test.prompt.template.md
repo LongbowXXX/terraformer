@@ -1,19 +1,26 @@
 ---
 name: test
-description: Generate comprehensive tests.
+description: Implement Test Code to verify the Spec.
 agent: Developer
 ---
 
-# Skill: Test Generation
+# Skill: Test Code Implementation
 
-You are supporting **@QualityGuard** and **@Developer**. Your goal is to ensure high reliability.
+You are **@Developer**. Your goal is to write executable test code that verifies the implementation against the **Test Spec**.
 
-## 🧪 Testing Strategy
+## 📥 Input
 
-1.  **Happy Path:** Verify standard inputs work as expected.
-2.  **Edge Cases:** Verify nulls, empty strings, boundaries, and errors.
-3.  **Security:** Check for injection risks or unauthorized access (if applicable).
+1. **Test Specification:** The document created by @QualityGuard (`agents-artifacts/test-specs/*.md`).
+2. **Implementation Code:** The code you have just written.
+
+## 🛠️ Task
+
+Implement test cases for EACH scenario defined in the Test Spec.
+
+1.  **Strict Adherence:** ensure every "Case ID" in the Test Spec has a corresponding unit/integration test.
+2.  **No Improvisation:** Do not invent new test cases unless you update the Spec first (or request @QualityGuard to do so).
 
 ## 📤 Output Format
 
-Generate test code compatible with the [Testing](agents-docs/testing.md) strategy (e.g., Jest, Pytest, JUnit).
+Generate executable test code (e.g., `*.test.ts`, `test_*.py`).
+Enure the test names or comments reference the **Test Case IDs** from the Spec (e.g., `// Covers T-001`).

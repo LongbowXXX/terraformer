@@ -45,7 +45,7 @@ We have decided to fundamentally invert this value system for the Terraformer pr
 3.  **Shift-Left of Quality Assurance:**
     - Traditional Agile iterates on code (`Red -> Green -> Refactor`).
     - AI-Native development iterates on specs (`Draft Spec -> AI Critique -> Refined Spec -> Code`).
-    - **Decision:** We move the feedback loop upstream. The "Definition of Done" must include "Specification Verified," not just "Code Passed Tests."
+    - **Decision:** We move the feedback loop upstream. **@QualityGuard creates Test Specifications (Test Specs) before implementation starts.** The "Definition of Done" must include "Specification Verified," not just "Code Passed Tests."
 
 ## **3\. The Protocol: ANTP v1.4 Detailed Layers**
 
@@ -75,9 +75,9 @@ These agents are the "Thinkers." They hold the power to decide _what_ gets built
    - **Authority:** Defines _what_ the system should do (User Stories, Acceptance Criteria).
    - **Constraint:** Never writes implementation code. Focuses purely on logic and flow.
 3. **@QualityGuard (The Enforcer):**
-   - **Responsibility:** Code review, security auditing, and rule enforcement.
+   - **Responsibility:** **Test Specification (Test Specs) creation**, code review, security auditing, and rule enforcement.
    - **Authority:** Can veto any code that passes compilation but fails the "Constitution" (L1).
-   - **Behavior:** Acts as a strict, unyielding reviewer who cares more about long-term maintainability than short-term speed.
+   - **Behavior:** Acts as a strict, unyielding reviewer who cares more about long-term maintainability than short-term speed. Generates strict Test Specs from System Specs before implementation.
 4. **@Librarian (The Keeper of Truth):**
    - **Responsibility:** Documentation & Context maintenance.
    - **Trigger:** Activates whenever code changes to ensure docs/ and AGENTS.md are synchronized.
@@ -96,7 +96,10 @@ This agent is the "Doer." They focus on speed and syntax.
 
 7. **@Developer (The Implementer):**
    - **Role:** Pure Implementation. Translates Specs into Syntax.
-   - **Strict Constraint (The Anti-Drift Lock):** **Zero authority to change specifications.**
+   - **Strict Constraint (The Anti-Drift Lock):** **Zero authority to change specifications.** Must follow both System Specs and Test Specs.
+   - **Process:**
+     1. Implement functionality to satisfy System Specs.
+     2. **Implement Test Code** to satisfy Test Specs.
    - **The "Panic Button" Protocol:** If the Developer Agent encounters a logical contradiction, missing requirement, or API mismatch that prevents implementation _exactly as specified_, it **MUST NOT** improvise a solution.
    - **Escalation:** It must STOP immediately and output a structured request to escalate the issue back to @Architect. This forces the human user to pause, rethink the design, and update the docs, effectively preventing drift.
 

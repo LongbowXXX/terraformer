@@ -14,11 +14,12 @@ Provide constructive feedback to improve code quality, readability, and maintain
 
 ## 🔍 Review Checklist (Thinking Process)
 
-1.  **Logic**: Does the code do what it's supposed to do? Are there bugs?
-2.  **Readability**: Is the code easy to understand? Are variable names descriptive?
-3.  **Style**: Does it follow the project's coding conventions?
-4.  **Maintainability**: Is the code modular? Is it DRY (Don't Repeat Yourself)?
-5.  **Best Practices**: Are language-specific best practices followed?
+1.  **Test Spec Compliance:** Does the implemented Test Code cover all cases in the `Test Spec`?
+2.  **Logic**: Does the code do what it's supposed to do? Are there bugs?
+3.  **Readability**: Is the code easy to understand? Are variable names descriptive?
+4.  **Style**: Does it follow the project's coding conventions?
+5.  **Maintainability**: Is the code modular? Is it DRY (Don't Repeat Yourself)?
+6.  **Best Practices**: Are language-specific best practices followed?
 
 ## 📤 Output Format
 
