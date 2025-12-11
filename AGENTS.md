@@ -140,6 +140,7 @@ Manual verification via test projects; automated CI planned.
 | `/audit-spec`            | Audit spec documents (Spec Linter) |
 | `/test-spec`             | Generate Test Specs                |
 | `/audit`                 | Code Review & Security Audit       |
+| `/brainstorm`            | Brainstorming & Spec consultation  |
 
 ---
 

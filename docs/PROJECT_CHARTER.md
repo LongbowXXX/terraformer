@@ -77,16 +77,16 @@ In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into
 
 1.  **@Architect (The Designer)**
     - **Authority:** Sole power to decide specs and design.
-    - **Equipped Skill:** **`/plan`** (Break down requirements into implementation plans & file impact lists).
+    - **Equipped Skill:** **`/plan`** (Implementation plans), **`/design`** (System design), **`/vscode-tasks`**, **`/vscode-settings`**, **`/vscode-extensions`**.
 2.  **@BusinessAnalyst (The Translator)**
     - **Authority:** Requirement definition.
-    - **Equipped Skill:** **`/requirements`** (Convert vague requests into User Stories).
+    - **Equipped Skill:** **`/requirements`** (Convert vague requests into User Stories), **`/brainstorm`** (Brainstorming & Spec consultation).
 3.  **@QualityGuard (The Enforcer)**
     - **Authority:** Code review and merge approval.
-    - **Equipped Skill:** **`/audit`** (Security & Quality checklist execution), **`/test-spec`** (Test Plan generation).
+    - **Equipped Skill:** **`/audit`** (Security & Quality checklist), **`/test-spec`** (Test Plan generation), **`/audit-spec`** (Specification Linter).
 4.  **@Librarian (The Keeper)**
     - **Authority:** Documentation synchronization.
-    - **Equipped Skill:** **`/doc-sync`** (Detect diffs between Code and Docs).
+    - **Equipped Skill:** **`/doc-sync`** (Detect diffs between Code and Docs), **`/check-doc-consistency`** (Verify doc consistency).
 5.  **@Gardener (The Maintainer)**
     - **Authority:** Tech debt removal.
     - **Equipped Skill:** **`/refactor`** (Safe structural improvements without logic changes).
@@ -98,7 +98,7 @@ In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into
 
 7.  **@Developer (The Implementer)**
     - **Authority:** Implementation ONLY (Strictly prohibited from changing specs).
-    - **Equipped Skill:** **`/test`** (Test Code implementation based on Test Specs).
+    - **Equipped Skill:** **`/test`** (Test Code implementation), **`/implement`** (Implementation from specs).
     - **Constraint:** Must escalate to `@Architect` (using `/plan`) if implementation is blocked.
 
 ## 7. Development Modes
