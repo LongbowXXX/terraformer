@@ -126,6 +126,8 @@ Manual verification via test projects; automated CI planned.
 | `/vscode-settings`       | Generate .vscode/settings.json     |
 | `/vscode-extensions`     | Generate .vscode/extensions.json   |
 | `/audit-spec`            | Audit spec documents (Spec Linter) |
+| `/test-spec`             | Generate Test Specs                |
+| `/audit`                 | Code Review & Security Audit       |
 
 ---
 
