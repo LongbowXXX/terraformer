@@ -125,7 +125,8 @@ We selected this specific implementation path to create a GUI-driven, guided exp
 2. **The Ecosystem (Agents & Handoffs):**
    - **Implementation:** **Custom Agents** defined in .github/agents/\*.agent.md.
    - **The UX Magic (Handoffs):** We utilize the handoffs property in the YAML frontmatter.
-     - When @Architect finishes a design, a button labeled **"Start Implementation (@Developer)"** appears.
+     - When @Architect finishes a design, a button labeled **"Create Test Specs (@QualityGuard)"** appears.
+     - When @QualityGuard finishes specs, a button labeled **"Start Implementation (@Developer)"** appears.
      - When @Developer hits a blocker, a button labeled **"🛑 Escalate to Architect"** appears.
    - **Strategic Value:** This is not just UI candy. It **systemically enforces the ANTP workflow**. It reduces the cognitive load on the user (no need to remember who to call next) and physically prevents the AI from skipping the critical review/design phases.
 
