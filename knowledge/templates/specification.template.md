@@ -7,13 +7,16 @@ status: draft
 
 # Specification: {{TITLE}}
 
+<metadata>
+
 | Metadata                | Value                        |
 | :---------------------- | :--------------------------- |
-| **Author**              | @{{AGENT_NAME}}              |
-| **Created**             | {{DATE}}                     |
 | **Status**              | Draft / In Review / Approved |
-| **Reviewers**           | [List reviewers]             |
 | **Source Requirements** | [Link to Requirements]       |
+
+</metadata>
+
+<overview>
 
 ## 1. Overview
 
@@ -24,6 +27,9 @@ status: draft
 ### Goals
 
 [What are the specific objectives of this feature/change?]
+</overview>
+
+<requirements>
 
 ## 2. Requirements
 
@@ -31,38 +37,74 @@ status: draft
 
 - As a **[Role]**, I want to **[Action]**, so that **[Benefit]**.
 
-### Acceptance Criteria
+### Acceptance Criteria (Gherkin)
 
-- [ ] Criteria 1
-- [ ] Criteria 2
+<!-- Use explicit Gherkin syntax for behavioral specs -->
+<gherkin>
+
+```gherkin
+Feature: [Feature Name]
+
+Scenario: [Scenario Name]
+Given [Precondition]
+When [Action]
+Then [Result]
+```
+
+</gherkin>
+</requirements>
+
+<technical_design>
 
 ## 3. Technical Design
 
-### Architecture
+### Architecture / Flow
 
-[High-level architectural changes. Use Mermaid diagrams if helpful.]
+<!-- Use Mermaid for visual flows, especially for complex logic -->
 
-### API Changes
+<mermaid_diagram>
 
-[New or modified API endpoints, function signatures, etc.]
+```mermaid
+graph TD
+A[Start] --> B{Decision}
+B -->|Yes| C[OK]
+B -->|No| D[Error]
+```
+
+</mermaid_diagram>
+
+### Logic Specifications
+
+<logic_details>
+[Detailed pseudo-code or additional Gherkin for complex logic. Use 'Rule' keywords if highly complex.]
+</logic_details>
 
 ### Data Models
 
-[Changes to database schema, data structures, etc.]
+<data_definitions>
+[Interface definitions, Schema changes]
+interface Example {
+id: string;
+}
+</data_definitions>
+
+### API Changes
+
+<api_definitions>
+[New or modified endpoints]
+</api_definitions>
+
+</technical_design>
+
+<verification_plan>
 
 ## 4. Verification Plan
 
 ### Automated Tests
 
-[What new tests will be added? Unit, Integration, E2E?]
+[Test cases to be implemented. Reference Gherkin scenarios where possible.]
 
 ### Manual Verification
 
-[Steps to manually verify the feature.]
-
-## 5. Review History
-
-| Date     | Reviewer        | Comment       | Status |
-| :------- | :-------------- | :------------ | :----- |
-| {{DATE}} | @{{AGENT_NAME}} | Initial Draft | Draft  |
-|          |                 |               |        |
+[Manual testing steps]
+</verification_plan>
