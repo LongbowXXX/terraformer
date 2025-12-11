@@ -43,7 +43,7 @@ terraformer/
 ### `/knowledge/`
 
 - **Role**: A library of "Universal Knowledge" that applies across multiple projects. Contains best practices, prompting guides, and review checklists.
-- **Key Files**: `prompting-techniques.md`, `xml-structured-prompting.md`.
+- **Key Files**: `prompting-techniques.md`, `xml-structured-prompting.md`, `specification-guidelines.md`.
 - **Dependencies**: Can be symlinked or copied to other projects.
 
 ### `/docs/`

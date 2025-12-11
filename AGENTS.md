@@ -152,6 +152,8 @@ Manual verification via test projects; automated CI planned.
 | PR Creation Guidelines       | [knowledge/pr-creation-guidelines.md](./knowledge/pr-creation-guidelines.md)             |
 | Prompting Techniques         | [knowledge/prompting-techniques.md](./knowledge/prompting-techniques.md)                 |
 | Software Review Perspectives | [knowledge/software-review-perspectives.md](./knowledge/software-review-perspectives.md) |
+| XML Structured Prompting     | [knowledge/xml-structured-prompting.md](./knowledge/xml-structured-prompting.md)         |
+| Specification Guidelines     | [knowledge/specification-guidelines.md](./knowledge/specification-guidelines.md)         |
 
 ---
 
