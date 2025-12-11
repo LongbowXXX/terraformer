@@ -329,7 +329,14 @@ Verify that the generated documentation matches the implementation:
     - Confirm that recent changes are reflected in the documentation.
 
 3.  **Evaluate Completeness**
+
     - Confirm that all major features are covered.
+
+4.  **Check Agents and Skills**
+
+    - Use `list_dir` to check `.github/templates/` and `.github/prompts/`.
+    - Verify that all Agent and Skill templates are mentioned in `AGENTS.md`.
+    - Verify that they are also reflected in other relevant documentation (e.g. `agents-docs/directory-structure.md`, `agents-docs/tech-stack.md`).
 
 ### Step 4: Maintenance Guidelines Proposal
 
