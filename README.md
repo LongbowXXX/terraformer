@@ -131,6 +131,7 @@ It provides resources such as:
 - **Templates**: Reusable patterns for documentation and workflows.
 - **AI Literacy**: Resources to make _humans_ AI-Ready and effective at using AI agents.
 - **XML Structured Prompting**: Comprehensive guide on using XML tags for better LLM control.
+- **Specification Guidelines**: Synergizing Gherkin behavior and Mermaid diagrams for unambiguous specs.
 
 ## 📄 Documentation
 
