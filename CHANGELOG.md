@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.11] - 2025-12-11
+
+### Added
+
+- **Skills**: Brainstorming skill.
+- **Documentation**: Section detailing the paradigm shift.
+
+### Changed
+
+- **Agents**: update agent commands.
+- **Documentation**: Update project charter.
+
 ## [0.0.10] - 2025-12-09
 
 ### Added
