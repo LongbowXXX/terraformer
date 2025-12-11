@@ -67,6 +67,18 @@ This section defines the core terminology used across the project. For the full 
 
 → **Details**: [agents-docs/coding-conventions.md](./agents-docs/coding-conventions.md), [agents-docs/constraints-and-gotchas.md](./agents-docs/constraints-and-gotchas.md)
 
+### 🔍 Dynamic Context Protocol (Research Phase)
+
+**CRITICAL INSTRUCTION FOR ALL AGENTS:**
+The context provided in this file (`AGENTS.md`) is a **summary index**. It does NOT contain all the details needed for your tasks.
+**Before starting any task, you MUST:**
+
+1.  **Search**: Use your available tools to perform **keyword/regex searches** or **semantic searches** to find specific documentation in `agents-docs/` or `knowledge/` relevant to the user's request.
+    - _Example_: If the user asks about "Testing", search for and read documents related to testing instructions.
+    - _Example_: If the user asks for a "Review", search for and read review guidelines.
+2.  **Read**: Load the content of these detailed documents into your context.
+3.  **Cross-Reference**: Do NOT rely on assumptions. Always verify against the official documentation found.
+
 ### Must Follow
 
 - `@Developer` must **immediately escalate** spec gaps (Anti-Drift Lock)
