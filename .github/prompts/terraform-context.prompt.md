@@ -145,6 +145,19 @@ This file provides context and instructions for AI coding agents working on this
 
 ## 6. Development Rules (Constitution Summary)
 
+### 🔍 Dynamic Context Protocol (Research Phase)
+
+**CRITICAL INSTRUCTION FOR ALL AGENTS:**
+The context provided in this file (`AGENTS.md`) is a **summary index**. It does NOT contain all the details needed for your tasks.
+**Before starting any task, you MUST:**
+
+1.  **Search**: Use your available tools to perform **keyword/regex searches** or **semantic searches** to find specific documentation in `agents-docs/` or `knowledge/` relevant to the user's request.
+    - _Example_: If the user asks about "Testing", search for and read documents related to testing instructions.
+    - _Example_: If the user asks for a "Review", search for and read review guidelines.
+2.  **Follow Links**: Since `AGENTS.md` serves as a summary index and provides links to important files and folders, you MUST follow these links to obtain detailed information.
+3.  **Read**: Load the content of these detailed documents into your context.
+4.  **Cross-Reference**: Do NOT rely on assumptions. Always verify against the official documentation found.
+
 ### Must Follow
 
 - [e.g., All database access through Repository layer]
