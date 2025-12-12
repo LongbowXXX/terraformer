@@ -141,6 +141,7 @@ Manual verification via test projects; automated CI planned.
 | `/test-spec`             | Generate Test Specs                |
 | `/audit`                 | Code Review & Security Audit       |
 | `/brainstorm`            | Brainstorming & Spec consultation  |
+| `/discover-specs`        | Reverse-engineer specs from code   |
 
 ---
 

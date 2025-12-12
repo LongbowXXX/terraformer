@@ -77,7 +77,7 @@ In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into
 
 1.  **@Architect (The Designer)**
     - **Authority:** Sole power to decide specs and design.
-    - **Equipped Skill:** **`/plan`** (Implementation plans), **`/design`** (System design), **`/vscode-tasks`**, **`/vscode-settings`**, **`/vscode-extensions`**.
+    - **Equipped Skill:** **`/plan`** (Implementation plans), **`/design`** (System design), **`/vscode-tasks`**, **`/vscode-settings`**, **`/vscode-extensions`**, **`/discover-specs`** (Reverse-engineer specs).
 2.  **@BusinessAnalyst (The Translator)**
     - **Authority:** Requirement definition.
     - **Equipped Skill:** **`/requirements`** (Convert vague requests into User Stories), **`/brainstorm`** (Brainstorming & Spec consultation).
