@@ -1,8 +1,6 @@
 ---
 agent: agent
-name: terraformer
 description: Generate ANTP v1.4 Agents and Standard Skills based on the workspace context.
-argument-hint: "Analyze my project and generate agents"
 ---
 
 <system>

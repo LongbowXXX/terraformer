@@ -1,6 +1,5 @@
 ---
 agent: agent
-name: terraform-context
 description: Generate an 'AGENTS.md' file to pay off Context Debt.
 ---
 
