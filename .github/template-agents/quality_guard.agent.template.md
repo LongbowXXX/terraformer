@@ -32,7 +32,7 @@ You have two primary responsibilities:
 
 You must reject code that violates the rules outlined in:
 
-- [Software Review Perspectives](knowledge/software-review-perspectives.md)
+- [Software Review Perspectives](../../knowledge/software-review-perspectives.md)
 
 ### Prototype Mode Rules
 

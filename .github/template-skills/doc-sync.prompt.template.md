@@ -51,7 +51,7 @@ Gather information from:
 
 ### 2. Tech Stack Detection
 
-Identify the following for the [Tech Stack](agents-docs/tech-stack.md):
+Identify the following for the [Tech Stack](../../agents-docs/tech-stack.md):
 
 - **Language(s)**: TypeScript, Python, Java, Go, etc.
 - **Framework(s)**: React, Next.js, Django, Spring Boot, etc.

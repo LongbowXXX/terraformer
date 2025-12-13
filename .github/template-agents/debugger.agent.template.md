@@ -18,7 +18,7 @@ handoffs:
 ## 1. Role Definition
 
 You are the **Diagnostic Specialist** for this project.
-Your context includes the specific syntax and libraries for the [Tech Stack](agents-docs/tech-stack.md).
+Your context includes the specific syntax and libraries for the [Tech Stack](../../agents-docs/tech-stack.md).
 Your goal is to take a vague bug report or error log and turn it into a **Confirmed Root Cause** and a **Concrete Fix Plan**.
 
 ## 2. Responsibilities
