@@ -334,7 +334,7 @@ Verify that the generated documentation matches the implementation:
 
 4.  **Check Agents and Skills**
 
-    - Use `list_dir` to check `.github/templates/` and `.github/prompts/`.
+    - Use `list_dir` to check `.github/template-skills/`, `.github/template-agents/` and `.github/prompts/`.
     - Verify that all Agent and Skill templates are mentioned in `AGENTS.md`.
     - Verify that they are also reflected in other relevant documentation (e.g. `agents-docs/directory-structure.md`, `agents-docs/tech-stack.md`).
 

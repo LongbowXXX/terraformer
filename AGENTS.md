@@ -34,7 +34,7 @@ This file provides context and instructions for AI coding agents working on this
 terraformer/
 ├── .github/
 │   ├── prompts/                    # Engine (/terraformer, /terraform-context)
-│   └── templates/                  # Agent & Skill templates
+│   └── template-*/                 # Agent & Skill templates
 ├── docs/                           # PROJECT_CHARTER.md, DEVELOPMENT_CONTEXT.md
 ├── agents-docs/                    # AI-oriented documentation
 ├── knowledge/                      # Reusable knowledge & techniques (e.g., prompting)

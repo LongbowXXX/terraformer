@@ -71,7 +71,7 @@ Detect architectural patterns:
 Generate the following initial documentation files in the `agents-docs/` directory. Use the detected tech stack and context to populate them.
 
 Generate the initial documentation files in the `agents-docs/` directory.
-Refer to `.github/templates/skills/doc-sync.prompt.template.md` for the list of files to generate and their expected content structure.
+Refer to `.github/template-skills/doc-sync.prompt.template.md` for the list of files to generate and their expected content structure.
 
 _Note: Create these files with initial content based on your analysis. They will be refined by the @Librarian later._
 

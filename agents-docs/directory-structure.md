@@ -12,7 +12,7 @@ terraformer/
 ├── .github/                # The Core Engine (Prompts, Templates)
 │   ├── agents/             # Generated Agent Definitions (L4)
 │   ├── prompts/            # Skill Definitions (L2)
-│   └── templates/          # Source templates for generating agents/skills
+│   └── template-*/         # Source templates for generating agents/skills
 ├── agents-docs/            # Documentation written FOR Agents (L3)
 ├── docs/                   # Human-oriented documentation (Project Charter, ADRs)
 ├── knowledge/              # Universal/Reusable Knowledge (Not project-specific)
@@ -28,7 +28,7 @@ terraformer/
 - **Key Files**: `terraformer.prompt.md`, `terraform-context.prompt.md`
 - **Dependencies**: These files are referenced by Copilot Custom Prompts (commands).
 
-### `/.github/templates/`
+### `/.github/template-*/`
 
 - **Role**: Stores the blueprints used by the `/terraformer` command to generate project-specific assets.
 - **Key Files**: Agent definitions, skill templates.
@@ -61,7 +61,7 @@ graph TD
     Root --> Docs[docs]
 
     Github --> Prompts[prompts]
-    Github --> Templates[templates]
+    Github --> Templates[template-*]
 
     Prompts -->|Reads| AgentsDocs
     Prompts -->|Reads| Knowledge

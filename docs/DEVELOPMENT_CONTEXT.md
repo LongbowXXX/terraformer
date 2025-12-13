@@ -138,9 +138,8 @@ terraformer/
 │ ├── prompts/  
 │ │ ├── terraformer.prompt.md # The Meta-Engine. Generates agents & skills.  
 │ │ └── terraform-context.prompt.md # Generates AGENTS.md context map.  
-│ └── templates/  
-│ ├── \*.agent.template.md # L4: Agent templates (7 roles)  
-│ └── skills/\_.prompt.template.md # L2: Skill templates (plan, refactor, test)  
+│ └── template-agents/\*.agent.template.md # L4: Agent templates (roles)  
+│ └── template-skills/\*.prompt.template.md # L2: Skill templates (plan, refactor, test)  
 ├── docs/  
 │ ├── PROJECT_CHARTER.md # The "Constitution" of this project. Detailed definition of ANTP v1.4.  
 │ └── DEVELOPMENT_CONTEXT.md # This file. The ADR and single source of truth for AI context.  

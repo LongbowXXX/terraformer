@@ -40,7 +40,7 @@ Based on the `AGENTS.md` context, generates specialized AI agents (e.g., `@Archi
 1.  **User** ensures `AGENTS.md` is open or in context.
 2.  **User** types `/terraformer` in Copilot Chat.
 3.  **Engine** analyzes the tech stack defined in `AGENTS.md`.
-4.  **Engine** selects appropriate templates from `.github/templates/`.
+4.  **Engine** selects appropriate templates from `.github/template-agents/` and `.github/template-skills/`.
 5.  **Engine** generates:
     - `.github/agents/*.agent.md` (Agent Definitions)
     - `.github/prompts/*.prompt.md` (Skill Definitions)

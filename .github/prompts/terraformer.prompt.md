@@ -54,7 +54,7 @@ Your goal is to implement the **AI-Native Transformation Protocol (ANTP)** by ge
 
 ### 2. Skill Generation (Standard Equipment)
 
-Generate or **Update** **ALL** skill files by reading their templates from `.github/templates/skills/`.
+Generate or **Update** **ALL** skill files by reading their templates from `.github/template-skills/`.
 **IMPORTANT**: If the file already exists, **UPDATE** it to match the latest template and `AGENTS.md` context.
 
 **Representative Examples:**
@@ -65,7 +65,7 @@ Generate or **Update** **ALL** skill files by reading their templates from `.git
 
 ### 3. Agent Generation
 
-Generate agents using `.github/templates/*.agent.template.md`.
+Generate agents using `.github/template-agents/*.agent.template.md`.
 
 **IMPORTANT**: Do **NOT** specify `tools` in the generated agent file. While best practices may suggest defining them, available tools vary by development environment. Omitting the `tools` field ensures all available tools are accessible.
 
