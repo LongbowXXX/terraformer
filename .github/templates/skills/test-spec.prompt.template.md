@@ -39,7 +39,7 @@ You **MUST** use the standard template located at `knowledge/templates/test_spec
 ```markdown
 # Test Specification: {Feature Name}
 
-**Case ID Prefix:** T-001
+**Case ID Prefix:** {feature_name}
 **Target Spec:** [Spec Link]
 
 ## 1. Happy Path Scenarios
