@@ -36,7 +36,7 @@ Focus on:
 - **Error Handling**: How are exceptions and failures managed?
 - **Data Models**: What are the core data structures?
 
-_Use the `grep` or `read_file` tools to explore the codebase thoroughly._
+_Use the **keyword/regex searches** or **semantic searches** to explore the codebase thoroughly._
 
 ## Step 3: Spec Generation
 
@@ -63,6 +63,6 @@ _Use the `grep` or `read_file` tools to explore the codebase thoroughly._
 
 ## Step 4: Final Review
 
-1.  Present the generated specification to the user.
-2.  Ask: "Does this accurately reflect the current system behavior?"
-3.  If confirmed, ensure the file is saved in the `agents-artifacts/specs/` directory.
+1.  **Verify Granularity**: Check if the specifications are appropriately split by Component/Module (ensure no monolithic files).
+2.  Present the generated specification to the user.
+3.  Ask: "Does this accurately reflect the current system behavior?"
