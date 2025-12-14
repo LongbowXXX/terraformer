@@ -24,14 +24,22 @@ The output follows the [AGENTS.md](https://agents.md/) format - a simple, open f
 
 **IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
 
-1.  **Input Analysis**: Analyze README, file structure, config files, entry points, and existing docs.
-2.  **Tech Stack Detection**: Identify languages, frameworks, databases, build tools, etc.
-3.  **Pattern Recognition**: Detect architectural patterns.
-4.  **Documentation Generation**: Generate initial docs in `agents-docs/` (referencing `doc-sync.prompt.template.md`).
-5.  **AGENTS.md Generation**: Generate the `AGENTS.md` file following the specified format.
-6.  **Final Check**: Review the "Final Check" section.
+1.  **Language Detection**: Detect the target language specified by the user (default: English).
+2.  **Input Analysis**: Analyze README, file structure, config files, entry points, and existing docs.
+3.  **Tech Stack Detection**: Identify languages, frameworks, databases, build tools, etc.
+4.  **Pattern Recognition**: Detect architectural patterns.
+5.  **Documentation Generation**: Generate initial docs in `agents-docs/` in the **Target Language**.
+6.  **Knowledge Base Translation**: Translate `knowledge/` files if the Target Language is not English.
+7.  **AGENTS.md Generation**: Generate the `AGENTS.md` file following the format in the **Target Language**.
+8.  **Final Check**: Review the "Final Check" section.
 
 ## 🛠️ Generation Logic
+
+### Step 0: Language Detection
+
+The user may specify a language (e.g., `/terraform-context Japanese`).
+If no language is specified, default to **English**.
+All subsequent outputs (Docs, AGENTS.md) MUST be in this **Target Language**.
 
 ### Step 1: Input Analysis
 
@@ -72,13 +80,25 @@ Generate the following initial documentation files in the `agents-docs/` directo
 Generate the initial documentation files in the `agents-docs/` directory.
 Refer to `.github/template-skills/doc-sync.prompt.template.md` for the list of files to generate and their expected content structure.
 
+**IMPORTANT**: Translate the content into the **Target Language**.
+
+### Step 5: Knowledge Base Translation
+
+If the **Target Language** is NOT English:
+
+1.  **Read** the files in the `knowledge/` directory.
+2.  **Translate** the content of each file into the **Target Language**.
+3.  **Overwrite** the existing files in `knowledge/` with the translated content.
+    - _Note_: Do NOT change filenames, only the content.
+    - _Note_: Ensure specific technical terms remain accurate (English may be kept where appropriate).
+
 _Note: Create these files with initial content based on your analysis. They will be refined by the @Librarian later._
 
 <agents_style_guide>
 
 ## 📤 Output Format (`AGENTS.md`)
 
-Generate the content for `AGENTS.md` following this structure. **Output in English.**
+Generate the content for `AGENTS.md` following this structure. **Output in the Target Language (defined in Step 0).**
 
 ````markdown
 # AGENTS.md - [Project Name]
@@ -218,6 +238,7 @@ List all files in the `knowledge/` directory.
 
 Before outputting, verify:
 
+- [ ] **Language**: Content is in the Target Language.
 - [ ] **Accuracy**: All paths and names exist in the actual project
 - [ ] **Completeness**: All major components documented
 - [ ] **Conciseness**: No redundant information
@@ -229,8 +250,8 @@ Before outputting, verify:
 **Before finishing, confirm:**
 
 - [ ] All todos are marked as completed.
-- [ ] `AGENTS.md` has been generated with all required sections.
-- [ ] Initial documentation files in `agents-docs/` have been created.
+- [ ] `AGENTS.md` has been generated in the Target Language.
+- [ ] Initial documentation files in `agents-docs/` have been created in the Target Language.
 - [ ] All placeholders in the generated files are replaced with actual values.
 
 </instruction>

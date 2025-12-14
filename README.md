@@ -74,6 +74,7 @@ _The era of humans typing commands is over! 😜🚀_
 ### 2. Generate Context Map (L3)
 
 1.  Type **`/terraform-context`** in the Chat.
+    - _Tip: You can specify a language: `/terraform-context Japanese`_
 2.  Terraformer will generate a high-density `AGENTS.md`.
 3.  Save it to the project root.
 
@@ -82,6 +83,7 @@ _The era of humans typing commands is over! 😜🚀_
 1.  Open your project in **VS Code** (ensure GitHub Copilot Chat extension is active).
 2.  Open `AGENTS.md` (generated in step 2) to provide context.
 3.  Type **`/terraformer`** in the Copilot Chat.
+    - _Tip: You can specify a language: `/terraformer Japanese`_
 4.  Terraformer will analyze your project and **generate or update**:
     - **Agent Definitions** (e.g., `architect.agent.md`) customized for your tech stack.
     - **Standard Skills** (`plan.prompt.md`, `refactor.prompt.md`, etc.).
