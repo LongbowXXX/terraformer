@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.12] - 2025-12-14
+
+### Added
+
+- **Skills**: New `discover-specs` skill template.
+
+### Changed
+
+- **Prompts**: Update `terraform-context` prompt (ANTP v1.4 project context).
+- **Documentation**: Add instructions for agents to follow links.
+
 ## [0.0.11] - 2025-12-11
 
 ### Added
