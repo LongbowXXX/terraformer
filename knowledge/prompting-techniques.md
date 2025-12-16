@@ -333,3 +333,73 @@ Inject a **Critical Translation Rule** immediately before the section that must 
 
 - **Consistency**: Ensures agents behave identically regardless of the user's language.
 - **Safety**: Prevents the accidental removal of guardrails during translation.
+- [ ] Use `[Suggestion]` for non-critical improvements.
+- [ ] Maintain a professional tone.
+
+## Multi-Perspective Search (Context Expansion)
+
+### Problem
+
+When users ask complex technical questions, a single keyword search often yields incomplete results, missing relevant context from related files or documentation living under different terminology.
+
+### Solution
+
+Force the agent to "triangulate" the truth by generating multiple, distinct search queries covering definitions, implementation patterns, and test cases.
+
+### Implementation Steps
+
+1.  **Instruction**: Add a step requiring the generation of 3 distinct search angles.
+2.  **Execution**: Run tools for each angle.
+
+### Example Template
+
+```markdown
+### 🔍 Research Strategy
+
+**Do not rely on a single search query.** You MUST:
+
+1.  **Identify Keywords**: Extract 3-5 distinct keywords/concepts from the request.
+2.  **Parallel Execution**: Run search tools for EACH keyword to gather diverse context (Definitions, Usage patterns, Test cases).
+3.  **Synthesize**: Form meaningful insights only after reviewing results from all search paths.
+```
+
+### Benefits
+
+- **Comprehensiveness**: Ensures a thorough understanding of the codebase.
+- **Accuracy**: Reduces the chance of missing edge cases or alternative implementations.
+
+## Few-Shot Chain of Thought (Reasoning)
+
+### Problem
+
+Standard "Chain of Thought" (CoT) instructions ("Think step by step") are often too abstract, leading models to ramble without structure or skip critical reasoning steps.
+
+### Solution
+
+Provide a concrete _example_ of the expected reasoning process within the prompt. This "Few-Shot" approach aligns the model's internal monologue with the desired depth and structure.
+
+### Implementation Steps
+
+1.  **Define Structure**: Create a `<thinking>` block example.
+2.  **Show "Good" Pattern**: Demonstrate how to catch an error or weigh options.
+
+### Example Template
+
+```xml
+<example_thinking>
+User asked: "Refactor the login function."
+
+1.  **Analyze**: I see the `login` function in `auth.ts`. It uses a callback pattern.
+2.  **Critique**: Callbacks are outdated. I should use async/await.
+3.  **Safety Check**: Are there any existing tests? Yes, `auth.test.ts`. I must ensure they pass.
+4.  **Plan**:
+    - Update signature to return Promise.
+    - Wrap legacy code.
+    - Update tests.
+</example_thinking>
+```
+
+### Benefits
+
+- **Alignment**: The model copies the _logic structure_ of the example.
+- **Consistency**: Produces more predictable and high-quality reasoning outputs.

@@ -73,6 +73,14 @@ Detect architectural patterns:
 - Event Sourcing, CQRS
 - Microservices, Monolith, Modular Monolith
 
+### Step 3.5: Context Compression
+
+**Synthesize** your findings into a concise mental model.
+
+- **Identify Noise**: Ignore test files, vendor directories, and auto-generated code when summarizing.
+- **Focus on Signal**: Prioritize core business logic, public APIs, and configuration.
+- **Goal**: Create a high-density summary that fits within the context window while retaining critical details.
+
 ### Step 4: Documentation Generation
 
 Generate the following initial documentation files in the `agents-docs/` directory. Use the detected tech stack and context to populate them.

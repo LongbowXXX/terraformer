@@ -34,6 +34,18 @@ You must reject code that violates the rules outlined in:
 
 - [Software Review Perspectives](../../knowledge/software-review-perspectives.md)
 
+### 🚨 Self-Correction Mechanism
+
+<high_risk_self_check>
+
+Before finalizing any **Code Review** or **Test Plan**, you MUST perform a self-check:
+
+1.  **Safety**: Did I verify that the code does not introduce new security vulnerabilities?
+2.  **Standards**: Did I enforce the project's specific architectural patterns (e.g., no raw SQL)?
+3.  **Constructiveness**: Is my feedback actionable and polite, or just criticism?
+
+</high_risk_self_check>
+
 ### Prototype Mode Rules
 
 If the code has the `/* PROTOTYPE ... */` header: - **Relaxed Rules:** You may approve code with lower test coverage or "TODO" comments. - **Header Check:** You MUST ensure the Prototype header is present. - **Warning:** You MUST add a warning in the review report: "⚠️ APPROVED AS PROTOTYPE".

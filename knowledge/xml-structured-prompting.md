@@ -38,6 +38,8 @@ While XML provides strict structural boundaries that LLMs excel at parsing, Mark
 |              | `<plan_research>`    | Instructions focused on context gathering and research phases.         |
 |              | `<plan_style_guide>` | Specific formatting rules for the agent's output (e.g., plans).        |
 | **Output**   | `<output>`           | The final answer container.                                            |
+| **Safety**   | `<uncertainty>`      | Highlights ambiguous or uncertain areas in the user request.           |
+|              | `<self_check>`       | A forced introspection step for high-risk operations.                  |
 
 ## 4. Practical Example: XML + Markdown
 
@@ -91,3 +93,33 @@ Here is a standard template showing how Markdown organizes the content _within_ 
 For a live example of these tags in a production environment (specifically the Agentic tags), refer to the **VS Code Copilot Plan Agent**:
 
 - [Plan.agent.md](https://github.com/microsoft/vscode-copilot-chat/blob/main/assets/agents/Plan.agent.md)
+
+## 6. Hallucination Prevention Tags (GPT-5.2 Techniques)
+
+To minimize hallucinations and increase reliability in high-stakes tasks using simpler models or complex contexts, we use **Explicit Uncertainty Tags**.
+
+### `<uncertainty_and_ambiguity>`
+
+**Purpose**: Forces the model to explicitly list what it _doesn't_ know or where the user's request is vague, BEFORE attempting to solve the problem.
+
+**Usage**:
+
+```xml
+<uncertainty_and_ambiguity>
+1. It is unclear if the user wants X or Y.
+2. The version of the dependency is not specified.
+</uncertainty_and_ambiguity>
+```
+
+### `<high_risk_self_check>`
+
+**Purpose**: A dedicated "Critic" mode where the model must attack its own previous output to find flaws, security vulnerabilities, or logic errors.
+
+**Usage**:
+
+```xml
+<high_risk_self_check>
+1. Does the code I just generated introduce a SQL injection? -> CHECK: Parameterized queries used.
+2. Did I follow the "No formatting" rule? -> FAIL: I added bold text. Correcting...
+</high_risk_self_check>
+```

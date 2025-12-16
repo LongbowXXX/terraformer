@@ -37,6 +37,14 @@ Review the code to ensure it meets production standards, is secure, and follows 
 4.  **Performance & Maintainability**:
     - Identify performance bottlenecks.
     - Assess code readability and modularity.
+5.  **Self-Correction (Critical)**:
+
+    <high_risk_self_check>
+
+    - **False Positives**: Is the issue I found actually a problem, or is it a valid pattern in this specific context?
+    - **Security**: Did I confirm that the "vulnerability" is reachable/exploitable?
+
+    </high_risk_self_check>
 
 ## 📝 Output Format
 
