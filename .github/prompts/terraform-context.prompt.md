@@ -86,6 +86,13 @@ Refer to `.github/template-skills/doc-sync.prompt.template.md` for the list of f
 
 If the **Target Language** is NOT English:
 
+> [!IMPORTANT] > **CRITICAL TRANSLATION RULE**:
+> When generating the content below in the **Target Language**, you MUST:
+>
+> 1. **DO NOT SUMMARIZE**: Translate the content **verbatim**.
+> 2. **PRESERVE STRUCTURE**: Keep all structure, bullet points, and warnings.
+> 3. **MAINTAIN INTENSITY**: Do not soften "MUST" to "should".
+
 1.  **Read** the files in the `knowledge/` directory.
 2.  **Translate** the content of each file into the **Target Language**.
 3.  **Overwrite** the existing files in `knowledge/` with the translated content.
@@ -99,6 +106,14 @@ _Note: Create these files with initial content based on your analysis. They will
 ## 📤 Output Format (`AGENTS.md`)
 
 Generate the content for `AGENTS.md` following this structure. **Output in the Target Language (defined in Step 0).**
+
+> [!IMPORTANT] > **CRITICAL TRANSLATION RULE**:
+> When generating the content below in the **Target Language**, you MUST:
+>
+> 1. **DO NOT SUMMARIZE**: Translate the "Dynamic Context Protocol" section **verbatim** (word-for-word).
+> 2. **PRESERVE STRUCTURE**: Keep all structure, bullet points, and **bold** warnings exactly as they appear in the template.
+> 3. **MAINTAIN INTENSITY**: Do not soften the tone. Keep the instructions "CRITICAL" and "MUST".
+> 4. **NO OMISSION**: Do not omit any part of the instructions for brevity.
 
 ````markdown
 # AGENTS.md - [Project Name]

@@ -62,6 +62,13 @@ If no language is specified, default to **English**.
 Generate or **Update** **ALL** skill files by reading their templates from `.github/template-skills/`.
 **IMPORTANT**:
 
+> [!IMPORTANT] > **CRITICAL TRANSLATION RULE**:
+> When generating the content below in the **Target Language**, you MUST:
+>
+> 1. **DO NOT SUMMARIZE**: Translate the text **verbatim**.
+> 2. **PRESERVE STRUCTURE**: Keep all structure, bullet points, and warnings.
+> 3. **MAINTAIN INTENSITY**: Do not soften "MUST" to "should".
+
 - If the file already exists, **UPDATE** it to match the latest template and `AGENTS.md` context.
 - **Translate the content of the template into the Target Language** (Step 0).
 - Keep technical terms (e.g., specific commands, variable names) in English if appropriate for the target audience.
@@ -77,6 +84,13 @@ Generate or **Update** **ALL** skill files by reading their templates from `.git
 Generate agents using `.github/template-agents/*.agent.template.md`.
 
 **IMPORTANT**:
+
+> [!IMPORTANT] > **CRITICAL TRANSLATION RULE**:
+> When generating the content below in the **Target Language**, you MUST:
+>
+> 1. **DO NOT SUMMARIZE**: Translate the text **verbatim**.
+> 2. **PRESERVE STRUCTURE**: Keep all structure, bullet points, and warnings.
+> 3. **MAINTAIN INTENSITY**: Do not soften "MUST" to "should".
 
 - **Translate the content of the template into the Target Language** (Step 0).
 - Do **NOT** specify `tools` in the generated agent file. While best practices may suggest defining them, available tools vary by development environment. Omitting the `tools` field ensures all available tools are accessible.
