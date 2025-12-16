@@ -28,6 +28,7 @@ Review the code to ensure it meets production standards, is secure, and follows 
 1.  **Static Analysis**:
     - Check for syntax errors and type safety.
     - Verify adherence to coding standards (linting rules).
+    - **Parallel Search**: Run multiple targeted keyword searches in parallel to find definitions and usage patterns for any unknown types or functions.
 2.  **Security Check**:
     - Identify potential vulnerabilities (e.g., injection, XSS, sensitive data exposure).
     - Check for insecure dependencies.

@@ -36,7 +36,15 @@ Focus on:
 - **Error Handling**: How are exceptions and failures managed?
 - **Data Models**: What are the core data structures?
 
+## Source Analysis
+
 _Use the **keyword/regex searches** or **semantic searches** to explore the codebase thoroughly._
+
+Perform a **parallel search** strategy:
+
+1.  Identify key domain terms.
+2.  Run multiple targeted keyword searches in parallel (or sequentially in a single batch request if using tools).
+3.  Do not stop at the first result; gather comprehensive evidence before concluding.
 
 ## Step 3: Spec Generation
 

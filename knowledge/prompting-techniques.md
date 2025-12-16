@@ -336,38 +336,6 @@ Inject a **Critical Translation Rule** immediately before the section that must 
 - [ ] Use `[Suggestion]` for non-critical improvements.
 - [ ] Maintain a professional tone.
 
-## Multi-Perspective Search (Context Expansion)
-
-### Problem
-
-When users ask complex technical questions, a single keyword search often yields incomplete results, missing relevant context from related files or documentation living under different terminology.
-
-### Solution
-
-Force the agent to "triangulate" the truth by generating multiple, distinct search queries covering definitions, implementation patterns, and test cases.
-
-### Implementation Steps
-
-1.  **Instruction**: Add a step requiring the generation of 3 distinct search angles.
-2.  **Execution**: Run tools for each angle.
-
-### Example Template
-
-```markdown
-### 🔍 Research Strategy
-
-**Do not rely on a single search query.** You MUST:
-
-1.  **Identify Keywords**: Extract 3-5 distinct keywords/concepts from the request.
-2.  **Parallel Execution**: Run search tools for EACH keyword to gather diverse context (Definitions, Usage patterns, Test cases).
-3.  **Synthesize**: Form meaningful insights only after reviewing results from all search paths.
-```
-
-### Benefits
-
-- **Comprehensiveness**: Ensures a thorough understanding of the codebase.
-- **Accuracy**: Reduces the chance of missing edge cases or alternative implementations.
-
 ## Few-Shot Chain of Thought (Reasoning)
 
 ### Problem
@@ -403,3 +371,35 @@ User asked: "Refactor the login function."
 
 - **Alignment**: The model copies the _logic structure_ of the example.
 - **Consistency**: Produces more predictable and high-quality reasoning outputs.
+
+## Explicit Parallelism (Efficiency)
+
+### Problem
+
+Agents often execute search or retrieval tools sequentially (one after another), waiting for each round-trip to complete. This unnecessarily prolongs the "thinking" time and can lead to timeouts or user frustration.
+
+### Solution
+
+Explicitly instruct the agent to run independent tool calls **in parallel** (or in a single batch) whenever possible.
+
+### Implementation Steps
+
+1.  **Identify Independent Tasks**: Look for searches or reads that do not depend on each other.
+2.  **Instruction**: Add a "Parallel Execution" rule.
+
+### Example Template
+
+```markdown
+## Source Analysis
+
+Perform a **parallel search** strategy:
+
+1. Identify key domain terms.
+2. Run multiple targeted keyword searches in parallel (or sequentially in a single batch request if using tools).
+3. Do not stop at the first result; gather comprehensive evidence before concluding.
+```
+
+### Benefits
+
+- **Speed**: Drastically reduces total execution time.
+- **Breadth**: Encourages covering more ground since the "cost" (in time) feels lower to the model.
