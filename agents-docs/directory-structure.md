@@ -50,6 +50,10 @@ terraformer/
 
 - **Role**: Contains high-level documentation primarily for human readers, though agents can also read them.
 - **Key Files**: `PROJECT_CHARTER.md` (Mission), `DEVELOPMENT_CONTEXT.md` (ADRs).
+- **Subdirectories**:
+  - `docs/specs/`: System and Feature specifications (Target for `@Architect`).
+  - `docs/design/`: Detailed design documents (Target for `@Architect`).
+  - `docs/tests/`: Test specifications and reports (Target for `@QualityGuard`).
 
 ## Module Dependency Diagram
 

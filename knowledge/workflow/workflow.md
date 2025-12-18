@@ -28,7 +28,8 @@ graph TD
 
 **Goal**: Clarify WHY we are doing this and WHAT problem we are solving.
 
-- **AI Role**: Organizing requirements, identifying unknowns, researching similar features, drafting user stories.
+- **AI Role**: **@BusinessAnalyst** (Skill: `/requirements`)
+  - Organizing requirements, identifying unknowns, researching similar features, drafting user stories.
 - **Human Role**: Presenting requirements, defining scope, judging business value.
 - **Key Deliverables**:
   - [Requirement Definition Issue](./templates/issue_requirement.md) (Purpose, Context, Scope, Exit Criteria)
@@ -37,18 +38,20 @@ graph TD
 
 **Goal**: Concretize HOW to achieve it and prevent rework.
 
-- **AI Role**: Drafting specifications, proposing architecture, defining interfaces, **creating Test Cases**.
+- **AI Role**: **@Architect** (Skill: `/design`)
+  - Drafting specifications, proposing architecture, defining interfaces.
 - **Human Role**: Design decisions, security risk assessment, specification approval.
 - **Key Deliverables**:
   - [Design Discussion Issue](./templates/issue_design.md)
-  - Specifications/Design Docs (Git: `docs/specs/`, `docs/design/`)
-  - Test Design Docs (Git: `docs/tests/features/`) - Create/Update aligned with spec changes.
+  - Specifications (Git: `docs/specs/`) - Uses `specification.template.md`
+  - Design Docs (Git: `docs/design/`)
 
 ### 3. Implementation Phase
 
 **Goal**: Create code that works as designed.
 
-- **AI Role**: Implementing code, creating unit tests, updating documentation, drafting commit messages.
+- **AI Role**: **@Developer** (Skill: `/implement`, `/refactor`)
+  - Implementing code, creating unit tests, updating documentation, drafting commit messages.
 - **Human Role**: Code review, assisting with complex logic, directing AI.
 - **Key Deliverables**:
   - Source Code, Test Code (Git)
@@ -58,9 +61,12 @@ graph TD
 
 **Goal**: Guarantee quality and decide on release.
 
-- **AI Role**: Assisting test case execution, identifying bugs, and proposing fixes.
+- **AI Role**: **@QualityGuard** (Skill: `/test-spec`, `/audit`)
+  - **@Architect** (creating Test Cases)
+  - Assisting test case execution, identifying bugs, and proposing fixes.
 - **Human Role**: Exploratory testing, usability checks, release decision.
 - **Key Deliverables**:
+  - Test Specifications (Git: `docs/tests/specs/`)
   - [Sanity Test Result](./templates/test_sanity.md) (Uses `docs/tests/sanity.md` on Git)
   - [Functional Test Result](./templates/test_functional.md) (Uses `docs/tests/features/*.md` on Git)
   - [Exit Criteria Check Issue](./templates/issue_exit_criteria.md)
@@ -69,7 +75,8 @@ graph TD
 
 **Goal**: Deliver value to the user.
 
-- **AI Role**: Generating CHANGELOG, creating release notes, automating tagging.
+- **AI Role**: **@Librarian** (Skill: `/release-new-version`)
+  - Generating CHANGELOG, creating release notes, automating tagging.
 - **Human Role**: Final approval, pushing the release button (or approving).
 - **Key Deliverables**:
   - Release Notes (GitHub Releases)
