@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.13] - 2025-12-18
+
+### Added
+
+- **Documentation**: AI collaborative workflow documentation and project charter.
+- **Templates**: Design, release, and test specification skill templates.
+- **Knowledge**: Advanced prompting techniques for GitHub Copilot.
+- **Skills**: Audit and discover-specs skill templates.
+- **Prompts**: Structured prompting guide and project context generation prompts.
+
 ## [0.0.12] - 2025-12-14
 
 ### Added
