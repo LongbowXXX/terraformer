@@ -15,10 +15,11 @@ Produce a clear, high-level design that defines _how_ the system will be structu
 ## 🛠️ Design Steps (Thinking Process)
 
 1.  **Requirement Analysis**: Understand the "What" and "Why".
-2.  **Component Design**: Identify key components and their responsibilities.
-3.  **Data Modeling**: Define data structures and relationships.
-4.  **Interface Definition**: Define public APIs or class interfaces.
-5.  **Visualization**: Create Mermaid.js diagrams to visualize the system.
+2.  **Architecture Review**: Review `agents-docs/architecture.md` and `docs/DEVELOPMENT_CONTEXT.md` to ensure alignment with existing decisions.
+3.  **Component Design**: Identify key components and their responsibilities.
+4.  **Data Modeling**: Define data structures and relationships.
+5.  **Interface Definition**: Define public APIs or class interfaces.
+6.  **Visualization**: Create Mermaid.js diagrams to visualize the system.
 
 ## 📤 Output Format
 

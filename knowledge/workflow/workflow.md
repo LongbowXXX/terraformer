@@ -21,6 +21,9 @@ graph TD
     Impl["3. Implementation Phase<br/>(Git)"] --> Verify
     Verify["4. Verification Phase<br/>(Issue & Git)"] --> Release
     Release["5. Release Phase<br/>(Git)"] --> End
+
+    Verify -.->|Bug Fix| Impl
+    Impl -.->|Spec Change| Design
     End([End])
 ```
 
@@ -50,8 +53,11 @@ graph TD
 
 **Goal**: Create code that works as designed.
 
-- **AI Role**: **@Developer** (Skill: `/implement`, `/refactor`)
-  - Implementing code, creating unit tests, updating documentation, drafting commit messages.
+- **AI Role**:
+  - **@Developer** (Skill: `/implement`)
+    - Implementing code, creating unit tests, updating documentation, drafting commit messages.
+  - **@Gardener** (Skill: `/refactor`)
+    - Performing safe refactoring to improve code structure without changing behavior.
 - **Human Role**: Code review, assisting with complex logic, directing AI.
 - **Key Deliverables**:
   - Source Code, Test Code (Git)
