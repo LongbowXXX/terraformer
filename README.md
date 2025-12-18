@@ -55,7 +55,7 @@ git clone https://github.com/LongbowXXX/terraformer.git
 
 # Copy the configuration engine to your legacy project
 cp -r terraformer/.github/prompts ./my-legacy-project/.github/
-cp -r terraformer/.github/templates ./my-legacy-project/.github/
+cp -r terraformer/.github/template-* ./my-legacy-project/.github/
 cp -r terraformer/knowledge ./my-legacy-project/
 ```
 
@@ -134,6 +134,7 @@ It provides resources such as:
 - **AI Literacy**: Resources to make _humans_ AI-Ready and effective at using AI agents.
 - **XML Structured Prompting**: Comprehensive guide on using XML tags for better LLM control.
 - **Specification Guidelines**: Synergizing Gherkin behavior and Mermaid diagrams for unambiguous specs.
+- **Workflow**: Standardized [Collaboration Process](./knowledge/workflow/workflow.md) for Agents and Humans.
 
 ## 📄 Documentation
 

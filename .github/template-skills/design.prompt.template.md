@@ -12,17 +12,25 @@ You are supporting the **@Architect**. Your goal is to design the structure, int
 
 Produce a clear, high-level design that defines _how_ the system will be structured, using diagrams and interface definitions.
 
+## 📥 Input Types
+
+1.  **Requirement Document**: A clear set of user stories or requirements (e.g., from `/requirements`). **@Architect must NOT design without requirements.**
+2.  **Architecture Context**: Existing `agents-docs/architecture.md`.
+
 ## 🛠️ Design Steps (Thinking Process)
 
 1.  **Requirement Analysis**: Understand the "What" and "Why".
-2.  **Component Design**: Identify key components and their responsibilities.
-3.  **Data Modeling**: Define data structures and relationships.
-4.  **Interface Definition**: Define public APIs or class interfaces.
-5.  **Visualization**: Create Mermaid.js diagrams to visualize the system.
+2.  **Architecture Review**: Review `agents-docs/architecture.md` to ensure alignment with existing decisions.
+3.  **Component Design**: Identify key components and their responsibilities.
+4.  **Data Modeling**: Define data structures and relationships.
+5.  **Interface Definition**: Define public APIs or class interfaces.
+6.  **Visualization**: Create Mermaid.js diagrams to visualize the system.
 
 ## 📤 Output Format
 
-Use the standard template: `knowledge/templates/design_doc.template.md` (if it exists) or the following format:
+**File Path**: `agents-artifacts/designs/[feature-name].design.md`
+
+Use the standard template: `knowledge/templates/design.template.md` (if it exists) or the following format:
 
 ````markdown
 # Design Document: [Feature Name]

@@ -122,27 +122,28 @@ Manual verification via test projects; automated CI planned.
 
 ### Skills
 
-| Skill                    | Purpose                            |
-| ------------------------ | ---------------------------------- |
-| `/requirements`          | PRD & User Story generation        |
-| `/design`                | System design & diagrams           |
-| `/plan`                  | Impact analysis & planning         |
-| `/refactor`              | Safe refactoring                   |
-| `/test`                  | TDD-based test generation          |
-| `/implement`             | Implementation from specs          |
-| `/review`                | General code review                |
-| `/debug`                 | Root cause analysis & fix          |
-| `/doc-sync`              | Documentation sync                 |
-| `/check-doc-consistency` | Verify doc consistency             |
-| `/create-custom-prompt`  | Create custom skill prompt         |
-| `/vscode-tasks`          | Generate .vscode/tasks.json        |
-| `/vscode-settings`       | Generate .vscode/settings.json     |
-| `/vscode-extensions`     | Generate .vscode/extensions.json   |
-| `/audit-spec`            | Audit spec documents (Spec Linter) |
-| `/test-spec`             | Generate Test Specs                |
-| `/audit`                 | Code Review & Security Audit       |
-| `/brainstorm`            | Brainstorming & Spec consultation  |
-| `/discover-specs`        | Reverse-engineer specs from code   |
+| Skill                    | Purpose                             |
+| ------------------------ | ----------------------------------- |
+| `/requirements`          | PRD & User Story generation         |
+| `/design`                | System design & diagrams            |
+| `/plan`                  | Impact analysis & planning          |
+| `/refactor`              | Safe refactoring                    |
+| `/test`                  | TDD-based test generation           |
+| `/implement`             | Implementation from specs           |
+| `/review`                | General code review                 |
+| `/debug`                 | Root cause analysis & fix           |
+| `/doc-sync`              | Documentation sync                  |
+| `/check-doc-consistency` | Verify doc consistency              |
+| `/create-custom-prompt`  | Create custom skill prompt          |
+| `/vscode-tasks`          | Generate .vscode/tasks.json         |
+| `/vscode-settings`       | Generate .vscode/settings.json      |
+| `/vscode-extensions`     | Generate .vscode/extensions.json    |
+| `/audit-spec`            | Audit spec documents (Spec Linter)  |
+| `/test-spec`             | Generate Test Specs                 |
+| `/audit`                 | Code Review & Security Audit        |
+| `/brainstorm`            | Brainstorming & Spec consultation   |
+| `/discover-specs`        | Reverse-engineer specs from code    |
+| `/release-new-version`   | Manual/Automated release management |
 
 ---
 
@@ -169,6 +170,7 @@ Manual verification via test projects; automated CI planned.
 | Software Review Perspectives | [knowledge/software-review-perspectives.md](./knowledge/software-review-perspectives.md) |
 | XML Structured Prompting     | [knowledge/xml-structured-prompting.md](./knowledge/xml-structured-prompting.md)         |
 | Specification Guidelines     | [knowledge/specification-guidelines.md](./knowledge/specification-guidelines.md)         |
+| Workflow (AI Collaboration)  | [knowledge/workflow/workflow.md](./knowledge/workflow/workflow.md)                       |
 
 ---
 
