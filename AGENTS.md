@@ -170,6 +170,7 @@ Manual verification via test projects; automated CI planned.
 | Software Review Perspectives | [knowledge/software-review-perspectives.md](./knowledge/software-review-perspectives.md) |
 | XML Structured Prompting     | [knowledge/xml-structured-prompting.md](./knowledge/xml-structured-prompting.md)         |
 | Specification Guidelines     | [knowledge/specification-guidelines.md](./knowledge/specification-guidelines.md)         |
+| Workflow (AI Collaboration)  | [knowledge/workflow/workflow.md](./knowledge/workflow/workflow.md)                       |
 
 ---
 

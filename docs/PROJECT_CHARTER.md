@@ -137,7 +137,7 @@ This allows users to acquire a **"Team of Agents equipped with Senior Engineer t
 
 ## 10. Documentation & Traceability
 
-To ensure that AI and human collaboration is effective and auditable, we enforce strict documentation standards.
+To ensure that AI and human collaboration is effective and auditable, we enforce strict documentation standards and follow the [Standard Workflow](../knowledge/workflow/workflow.md).
 
 ### Standardized Templates
 
