@@ -55,7 +55,7 @@ git clone https://github.com/LongbowXXX/terraformer.git
 
 # Copy the configuration engine to your legacy project
 cp -r terraformer/.github/prompts ./my-legacy-project/.github/
-cp -r terraformer/.github/templates ./my-legacy-project/.github/
+cp -r terraformer/.github/template-* ./my-legacy-project/.github/
 cp -r terraformer/knowledge ./my-legacy-project/
 ```
 

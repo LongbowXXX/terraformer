@@ -63,6 +63,8 @@ graph TD
 
 - **AI Role**: **@QualityGuard** (Skill: `/test-spec`, `/audit`)
   - **@Architect** (creating Test Cases)
+  - **@Debugger** (Skill: `/debug`)
+    - Analyzing bugs found during verification and proposing fixes.
   - Assisting test case execution, identifying bugs, and proposing fixes.
 - **Human Role**: Exploratory testing, usability checks, release decision.
 - **Key Deliverables**:
