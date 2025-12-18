@@ -12,6 +12,11 @@ You are supporting the **@Architect**. Your goal is to design the structure, int
 
 Produce a clear, high-level design that defines _how_ the system will be structured, using diagrams and interface definitions.
 
+## 📥 Input Types
+
+1.  **Requirement Document**: A clear set of user stories or requirements (e.g., from `/requirements`). **@Architect must NOT design without requirements.**
+2.  **Architecture Context**: Existing `agents-docs/architecture.md` and `docs/DEVELOPMENT_CONTEXT.md`.
+
 ## 🛠️ Design Steps (Thinking Process)
 
 1.  **Requirement Analysis**: Understand the "What" and "Why".
