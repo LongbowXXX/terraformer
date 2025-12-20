@@ -7,7 +7,7 @@ It checks for broken installation paths, workflow inconsistencies, and prompt lo
 
 ## 1. Preparation
 
-1.  Create a timestamped report file: `agents-artifacts/reports/simulation_report_[YYYYMMDD].md`.
+1.  Create a timestamped report file: `docs/specs/reports/simulation_report_[YYYYMMDD].md`.
     - Initialize it with a Header and "Executive Summary" section (to be filled at the end).
     - Create a "1. Project Overview & Installation" section.
 

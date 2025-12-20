@@ -14,12 +14,12 @@ Produce a clear, high-level design that defines _how_ the system will be structu
 
 ## 📥 Input Types
 
-1.  **Requirement Document**: A clear set of user stories or requirements (e.g., from `/requirements`). **@Architect must NOT design without requirements.**
+1.  **Requirement Document**: A clear set of user stories (`docs/specs/[FeatureName]/requirements.md`). **@Architect must NOT design without requirements.**
 2.  **Architecture Context**: Existing `agents-docs/architecture.md`.
 
 ## 🛠️ Design Steps (Thinking Process)
 
-1.  **Requirement Analysis**: Understand the "What" and "Why".
+1.  **Requirement Analysis**: Read `docs/specs/[FeatureName]/requirements.md`. Understand the "What" and "Why".
 2.  **Architecture Review**: Review `agents-docs/architecture.md` to ensure alignment with existing decisions.
 3.  **Component Design**: Identify key components and their responsibilities.
 4.  **Data Modeling**: Define data structures and relationships.
@@ -28,7 +28,7 @@ Produce a clear, high-level design that defines _how_ the system will be structu
 
 ## 📤 Output Format
 
-**File Path**: `agents-artifacts/designs/[feature-name].design.md`
+**File Path**: `docs/specs/[FeatureName]/design.md`
 
 Use the standard template: `knowledge/templates/design.template.md` (if it exists) or the following format:
 

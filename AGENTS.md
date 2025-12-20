@@ -95,6 +95,23 @@ The context provided in this file (`AGENTS.md`) is a **summary index**. It does 
   - https://code.visualstudio.com/docs/copilot/customization/prompt-files
   - https://code.visualstudio.com/docs/copilot/customization/custom-agents
 
+### Artifact-Centric Workflow (Spec-Driven L4)
+
+**Role**: "1 Command = 1 Artifact"
+All agents MUST output their work as persistent Markdown artifacts in `docs/specs/[FeatureName]/`. Conversations are ephemeral; artifacts are eternal.
+
+**Pipeline**:
+
+1.  **Requirements**: `/requirements` -> `docs/specs/[Feature]/requirements.md`
+2.  **Design**: `/design` -> `docs/specs/[Feature]/design.md`
+3.  **Plan**: `/plan` -> `docs/specs/[Feature]/implementation_plan.md`
+4.  **Implementation**: `/implement` -> Code (src/...)
+
+**Context Hygiene**:
+
+- Agents should only read the artifacts relevant to their phase.
+- Do NOT rely on chat history for critical specifications.
+
 ### Language Guidelines
 
 - **Documentation**: All documents managed in git must be written in English.

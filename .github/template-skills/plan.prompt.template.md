@@ -14,11 +14,13 @@ Analyze the request and output a plan that a **@Developer** can follow without a
 
 ## 🛠️ Planning Steps (Thinking Process)
 
-1.  **Context Analysis:** Understand the goal and the current codebase.
-2.  **Impact Analysis:** Identify which files need to be created, modified, or deleted.
-3.  **Step-by-Step Plan:** Break down the work into atomic tasks.
+1.  **Context Analysis**: Read `docs/specs/[FeatureName]/design.md` and `docs/specs/[FeatureName]/requirements.md`.
+2.  **Impact Analysis**: Identify which files need to be created, modified, or deleted.
+3.  **Step-by-Step Plan**: Break down the work into atomic tasks.
 
 ## 📤 Output Format
+
+**File Path**: `docs/specs/[FeatureName]/implementation_plan.md`
 
 Use the standard template: `knowledge/templates/specification.template.md`
 

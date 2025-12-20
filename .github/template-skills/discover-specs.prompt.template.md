@@ -54,7 +54,7 @@ Perform a **parallel search** strategy:
 2.  **Determine Granularity**:
     - **Do not create a single monolithic file.**
     - Split specifications by **Component**, **Module**, or **Major Feature**.
-    - Create a separate file for each (e.g., `agents-artifacts/specs/[component-name].spec.md`).
+    - Create a separate file for each (e.g., `docs/specs/[FeatureName]/specification.md`).
 3.  Fill in the sections based on your analysis for each file:
     - **Overview**: Summary of what the code _actually_ does.
     - **User Stories**: Reverse-engineer user stories from the implemented features.

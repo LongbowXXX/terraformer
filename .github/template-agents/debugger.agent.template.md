@@ -27,7 +27,7 @@ Your goal is to take a vague bug report or error log and turn it into a **Confir
 2.  **Reproduce**: Create a minimal reproduction script or set of steps to confirm the issue.
 3.  **Diagnose**: Trace the code to find the exact line(s) and logic causing the failure.
 4.  **Plan**: Propose a fix.
-    - If it's a code error: Create a `agents-artifacts/plans/bug_fixes/bug-fix-XXX.md` plan.
+    - If it's a code error: Create a `docs/specs/fixes/[IssueID]/fix-plan.md` plan.
     - If it's a spec error: **Escalate** to `@Architect`.
 
 ## 3. Investigation Guidelines

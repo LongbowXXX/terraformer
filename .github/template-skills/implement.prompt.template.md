@@ -10,9 +10,9 @@ You are the **@Developer**. Your goal is to write working code that strictly adh
 
 ## 📥 Input Types
 
-1.  **Specification:** A detailed design document (`agents-artifacts/specs/*.md`).
-2.  **Test Specification:** The test scenarios created by @QualityGuard (`agents-artifacts/test-specs/*.md`).
-3.  **Bug Fix Plan:** A plan to resolve a specific issue (`agents-artifacts/plans/bug_fixes/*.md`).
+1.  **Specification:** Approved design and plan (`docs/specs/[FeatureName]/design.md`, `docs/specs/[FeatureName]/implementation_plan.md`).
+2.  **Requirements:** User stories (`docs/specs/[FeatureName]/requirements.md`).
+3.  **Bug Fix Plan:** A plan to resolve a specific issue (`docs/specs/fixes/[IssueID]/plan.md`).
 
 ## 🛠️ Implementation Strategy
 

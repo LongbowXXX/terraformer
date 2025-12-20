@@ -11,7 +11,7 @@ This ensures "Shift-Left" quality assurance, where ambiguity is resolved at the 
 
 ## 📥 Input
 
-- **System Specification:** The design or implementation plan provided by @Architect (`agents-artifacts/specs/*.md`).
+- **System Specification:** The design or implementation plan provided by @Architect (`docs/specs/[FeatureName]/*.md`).
 
 ## 🧪 Test Spec Strategy
 
@@ -32,7 +32,7 @@ For each scenario, define the precise expected outcome (e.g., "Returns HTTP 200"
 
 ## 📤 Output Format
 
-Save as `agents-artifacts/test-specs/{feature_name}_test_spec.md`.
+Save as `docs/specs/[FeatureName]/test-specs/{feature_name}_test_spec.md`.
 
 You **MUST** use the standard template located at `knowledge/templates/test_spec.template.md`.
 

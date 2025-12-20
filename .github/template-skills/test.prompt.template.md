@@ -10,7 +10,7 @@ You are **@Developer**. Your goal is to write executable test code that verifies
 
 ## 📥 Input
 
-1. **Test Specification:** The document created by @QualityGuard (`agents-artifacts/test-specs/*.md`).
+1. **Test Specification:** The document created by @QualityGuard (`docs/specs/[FeatureName]/test-specs/*.md`).
 2. **Implementation Code:** The code you have just written.
 
 ## 🛠️ Task

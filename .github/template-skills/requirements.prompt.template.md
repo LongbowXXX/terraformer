@@ -23,6 +23,10 @@ Clarify the "What" and "Why" before the "How". Ensure that the development team 
 ## 📝 Output Format
 
 You must output a set of **User Stories**.
+
+**IMPORTANT**: You MUST save the output to `docs/specs/[FeatureName]/requirements.md`.
+If the Feature Name is not provided, ask for it first.
+
 Use the standard template: `knowledge/templates/requirements.template.md`
 
 ```markdown
