@@ -160,6 +160,7 @@ Manual verification via test projects; automated CI planned.
 | `/audit`                 | Code Review & Security Audit        |
 | `/brainstorm`            | Brainstorming & Spec consultation   |
 | `/discover-specs`        | Reverse-engineer specs from code    |
+| `/sanity-test`           | Generate sanity test checklist      |
 | `/release-new-version`   | Manual/Automated release management |
 
 ---
