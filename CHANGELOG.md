@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.14] - 2025-12-22
+
+### Changed
+
+- **Documentation**: Update agent documentation covering core concepts, workflow, and new `PROJECT_CHARTER.md` defining the AI-Native Transformation Protocol.
+- **Workflow**: Update AI collaborative workflow with agent roles, skills, and documentation.
+
 ## [0.0.13] - 2025-12-18
 
 ### Added
