@@ -66,3 +66,30 @@ How a user interacts with the generated agents to build a feature.
 4.  **User** asks `@Developer` to "Implement feature X based on the plan".
 5.  **@Developer** reads the plan and implements code. _Note: Developer cannot change the plan._
 6.  **User** asks `@QualityGuard` to "Review the changes".
+
+## Flow 4: Release Management (`/release-new-version`)
+
+### Overview
+
+Standardized process for releasing a new version of the software.
+
+### Processing Flow
+
+1.  **User** runs `/release-new-version`.
+2.  **Agent** analyzes `CHANGELOG.md` and git history.
+3.  **Agent** proposes the next semantic version number (Major/Minor/Patch).
+4.  **Agent** updates `CHANGELOG.md` and `package.json` (or equivalent).
+5.  **Agent** creates a git tag and pushes changes.
+
+## Flow 5: Specification Discovery (`/discover-specs`)
+
+### Overview
+
+Reverse-engineering specifications from existing code when documentation is missing or outdated.
+
+### Processing Flow
+
+1.  **User** runs `/discover-specs` on a specific feature or directory.
+2.  **Agent** analyzes the source code to understand logic and behavior.
+3.  **Agent** generates a `requirements.md` and `design.md` file in `docs/specs/[FeatureName]/`.
+4.  **User** verifies the generated specs match the actual behavior.

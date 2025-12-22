@@ -31,7 +31,8 @@ terraformer/
 ### `/.github/template-*/`
 
 - **Role**: Stores the blueprints used by the `/terraformer` command to generate project-specific assets.
-- **Key Files**: Agent definitions, skill templates.
+- **Key Files**: `template-agents/*.agent.template.md`, `template-skills/*.prompt.template.md`.
+- **Note**: This directory is the "Source of Truth" for all skills. Improvements should be made here, not in `.github/prompts/` (which are generated).
 - **Dependencies**: Used by the Terraformer meta-prompt.
 
 ### `/agents-docs/`

@@ -36,3 +36,17 @@
 
 - **Prompt Validation**: New prompts should be tested against a set of "golden queries" to ensure they don't hallucinate.
 - **Prototype Mode**: Use "Prototype Mode" to bypass strict specification checks for rapid iteration.
+
+## Documentation Maintenance (Sync-Doc Guidelines)
+
+To prevent documentation from diverging from the codebase:
+
+1.  **Timing**: Run `/sync-doc` (or manually check) whenever:
+    - A new Agent or Skill is added.
+    - A major refactoring changes the directory structure.
+    - A new external integration is added.
+2.  **Review Process**:
+    - Documentation changes should be included in the same PR as the code changes.
+    - Use `@Librarian` or `/check-doc-consistency` to detect drift.
+3.  **Automation**:
+    - Future: Add a CI check that runs a "doc-coverage" tool.

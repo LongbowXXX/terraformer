@@ -25,6 +25,12 @@ Since Terraformer is a "Prompt Engineering" project, "tests" are primarily manua
 - **Target**: Core skills like `/plan` and `/refactor`.
 - **Method**: Re-running standard prompts against a known "Golden" codebase (e.g., the `terraformer` repo itself) and checking if the output structure remains consistent.
 
+### Sanity Testing (Health Check)
+
+- **Target**: Application-wide health and configuration.
+- **Method**: Use `{ /sanity-test }` to generate a checklist of critical paths and configuration states (e.g., "Is the database connected?", "Are env vars loaded?").
+- **Usage**: Run before major releases or after significant refactoring to ensure the "skeleton" of the app is intact.
+
 ## Test Data Management
 
 - **Golden Project**: The `terraformer` repository itself serves as the primary test case.
