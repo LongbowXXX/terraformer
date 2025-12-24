@@ -183,7 +183,7 @@ Manual verification via test projects; automated CI planned.
 | Topic                        | Link                                                                                                                       |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | PR Creation Guidelines       | [knowledge/guidelines/pr-creation-guidelines.md](./knowledge/guidelines/pr-creation-guidelines.md)                         |
-| Prompting Techniques         | [knowledge/guidelines/prompting/prompting-techniques.md](./knowledge/guidelines/prompting/prompting-techniques.md)         |
+| Prompting Techniques         | [knowledge/guidelines/prompting/README.md](./knowledge/guidelines/prompting/README.md)                                     |
 | Software Review Perspectives | [knowledge/guidelines/software-review.md](./knowledge/guidelines/software-review.md)                                       |
 | XML Structured Prompting     | [knowledge/guidelines/prompting/xml-structured-prompting.md](./knowledge/guidelines/prompting/xml-structured-prompting.md) |
 | Specification Guidelines     | [knowledge/guidelines/specification-guidelines.md](./knowledge/guidelines/specification-guidelines.md)                     |

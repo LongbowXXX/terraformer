@@ -36,7 +36,7 @@ Your results are directly proportional to the clarity of your instructions.
 - **Provide Persona**: "Act as a Software Architect" yields very different results than "Act as a Developer." (The former focuses on design patterns and trade-offs, while the latter focuses on implementation details.)
 - **Chain of Thought**: Ask the AI to "think step-by-step" to reduce errors in complex tasks.
 
-👉 **Deep Dive**: Refer to [Prompting Techniques](../prompting-techniques.md) for advanced strategies.
+👉 **Deep Dive**: Refer to [Prompting Techniques](../prompting/README.md) for advanced strategies.
 
 ### 2. Context Engineering (Giving AI the "Map")
 
