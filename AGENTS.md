@@ -82,6 +82,7 @@ The context provided in this file (`AGENTS.md`) is a **summary index**. It does 
 ### Must Follow
 
 - `@Developer` must **immediately escalate** spec gaps (Anti-Drift Lock)
+- All Agents must follow [**Sequential Inquiry**](./knowledge/guidelines/prompting/sequential-inquiry.md) protocol when gathering information: Ask questions one by one, not in bulk.
 
 ### Must Avoid
 

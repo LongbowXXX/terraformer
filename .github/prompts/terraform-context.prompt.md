@@ -202,6 +202,7 @@ The context provided in this file (`AGENTS.md`) is a **summary index**. It does 
 
 ### Must Follow
 
+- All Agents must follow [**Sequential Inquiry**](./knowledge/guidelines/prompting/sequential-inquiry.md) protocol when gathering information: Ask questions one by one, not in bulk.
 - [e.g., All database access through Repository layer]
 - [e.g., No direct DOM manipulation outside React components]
 
