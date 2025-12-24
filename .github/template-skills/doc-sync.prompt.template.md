@@ -30,10 +30,10 @@ Generate the following 8 documentation files:
 | ------------------------------------- | ------------------------------------ | --------------------------------------------------- |
 | `architecture/overview.md`            | System overview and design rationale | Components, Diagrams, Design Decisions              |
 | `architecture/directory-structure.md` | File organization guide              | Tree structure, Responsibilities, Dependencies      |
-| `guidelines/coding-conventions.md`    | Code style and standards             | Naming, Formatting, Patterns                        |
+| `rules/coding-conventions.md`         | Code style and standards             | Naming, Formatting, Patterns                        |
 | `architecture/key-flows.md`           | Main workflows and entry points      | User Journeys, Data Flow, API Endpoints             |
 | `architecture/tech-stack.md`          | Technology choices and dependencies  | Languages, Frameworks, External Services            |
-| `guidelines/testing.md`               | Test strategy and patterns           | Test Types, Coverage Goals, Running Tests           |
+| `rules/testing.md`                    | Test strategy and patterns           | Test Types, Coverage Goals, Running Tests           |
 | `architecture/constraints.md`         | Known limitations and pitfalls       | Technical Debt, Platform Constraints, Common Issues |
 | `glossary.md`                         | Ubiquitous Language & Definitions    | Key Terms, Domain Concepts, Acronyms                |
 

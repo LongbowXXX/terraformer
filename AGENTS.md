@@ -64,7 +64,7 @@ This section defines the core terminology used across the project. For the full 
 
 ## 6. Development Rules
 
-→ **Details**: [docs/guidelines/coding-conventions.md](./docs/guidelines/coding-conventions.md), [docs/architecture/constraints.md](./docs/architecture/constraints.md)
+→ **Details**: [docs/rules/coding-conventions.md](./docs/rules/coding-conventions.md), [docs/architecture/constraints.md](./docs/architecture/constraints.md)
 
 ### 🔍 Dynamic Context Protocol (Research Phase)
 
@@ -118,7 +118,7 @@ All agents MUST output their work as persistent Markdown artifacts in `docs/spec
 
 ## 7. Testing
 
-→ **Details**: [docs/guidelines/testing.md](./docs/guidelines/testing.md)
+→ **Details**: [docs/rules/testing.md](./docs/rules/testing.md)
 
 Manual verification via test projects; automated CI planned.
 
@@ -170,10 +170,10 @@ Manual verification via test projects; automated CI planned.
 | --------------------- | -------------------------------------------------------------------------------------- |
 | Architecture & Design | [docs/architecture/overview.md](./docs/architecture/overview.md)                       |
 | Directory Structure   | [docs/architecture/directory-structure.md](./docs/architecture/directory-structure.md) |
-| Coding Conventions    | [docs/guidelines/coding-conventions.md](./docs/guidelines/coding-conventions.md)       |
+| Coding Conventions    | [docs/rules/coding-conventions.md](./docs/rules/coding-conventions.md)                 |
 | Key Flows & Use Cases | [docs/architecture/key-flows.md](./docs/architecture/key-flows.md)                     |
 | Tech Stack            | [docs/architecture/tech-stack.md](./docs/architecture/tech-stack.md)                   |
-| Testing Strategy      | [docs/guidelines/testing.md](./docs/guidelines/testing.md)                             |
+| Testing Strategy      | [docs/rules/testing.md](./docs/rules/testing.md)                                       |
 | Constraints & Gotchas | [docs/architecture/constraints.md](./docs/architecture/constraints.md)                 |
 
 ## 9. Knowledge Base

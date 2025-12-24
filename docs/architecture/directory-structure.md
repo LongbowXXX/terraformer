@@ -37,7 +37,7 @@ terraformer/
 ### `/docs/`
 
 - **Role**: Contains both high-level project documentation (Charter, ADRs) and specific context for Agents (Architecture, Guidelines).
-- **Key Files**: `PROJECT_CHARTER.md`, `architecture/`, `guidelines/`
+- **Key Files**: `PROJECT_CHARTER.md`, `architecture/`, `rules/`
 - **Dependencies**: Referenced by `AGENTS.md`.
 
 ### `/knowledge/`

@@ -120,7 +120,7 @@ Always add the following comment to the beginning of each document:
 [Presentation layer, business logic layer, data access layer, etc.]
 ```
 
-#### 3. `docs/guidelines/coding-conventions.md` - Design Principles and Patterns
+#### 3. `docs/rules/coding-conventions.md` - Design Principles and Patterns
 
 ```markdown
 <!-- This document is generated/updated by the sync-doc workflow -->
@@ -216,7 +216,7 @@ Always add the following comment to the beginning of each document:
 - CI/CD: [Name]
 ```
 
-#### 6. `docs/guidelines/testing.md` - Testing Strategy and Guide
+#### 6. `docs/rules/testing.md` - Testing Strategy and Guide
 
 ```markdown
 <!-- This document is generated/updated by the sync-doc workflow -->
