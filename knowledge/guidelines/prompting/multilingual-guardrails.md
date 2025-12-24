@@ -16,7 +16,8 @@ Inject a **Critical Translation Rule** immediately before the section that must 
 ## Example Template
 
 ```markdown
-> [!IMPORTANT] > **CRITICAL TRANSLATION RULE**:
+> [!IMPORTANT]
+> **CRITICAL TRANSLATION RULE**:
 > When generating the content below in the **Target Language**, you MUST:
 >
 > 1. **DO NOT SUMMARIZE**: Translate the text **verbatim**.
