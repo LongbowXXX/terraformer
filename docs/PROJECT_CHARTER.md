@@ -139,6 +139,21 @@ This allows users to acquire a **"Team of Agents equipped with Senior Engineer t
 
 To ensure that AI and human collaboration is effective and auditable, we enforce strict documentation standards and follow the [Standard Workflow](../knowledge/workflows/workflow.md).
 
+### Documentation Portability Strategy
+
+To maximize the reusability of the AI-Native Transformation Protocol across different projects, we enforce a strict separation of documentation assets:
+
+1.  **Universal Knowledge (`knowledge/`)**:
+
+    - **Purpose**: "Write Once, Run Anywhere".
+    - **Content**: General guidelines (AI Literacy, Prompting Techniques), Templates, and Workflow definitions.
+    - **Benefit**: Can be copied directly to any new project without modification.
+
+2.  **Project-Specific Assets (`docs/`)**:
+    - **Purpose**: "Context for _this_ project".
+    - **Content**: Architecture overview, Domain glossary, Feature specifications, and Local rules.
+    - **Benefit**: Keeps the core protocol clean and separates "Methodology" from "Implementation".
+
 ### Standardized Templates
 
 We use standard templates (e.g., `knowledge/templates/specification.template.md`, `knowledge/templates/review_report.template.md`) for all key deliverables.
