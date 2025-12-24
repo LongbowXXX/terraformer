@@ -5,7 +5,7 @@
 ## Design Principles
 
 - **Anti-Generalist Principle**: AI agents must have narrow, well-defined responsibilities. No agent should be a "jack of all trades".
-- **Explicit Context Over Implicit Knowledge**: All rules must be written down in `knowledge/` or `agents-docs/`. Do not assume the AI knows your preferences.
+- **Explicit Context Over Implicit Knowledge**: All rules must be written down in `knowledge/` or `docs/`. Do not assume the AI knows your preferences.
 - **Single Source of Truth**: `AGENTS.md` is the single entry point that orchestrates the entire system.
 
 ## Adopted Design Patterns

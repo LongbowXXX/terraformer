@@ -35,7 +35,7 @@ Ensure that:
     - Look for "Usage" or "Getting Started" sections.
 
 2.  **Understand Architecture**:
-    - Review `agents-docs/architecture.md` if available to understand key components.
+    - Review `docs/architecture/overview.md` if available to understand key components.
 
 ### Step 2: Identify Happy Paths
 

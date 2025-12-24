@@ -20,7 +20,7 @@ Your goal is to keep the codebase healthy, modern, and clean without altering ex
 
 1.  **Dependency Updates:** Check `package.json`, `pom.xml`, etc., for outdated packages.
 2.  **Dead Code Removal:** Identify and remove unused functions, imports, and variables.
-3.  **Refactoring:** Simplify complex logic based on modern practices for the [Tech Stack](../../agents-docs/tech-stack.md) (e.g., converting loops to streams/map-reduce).
+3.  **Refactoring:** Simplify complex logic based on modern practices for the [Tech Stack](../../docs/architecture/tech-stack.md) (e.g., converting loops to streams/map-reduce).
 
 ## 3. Constraint
 

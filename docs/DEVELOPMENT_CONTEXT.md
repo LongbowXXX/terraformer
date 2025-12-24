@@ -40,7 +40,7 @@ We have decided to fundamentally invert this value system for the Terraformer pr
 
     - In an AI-Native workflow, natural language specifications are effectively "High-Level Source Code" that compiles into implementation languages (TS, Python, etc.).
     - Therefore, neglecting documentation in favor of implementation is akin to neglecting the source code in favor of the compiled binary.
-    - **Decision:** We adopt **Document-Driven Development (DDD)**. We prioritize the quality and currency of `agents-docs/` and `AGENTS.md` above the implementation code itself.
+    - **Decision:** We adopt **Document-Driven Development (DDD)**. We prioritize the quality and currency of `docs/` and `AGENTS.md` above the implementation code itself.
 
 3.  **Shift-Left of Quality Assurance:**
     - Traditional Agile iterates on code (`Red -> Green -> Refactor`).
@@ -52,10 +52,10 @@ We have decided to fundamentally invert this value system for the Terraformer pr
 We have defined the **AI-Native Transformation Protocol (ANTP)**, a comprehensive framework consisting of four strictly integrated layers. Each layer addresses a specific aspect of the human-AI collaboration gap.
 
 | Layer  | Component        | Description & Strategic Value                                                                                                                                                                                                                      | Tech Stack                   |
-| :----- | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------- |
+| :----- | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------- | --- |
 | **L1** | **Constitution** | **The Rule of Law.** Defines the project's immutable laws, coding standards, and security policies. It acts as the "Global System Prompt" that applies to every interaction, ensuring consistency across all agents.                               | AGENTS.md                    |
 | **L2** | **Skills**       | **Standardized Procedures (SOPs).** A library of reusable prompt patterns for specific tasks (e.g., Planning, Testing, Refactoring). These ensure that routine tasks are executed with high precision and uniform quality, regardless of the user. | .github/prompts/\*.prompt.md |
-| **L3** | **Knowledge**    | **Explicit Context / The Brain.** A standardized, machine-readable summary of the project. Includes the [Core Workflow](../knowledge/workflow/workflow.md).                                                                                        | agents-docs/\*               |
+| **L3** | **Knowledge**    | **Explicit Context / The Brain.** A standardized, machine-readable summary of the project. Includes the [Core Workflow](../knowledge/workflows/workflow.md).                                                                                       | docs/\*                      |     |
 | **L4** | **Agents**       | **The Workforce.** A team of specialized AI personas. Unlike a general chatbot, these agents have narrow scopes, specific tools, and strict authority boundaries. They prevent the "One AI fits all" problem.                                      | .github/agents/\*.agent.md   |
 
 ## **4\. Architecture: The Specialized Seven (L4 Agents)**

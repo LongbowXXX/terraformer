@@ -43,12 +43,12 @@ First, use the following tools to grasp the overall picture of the project:
     - Look for traces of integration with external services (API, database, etc.).
 
 4.  **Check Existing Documentation**
-    - Use `list_dir` to search for `docs/` or `agents-docs/`.
+    - Use `list_dir` to search for `docs/`.
     - Use `view_file` to read `README.md`, `ARCHITECTURE.md`.
 
 ### Step 2: Documentation Generation
 
-Create the following documents in the `agents-docs/` directory.
+Create the following documents in the `docs/` directory.
 Use the `write_to_file` tool. If the directory does not exist, it will be created automatically.
 
 Always add the following comment to the beginning of each document:
@@ -62,7 +62,7 @@ Always add the following comment to the beginning of each document:
 - **DRY Principle**: Adhere to the DRY (Don't Repeat Yourself) principle.
 - **Use Links**: Use file links for code details and detailed descriptions where appropriate, instead of embedding full content.
 
-#### 1. `agents-docs/architecture.md` - Architecture Overview
+#### 1. `docs/architecture/overview.md` - Architecture Overview
 
 ```markdown
 <!-- This document is generated/updated by the sync-doc workflow -->
@@ -90,7 +90,7 @@ Always add the following comment to the beginning of each document:
 [Why this architecture was chosen]
 ```
 
-#### 2. `agents-docs/directory-structure.md` - Directory Structure Guide
+#### 2. `docs/architecture/directory-structure.md` - Directory Structure Guide
 
 ```markdown
 <!-- This document is generated/updated by the sync-doc workflow -->
@@ -120,7 +120,7 @@ Always add the following comment to the beginning of each document:
 [Presentation layer, business logic layer, data access layer, etc.]
 ```
 
-#### 3. `agents-docs/coding-conventions.md` - Design Principles and Patterns
+#### 3. `docs/guidelines/coding-conventions.md` - Design Principles and Patterns
 
 ```markdown
 <!-- This document is generated/updated by the sync-doc workflow -->
@@ -151,7 +151,7 @@ Always add the following comment to the beginning of each document:
 [How to write tests, coverage goals, etc.]
 ```
 
-#### 4. `agents-docs/key-flows.md` - Key Flows Explanation
+#### 4. `docs/architecture/key-flows.md` - Key Flows Explanation
 
 ```markdown
 <!-- This document is generated/updated by the sync-doc workflow -->
@@ -186,7 +186,7 @@ Always add the following comment to the beginning of each document:
 [Describe similarly for other major use cases]
 ```
 
-#### 5. `agents-docs/tech-stack.md` - Tech Stack and Dependencies
+#### 5. `docs/architecture/tech-stack.md` - Tech Stack and Dependencies
 
 ```markdown
 <!-- This document is generated/updated by the sync-doc workflow -->
@@ -216,7 +216,7 @@ Always add the following comment to the beginning of each document:
 - CI/CD: [Name]
 ```
 
-#### 6. `agents-docs/testing.md` - Testing Strategy and Guide
+#### 6. `docs/guidelines/testing.md` - Testing Strategy and Guide
 
 ```markdown
 <!-- This document is generated/updated by the sync-doc workflow -->
@@ -262,7 +262,7 @@ Always add the following comment to the beginning of each document:
 [Problems encountered during test execution and troubleshooting]
 ```
 
-#### 7. `agents-docs/constraints-and-gotchas.md` - Technical Constraints and Gotchas
+#### 7. `docs/architecture/constraints.md` - Technical Constraints and Gotchas
 
 ```markdown
 <!-- This document is generated/updated by the sync-doc workflow -->
@@ -290,7 +290,7 @@ Always add the following comment to the beginning of each document:
 [Technical limitations, license constraints, etc.]
 ```
 
-#### 8. `agents-docs/glossary.md` - Glossary & Ubiquitous Language
+#### 8. `docs/glossary.md` - Glossary & Ubiquitous Language
 
 ```markdown
 <!-- This document is generated/updated by the sync-doc workflow -->
@@ -336,7 +336,7 @@ Verify that the generated documentation matches the implementation:
 
     - Use `list_dir` to check `.github/template-skills/`, `.github/template-agents/` and `.github/prompts/`.
     - Verify that all Agent and Skill templates are mentioned in `AGENTS.md`.
-    - Verify that they are also reflected in other relevant documentation (e.g. `agents-docs/directory-structure.md`, `agents-docs/tech-stack.md`).
+    - Verify that they are also reflected in other relevant documentation (e.g. `docs/architecture/directory-structure.md`, `docs/architecture/tech-stack.md`).
 
 ### Step 4: Maintenance Guidelines Proposal
 
@@ -350,7 +350,7 @@ Propose the following to prevent documentation from diverging from implementatio
 
 Finally, create/update the following deliverables:
 
-1.  Each documentation file under `agents-docs/`
+1.  Each documentation file under `docs/`
 2.  Summary of execution results (which files were updated, issues found, etc.)
 
 ## Usage Example
@@ -359,4 +359,4 @@ Finally, create/update the following deliverables:
 /sync-doc
 ```
 
-When this workflow is executed, Antigravity will systematically analyze the project and automatically generate/update the necessary documentation in the `agents-docs/` directory.
+When this workflow is executed, Antigravity will systematically analyze the project and automatically generate/update the necessary documentation in the `docs/` directory.

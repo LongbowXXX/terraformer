@@ -291,7 +291,7 @@ Implement a "Research Phase" where the AI is explicitly instructed to perform ke
 
 **Before starting any task, you MUST:**
 
-1.  **Search**: Use your available tools to perform **keyword/regex searches** or **semantic searches** to find specific documentation in `agents-docs/` or `knowledge/` relevant to the user's request.
+1.  **Search**: Use your available tools to perform **keyword/regex searches** or **semantic searches** to find specific documentation in `docs/` or `knowledge/` relevant to the user's request.
 2.  **Follow Links**: Since this file serves as a summary index, you MUST follow links to obtain detailed information.
 3.  **Read**: Load the content of these detailed documents into your context.
 4.  **Cross-Reference**: Do NOT rely on assumptions. Always verify against the official documentation found.

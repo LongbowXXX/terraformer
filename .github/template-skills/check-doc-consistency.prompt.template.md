@@ -27,7 +27,7 @@ Ensure that:
 1.  **Structure is Complete**: The project root `README.md` acts as a proper entry point and all links work.
 2.  **Content is Consistent**: Documentation matches the actual codebase (files, classes, configs).
 3.  **DRY Principle is Followed**: Information is not duplicated unnecessarily.
-4.  **Project Rules are Met**: Documentation follows `agents-docs/` structure and other project conventions.
+4.  **Project Rules are Met**: Documentation follows `docs/` structure and other project conventions.
 5.  **Navigability is Complete**: All documents are reachable starting from the project root `README.md`.
 6.  **Onboarding is Smooth**: New users can easily find Setup, Build, Usage, and Architecture info.
 
@@ -41,8 +41,8 @@ Ensure that:
     - Identify key sections and links to other documents.
 
 2.  **Read Agent Documentation**:
-    - List files in `agents-docs/`.
-    - Read key documents like `agents-docs/directory-structure.md`, `agents-docs/tech-stack.md`, and `agents-docs/key-flows.md`.
+    - List files in `docs/`.
+    - Read key documents like `docs/architecture/directory-structure.md`, `docs/architecture/tech-stack.md`, and `docs/architecture/key-flows.md`.
 
 ### Step 2: Verify Links and Navigability
 
@@ -63,12 +63,12 @@ Ensure that:
 
 1.  **Directory Structure**:
 
-    - Compare `agents-docs/directory-structure.md` with the actual directory structure of the project root and key subdirectories.
+    - Compare `docs/architecture/directory-structure.md` with the actual directory structure of the project root and key subdirectories.
     - Note any missing or obsolete directories in the documentation.
 
 2.  **Tech Stack & Config**:
 
-    - Compare `agents-docs/tech-stack.md` with `pyproject.toml`, `package.json`, or other configuration files.
+    - Compare `docs/architecture/tech-stack.md` with `pyproject.toml`, `package.json`, or other configuration files.
     - Ensure versions and dependencies match.
 
 3.  **Code References**:

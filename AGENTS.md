@@ -14,7 +14,7 @@ This file provides context and instructions for AI coding agents working on this
 
 ## 2. Architecture & Tech Stack
 
-→ **Details**: [agents-docs/architecture.md](./agents-docs/architecture.md), [agents-docs/tech-stack.md](./agents-docs/tech-stack.md)
+→ **Details**: [docs/architecture/overview.md](./docs/architecture/overview.md), [docs/architecture/tech-stack.md](./docs/architecture/tech-stack.md)
 
 | Category      | Technology               | Purpose                 |
 | ------------- | ------------------------ | ----------------------- |
@@ -28,22 +28,21 @@ This file provides context and instructions for AI coding agents working on this
 
 ## 3. Directory Structure
 
-→ **Details**: [agents-docs/directory-structure.md](./agents-docs/directory-structure.md)
+→ **Details**: [docs/architecture/directory-structure.md](./docs/architecture/directory-structure.md)
 
 ```
 terraformer/
 ├── .github/
 │   ├── prompts/                    # Engine (/terraformer, /terraform-context)
 │   └── template-*/                 # Agent & Skill templates
-├── docs/                           # PROJECT_CHARTER.md, DEVELOPMENT_CONTEXT.md
-├── agents-docs/                    # AI-oriented documentation
-├── knowledge/                      # Reusable knowledge & techniques (e.g., prompting)
+├── docs/                           # Project-specific docs (architecture, features, specs)
+├── knowledge/                      # Universal guidelines & templates
 └── AGENTS.md                       # This file (L1: Constitution & L3: Knowledge Hub)
 ```
 
 ## 4. Key Concepts (Ubiquitous Language)
 
-→ **Details**: [agents-docs/glossary.md](./agents-docs/glossary.md)
+→ **Details**: [docs/glossary.md](./docs/glossary.md)
 
 This section defines the core terminology used across the project. For the full list of definitions, please refer to the detailed Glossary document linked above.
 
@@ -54,7 +53,7 @@ This section defines the core terminology used across the project. For the full 
 
 ## 5. Entry Points & Key Flows
 
-→ **Details**: [agents-docs/key-flows.md](./agents-docs/key-flows.md)
+→ **Details**: [docs/architecture/key-flows.md](./docs/architecture/key-flows.md)
 
 | Command              | Purpose                          |
 | -------------------- | -------------------------------- |
@@ -65,7 +64,7 @@ This section defines the core terminology used across the project. For the full 
 
 ## 6. Development Rules
 
-→ **Details**: [agents-docs/coding-conventions.md](./agents-docs/coding-conventions.md), [agents-docs/constraints-and-gotchas.md](./agents-docs/constraints-and-gotchas.md)
+→ **Details**: [docs/guidelines/coding-conventions.md](./docs/guidelines/coding-conventions.md), [docs/architecture/constraints.md](./docs/architecture/constraints.md)
 
 ### 🔍 Dynamic Context Protocol (Research Phase)
 
@@ -73,7 +72,7 @@ This section defines the core terminology used across the project. For the full 
 The context provided in this file (`AGENTS.md`) is a **summary index**. It does NOT contain all the details needed for your tasks.
 **Before starting any task, you MUST:**
 
-1.  **Search**: Use your available tools to perform **keyword/regex searches** or **semantic searches** to find specific documentation in `agents-docs/` or `knowledge/` relevant to the user's request.
+1.  **Search**: Use your available tools to perform **keyword/regex searches** or **semantic searches** to find specific documentation in `docs/` or `knowledge/` relevant to the user's request.
     - _Example_: If the user asks about "Testing", search for and read documents related to testing instructions.
     - _Example_: If the user asks for a "Review", search for and read review guidelines.
 2.  **Follow Links**: Since `AGENTS.md` serves as a summary index and provides links to important files and folders, you MUST follow these links to obtain detailed information.
@@ -119,7 +118,7 @@ All agents MUST output their work as persistent Markdown artifacts in `docs/spec
 
 ## 7. Testing
 
-→ **Details**: [agents-docs/testing.md](./agents-docs/testing.md)
+→ **Details**: [docs/guidelines/testing.md](./docs/guidelines/testing.md)
 
 Manual verification via test projects; automated CI planned.
 
@@ -167,28 +166,28 @@ Manual verification via test projects; automated CI planned.
 
 ## 📚 Detailed Documentation Index
 
-| Topic                 | Link                                                                               |
-| --------------------- | ---------------------------------------------------------------------------------- |
-| Architecture & Design | [agents-docs/architecture.md](./agents-docs/architecture.md)                       |
-| Directory Structure   | [agents-docs/directory-structure.md](./agents-docs/directory-structure.md)         |
-| Coding Conventions    | [agents-docs/coding-conventions.md](./agents-docs/coding-conventions.md)           |
-| Key Flows & Use Cases | [agents-docs/key-flows.md](./agents-docs/key-flows.md)                             |
-| Tech Stack            | [agents-docs/tech-stack.md](./agents-docs/tech-stack.md)                           |
-| Testing Strategy      | [agents-docs/testing.md](./agents-docs/testing.md)                                 |
-| Constraints & Gotchas | [agents-docs/constraints-and-gotchas.md](./agents-docs/constraints-and-gotchas.md) |
+| Topic                 | Link                                                                                   |
+| --------------------- | -------------------------------------------------------------------------------------- |
+| Architecture & Design | [docs/architecture/overview.md](./docs/architecture/overview.md)                       |
+| Directory Structure   | [docs/architecture/directory-structure.md](./docs/architecture/directory-structure.md) |
+| Coding Conventions    | [docs/guidelines/coding-conventions.md](./docs/guidelines/coding-conventions.md)       |
+| Key Flows & Use Cases | [docs/architecture/key-flows.md](./docs/architecture/key-flows.md)                     |
+| Tech Stack            | [docs/architecture/tech-stack.md](./docs/architecture/tech-stack.md)                   |
+| Testing Strategy      | [docs/guidelines/testing.md](./docs/guidelines/testing.md)                             |
+| Constraints & Gotchas | [docs/architecture/constraints.md](./docs/architecture/constraints.md)                 |
 
 ## 9. Knowledge Base
 
 → **Details**: [knowledge/](./knowledge/)
 
-| Topic                        | Link                                                                                     |
-| ---------------------------- | ---------------------------------------------------------------------------------------- |
-| PR Creation Guidelines       | [knowledge/pr-creation-guidelines.md](./knowledge/pr-creation-guidelines.md)             |
-| Prompting Techniques         | [knowledge/prompting-techniques.md](./knowledge/prompting-techniques.md)                 |
-| Software Review Perspectives | [knowledge/software-review-perspectives.md](./knowledge/software-review-perspectives.md) |
-| XML Structured Prompting     | [knowledge/xml-structured-prompting.md](./knowledge/xml-structured-prompting.md)         |
-| Specification Guidelines     | [knowledge/specification-guidelines.md](./knowledge/specification-guidelines.md)         |
-| Workflow (AI Collaboration)  | [knowledge/workflow/workflow.md](./knowledge/workflow/workflow.md)                       |
+| Topic                        | Link                                                                                                                       |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| PR Creation Guidelines       | [knowledge/guidelines/pr-creation-guidelines.md](./knowledge/guidelines/pr-creation-guidelines.md)                         |
+| Prompting Techniques         | [knowledge/guidelines/prompting/prompting-techniques.md](./knowledge/guidelines/prompting/prompting-techniques.md)         |
+| Software Review Perspectives | [knowledge/guidelines/software-review.md](./knowledge/guidelines/software-review.md)                                       |
+| XML Structured Prompting     | [knowledge/guidelines/prompting/xml-structured-prompting.md](./knowledge/guidelines/prompting/xml-structured-prompting.md) |
+| Specification Guidelines     | [knowledge/guidelines/specification-guidelines.md](./knowledge/guidelines/specification-guidelines.md)                     |
+| Workflow (AI Collaboration)  | [knowledge/workflows/workflow.md](./knowledge/workflows/workflow.md)                                                       |
 
 ---
 

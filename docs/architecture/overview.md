@@ -28,7 +28,7 @@ The system is built upon the **Roles & Skills Architecture** (ANTP v1.4), compri
 ### L3: Knowledge (Explicit Context Map)
 
 - **Role**: Acts as the external long-term memory for the project.
-- **Key Artifacts**: `agents-docs/`, `knowledge/`
+- **Key Artifacts**: `docs/`, `knowledge/`
 - **Responsibility**: Storing architectural decisions, coding conventions, domain terminology, and guidelines that are too voluminous to fit in a single prompt context but essential for high-quality output.
 
 ### L4: Agents (Specialized Roles)
@@ -59,7 +59,7 @@ graph TD
 
 1.  **Context Injection**: When a user invokes an agent (e.g., `@Architect`), the `AGENTS.md` (L1) is loaded into the context.
 2.  **Instruction Execution**: The agent receives the user's prompt and selects the appropriate Skill (L2) (e.g., `/plan`).
-3.  **Knowledge Retrieval**: The skill may reference specific documents in `agents-docs` or `knowledge` (L3) to ground its response in the project's actual standards.
+3.  **Knowledge Retrieval**: The skill may reference specific documents in `docs` or `knowledge` (L3) to ground its response in the project's actual standards.
 4.  **Output Generation**: The agent generates a response (code, plan, or answer) that is strictly aligned with the retrieved context.
 
 ## Design Background and Rationale

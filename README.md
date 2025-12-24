@@ -22,12 +22,12 @@ Traditional projects rely on implicit knowledge ("Context Debt") that only human
 
 Terraformer implements the **Roles & Skills Architecture**. It doesn't just give you a generic chatbot; it builds a **specialized AI team** equipped with **standard operating procedures (SOPs)**.
 
-| Component            | Function                         | Implementation                    |
-| :------------------- | :------------------------------- | :-------------------------------- |
-| **L1: Constitution** | Immutable Rules                  | [`AGENTS.md`](./AGENTS.md)        |
-| **L2: Skills**       | Standardized Procedures (SOPs)   | `.github/prompts/*.prompt.md`     |
-| **L3: Knowledge**    | Explicit Context Map             | [`agents-docs/*`](./agents-docs/) |
-| **L4: Agents**       | Specialized Roles with Authority | `.github/agents/*.agent.md`       |
+| Component            | Function                         | Implementation                |
+| :------------------- | :------------------------------- | :---------------------------- |
+| **L1: Constitution** | Immutable Rules                  | [`AGENTS.md`](./AGENTS.md)    |
+| **L2: Skills**       | Standardized Procedures (SOPs)   | `.github/prompts/*.prompt.md` |
+| **L3: Knowledge**    | Explicit Context Map             | [`docs/*`](./docs/)           |
+| **L4: Agents**       | Specialized Roles with Authority | `.github/agents/*.agent.md`   |
 
 ## 🔄 The Paradigm Shift: From Agile to Document-Driven
 
@@ -134,13 +134,13 @@ It provides resources such as:
 - **AI Literacy**: Resources to make _humans_ AI-Ready and effective at using AI agents.
 - **XML Structured Prompting**: Comprehensive guide on using XML tags for better LLM control.
 - **Specification Guidelines**: Synergizing Gherkin behavior and Mermaid diagrams for unambiguous specs.
-- **Workflow**: Standardized [Collaboration Process](./knowledge/workflow/workflow.md) for Agents and Humans.
+- **Workflow**: Standardized [Collaboration Process](./knowledge/workflows/workflow.md) for Agents and Humans.
 
 ## 📄 Documentation
 
 - [Project Charter (ANTP v1.4)](./docs/PROJECT_CHARTER.md) - The core philosophy.
 - [Development Context (ADR)](./docs/DEVELOPMENT_CONTEXT.md) - Architecture decisions.
-- [AI-Oriented Docs](./agents-docs/) - Detailed documentation for AI agents and developers.
+- [AI-Oriented Docs](./docs/) - Detailed documentation for AI agents and developers.
 - [Context Map for Agents](./AGENTS.md) - High-density project summary for AI coding agents.
 
 ## 📓 Interactive Guide (Google NotebookLM)

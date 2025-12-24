@@ -23,7 +23,7 @@ It checks for broken installation paths, workflow inconsistencies, and prompt lo
 
 ## 3. Workflow & Roles Consistency Check
 
-1.  Read `AGENTS.md` (The Constitution) and `knowledge/workflow/workflow.md` (The Process).
+1.  Read `AGENTS.md` (The Constitution) and `knowledge/workflows/workflow.md` (The Process).
 2.  **Verify**:
     - Do all Roles mentioned in `AGENTS.md` appear in `workflow.md`?
     - Do all phases in `workflow.md` assign a specific Agent/Skill?
@@ -95,7 +95,7 @@ For each step, explicitly verify the **Input**, **Skill** used, and **Output**. 
     - **Output**: Drift Report / Updated Docs
     - **Check**:
       - Does it trace links from `README.md` throughout the project?
-      - Can it detect if `agents-docs/directory-structure.md` is outdated compared to the actual file tree?
+      - Can it detect if `docs/architecture/directory-structure.md` is outdated compared to the actual file tree?
 
 **Report**: Check that each output template and directory is defined. Log any friction points or ambiguity found during this walkthrough to the report file.
 
