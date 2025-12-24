@@ -31,6 +31,8 @@ description: Create a pull request following project guidelines, ensuring actual
      - **Self-Check**: Ensure all checklist items are met.
 
 5. **Create Pull Request**
-   - Use the `gh` CLI tool to create the PR.
-   - Command: `gh pr create --title "<Title>" --body "<Description>"`
-   - If `gh` is not installed or authentication fails, propose the Title and Body to the user so they can create it manually.
+   - **Preferred Method:** If the `remote-github` MCP server is available, use the `create_pull_request` tool.
+     - Ensure all fields (owner, repo, title, body, head, base) are correctly populated.
+   - **Alternative:** Use the `gh` CLI tool or manual creation.
+     - Command: `gh pr create --title "<Title>" --body "<Description>"`
+   - If automation fails, propose the Title and Body to the user so they can create it manually.
