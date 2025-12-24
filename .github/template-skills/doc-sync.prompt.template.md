@@ -10,7 +10,7 @@ You are supporting the **@Librarian**. Your goal is to generate and maintain com
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Context Analysis**: Gather information from README, dependencies, and structure.
 2.  **Tech Stack Detection**: Identify languages, frameworks, and tools.
@@ -138,7 +138,7 @@ When updating existing documentation:
 
 **Before finishing, confirm:**
 
-- [ ] All todos are marked as completed.
+- [ ] All todo are marked as completed.
 - [ ] All 8 documentation files are generated/updated.
 - [ ] No placeholders remain (all replaced with actual tech stack info).
 - [ ] All diagrams use valid Mermaid syntax.

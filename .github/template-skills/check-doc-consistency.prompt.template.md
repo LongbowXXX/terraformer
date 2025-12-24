@@ -10,7 +10,7 @@ You are supporting the **@Librarian**. Your goal is to verify the consistency of
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Read Documentation**: Read project root `README.md` and agent docs.
 2.  **Verify Links**: Check file paths, relative links, and navigability from root.
@@ -128,7 +128,7 @@ Present your findings in the following format:
 
 **Before finishing, confirm:**
 
-- [ ] All todos are marked as completed.
+- [ ] All todo are marked as completed.
 - [ ] All broken links are reported or fixed.
 - [ ] Navigability from project root `README.md` is confirmed.
 - [ ] Onboarding flow (Setup->Build->Usage->Architecture) is verified.

@@ -10,7 +10,7 @@ You are supporting the **@QualityGuard**. Your goal is to enforce quality standa
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Static Analysis**: Check syntax, types, and standards.
 2.  **Security Check**: Identify vulnerabilities and insecure dependencies.
@@ -82,7 +82,7 @@ Use the standard template: `knowledge/templates/review_report.template.md`
 
 **Before finishing, confirm:**
 
-- [ ] All todos are marked as completed.
+- [ ] All todo are marked as completed.
 - [ ] All critical issues (security, bugs) are identified.
 - [ ] The report follows the standard template.
 - [ ] A clear conclusion (Approve/Request Changes) is provided.

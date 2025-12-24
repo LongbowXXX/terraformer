@@ -22,7 +22,7 @@ The output follows the [AGENTS.md](https://agents.md/) format - a simple, open f
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Language Detection**: Detect the target language specified by the user (default: English).
 2.  **Input Analysis**: Analyze README, file structure, config files, entry points, and existing docs.
@@ -272,7 +272,7 @@ Before outputting, verify:
 
 **Before finishing, confirm:**
 
-- [ ] All todos are marked as completed.
+- [ ] All todo are marked as completed.
 - [ ] `AGENTS.md` has been generated in the Target Language.
 - [ ] Initial documentation files in `docs/` have been created in the Target Language.
 - [ ] All placeholders in the generated files are replaced with actual values.

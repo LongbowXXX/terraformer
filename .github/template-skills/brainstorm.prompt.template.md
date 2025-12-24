@@ -11,7 +11,7 @@ To avoid context window issues and hallucinations, you strict adhere to a "minut
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Define Topic**: Agree on the brainstorming topic.
 2.  **Discussion**: Discuss the topic, identifying key points, pros/cons, and decisions.

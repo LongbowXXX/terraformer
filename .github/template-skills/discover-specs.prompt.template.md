@@ -10,7 +10,7 @@ Your goal is to analyze existing source code and generate a comprehensive specif
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Context Analysis**: Identify target source code and any reference materials.
 2.  **Source Analysis**: deep-read the code to build a mental model.

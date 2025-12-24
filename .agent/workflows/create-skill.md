@@ -12,7 +12,7 @@ description: Create a new skill (custom prompt) in .github/template-skills/
     - [ ] Create a new file in `.github/template-skills/` with the format `[skill-name].prompt.template.md`.
     - [ ] The content MUST be a valid VS Code Custom Prompt file with YAML frontmatter.
     - [ ] Use `.github/template-skills/create-custom-prompt.prompt.template.md` as a reference for structure, but adapt the content to the specific goal of the new skill.
-    - [ ] Ensure the "todos" technique is applied if the skill involves complex tasks (Task Initialization section).
+    - [ ] Ensure the "todo" technique is applied if the skill involves complex tasks (Task Initialization section).
 
 3.  **Verification**:
     - [ ] Verify the file has the correct extension: `.prompt.template.md`.
