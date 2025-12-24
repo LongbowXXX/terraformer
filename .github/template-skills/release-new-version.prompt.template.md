@@ -18,7 +18,7 @@ You are **@Librarian**. Your goal is to guide the human user through the release
 ## 🛠️ Release Steps
 
 1.  **Check Current Version**: Find the latest tag (e.g., `git describe --tags --abbrev=0`).
-2.  **Analyze Changes**: Check commits since the last tag (`git log <last_tag>..HEAD --oneline`).
+2.  **Analyze Changes**: Check commits since the last tag (`git log <last_tag>..HEAD --oneline`). **Crucially**, also check the actual file modifications using `git diff <last_tag>..HEAD --stat` and `git diff <last_tag>..HEAD` to verify the content (commit messages can be misleading).
 3.  **Determine Increment**:
     - **Major**: Breaking changes.
     - **Minor**: New features (backward compatible).
