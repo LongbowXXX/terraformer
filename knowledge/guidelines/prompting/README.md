@@ -4,6 +4,7 @@ This directory contains effective techniques for creating custom prompts for Git
 
 ## Reliability & Execution
 
+- [Input Over Structure (3S + S.S.G.)](input-over-structure.md): Prioritize raw context over summarized explanations to avoid hallucinations.
 - [Task Management with #todo](task-management.md): Enforce structured execution and prevent missed steps.
 - [Stop and Ask (Circuit Breaker)](circuit-breaker.md): Prevent infinite loops or bad assumption chains.
 - [Sequential Inquiry](sequential-inquiry.md): Reduce cognitive load by asking questions one by one.
