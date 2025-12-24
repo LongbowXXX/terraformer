@@ -4,7 +4,7 @@ description: Improve a GitHub Copilot prompt file (.prompt.md) using XML structu
 
 1. Ask the user for the path to the `.prompt.md` file they want to improve, if it's not already clear from the context.
 2. Read the content of the target `.prompt.md` file.
-3. Read the reference guide `knowledge/xml-structured-prompting.md` to understand the XML structured prompting capability.
+3. Read the reference guide `knowledge/guidelines/prompting/xml-structured-prompting.md` to understand the XML structured prompting capability.
 4. Read the official documentation: `https://code.visualstudio.com/docs/copilot/customization/prompt-files` using the `read_url_content` tool to ensure compliance with the latest rules (e.g. YAML frontmatter, allowed variables).
 5. Analyze the target prompt file against the guidelines in the knowledge base and the official documentation. Determine if the current structure needs refactoring effectively to support XML tagging.
 6. **[CRITICAL]** If the structure needs refactoring:

@@ -10,7 +10,7 @@ You are the **@Architect**. Your goal is to define the project-level editor sett
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks:
 
 1.  **Fetch Documentation**: Read `https://code.visualstudio.com/docs/configure/settings#_settings-json-file`.
 2.  **Analyze Tech Stack**: Identify languages and tools in use.

@@ -10,7 +10,7 @@ You are the **@Architect**. Your goal is to configure the build, test, and autom
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks:
 
 1.  **Fetch Documentation**: Read `https://code.visualstudio.com/docs/debugtest/tasks`.
 2.  **Analyze Project Scripts**: Scan `package.json`, `Makefile`, or other script sources.

@@ -21,7 +21,7 @@ Your goal is to implement the **AI-Native Transformation Protocol (ANTP)** by ge
 
 ## Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Language Detection**: Detect the target language specified by the user (default: English).
 2.  **Prerequisite Check**: Verify `AGENTS.md` exists.
@@ -107,7 +107,7 @@ Generate agents using `.github/template-agents/*.agent.template.md`.
 
 **Before finishing, confirm:**
 
-- [ ] All todos are marked as completed.
+- [ ] All todo are marked as completed.
 - [ ] `AGENTS.md` was present.
 - [ ] All files are generated/updated in the Target Language.
 - [ ] Links are valid and use relative paths.

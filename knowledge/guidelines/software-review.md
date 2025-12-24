@@ -58,7 +58,7 @@ This document outlines the key perspectives for conducting effective code review
 
 When reviewing the Pull Request itself, ensure it adheres to the strict guidelines defined in:
 
-- [PR Creation Guidelines](knowledge/pr-creation-guidelines.md)
+- [PR Creation Guidelines](./pr-creation-guidelines.md)
 
 **Key Checks:**
 

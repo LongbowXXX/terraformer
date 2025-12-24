@@ -10,7 +10,7 @@ You will interview the user to understand their requirements and propose an effe
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Fetch Documentation**: Retrieve official docs from `code.visualstudio.com`.
 2.  **Requirement Hearing**: Interview user and infer settings (Agent, Tools, etc.).
@@ -117,7 +117,7 @@ Read the documentation before creating the prompt file based on the user's requi
 
 **Before finishing, confirm:**
 
-- [ ] All todos are marked as completed.
+- [ ] All todo are marked as completed.
 - [ ] Official documentation was fetched and used.
 - [ ] The prompt file includes valid YAML frontmatter.
 - [ ] The prompt file content is displayed in a code block.

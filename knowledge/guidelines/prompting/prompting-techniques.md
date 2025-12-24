@@ -2,7 +2,7 @@
 
 This document summarizes effective techniques for creating custom prompts for GitHub Copilot in VS Code.
 
-## Task Management with `#todos`
+## Task Management with `#todo`
 
 ### Problem
 
@@ -10,18 +10,18 @@ When a custom prompt requires performing multiple complex operations (e.g., anal
 
 ### Solution
 
-Enforce structured execution by explicitly registering tasks using the `#todos` tool at the beginning of the prompt and requiring a final verification step.
+Enforce structured execution by explicitly registering tasks using the `#todo` tool at the beginning of the prompt and requiring a final verification step.
 
 ### Implementation Steps
 
 1.  **Task Initialization**:
-    At the very beginning of the prompt (after the role definition), instruct Copilot to immediately use the `#todos` tool to register all high-level tasks.
+    At the very beginning of the prompt (after the role definition), instruct Copilot to immediately use the `#todo` tool to register all high-level tasks.
 
     > [!IMPORTANT]
     > Ensure that the TODO items and the work Steps match. If they do not match, the AI may make mistakes when checking progress.
 
 2.  **Final Verification**:
-    Add a "Final Check" section at the end of the prompt that requires Copilot to confirm all registered todos are completed.
+    Add a "Final Check" section at the end of the prompt that requires Copilot to confirm all registered todo are completed.
 
 ### Example Template
 
@@ -32,7 +32,7 @@ Enforce structured execution by explicitly registering tasks using the `#todos` 
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Step 1**: [Description of step 1]
 2.  **Step 2**: [Description of step 2]
@@ -45,13 +45,13 @@ Enforce structured execution by explicitly registering tasks using the `#todos` 
 
 **Before finishing, confirm:**
 
-- [ ] All todos are marked as completed.
+- [ ] All todo are marked as completed.
 - [ ] All requirements are met.
 ```
 
 ### Benefits
 
-- **Visibility**: Users can see the planned tasks in the "Todos" view.
+- **Visibility**: Users can see the planned tasks in the "todo" view.
 - **Completeness**: Reduces the risk of missing steps in complex workflows.
 - **Self-Correction**: Encourages the model to review its own work against the checklist.
 
@@ -291,7 +291,7 @@ Implement a "Research Phase" where the AI is explicitly instructed to perform ke
 
 **Before starting any task, you MUST:**
 
-1.  **Search**: Use your available tools to perform **keyword/regex searches** or **semantic searches** to find specific documentation in `agents-docs/` or `knowledge/` relevant to the user's request.
+1.  **Search**: Use your available tools to perform **keyword/regex searches** or **semantic searches** to find specific documentation in `docs/` or `knowledge/` relevant to the user's request.
 2.  **Follow Links**: Since this file serves as a summary index, you MUST follow links to obtain detailed information.
 3.  **Read**: Load the content of these detailed documents into your context.
 4.  **Cross-Reference**: Do NOT rely on assumptions. Always verify against the official documentation found.

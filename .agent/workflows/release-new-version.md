@@ -12,6 +12,8 @@ description: Release a new version of the project
 
    - Run `git describe --tags --abbrev=0` to get the last tag.
    - Run `git log <last-tag>..HEAD --pretty=format:"%s"` to see the commit messages since the last tag.
+   - Run `git diff <last-tag>..HEAD --stat` to see which files have changed.
+   - Run `git diff <last-tag>..HEAD` to view the actual code changes and ensure the commit messages match the reality (commit messages can be misleading).
 
 3. Update CHANGELOG.md
 

@@ -40,23 +40,28 @@ We have decided to fundamentally invert this value system for the Terraformer pr
 
     - In an AI-Native workflow, natural language specifications are effectively "High-Level Source Code" that compiles into implementation languages (TS, Python, etc.).
     - Therefore, neglecting documentation in favor of implementation is akin to neglecting the source code in favor of the compiled binary.
-    - **Decision:** We adopt **Document-Driven Development (DDD)**. We prioritize the quality and currency of `agents-docs/` and `AGENTS.md` above the implementation code itself.
+    - **Decision:** We adopt **Document-Driven Development (DDD)**. We prioritize the quality and currency of `docs/` and `AGENTS.md` above the implementation code itself.
 
 3.  **Shift-Left of Quality Assurance:**
+
     - Traditional Agile iterates on code (`Red -> Green -> Refactor`).
     - AI-Native development iterates on specs (`Draft Spec -> AI Critique -> Refined Spec -> Code`).
     - **Decision:** We move the feedback loop upstream. **@QualityGuard creates Test Specifications (Test Specs) before implementation starts.** The "Definition of Done" must include "Specification Verified," not just "Code Passed Tests."
+
+4.  **Portability of Intelligence:**
+    - **Context:** Methodology and General Knowledge (How to prompt, How to review) are universal, but Architecture and Business Logic are project-specific.
+    - **Decision:** we enforce a strict separation between **Universal Knowledge** (`knowledge/`) and **Project Assets** (`docs/`). This allows the ANTP engine to be installed into any new project by simply copying the `knowledge/` directory, instantly deploying the "AI Culture" without carrying over legacy baggage.
 
 ## **3\. The Protocol: ANTP v1.4 Detailed Layers**
 
 We have defined the **AI-Native Transformation Protocol (ANTP)**, a comprehensive framework consisting of four strictly integrated layers. Each layer addresses a specific aspect of the human-AI collaboration gap.
 
-| Layer  | Component        | Description & Strategic Value                                                                                                                                                                                                                      | Tech Stack                   |
-| :----- | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------- |
-| **L1** | **Constitution** | **The Rule of Law.** Defines the project's immutable laws, coding standards, and security policies. It acts as the "Global System Prompt" that applies to every interaction, ensuring consistency across all agents.                               | AGENTS.md                    |
-| **L2** | **Skills**       | **Standardized Procedures (SOPs).** A library of reusable prompt patterns for specific tasks (e.g., Planning, Testing, Refactoring). These ensure that routine tasks are executed with high precision and uniform quality, regardless of the user. | .github/prompts/\*.prompt.md |
-| **L3** | **Knowledge**    | **Explicit Context / The Brain.** A standardized, machine-readable summary of the project. Includes the [Core Workflow](../knowledge/workflow/workflow.md).                                                                                        | agents-docs/\*               |
-| **L4** | **Agents**       | **The Workforce.** A team of specialized AI personas. Unlike a general chatbot, these agents have narrow scopes, specific tools, and strict authority boundaries. They prevent the "One AI fits all" problem.                                      | .github/agents/\*.agent.md   |
+| Layer  | Component        | Description & Strategic Value                                                                                                                                                                                                                      | Tech Stack                    |
+| :----- | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------- |
+| **L1** | **Constitution** | **The Rule of Law.** Defines the project's immutable laws, coding standards, and security policies. It acts as the "Global System Prompt" that applies to every interaction, ensuring consistency across all agents.                               | `AGENTS.md`                   |
+| **L2** | **Skills**       | **Standardized Procedures (SOPs).** A library of reusable prompt patterns for specific tasks (e.g., Planning, Testing, Refactoring). These ensure that routine tasks are executed with high precision and uniform quality, regardless of the user. | `.github/prompts/*.prompt.md` |
+| **L3** | **Knowledge**    | **Explicit Context / The Brain.** A standardized, machine-readable summary of the project. Split into **Universal** (`knowledge/`) and **Project-Specific** (`docs/`).                                                                             | `docs/*`, `knowledge/*`       |
+| **L4** | **Agents**       | **The Workforce.** A team of specialized AI personas. Unlike a general chatbot, these agents have narrow scopes, specific tools, and strict authority boundaries. They prevent the "One AI fits all" problem.                                      | `.github/agents/*.agent.md`   |
 
 ## **4\. Architecture: The Specialized Seven (L4 Agents)**
 
@@ -133,8 +138,7 @@ We selected this specific implementation path to create a GUI-driven, guided exp
 ## **6\. Repository Structure**
 
 terraformer/  
-├── .github/
-
+├── .github/  
 │ ├── prompts/  
 │ │ ├── terraformer.prompt.md # The Meta-Engine. Generates agents & skills.  
 │ │ └── terraform-context.prompt.md # Generates AGENTS.md context map.  
@@ -143,7 +147,7 @@ terraformer/
 ├── docs/  
 │ ├── PROJECT_CHARTER.md # The "Constitution" of this project. Detailed definition of ANTP v1.4.  
 │ └── DEVELOPMENT_CONTEXT.md # This file. The ADR and single source of truth for AI context.  
-└── AGENTS.md # L1: Constitution & L3: Knowledge Hub
+└── AGENTS.md # L1: Constitution & L3: Knowledge Hub  
 └── README.md # Entry point for human users.
 
 ## **7\. Future Roadmap**

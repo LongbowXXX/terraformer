@@ -22,13 +22,13 @@ The output follows the [AGENTS.md](https://agents.md/) format - a simple, open f
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Language Detection**: Detect the target language specified by the user (default: English).
 2.  **Input Analysis**: Analyze README, file structure, config files, entry points, and existing docs.
 3.  **Tech Stack Detection**: Identify languages, frameworks, databases, build tools, etc.
 4.  **Pattern Recognition**: Detect architectural patterns.
-5.  **Documentation Generation**: Generate initial docs in `agents-docs/` in the **Target Language**.
+5.  **Documentation Generation**: Generate initial docs in `docs/` in the **Target Language**.
 6.  **Knowledge Base Translation**: Translate `knowledge/` files if the Target Language is not English.
 7.  **AGENTS.md Generation**: Generate the `AGENTS.md` file following the format in the **Target Language**.
 8.  **Final Check**: Review the "Final Check" section.
@@ -83,9 +83,9 @@ Detect architectural patterns:
 
 ### Step 4: Documentation Generation
 
-Generate the following initial documentation files in the `agents-docs/` directory. Use the detected tech stack and context to populate them.
+Generate the following initial documentation files in the `docs/` directory. Use the detected tech stack and context to populate them.
 
-Generate the initial documentation files in the `agents-docs/` directory.
+Generate the initial documentation files in the `docs/` directory.
 Refer to `.github/template-skills/doc-sync.prompt.template.md` for the list of files to generate and their expected content structure.
 
 **IMPORTANT**: Translate the content into the **Target Language**.
@@ -193,7 +193,7 @@ This file provides context and instructions for AI coding agents working on this
 The context provided in this file (`AGENTS.md`) is a **summary index**. It does NOT contain all the details needed for your tasks.
 **Before starting any task, you MUST:**
 
-1.  **Search**: Use your available tools to perform **keyword/regex searches** or **semantic searches** to find specific documentation in `agents-docs/` or `knowledge/` relevant to the user's request.
+1.  **Search**: Use your available tools to perform **keyword/regex searches** or **semantic searches** to find specific documentation in `docs/` or `knowledge/` relevant to the user's request.
     - _Example_: If the user asks about "Testing", search for and read documents related to testing instructions.
     - _Example_: If the user asks for a "Review", search for and read review guidelines.
 2.  **Follow Links**: Since `AGENTS.md` serves as a summary index and provides links to important files and folders, you MUST follow these links to obtain detailed information.
@@ -242,7 +242,7 @@ The context provided in this file (`AGENTS.md`) is a **summary index**. It does 
 
 For detailed information, refer to the following documents:
 
-List all documentation files in `agents-docs/` directory, linking to them
+List all documentation files in `docs/` directory, linking to them
 
 ## 9. Knowledge Base
 
@@ -272,9 +272,9 @@ Before outputting, verify:
 
 **Before finishing, confirm:**
 
-- [ ] All todos are marked as completed.
+- [ ] All todo are marked as completed.
 - [ ] `AGENTS.md` has been generated in the Target Language.
-- [ ] Initial documentation files in `agents-docs/` have been created in the Target Language.
+- [ ] Initial documentation files in `docs/` have been created in the Target Language.
 - [ ] All placeholders in the generated files are replaced with actual values.
 
 </instruction>

@@ -10,7 +10,7 @@ You are supporting the **@QualityGuard**. Your goal is to review specification d
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks:
 
 1.  **Ambiguity Check**: Scan for vague language.
 2.  **Consistency Check**: Verify alignment between strict requirements and technical design.

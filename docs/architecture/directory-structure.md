@@ -13,9 +13,8 @@ terraformer/
 │   ├── agents/             # Generated Agent Definitions (L4)
 │   ├── prompts/            # Skill Definitions (L2)
 │   └── template-*/         # Source templates for generating agents/skills
-├── agents-docs/            # Documentation written FOR Agents (L3)
-├── docs/                   # Human-oriented documentation (Project Charter, ADRs)
-├── knowledge/              # Universal/Reusable Knowledge (Not project-specific)
+├── docs/                   # Project Documentation (L3) - Architecture, Specs, Context
+├── knowledge/              # Universal Guidelines (not project-specific)
 ├── AGENTS.md               # The Constitution & Context Map Entry Point (L1)
 └── README.md               # Project Introduction
 ```
@@ -35,22 +34,17 @@ terraformer/
 - **Note**: This directory is the "Source of Truth" for all skills. Improvements should be made here, not in `.github/prompts/` (which are generated).
 - **Dependencies**: Used by the Terraformer meta-prompt.
 
-### `/agents-docs/`
+### `/docs/`
 
-- **Role**: Stores documentation specifically designed to be read by AI agents to understand the specific project's context.
-- **Key Files**: `architecture.md`, `tech-stack.md`, etc.
-- **Dependencies**: Referenced by `AGENTS.md` and various Skills.
+- **Role**: Contains both high-level project documentation (Charter, ADRs) and specific context for Agents (Architecture, Guidelines).
+- **Key Files**: `PROJECT_CHARTER.md`, `architecture/`, `rules/`
+- **Dependencies**: Referenced by `AGENTS.md`.
 
 ### `/knowledge/`
 
 - **Role**: A library of "Universal Knowledge" that applies across multiple projects. Contains best practices, prompting guides, and review checklists.
-- **Key Files**: `prompting-techniques.md`, `xml-structured-prompting.md`, `specification-guidelines.md`.
+- **Key Files**: `guidelines/prompting/prompting-techniques.md`, `guidelines/software-review.md`, `workflows/workflow.md`.
 - **Dependencies**: Can be symlinked or copied to other projects.
-
-### `/docs/`
-
-- **Role**: Contains high-level documentation primarily for human readers, though agents can also read them.
-- **Key Files**: `PROJECT_CHARTER.md` (Mission), `DEVELOPMENT_CONTEXT.md` (ADRs).
 
 ### `/docs/specs/`
 
@@ -62,7 +56,6 @@ terraformer/
 ```mermaid
 graph TD
     Root[Root] --> Github[.github]
-    Github --> AgentsDocs[agents-docs]
     Root --> Specs[docs/specs]
     Root --> Knowledge[knowledge]
     Root --> Docs[docs]
@@ -70,12 +63,12 @@ graph TD
     Github --> Prompts[prompts]
     Github --> Templates[template-*]
 
-    Prompts -->|Reads| AgentsDocs
+    Prompts -->|Reads| Docs
     Prompts -->|Reads| Knowledge
 ```
 
 ## Layer Structure
 
 1.  **Configuration Layer**: `.github/` - Defines HOW the system works.
-2.  **Context Layer**: `agents-docs/`, `AGENTS.md` - Defines WHAT the system works on.
+2.  **Context Layer**: `docs/`, `AGENTS.md` - Defines WHAT the system works on.
 3.  **Reference Layer**: `knowledge/`, `docs/` - Defines WHY and HOW-TO mechanisms.

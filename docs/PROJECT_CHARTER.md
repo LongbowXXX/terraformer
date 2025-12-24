@@ -66,7 +66,7 @@ The protocol establishes four integrated layers within a project:
 | :----- | :--------------- | :------------------------------------------------------------------------------- | :---------------------------- |
 | **L1** | **Constitution** | Project Rules & Laws                                                             | `AGENTS.md`                   |
 | **L2** | **Skills**       | **(New)** Standardized Task Procedures<br>(e.g., Planning, Testing, Refactoring) | `.github/prompts/*.prompt.md` |
-| **L3** | **Knowledge**    | Explicit Context Map                                                             | `agents-docs/*`               |
+| **L3** | **Knowledge**    | Explicit Context Map                                                             | `docs/*`                      |
 | **L4** | **Agents**       | Specialized Roles with Authority                                                 | `.github/agents/*.agent.md`   |
 
 ## 6. Architecture: Roles & Skills Matrix
@@ -137,7 +137,22 @@ This allows users to acquire a **"Team of Agents equipped with Senior Engineer t
 
 ## 10. Documentation & Traceability
 
-To ensure that AI and human collaboration is effective and auditable, we enforce strict documentation standards and follow the [Standard Workflow](../knowledge/workflow/workflow.md).
+To ensure that AI and human collaboration is effective and auditable, we enforce strict documentation standards and follow the [Standard Workflow](../knowledge/workflows/workflow.md).
+
+### Documentation Portability Strategy
+
+To maximize the reusability of the AI-Native Transformation Protocol across different projects, we enforce a strict separation of documentation assets:
+
+1.  **Universal Knowledge (`knowledge/`)**:
+
+    - **Purpose**: "Write Once, Run Anywhere".
+    - **Content**: General guidelines (AI Literacy, Prompting Techniques), Templates, and Workflow definitions.
+    - **Benefit**: Can be copied directly to any new project without modification.
+
+2.  **Project-Specific Assets (`docs/`)**:
+    - **Purpose**: "Context for _this_ project".
+    - **Content**: Architecture overview, Domain glossary, Feature specifications, and Local rules.
+    - **Benefit**: Keeps the core protocol clean and separates "Methodology" from "Implementation".
 
 ### Standardized Templates
 

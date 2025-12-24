@@ -1,6 +1,6 @@
 ---
 name: doc-sync
-description: Generate or update project documentation in agents-docs/ directory.
+description: Generate or update project documentation in docs/ directory.
 agent: Librarian
 ---
 
@@ -10,7 +10,7 @@ You are supporting the **@Librarian**. Your goal is to generate and maintain com
 
 ## 📋 Task Initialization
 
-**IMMEDIATELY** use the `#todos` tool to register the following tasks to track your progress:
+**IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Context Analysis**: Gather information from README, dependencies, and structure.
 2.  **Tech Stack Detection**: Identify languages, frameworks, and tools.
@@ -20,22 +20,22 @@ You are supporting the **@Librarian**. Your goal is to generate and maintain com
 
 ## 🎯 Objective
 
-Analyze the current workspace and generate/update documentation files in the `agents-docs/` directory. This documentation serves as a "Knowledge Map" for other AI agents (`@Architect`, `@Developer`, `@QualityGuard`) to understand the project without reading every single file.
+Analyze the current workspace and generate/update documentation files in the `docs/` directory. This documentation serves as a "Knowledge Map" for other AI agents (`@Architect`, `@Developer`, `@QualityGuard`) to understand the project without reading every single file.
 
 ## 📁 Output Files
 
 Generate the following 8 documentation files:
 
-| File                         | Purpose                              | Key Sections                                        |
-| ---------------------------- | ------------------------------------ | --------------------------------------------------- |
-| `architecture.md`            | System overview and design rationale | Components, Diagrams, Design Decisions              |
-| `directory-structure.md`     | File organization guide              | Tree structure, Responsibilities, Dependencies      |
-| `coding-conventions.md`      | Code style and standards             | Naming, Formatting, Patterns                        |
-| `key-flows.md`               | Main workflows and entry points      | User Journeys, Data Flow, API Endpoints             |
-| `tech-stack.md`              | Technology choices and dependencies  | Languages, Frameworks, External Services            |
-| `testing.md`                 | Test strategy and patterns           | Test Types, Coverage Goals, Running Tests           |
-| `constraints-and-gotchas.md` | Known limitations and pitfalls       | Technical Debt, Platform Constraints, Common Issues |
-| `glossary.md`                | Ubiquitous Language & Definitions    | Key Terms, Domain Concepts, Acronyms                |
+| File                                  | Purpose                              | Key Sections                                        |
+| ------------------------------------- | ------------------------------------ | --------------------------------------------------- |
+| `architecture/overview.md`            | System overview and design rationale | Components, Diagrams, Design Decisions              |
+| `architecture/directory-structure.md` | File organization guide              | Tree structure, Responsibilities, Dependencies      |
+| `rules/coding-conventions.md`         | Code style and standards             | Naming, Formatting, Patterns                        |
+| `architecture/key-flows.md`           | Main workflows and entry points      | User Journeys, Data Flow, API Endpoints             |
+| `architecture/tech-stack.md`          | Technology choices and dependencies  | Languages, Frameworks, External Services            |
+| `rules/testing.md`                    | Test strategy and patterns           | Test Types, Coverage Goals, Running Tests           |
+| `architecture/constraints.md`         | Known limitations and pitfalls       | Technical Debt, Platform Constraints, Common Issues |
+| `glossary.md`                         | Ubiquitous Language & Definitions    | Key Terms, Domain Concepts, Acronyms                |
 
 ## 🛠️ Generation Process
 
@@ -51,7 +51,7 @@ Gather information from:
 
 ### 2. Tech Stack Detection
 
-Identify the following for the [Tech Stack](../../agents-docs/tech-stack.md):
+Identify the following for the [Tech Stack](../../docs/architecture/tech-stack.md):
 
 - **Language(s)**: TypeScript, Python, Java, Go, etc.
 - **Framework(s)**: React, Next.js, Django, Spring Boot, etc.
@@ -83,7 +83,7 @@ For each file, follow this structure:
 
 Output each file with its path and full content:
 
-**File: `agents-docs/architecture.md`**
+**File: `docs/architecture/overview.md`**
 
 ```markdown
 <!-- This document is generated and updated by .github/prompts/doc-sync.prompt.md -->
@@ -138,7 +138,7 @@ When updating existing documentation:
 
 **Before finishing, confirm:**
 
-- [ ] All todos are marked as completed.
+- [ ] All todo are marked as completed.
 - [ ] All 8 documentation files are generated/updated.
 - [ ] No placeholders remain (all replaced with actual tech stack info).
 - [ ] All diagrams use valid Mermaid syntax.
