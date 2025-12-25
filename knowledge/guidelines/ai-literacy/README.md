@@ -60,23 +60,6 @@ To lead effectively, you must know your team's strengths and weaknesses.
 - **Hallucinations**: It is a creative engine, not a database. It can invent plausible-looking libraries. **Always Verify.**
 - **Bias**: It mimics the patterns it was trained on. If you write messy code, it will suggest messy code.
 
-### Learning Resources (Level Up)
-
-- [Microsoft Learn: Copilot Training](https://learn.microsoft.com/en-us/training/browse/?products=ms-copilot)
-  - Official training modules for Microsoft Copilot products.
-- [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
-  - Official documentation containing features, guides, and best practices.
-- [VS Code Copilot Overview](https://code.visualstudio.com/docs/copilot/overview)
-  - Comprehensive guide for using Copilot within VS Code.
-- [Awesome Copilot](https://github.com/github/awesome-copilot)
-  - A curated list of useful resources, demos, and tools for GitHub Copilot.
-- [AGENTS.md Specification](https://github.com/openai/agents.md)
-  - The open standard format for defining AI agent context used in this project.
-- [VS Code Repository](https://github.com/microsoft/vscode)
-  - VS Code is developed using VS Code and Copilot. A great reference for settings and Copilot prompts.
-- [VS Code GitHub Copilot Extension](https://github.com/microsoft/vscode-copilot-chat)
-  - The official GitHub Copilot Chat extension for VS Code. Source code and implementation details.
-
 ---
 
 ## 🛡️ Level 3: Defensive AI Programming (Security & Safety)
@@ -100,3 +83,20 @@ Treat all AI output as **"Untrusted External Input"**.
 To effectively work in an AI-Ready environment, we recommend:
 
 - **GitHub Copilot**: Your pair programmer.
+
+### Learning Resources (Level Up)
+
+- [Microsoft Learn: Copilot Training](https://learn.microsoft.com/en-us/training/browse/?products=ms-copilot)
+  - Official training modules for Microsoft Copilot products.
+- [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
+  - Official documentation containing features, guides, and best practices.
+- [VS Code Copilot Overview](https://code.visualstudio.com/docs/copilot/overview)
+  - Comprehensive guide for using Copilot within VS Code.
+- [Awesome Copilot](https://github.com/github/awesome-copilot)
+  - A curated list of useful resources, demos, and tools for GitHub Copilot.
+- [AGENTS.md Specification](https://github.com/openai/agents.md)
+  - The open standard format for defining AI agent context used in this project.
+- [VS Code Repository](https://github.com/microsoft/vscode)
+  - VS Code is developed using VS Code and Copilot. A great reference for settings and Copilot prompts.
+- [VS Code GitHub Copilot Extension](https://github.com/microsoft/vscode-copilot-chat)
+  - The official GitHub Copilot Chat extension for VS Code. Source code and implementation details.
