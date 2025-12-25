@@ -10,7 +10,8 @@ It acts as a meta-engine that analyzes existing "human-only" software projects a
 
 https://github.com/user-attachments/assets/79119803-cb99-452f-894c-f973e5915877
 
-> [!IMPORTANT] > **Before you start coding**, please read the [AI Literacy Guide](./knowledge/guidelines/ai-literacy/) to understand how to collaborate safely with AI agents.
+> [!IMPORTANT]  
+> **Before you start coding**, please read the [AI Literacy Guide](./knowledge/guidelines/ai-literacy/) to understand how to collaborate safely with AI agents.
 
 ## 🌟 The Problem: Context Debt
 

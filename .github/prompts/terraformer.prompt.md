@@ -62,7 +62,8 @@ If no language is specified, default to **English**.
 Generate or **Update** **ALL** skill files by reading their templates from `.github/template-skills/`.
 **IMPORTANT**:
 
-> [!IMPORTANT] > **CRITICAL TRANSLATION RULE**:
+> [!IMPORTANT]  
+> **CRITICAL TRANSLATION RULE**:
 > When generating the content below in the **Target Language**, you MUST:
 >
 > 1. **DO NOT SUMMARIZE**: Translate the text **verbatim**.
@@ -85,7 +86,8 @@ Generate agents using `.github/template-agents/*.agent.template.md`.
 
 **IMPORTANT**:
 
-> [!IMPORTANT] > **CRITICAL TRANSLATION RULE**:
+> [!IMPORTANT]  
+> **CRITICAL TRANSLATION RULE**:
 > When generating the content below in the **Target Language**, you MUST:
 >
 > 1. **DO NOT SUMMARIZE**: Translate the text **verbatim**.
