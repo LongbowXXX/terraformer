@@ -5,7 +5,7 @@
 ## Performance Requirements
 
 - **Token Usage**: Agents must be concise. `AGENTS.md` and skills are injected into the context window, so they must be kept as compact as possible to leave room for the actual codebase.
-- **Latency**: Agent responses (especially with GPT-4 class models) can take time. Users should be patient.
+- **Latency**: Agent responses (especially with GPT-5 class models) can take time. Users should be patient.
 
 ## Security Considerations
 
@@ -15,7 +15,7 @@
 ## Known Technical Debt
 
 - **Context "Compression"**: As a project grows, `AGENTS.md` might become too large. We need to implement a mechanism to split or summarize context (e.g., retrieval-augmented generation or RAG) in future ANTP versions.
-- **Model Dependency**: Some complex prompts (like `/plan`) are optimized for GPT-4 and might perform poorly on weaker models.
+- **Model Dependency**: Some complex prompts (like `/plan`) are optimized for GPT-5 and might perform poorly on weaker models.
 
 ## Common Troubles and Solutions
 
