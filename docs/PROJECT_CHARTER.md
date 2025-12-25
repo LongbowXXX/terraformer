@@ -9,6 +9,8 @@
 This project aims to establish a **universal transition protocol (Meta-Plan)** to transform any existing software project into an "AI-Native" state.
 In ANTP v1.4, we evolve beyond simple role definitions. We introduce the **"Roles & Skills Architecture,"** where AI agents are not only assigned specific responsibilities (Roles) but are also equipped with standardized procedural knowledge (Skills/SOPs). This ensures a high-quality, autonomous **"AI Collaboration System"** generated automatically for any legacy codebase.
 
+> [!IMPORTANT] > **Before you start coding**, please read the [AI Literacy Guide](../knowledge/guidelines/ai-literacy/) to understand how to collaborate safely with AI agents.
+
 ## 2. The AI-Native Manifesto
 
 We respect the values of Agile development, but as we welcome AI agents as members of our team, we declare a shift to the following new values (Paradigm Shift).

@@ -48,6 +48,7 @@ AI is like a super-skilled new hire who joined the team **today**. They know how
   - **Reference Files**: Don't just ask "fix this." Open the relevant files so the AI can "see" them (or tag them like `#Main.ts`).
   - **Background Info**: Explain _why_ you are doing this task. "To improve performance" vs "To fix a crash" leads to different code.
   - **Project Knowledge**: This project uses `AGENTS.md` and `docs/` to automate some context, but your specific task context must come from **YOU**.
+  - **Mechanics**: Learn how to use [Neighboring Tabs & @workspace vs #file](./context-management.md) to control what the AI sees.
 
 ### 3. Understanding Your Teammate (LLM Characteristics)
 
