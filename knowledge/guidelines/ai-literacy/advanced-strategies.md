@@ -8,7 +8,7 @@ In `README.md`, you learned the basic posture of treating AI as a partner. This 
 
 ## 🧠 1. Input Over Structure (The SSG Framework)
 
-Modern AI models (Gemini 1.5 Pro, GPT-4o, etc.) can process vast amounts of context. Discard the old wisdom of "summarizing info for brevity." Shift to a style of **"providing raw primary sources sufficiently."**
+Modern AI models (Gemini 3 Pro, GPT-5.2, etc.) can process vast amounts of context. Discard the old wisdom of "summarizing info for brevity." Shift to a style of **"providing raw primary sources sufficiently."**
 
 ### The 3S Principle (Terraformer Standard)
 
