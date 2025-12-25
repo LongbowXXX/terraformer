@@ -26,4 +26,4 @@
 | ------- | ---------------------------- | ------------------------------------------------------------------------- |
 | **SOP** | Standard Operating Procedure | A step-by-step guide for performing a specific task (encoded as a Skill). |
 | **ADR** | Architecture Decision Record | A document capturing an important architectural decision.                 |
-| **LLM** | Large Language Model         | The underlying AI model (e.g., GPT-4) powering the agents.                |
+| **LLM** | Large Language Model         | The underlying AI model (e.g., GPT-5) powering the agents.                |
