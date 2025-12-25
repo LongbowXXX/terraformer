@@ -76,23 +76,16 @@ By doing this, the AI generates code based on "Clear Truth (Ground Truth)" rathe
 
 ---
 
-## 🏗️ 4. Context Engineering
+## 🏗️ 4. Context Engineering (Using the Brain)
 
-We "engineer memory" to make AI observe project-specific rules.
+Terraformer has already "engineered" the project's memory. Your job is to **leverage** it.
 
-### `.github/copilot-instructions.md`
+### `AGENTS.md` (The Central Brain)
 
-The rulebook for the entire repository. Describe constraints like:
+This project is equipped with an `AGENTS.md` file that acts as the source of truth for AI context.
 
-- Libraries to use (e.g., "Use Vitest, not Jest")
-- Prohibitions (e.g., "No any type in TypeScript")
-
-### Agent Personas (in `AGENTS.md`)
-
-Use prompt sets with assigned roles for specific tasks.
-
-- `@architect`: Overall design and trade-off evaluation.
-- `@reviewer`: Pointing out security risks and edge cases.
+- **Role**: It defines the project's architecture, tech stack, and coding standards.
+- **Action**: **Read it.** You don't need to memorize it, but you must know what rules the AI is trying to follow. If the AI makes a mistake, check if `AGENTS.md` is outdated.
 
 ---
 
