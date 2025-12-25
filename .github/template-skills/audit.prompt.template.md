@@ -31,6 +31,13 @@ Review the code to ensure it meets production standards, is secure, and follows 
     - **Parallel Search**: Run multiple targeted keyword searches in parallel to find definitions and usage patterns for any unknown types or functions.
 2.  **Security Check**:
     - Identify potential vulnerabilities (e.g., injection, XSS, sensitive data exposure).
+    - **Package Existence Check (Slopsquatting)**:
+      - Verify existence of new `import` or `package.json` dependencies.
+      - Check for typos (Typosquatting).
+    - **Secret Leak Check**:
+      - Check for hardcoded API keys and passwords.
+    - **Public Code Contamination Check**:
+      - Check for license-violating copy-pasted code.
     - Check for insecure dependencies.
 3.  **Logic & Correctness**:
     - Verify that the code implements the intended logic correctly.

@@ -94,7 +94,8 @@ Refer to `.github/template-skills/doc-sync.prompt.template.md` for the list of f
 
 If the **Target Language** is NOT English:
 
-> [!IMPORTANT] > **CRITICAL TRANSLATION RULE**:
+> [!IMPORTANT]  
+> **CRITICAL TRANSLATION RULE**:
 > When generating the content below in the **Target Language**, you MUST:
 >
 > 1. **DO NOT SUMMARIZE**: Translate the content **verbatim**.
@@ -115,7 +116,8 @@ _Note: Create these files with initial content based on your analysis. They will
 
 Generate the content for `AGENTS.md` following this structure. **Output in the Target Language (defined in Step 0).**
 
-> [!IMPORTANT] > **CRITICAL TRANSLATION RULE**:
+> [!IMPORTANT]  
+> **CRITICAL TRANSLATION RULE**:
 > When generating the content below in the **Target Language**, you MUST:
 >
 > 1. **DO NOT SUMMARIZE**: Translate the "Dynamic Context Protocol" section **verbatim** (word-for-word).
