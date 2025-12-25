@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.16] - 2025-12-25
+
+### Added
+
+- **Documentation**: Advanced AI literacy strategies and defensive programming protocols.
+
+### Removed
+
+- **Documentation**: Deprecated `input-over-structure.md`.
+
 ## [0.0.15] - 2025-12-25
 
 ### Changed
