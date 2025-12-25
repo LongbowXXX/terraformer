@@ -27,6 +27,14 @@ status: draft
 ### Goals
 
 [What are the specific objectives of this feature/change?]
+
+### Uncertainties & Open Questions
+
+<!-- List items that need confirmation from the domain expert or product owner. -->
+
+- [ ] [Question 1]
+- [ ] [Question 2]
+
 </overview>
 
 <requirements>
@@ -35,11 +43,13 @@ status: draft
 
 ### User Stories
 
+<!-- Rule: No technical terms (class names, DB columns) in User Stories. Focus on value. -->
+
 - As a **[Role]**, I want to **[Action]**, so that **[Benefit]**.
 
 ### Acceptance Criteria (Gherkin)
 
-<!-- Use explicit Gherkin syntax for behavioral specs -->
+<!-- Use explicit Gherkin syntax for behavioral specs. NO technical jargon. -->
 <gherkin>
 
 ```gherkin
