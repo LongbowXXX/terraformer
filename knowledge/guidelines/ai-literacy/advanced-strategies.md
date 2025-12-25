@@ -91,3 +91,18 @@ This project is equipped with an `AGENTS.md` file that acts as the source of tru
 
 **"Trust, but Verify."**
 You are required to act as an "Orchestrator" who provides sufficient information (Source) to the AI and strictly verifies its output (Code).
+
+---
+
+## 🤝 5. AI Collaborative Workflow
+
+To maximize the potential of these strategies, we follow a structured collaboration process.
+
+### **Terraformer Standard Workflow**
+
+We have defined a standard workflow that clarifies the division of roles between AI and Humans in each phase (Requirement, Design, Implementation, Verification, Release).
+
+- **Rule**: Always follow the [AI Collaborative Model](../../workflows/workflow.md) when proceeding with tasks.
+- **Key Concept**:
+  - **Process in Issue**: Discussions and decisions are recorded in GitHub Issues.
+  - **Result in Git**: Final artifacts (code, specs) are managed in Git.
