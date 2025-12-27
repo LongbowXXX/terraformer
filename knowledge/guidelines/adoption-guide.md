@@ -24,6 +24,26 @@ Follow the standard installation instructions in the [README](../../README.md).
 2.  **Initialize Context**: Run `/terraform-context` to generate the initial `AGENTS.md`.
 3.  **Summon Agents**: Run `/terraformer` to generate project-specific agent personas and skills.
 
+### Anatomy of a Terraformed Project
+
+After installation, your project structure will look like this:
+
+```
+my-project/
+├── .github/
+│   ├── agents/          # (Generated) Active agents for this project (e.g., architect.agent.md)
+│   ├── prompts/         # (Generated) Skills and SOPs (e.g., plan.prompt.md)
+│   └── ...              # Templates used by the meta-engine
+├── knowledge/           # (Static) Universal knowledge from Terraformer
+│   ├── guidelines/      # AI Literacy, Review Guidelines, etc.
+│   └── ...
+├── docs/                # (Dynamic) Project-specific documentation (Context Map)
+│   ├── rules/           # Project rules (naming conventions, local workflows)
+│   ├── specs/           # Feature specifications
+│   └── ...
+└── AGENTS.md            # (Dynamic) The Constitution & Context Map
+```
+
 ## Phase 2: Refinement (Post-Terraforming)
 
 Now that the "AI Team" is installed, use them to improve the project's "AI-Readiness".
@@ -46,16 +66,22 @@ Auto-generated docs are a starting point. Make them richer.
 
 Every project has unique conventions (naming, testing, directory structure).
 
-- **Action**: Document these in `knowledge/rules/` or add them to `AGENTS.md` (Constitution).
+- **Action**: Document these in `docs/rules/` or add them to `AGENTS.md` (Constitution).
 - _Tip_: If an agent makes a mistake, don't just correct the code—**correct the prompt (instruction)**. Add a rule so it doesn't happen again.
 
 ### 4. Establish Collaborative Workflows
 
 Shift from "Command & Control" to "collaboration".
 
-- Use **Task Mode** (e.g., Agentic Mode, Copilot Workspace, or simply maintaining a `task.md`) to track complex features.
 - Regularly update `AGENTS.md` as the project evolves.
 
----
-
 > **Goal**: The ultimate goal is to have a repository where **Documentation is the Source Code**. Any developer (human or AI) should be able to read the docs and understand exactly how the system works without guessing.
+
+## Appendix: Knowledge vs. Docs
+
+To prevent confusion, we separate "Universal Principles" from "Project Reality".
+
+| Directory        | Type                    | Description                                                                                                                                                                                                                        |
+| :--------------- | :---------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`knowledge/`** | **In-Mutable** (Mostly) | Contains the "Textbook" of the ANTP method. These files (like _AI Literacy_ or _Review Guidelines_) are generic and apply to _any_ project. You typically **do not** edit these unless you are customizing the methodology itself. |
+| **`docs/`**      | **Mutable**             | Contains the "State" of _your_ project. This is where you write specs, architecture diagrams, and project-specific rules (`docs/rules/`). **This is where the Agents work.**                                                       |
