@@ -131,9 +131,9 @@ Manual verification via test projects; automated CI planned.
 | ------------------ | -------------- | ----------------------- | -------------------------------------- |
 | `@Architect`       | Design & Specs | —                       | `/plan`                                |
 | `@BusinessAnalyst` | Requirements   | No code                 | `/requirements`                        |
-| `@QualityGuard`    | Enforcer       | ✅ Merge Approval       | `/audit`, `/test-spec`, `/sanity-test` |
-| `@Librarian`       | Keeper         | ✅ Documentation        | `/doc-sync`, `/release-new-version`    |
-| `@Gardener`        | Maintainer     | ✅ Refactoring          | `/refactor`                            |
+| @QualityGuard    | Merge Approval | —                       | `/audit`, `/test-spec`, `/sanity-test` |
+| @Librarian       | Documentation  | —                       | `/doc-sync`, `/release-new-version`    |
+| @Gardener        | Refactoring    | —                       | `/refactor`                            |
 | `@Debugger`        | Bug Analysis   | Must escalate spec bugs | `/debug`                               |
 | `@Developer`       | **None**       | Must escalate blockers  | `/test`, `/implement`                  |
 
