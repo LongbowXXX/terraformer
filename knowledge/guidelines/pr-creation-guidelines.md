@@ -34,7 +34,7 @@ The PR description serves as the persistent record of context. It MUST answer **
 
 - **Summary:** A bulleted list of specific changes. **Keep it high-level.** Do not narrate the diff line-by-line.
 - **Impact Scope:** Explicitly list the functional and technical areas affected by this change.
-- **For Bug Fixes:** (See [Debugging Guidelines](../debugging.md))
+- **For Bug Fixes:** (See [Debugging Guidelines](debugging.md))
   - **Root Cause:** Explain the causal mechanism of the bug (Why did it happen?).
   - **Countermeasure:** Explain how the fix addresses the root cause.
   - **Horizontal Expansion (Yokoten):** Confirm if similar patterns were checked/fixed elsewhere in the codebase.
