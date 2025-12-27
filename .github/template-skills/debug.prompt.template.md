@@ -14,7 +14,7 @@ Move from "Something is broken" to "Here is exactly why and how to fix it".
 
 ## 📚 References
 
-- [Debugging Guidelines: The Scientific Method](../knowledge/guidelines/debugging.md) - **Read this first!**
+- [Debugging Guidelines: The Scientific Method](../../knowledge/guidelines/debugging.md) - **Read this first!**
 - **Core Principle**: "No Guesswork" (Do not change code without proof).
 
 ## 🕵️ Debugging Steps (Thinking Process)
