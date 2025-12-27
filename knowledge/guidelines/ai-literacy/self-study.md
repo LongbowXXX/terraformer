@@ -82,7 +82,7 @@ The "Age 35 Retirement Theory" is not a biological limit, but a "bill for neglig
 
 NVIDIA's Jensen Huang warns, "AI will not replace you. The person using AI will replace you" [1]. This quote has a double meaning for engineers.
 
-1.  **commoditization of Coding**:
+1.  **Commoditization of Coding**:
     In the past, "being able to write code" itself had high market value. However, with the advent of AI tools like GitHub Copilot and ChatGPT, the cost of writing syntactically correct code has dropped dramatically. The skill of simply translating specifications into code no longer has scarcity value.
 2.  **Expanding Gap in Learning Efficiency**:
     An unbridgeable "gap in productivity and learning speed" creates between engineers who can utilize AI as a learning partner (second brain) and those who cannot [1]. Using AI, you can have documents in unknown languages summarized, sample code generated, and error causes identified instantly. This makes it possible to cycle through learning several times faster than before.
