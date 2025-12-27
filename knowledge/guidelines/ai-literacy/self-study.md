@@ -1,4 +1,4 @@
-# **Autonomous Growth for Professional Engineers: Survival Strategy as a "Chef" in the Algorithm Age**
+# Autonomous Growth for Professional Engineers: Survival Strategy as a "Chef" in the Algorithm Age
 
 ## **Executive Summary**
 
@@ -8,9 +8,7 @@ This report clarifies the indispensability of self-study for young professionals
 
 With the "half-life" of technical skills shortening to less than 2.5 years, "intentional learning" separated from daily tasks is essential for engineers to maintain and improve their skills as human capital. This paper comprehensively analyzes the philosophy of "preparation" practiced by top-class athletes like Ichiro and Keisuke Honda, the habits of the top 5% of engineers, and the process of breaking away from being "instruction-waiting" personnel in the Generative AI era, presenting concrete action plans that young engineers should practice starting tomorrow. This is a proposal not for company-mandated learning, but for strategic investment in the engineer's own survival and freedom.
 
-## ---
-
-**Chapter 1: The Chef Metaphor — Redefining Professionalism**
+## **Chapter 1: The Chef Metaphor — Redefining Professionalism**
 
 ### **1.1 The Decisive Difference Between "Business Hours" and "Prep Work"**
 
@@ -56,9 +54,7 @@ If a chef insists, "I only make traditional French sauces. I don't want to study
 
 Being a professional means prioritizing value provision to the customer (user) over your own "likes and dislikes." Learning the latest technology (new ingredients) is not just a matter of intellectual curiosity, but a matter of **Professional Integrity** to continue providing the "best cuisine" to customers. Just as a cook who doesn't research outside of work cannot become first-class, it is impossible for an engineer who doesn't update their technology outside of work to succeed as a professional.
 
-## ---
-
-**Chapter 2: The "Half-life" of Knowledge and the Cruel Formula of Market Value**
+## **Chapter 2: The "Half-life" of Knowledge and the Cruel Formula of Market Value**
 
 ### **2.1 Accelerating Skill Obsolescence — The 2.5 Year Wall**
 
@@ -93,9 +89,7 @@ NVIDIA's Jensen Huang warns, "AI will not replace you. The person using AI will 
 
 "Young people who don't study" means not only that their knowledge doesn't increase, but that they miss this wave of "AI Leverage." In the AI era, a person without learning motivation is instantly left laps behind by a person with learning motivation equipped with the powerful engine called AI.
 
-## ---
-
-**Chapter 3: Pivot to AI — From "Coder" to "Goal Designer"**
+## **Chapter 3: Pivot to AI — From "Coder" to "Goal Designer"**
 
 ### **3.1 The Endangered Species: "Instruction-Waiting Humans"**
 
@@ -123,9 +117,7 @@ The survival strategy for engineers from 2025 onwards lies not in "fighting AI" 
 For example, creating daily reports, creating tests for routine code, and creating first drafts of documents should be delegatable to AI right now. Use self-study time to experience these "small automations" and build your own workflow. If you can do that, you can devote the saved time to more advanced learning (acquiring domain knowledge, building human relationships, etc.).
 Whether you can rotate this positive feedback loop of **"Creation of surplus time through automation → Investment in new learning"** will be the watershed dividing winners and losers.
 
-## ---
-
-**Chapter 4: The Philosophy of Preparation — The Essence of "Effort" Told by the Best**
+## **Chapter 4: The Philosophy of Preparation — The Essence of "Effort" Told by the Best**
 
 ### **4.1 Learning "Elimination of Excuses" from Ichiro**
 
@@ -172,9 +164,7 @@ So, specifically, what habits do excellent engineers (or students) called the "t
 
 These habits are things you can imitate starting today, even without talent. Just as a chef sharpens their knife every day, engineers can maintain their sharpness only through daily habits.
 
-## ---
-
-**Chapter 5: Career Strategy Theory for Gen Z — For "Autonomy" and "Freedom"**
+## **Chapter 5: Career Strategy Theory for Gen Z — For "Autonomy" and "Freedom"**
 
 ### **5.1 The Strongest Stability: "Not Depending on the Company"**
 
@@ -204,9 +194,7 @@ The only way to resolve this anxiety is to **"Take Action."**
 If you do nothing, anxiety becomes reality. However, if you start learning for even 15 minutes starting today, you can get the feeling (self-efficacy) that you are definitely progressing more than yesterday's self.
 Just as a chef stands in the kitchen with confidence by maintaining their knives, engineers can walk without fear in an era of drastic change by maintaining their skills.
 
-## ---
-
-**Chapter 6: Action Plan — Framework to Incorporate "Study" into Life**
+## **Chapter 6: Action Plan — Framework to Incorporate "Study" into Life**
 
 For engineers who say "I don't know what to do specifically" or "I don't have time" even when told to "study," we present concrete action plans that can be practiced starting tomorrow.
 
@@ -250,9 +238,7 @@ Allocate about 6 hours out of a 40-hour work week to "investment for the future.
 You might say "I don't have that time." But if you continue current work with current skills, time will never be born forever.
 Initially, instead of cutting sleep time, cut time staring at SNS on smartphones or useless meetings. Then, shorten work time with shortcut keys and automation tools learned through study, and invest the saved time into further study. This **"Straw Millionaire" style time investment strategy** is the only solution for busy engineers to grow.
 
-## ---
-
-**Conclusion: The Oath of a Professional**
+## **Conclusion: The Oath of a Professional**
 
 In the culinary world, there is a saying, "A chef's entire life appears on the plate."
 The world of engineers is the same. The code displayed on the screen, the designed system, and the written documents vividly show how that engineer faces work daily and how much "preparation" they have done behind the scenes.
@@ -266,9 +252,7 @@ In the coming era dominated by algorithms and AI, the value that remains in the 
 Now, let's head to the kitchen (PC). However, not to repeat yesterday's recipe, but to create new possibilities.
 Be the Chef, not just a Cook.
 
-### ---
-
-**Major References & Citations**
+### **Major References & Citations**
 
 This report was created by referencing and integrating the following survey data and expert opinions.
 
