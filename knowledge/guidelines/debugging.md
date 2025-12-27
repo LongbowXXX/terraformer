@@ -90,7 +90,7 @@ AI Agents (`@Debugger`) and human developers must follow the flow below:
     - **Action**: Search the entire project to check if similar patterns exist.
     - **Fix**: If found, include them in the scope of this fix (or raise as a separate Issue).
 8.  **Verification (Verification & Regression Testing)**
-    - **Step 1: Confirm Reproduction**: Confirm that the bug is fixed.
+    - **Step 1: Confirm Fix**: Confirm that the bug is fixed.
     - **Step 2: Confirm No Regression**: Confirm that "related functions" identified in the impact analysis work normally.
 
 ## 4. Checklist for Reviewers
