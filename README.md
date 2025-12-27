@@ -17,6 +17,8 @@ https://github.com/user-attachments/assets/79119803-cb99-452f-894c-f973e5915877
 
 > [!IMPORTANT]  
 > **Before you start coding**, please read the [AI Literacy Guide](./knowledge/guidelines/ai-literacy/) to understand how to collaborate safely with AI agents.
+>
+> 💡 **New to Terraformer?** Check out the [Adoption Guide](./knowledge/guidelines/adoption-guide.md) for the ideal integration workflow.
 
 ## 🌟 The Problem: Context Debt
 
