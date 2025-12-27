@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.17] - 2025-12-27
+
+### Added
+
+- **README**: GitHub badges for license, release, issues, and pull requests.
+
+### Fixed
+
+- **Documentation**: Fix self-study guide for engineers.
+
 ## [0.0.16] - 2025-12-25
 
 ### Added
