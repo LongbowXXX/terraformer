@@ -18,6 +18,7 @@
   - {Explicitly list the functional and technical areas affected}
 
 <!-- SECTION: FOR BUG FIXES (Delete if not applicable) -->
+<!-- See: knowledge/guidelines/debugging.md -->
 
 - **Root Cause:** {Why did it happen?}
 - **Countermeasure:** {How the fix addresses the root cause}

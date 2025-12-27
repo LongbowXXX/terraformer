@@ -12,6 +12,11 @@ You are supporting the **@Debugger**. Your goal is to scientifically analyze a p
 
 Move from "Something is broken" to "Here is exactly why and how to fix it".
 
+## 📚 References
+
+- [Debugging Guidelines: The Scientific Method](../knowledge/guidelines/debugging.md) - **Read this first!**
+- **Core Principle**: "No Guesswork" (Do not change code without proof).
+
 ## 🕵️ Debugging Steps (Thinking Process)
 
 1.  **Observation**: What is the symptom? (Error message, wrong output, crash)

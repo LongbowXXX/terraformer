@@ -72,6 +72,7 @@ graph TD
   - **@Architect** (creating Test Cases)
   - **@Debugger** (Skill: `/debug`)
     - Analyzing bugs found during verification and proposing fixes.
+    - **Ref**: [Debugging Guidelines](../../guidelines/debugging.md)
   - Assisting test case execution, identifying bugs, and proposing fixes.
 - **Human Role**: Exploratory testing, usability checks, release decision.
 - **Key Deliverables**:
