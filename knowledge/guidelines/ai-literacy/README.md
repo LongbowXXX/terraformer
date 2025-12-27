@@ -10,6 +10,23 @@ This document is designed to **upgrade human skills**. Its purpose is to make **
 
 ---
 
+## 🧠 Level 0: The Mindset (Continuous Evolution)
+
+> **"Be the Chef, not just a Cook."**
+
+In the age of AI, "coding" (writing syntax) is becoming a commodity—like chopping onions. To survive as a professional engineer, you must evolve from a "Cook" (who follows recipes) to a "Chef" (who designs menus and creates value).
+
+- **The Cook**: Follows instructions, writes code as specified. **Replaceable by AI**.
+- **The Chef**: Designs intent, orchestrates AI, and verifies quality. **Irreplaceable**.
+
+### The Survival Strategy
+
+Technology skills have a half-life of **< 2.5 years**. If you only learn during business hours (performance time), you will become obsolete. You must invest in "practice time" (self-study) outside of work to maintain your market value.
+
+👉 **Required Reading**: [The Survival Strategy: Chef vs Cook](./self-study.md)
+
+---
+
 ## 🎯 Level 1: Paradigm Shift (Beginner)
 
 Stop treating AI as a "search engine" or a "chatbot." Treat it as a **junior teammate** who has read every line of code but lacks "common sense" or "business context."
