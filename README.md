@@ -1,5 +1,10 @@
 # Terraformer 🌍🤖
 
+[![License](https://img.shields.io/github/license/LongbowXXX/terraformer)](./LICENSE)
+[![Release](https://img.shields.io/github/v/release/LongbowXXX/terraformer)](https://github.com/LongbowXXX/terraformer/releases)
+[![Issues](https://img.shields.io/github/issues/LongbowXXX/terraformer)](https://github.com/LongbowXXX/terraformer/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/LongbowXXX/terraformer)](https://github.com/LongbowXXX/terraformer/pulls)
+
 > **Terraform your legacy codebase into an AI-Native ecosystem.**
 
 **Terraformer** is the reference implementation of the **AI-Native Transformation Protocol (ANTP)**.
