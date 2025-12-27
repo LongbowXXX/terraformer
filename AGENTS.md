@@ -127,15 +127,15 @@ Manual verification via test projects; automated CI planned.
 
 ### Agents (The Specialized Team)
 
-| Agent              | Authority      | Constraint              | Skills                                 |
-| ------------------ | -------------- | ----------------------- | -------------------------------------- |
-| `@Architect`       | Design & Specs | —                       | `/plan`                                |
-| `@BusinessAnalyst` | Requirements   | No code                 | `/requirements`                        |
-| @QualityGuard    | Merge Approval | —                       | `/audit`, `/test-spec`, `/sanity-test` |
-| @Librarian       | Documentation  | —                       | `/doc-sync`, `/release-new-version`    |
-| @Gardener        | Refactoring    | —                       | `/refactor`                            |
-| `@Debugger`        | Bug Analysis   | Must escalate spec bugs | `/debug`                               |
-| `@Developer`       | **None**       | Must escalate blockers  | `/test`, `/implement`                  |
+| Agent              | Authority      | Constraint                    | Skills                                 |
+| ------------------ | -------------- | ----------------------------- | -------------------------------------- |
+| `@Architect`       | Design & Specs | —                             | `/plan`                                |
+| `@BusinessAnalyst` | Requirements   | No code                       | `/requirements`                        |
+| `@QualityGuard`    | Enforcer       | No implementation changes; review-only | `/audit`, `/test-spec`, `/sanity-test` |
+| `@Librarian`       | Keeper         | Docs only; no behavior changes | `/doc-sync`, `/release-new-version`    |
+| `@Gardener`        | Maintainer     | Refactors only; no feature changes | `/refactor`                            |
+| `@Debugger`        | Bug Analysis   | Must escalate spec bugs       | `/debug`                               |
+| `@Developer`       | **None**       | Must escalate blockers        | `/test`, `/implement`                  |
 
 ### Skills
 
