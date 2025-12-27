@@ -6,10 +6,11 @@
 
 | Term                          | Definition                                                                                                                                                 |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Context Debt**              | The invisible accumulation of implicit knowledge (tribal knowledge) in a project that makes it difficult for AI (and new humans) to understand the system. |
 | **ANTP**                      | **AI-Native Transformation Protocol**. A methodology to restructure legacy projects into environments where humans and AI can collaborate effectively.     |
-| **Meta-Engine**               | A system (like Terraformer) that generates configuration and agents for _other_ systems.                                                                   |
 | **Anti-Generalist Principle** | The rule that AI agents should have specialized roles and authority limits, rather than being generic "do-it-all" chatbots.                                |
+| **Antigravity**               | The advanced agentic coding environment used to build and maintain the Terraformer project.                                                                |
+| **Context Debt**              | The invisible accumulation of implicit knowledge (tribal knowledge) in a project that makes it difficult for AI (and new humans) to understand the system. |
+| **Meta-Engine**               | A system (like Terraformer) that generates configuration and agents for _other_ systems.                                                                   |
 
 ## Domain Terminology
 
