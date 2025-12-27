@@ -43,7 +43,7 @@ terraformer/
 ### `/knowledge/`
 
 - **Role**: A library of "Universal Knowledge" that applies across multiple projects. Contains best practices, prompting guides, and review checklists.
-- **Key Files**: `guidelines/prompting/README.md`, `guidelines/software-review.md`, `workflows/workflow.md`.
+- **Key Files**: `guidelines/ai-literacy/README.md`, `guidelines/prompting/README.md`, `guidelines/software-review.md`, `workflows/workflow.md`.
 - **Dependencies**: Can be symlinked or copied to other projects.
 
 ### `/docs/specs/`

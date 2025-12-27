@@ -127,15 +127,15 @@ Manual verification via test projects; automated CI planned.
 
 ### Agents (The Specialized Team)
 
-| Agent              | Authority      | Constraint              |
-| ------------------ | -------------- | ----------------------- |
-| `@Architect`       | Design & Specs | —                       |
-| `@BusinessAnalyst` | Requirements   | No code                 |
-| `@QualityGuard`    | Merge Approval | —                       |
-| `@Librarian`       | Documentation  | —                       |
-| `@Gardener`        | Refactoring    | —                       |
-| `@Debugger`        | Bug Analysis   | Must escalate spec bugs |
-| `@Developer`       | **None**       | Must escalate blockers  |
+| Agent              | Authority      | Constraint              | Skills                                 |
+| ------------------ | -------------- | ----------------------- | -------------------------------------- |
+| `@Architect`       | Design & Specs | —                       | `/plan`                                |
+| `@BusinessAnalyst` | Requirements   | No code                 | `/requirements`                        |
+| `@QualityGuard`    | Enforcer       | ✅ Merge Approval       | `/audit`, `/test-spec`, `/sanity-test` |
+| `@Librarian`       | Keeper         | ✅ Documentation        | `/doc-sync`, `/release-new-version`    |
+| `@Gardener`        | Maintainer     | ✅ Refactoring          | `/refactor`                            |
+| `@Debugger`        | Bug Analysis   | Must escalate spec bugs | `/debug`                               |
+| `@Developer`       | **None**       | Must escalate blockers  | `/test`, `/implement`                  |
 
 ### Skills
 
@@ -162,6 +162,7 @@ Manual verification via test projects; automated CI planned.
 | `/discover-specs`        | Reverse-engineer specs from code    |
 | `/sanity-test`           | Generate sanity test checklist      |
 | `/release-new-version`   | Manual/Automated release management |
+| `/ask-architect`         | Ask Architect for clarification     |
 
 ---
 
