@@ -131,7 +131,7 @@ Manual verification via test projects; automated CI planned.
 | ------------------ | -------------- | ----------------------------- | -------------------------------------- |
 | `@Architect`       | Design & Specs | —                             | `/plan`                                |
 | `@BusinessAnalyst` | Requirements   | No code                       | `/requirements`                        |
-| `@QualityGuard`    | Enforcer       | No implementation changes; review-only | `/audit`, `/test-spec`, `/sanity-test` |
+| `@QualityGuard`    | Enforcer       | Review only                   | `/audit`, `/test-spec`, `/sanity-test` |
 | `@Librarian`       | Keeper         | Docs only; no behavior changes | `/doc-sync`, `/release-new-version`    |
 | `@Gardener`        | Maintainer     | Refactors only; no feature changes | `/refactor`                            |
 | `@Debugger`        | Bug Analysis   | Must escalate spec bugs       | `/debug`                               |
