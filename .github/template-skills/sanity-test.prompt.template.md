@@ -57,7 +57,11 @@ Ensure that:
 
 ## 📤 Output Format
 
-Present your checklist in the following format:
+You must output or update the **Sanity Checklist**.
+
+**File Path**: `docs/specs/sanity_checklist.md`
+
+Use the standard template: `knowledge/templates/artifacts/sanity_checklist.template.md`
 
 ```markdown
 # Sanity Test Checklist
@@ -66,10 +70,6 @@ Present your checklist in the following format:
 
 - [ ] **[Action]**: [Expected Result] (e.g., Navigate to /login -> Login page loads)
 - [ ] ...
-
-## [Another Feature]
-
-...
 ```
 
 ## ✅ Final Check

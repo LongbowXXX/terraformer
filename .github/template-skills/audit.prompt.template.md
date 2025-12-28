@@ -57,7 +57,7 @@ Review the code to ensure it meets production standards, is secure, and follows 
 ## 📝 Output Format
 
 You must output an **Audit Report**.
-Use the standard template: `knowledge/templates/review_report.template.md`
+Use the standard template: `knowledge/templates/agents/review_report.template.md`
 
 ```markdown
 # Audit Report

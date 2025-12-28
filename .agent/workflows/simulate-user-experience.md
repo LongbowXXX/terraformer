@@ -32,72 +32,41 @@ It checks for broken installation paths, workflow inconsistencies, and prompt lo
 
 ## 4. Scenario Simulation (Mental Walkthrough)
 
-Perform a "Mental Walkthrough" for the following scenarios. Read the relevant Prompt Files (`.github/prompts/*.prompt.md` or templates) to verify logic.
-For each step, explicitly verify the **Input**, **Skill** used, and **Output**. Confirm that the output of the previous step provides necessary data for the input of the next step.
+Perform a "Mental Walkthrough" for the following scenarios.
+**CRITICAL**: Do NOT check against a static list. You must **Dynamically Trace** the path from Workflow to Skill to Template.
+
+### Verification Loop (For Each Step)
+
+1.  **Discovery**: Read `knowledge/workflows/workflow.md` (and `AGENTS.md`) to identify the **Rule** and **Skill**.
+2.  **Trace**: Read the **Skill Prompt** (e.g., `.github/prompts/*.prompt.md`) to find the referenced **Template**.
+3.  **Existence Check**: Verify that the specific Template file exists at the path referenced in the Prompt.
+4.  **Usability Check (Worker's Perspective)**: Read the Template content.
+    - **Clarity**: Is it clear what to fill in?
+    - **Consistency**: Does it align with the Skill's instructions?
+    - **Placeholders**: Are `{{PLACEHOLDER}}` markers intuitive?
+    - **Links**: Do references to Guidelines work?
 
 ### Scenario A: New Feature
 
-1.  **Requirement Definition**
-    - **Input**: User Request
-    - **Skill**: `requirements`
-    - **Output**: Requirement Document
-    - **Check**: Does the prompt define a clear output template? Is the save path defined?
-2.  **Architectural Design**
-    - **Input**: Requirement Document (from previous step)
-    - **Skill**: `design`
-    - **Output**: Design Document / Specification
-    - **Check**: Does the skill explicitly reference the Requirement Document as input?
-3.  **Implementation**
-    - **Input**: Design Document, Existing Codebase
-    - **Skill**: `implement`
-    - **Output**: Source Code Changes
-    - **Check**: Does it strictly forbid spec changes (if required by `AGENTS.md`)?
+1.  **Instruction**: Simulate the **Feature Story** flow defined in `knowledge/workflows/workflow.md`.
+2.  **Meta-Check**: Dynamically identify every Task and Artifact required by the WBS in the workflow.
+3.  **Action**: For each identified step, trace the Skill to its Template and verify consistent existence and usability.
 
 ### Scenario B: Specification Change
 
-1.  **Trigger**: Developer encounters a spec gap or change request.
-2.  **Escalation**
-    - **Input**: Issue/Drift Report
-    - **Skill**: `ask_architect` (or manual escalation)
-    - **Output**: Decision to change Spec
-    - **Check**: Is there a clear prohibition ("Anti-Drift Lock") against on-the-fly changes? Who is the authority? (@Architect).
-3.  **Process Restart**
-    - **Input**: Decision to change Spec
-    - **Skill**: `design` (Re-run)
-    - **Output**: Updated Design Document
-    - **Check**: Does the workflow support returning to the "Design Phase"?
+1.  **Instruction**: Simulate a specification change request during implementation.
+2.  **Meta-Check**: Consult `AGENTS.md` and `workflow.md` for "Drift Prevention" rules.
+3.  **Action**: Verify if the workflow effectively prohibits unauthorized changes and provides a restart path.
 
 ### Scenario C: Bug Fix
 
-1.  **Debugging**
-    - **Input**: Bug Report, Source Code
-    - **Skill**: `debug`
-    - **Output**: Reproduction Steps, Root Cause Analysis
-    - **Check**:
-      - Does it require a reproduction step before fixing?
-      - Where is the output saved (Artifacts vs Docs)?
+1.  **Instruction**: Simulate the **Bug Fix Story** flow defined in `knowledge/workflows/workflow.md`.
+2.  **Meta-Check**: Verify that the templates discovered via the `debug` skill enforce the **Scientific Method** (Observation -> Hypothesis -> Experiment).
 
 ### Scenario D: Refactoring (@Gardener)
 
-1.  **Refactoring**
-    - **Input**: Source Code
-    - **Skill**: `refactor`
-    - **Output**: Refactored Code
-    - **Check**:
-      - Does it explicitly forbid business logic changes?
-      - Does it mention updating documentation if the structure changes?
-
-### Scenario E: Documentation Sync (@Librarian)
-
-1.  **Drift Detection**
-    - **Input**: Codebase, Existing Documentation
-    - **Skill**: `check-doc-consistency`
-    - **Output**: Drift Report / Updated Docs
-    - **Check**:
-      - Does it trace links from `README.md` throughout the project?
-      - Can it detect if `docs/architecture/directory-structure.md` is outdated compared to the actual file tree?
-
-**Report**: Check that each output template and directory is defined. Log any friction points or ambiguity found during this walkthrough to the report file.
+1.  **Instruction**: Simulate a Refactoring task using the `refactor` skill.
+2.  **Meta-Check**: Verify that the skill prompt instructions explicitly forbid business logic changes.
 
 ## 5. Finalize
 

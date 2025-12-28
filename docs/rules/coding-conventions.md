@@ -5,6 +5,8 @@
 ## Design Principles
 
 - **Anti-Generalist Principle**: AI agents must have narrow, well-defined responsibilities. No agent should be a "jack of all trades".
+- **Documentation IS Code**: Natural language specs are the "High-Level Source Code" of the system. They must be versioned, reviewed, and debugged just like software.
+- **Fail Fast in Spec**: Catch bugs in the requirement phase (cheap) rather than in the code phase (expensive).
 - **Explicit Context Over Implicit Knowledge**: All rules must be written down in `knowledge/` or `docs/`. Do not assume the AI knows your preferences.
 - **Single Source of Truth**: `AGENTS.md` is the single entry point that orchestrates the entire system.
 

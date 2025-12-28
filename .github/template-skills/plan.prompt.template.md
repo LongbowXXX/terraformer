@@ -22,7 +22,7 @@ Analyze the request and output a plan that a **@Developer** can follow without a
 
 **File Path**: `docs/specs/[FeatureName]/implementation_plan.md`
 
-Use the standard template: `knowledge/templates/specification.template.md`
+Use the standard template: `knowledge/templates/artifacts/specification.template.md`
 
 ```markdown
 ### 1. Summary

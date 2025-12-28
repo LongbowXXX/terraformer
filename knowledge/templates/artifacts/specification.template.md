@@ -50,6 +50,7 @@ status: draft
 ### Acceptance Criteria (Gherkin)
 
 <!-- Use explicit Gherkin syntax for behavioral specs. NO technical jargon. -->
+<!-- Tip: Use 'Rule' keyword to group scenarios in complex logic (Guidelines Pattern A). -->
 <gherkin>
 
 ```gherkin

@@ -23,7 +23,7 @@ Provide constructive feedback to improve code quality, readability, and maintain
 
 ## 📤 Output Format
 
-Use the standard template: `knowledge/templates/review_report.template.md` (if it exists) or the following format:
+Use the standard template: `knowledge/templates/agents/review_report.template.md` (if it exists) or the following format:
 
 ```markdown
 # Code Review Report

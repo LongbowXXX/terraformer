@@ -27,7 +27,7 @@ You must output a set of **User Stories**.
 **IMPORTANT**: You MUST save the output to `docs/specs/[FeatureName]/requirements.md`.
 If the Feature Name is not provided, ask for it first.
 
-Use the standard template: `knowledge/templates/requirements.template.md`
+Use the standard template: `knowledge/templates/artifacts/requirements.template.md`
 
 ```markdown
 # Requirements Specification

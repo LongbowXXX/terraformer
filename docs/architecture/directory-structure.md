@@ -24,7 +24,8 @@ terraformer/
 ### `/.github/prompts/`
 
 - **Role**: Contains the "Skills" (SOPs) available to agents.
-- **Key Files**: `terraformer.prompt.md`, `terraform-context.prompt.md`
+- **In Source Repo**: Contains only engine-core prompts (`terraformer.prompt.md`, `terraform-context.prompt.md`).
+- **In Target Project**: Populated with all generated skills (`plan`, `debug`, etc.).
 - **Dependencies**: These files are referenced by Copilot Custom Prompts (commands).
 
 ### `/.github/template-*/`

@@ -33,12 +33,17 @@ This file provides context and instructions for AI coding agents working on this
 ```
 terraformer/
 ├── .github/
-│   ├── prompts/                    # Engine (/terraformer, /terraform-context)
-│   └── template-*/                 # Agent & Skill templates
+│   ├── agents/                     # (Target Project) Generated Agent Definitions
+│   ├── prompts/                    # Engine & (Target Project) Generated Skills
+│   └── template-*/                 # Agent & Skill templates (Source)
 ├── docs/                           # Project-specific docs (architecture, features, specs)
 ├── knowledge/                      # Universal guidelines & templates
 └── AGENTS.md                       # This file (L1: Constitution & L3: Knowledge Hub)
 ```
+
+> **Note on Directory Structure**:
+> In this source repository, `.github/agents/` is empty and `.github/prompts/` contains only core engine prompts.
+> When Terraformer is installed in a **Target Project**, these directories are populated with the Generated Agents and Skills.
 
 ## 4. Key Concepts (Ubiquitous Language)
 
@@ -127,15 +132,15 @@ Manual verification via test projects; automated CI planned.
 
 ### Agents (The Specialized Team)
 
-| Agent              | Authority      | Constraint                    | Skills                                 |
-| ------------------ | -------------- | ----------------------------- | -------------------------------------- |
-| `@Architect`       | Design & Specs | —                             | `/plan`                                |
-| `@BusinessAnalyst` | Requirements   | No code                       | `/requirements`                        |
-| `@QualityGuard`    | Enforcer       | Review only                   | `/audit`, `/test-spec`, `/sanity-test` |
-| `@Librarian`       | Keeper         | Docs only; no behavior changes | `/doc-sync`, `/release-new-version`    |
+| Agent              | Authority      | Constraint                         | Skills                                 |
+| ------------------ | -------------- | ---------------------------------- | -------------------------------------- |
+| `@Architect`       | Design & Specs | —                                  | `/plan`, `/design`                     |
+| `@BusinessAnalyst` | Requirements   | No code                            | `/requirements`                        |
+| `@QualityGuard`    | Enforcer       | Review only                        | `/audit`, `/test-spec`, `/sanity-test` |
+| `@Librarian`       | Keeper         | Docs only; no behavior changes     | `/doc-sync`, `/release-new-version`    |
 | `@Gardener`        | Maintainer     | Refactors only; no feature changes | `/refactor`                            |
-| `@Debugger`        | Bug Analysis   | Must escalate spec bugs       | `/debug`                               |
-| `@Developer`       | **None**       | Must escalate blockers        | `/test`, `/implement`                  |
+| `@Debugger`        | Bug Analysis   | Must escalate spec bugs            | `/debug`                               |
+| `@Developer`       | **None**       | Must escalate blockers             | `/test`, `/implement`                  |
 
 ### Skills
 
