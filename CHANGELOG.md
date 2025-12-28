@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.19] - 2025-12-29
+
+### Added
+
+- **Documentation**: Add AI collaborative model workflow definition.
+- **Workflows**: Update simulation workflow and standard workflow definitions.
+
 ## [0.0.18] - 2025-12-28
 
 ### Added
