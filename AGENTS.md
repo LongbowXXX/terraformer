@@ -33,12 +33,17 @@ This file provides context and instructions for AI coding agents working on this
 ```
 terraformer/
 ├── .github/
-│   ├── prompts/                    # Engine (/terraformer, /terraform-context)
-│   └── template-*/                 # Agent & Skill templates
+│   ├── agents/                     # (Target Project) Generated Agent Definitions
+│   ├── prompts/                    # Engine & (Target Project) Generated Skills
+│   └── template-*/                 # Agent & Skill templates (Source)
 ├── docs/                           # Project-specific docs (architecture, features, specs)
 ├── knowledge/                      # Universal guidelines & templates
 └── AGENTS.md                       # This file (L1: Constitution & L3: Knowledge Hub)
 ```
+
+> **Note on Directory Structure**:
+> In this source repository, `.github/agents/` is empty and `.github/prompts/` contains only core engine prompts.
+> When Terraformer is installed in a **Target Project**, these directories are populated with the Generated Agents and Skills.
 
 ## 4. Key Concepts (Ubiquitous Language)
 
