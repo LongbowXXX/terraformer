@@ -35,7 +35,7 @@ graph TD
   - Organizing requirements, identifying unknowns, researching similar features, drafting user stories.
 - **Human Role**: Presenting requirements, defining scope, judging business value.
 - **Key Deliverables**:
-  - [Requirement Definition Issue](../templates/issues/issue_requirement.md) (Purpose, Context, Scope, Exit Criteria)
+  - [Requirement Definition Task](../templates/issues/task_requirement.md) (Purpose, Context, Scope, Exit Criteria)
   - **Artifact**: `docs/specs/[FeatureName]/requirements.md`
 
 ### 2. Design Phase
@@ -46,7 +46,7 @@ graph TD
   - Drafting specifications, proposing architecture, defining interfaces.
 - **Human Role**: Design decisions, security risk assessment, specification approval.
 - **Key Deliverables**:
-  - [Design Discussion Issue](../templates/issues/issue_design.md)
+  - [Design Discussion Task](../templates/issues/task_design.md)
   - **Artifact**: `docs/specs/[FeatureName]/design.md`
   - **Artifact**: `docs/specs/[FeatureName]/implementation_plan.md`
 
@@ -63,6 +63,7 @@ graph TD
 - **Key Deliverables**:
   - Source Code, Test Code (Git)
   - Pull Request (Git)
+  - [Implementation Task](../templates/issues/task_implementation.md)
 
 ### 4. Verification Phase (QA)
 
@@ -78,9 +79,9 @@ graph TD
 - **Key Deliverables**:
   - **Artifact**: `docs/specs/[FeatureName]/test-specs/*.md` (Test Specifications)
   - **Artifact**: `docs/specs/fixes/[IssueID]/fix-plan.md` (Bug Fix Plans)
-  - [Sanity Test Result](../templates/issues/test_sanity.md)
-  - [Functional Test Result](../templates/issues/test_functional.md)
-  - [Exit Criteria Check Issue](../templates/issues/issue_exit_criteria.md)
+  - [Sanity Test Result](../templates/issues/task_test_sanity.md)
+  - [Functional Test Result](../templates/issues/task_test_functional.md)
+  - [Exit Criteria Check Task](../templates/issues/task_exit_criteria.md)
 
 ### 5. Release Phase
 

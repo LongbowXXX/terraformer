@@ -7,14 +7,22 @@ This directory categorizes templates based on their usage in the [Standard Workf
 ### 1. [Issue Templates](./templates/issues/)
 
 Templates for **Process Management** (GitHub Issues).
-These are used to create tickets that track work, progress, and decisions.
+We use a **Story (Parent)** - **Task (Child)** hierarchy.
 
-- **Location**: `knowledge/templates/issues/`
-- **Usage**: Copy content into GitHub Issue description.
-- **Examples**:
-  - `issue_requirement.md`: For Requirement Definition Issues.
-  - `issue_design.md`: For Design Discussion Issues.
-  - `test_sanity.md`: For reporting Sanity Test Results in an Issue.
+#### Story Templates (Parent)
+
+- `story_feature.md`: Feature Addition/Change.
+- `story_release.md`: Release Process.
+- `story_bug_fix.md`: Bug Fixes.
+
+#### Task Templates (Child)
+
+- `task_requirement.md`: Requirement Definition.
+- `task_design.md`: Design Discussion.
+- `task_implementation.md`: Implementation & PR.
+- `task_test_sanity.md`: Sanity Test Reporting.
+- `task_test_functional.md`: Functional Test Reporting.
+- `task_exit_criteria.md`: Final Exit Criteria Check.
 
 ### 2. [Product Templates](./templates/)
 
