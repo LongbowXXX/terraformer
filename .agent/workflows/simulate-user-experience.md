@@ -68,7 +68,7 @@ Perform a "Mental Walkthrough" for the following scenarios.
 1.  **Instruction**: Simulate a Refactoring task using the `refactor` skill.
 2.  **Meta-Check**: Verify that the skill prompt instructions explicitly forbid business logic changes.
 
-## 6. Finalize
+## 5. Finalize
 
 1.  Summarize the top 3 critical issues found in the "Executive Summary" of the report.
 2.  Suggest an `implementation_plan` if critical fixes are needed.
