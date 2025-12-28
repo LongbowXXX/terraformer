@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.18] - 2025-12-28
+
+### Added
+
+- **Documentation**: Added adoption guide for Terraformer (`knowledge/guidelines/adoption-guide.md`) and linked it in `README.md`.
+
 ## [0.0.17] - 2025-12-27
 
 ### Added
