@@ -111,8 +111,6 @@ graph TD
     T3["3. Design<br/>📐 Git (Docs)"] --> T4
     T3 --> T5
     T3 --> T6
-    T1 --> T4
-    T1 --> T5
     T4["4. Update Sanity Checklist<br/>📋 Git (Sanity)"] --> T7
     T5["5. Create Feature Checklist<br/>✓ Issue (Checklist)"] --> T8
     T6["6. Implementation & Tests<br/>💻 Git (Code)"] --> T7
