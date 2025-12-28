@@ -136,6 +136,38 @@ graph TD
 - 🔵 Blue: Task (Creating Artifacts)
 - 🟠 Orange: Verification/Check Task
 
+### Bug Fix Story
+
+For fixing bugs, emphasizing "Reproduction" and "Prevention".
+
+```mermaid
+graph TD
+    Start([Start]) --> T1
+    T1["1. Analyze & Plan<br/>📄 Issue (Comment)"] --> T2
+    T2["2. Create Reproduction Test<br/>💻 Git (Test)"] --> T3
+    T3["3. Implement Fix<br/>💻 Git (Code)"] --> T4
+    T4["4. Verify Fix (Test)<br/>📊 Issue (Result)"] --> T5
+    T4 --> T6
+    T5["5. Verify Side Effects<br/>👀 Issue (Result)"] --> T7
+    T6["6. Update Documentation<br/>📚 Git (Docs)"] --> T7
+    T7["7. Verify Exit Criteria<br/>✅ Issue (Record)"] --> End
+    End([Resolved])
+
+    classDef startEnd fill:#e1f5e1,stroke:#4caf50,stroke-width:2px,color:#000
+    classDef task fill:#e3f2fd,stroke:#2196f3,stroke-width:2px,color:#000
+    classDef check fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000
+
+    class Start,End startEnd
+    class T1,T2,T3,T6 task
+    class T4,T5,T7 check
+```
+
+**Legend**:
+
+- 🟢 Green: Start/End
+- 🔵 Blue: Task
+- 🟠 Orange: Verification
+
 ### Release Story
 
 Create a specific story for releasing the application.
