@@ -200,9 +200,9 @@ graph TD
 
     class Start,End startEnd
     class Features prereq
-    class T1,T2,T5,T6 task
-    class T3,T4,T7,T8,T10 check
-    class T9 release
+    class T1,T2,T5,T6,T7,T9 task
+    class T3,T4,T8,T11 check
+    class T10 release
 ```
 
 **Legend**:
