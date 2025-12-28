@@ -18,7 +18,7 @@ Template for recording detailed functional test results based on Acceptance Crit
 
 ## Target
 
-Test Case (Git): `docs/tests/features/{Feature Name}.md`
+Test Case (Git): `docs/specs/{Feature Name}/test-specs/spec.md`
 
 ## Result Summary
 
