@@ -4,12 +4,12 @@ This directory categorizes templates based on their usage in the [Standard Workf
 
 ## Directory Structure
 
-### 1. [Workflow Templates](./workflows/templates/)
+### 1. [Issue Templates](./templates/issues/)
 
 Templates for **Process Management** (GitHub Issues).
 These are used to create tickets that track work, progress, and decisions.
 
-- **Location**: `knowledge/workflows/templates/`
+- **Location**: `knowledge/templates/issues/`
 - **Usage**: Copy content into GitHub Issue description.
 - **Examples**:
   - `issue_requirement.md`: For Requirement Definition Issues.

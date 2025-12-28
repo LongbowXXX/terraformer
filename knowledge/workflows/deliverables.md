@@ -13,18 +13,18 @@ In this project, we strictly separate "GitHub Issues (Process/Log)" and "Git Rep
 
 | Phase              | Deliverable Name               | Location  | Template                                 | Description                                                                                       |
 | :----------------- | :----------------------------- | :-------- | :--------------------------------------- | :------------------------------------------------------------------------------------------------ |
-| **1. Requirement** | Requirement Definition (Issue) | Issue     | `issue_requirement.md`                   | Purpose, Context, Scope, and discussion/agreement on Acceptance Criteria.                         |
-| **2. Design**      | Design Discussion Record       | Issue     | `issue_design.md`                        | Architecture selection, trade-off considerations, design review history.                          |
+| **1. Requirement** | Requirement Definition (Issue) | Issue     | `issues/issue_requirement.md`            | Purpose, Context, Scope, and discussion/agreement on Acceptance Criteria.                         |
+| **2. Design**      | Design Discussion Record       | Issue     | `issues/issue_design.md`                 | Architecture selection, trade-off considerations, design review history.                          |
 |                    | **Functional Spec**            | **Git**   | `artifacts/specification.template.md`    | Confirmed functional specifications. Reflects Issue discussions and must be kept up-to-date.      |
 |                    | **Technical Design**           | **Git**   | `artifacts/design.template.md`           | Confirmed system design, API definitions, DB schema, etc.                                         |
 |                    | **Test Spec**                  | **Git**   | `artifacts/test_spec.template.md`        | Functional test cases (procedures/expected results). Saved in `docs/specs/[Feature]/test-specs/`. |
 | **3. Impl**        | Source Code                    | Git       | N/A                                      | Product code under `src/`.                                                                        |
 |                    | Test Code                      | Git       | N/A                                      | Automated test code under `tests/`.                                                               |
-|                    | Pull Request                   | Git (PR)  | `pull_request.md`                        | Code change proposals, reviews, CI results.                                                       |
+|                    | Pull Request                   | Git (PR)  | `issues/pull_request.md`                 | Code change proposals, reviews, CI results.                                                       |
 |                    | **Sanity Checklist**           | **Git**   | `artifacts/sanity_checklist.template.md` | Project-wide master list of sanity test items.                                                    |
-| **4. Verify**      | Sanity Test Result             | Issue     | `test_sanity.md`                         | Results executed based on the list in Git.                                                        |
-|                    | Functional Test Result         | Issue     | `test_functional.md`                     | Results executed based on test cases in Git.                                                      |
-|                    | **Exit Criteria Check**        | Issue     | `issue_exit_criteria.md`                 | Final check to see if release criteria are met.                                                   |
+| **4. Verify**      | Sanity Test Result             | Issue     | `issues/test_sanity.md`                  | Results executed based on the list in Git.                                                        |
+|                    | Functional Test Result         | Issue     | `issues/test_functional.md`              | Results executed based on test cases in Git.                                                      |
+|                    | **Exit Criteria Check**        | Issue     | `issues/issue_exit_criteria.md`          | Final check to see if release criteria are met.                                                   |
 | **5. Release**     | Release Notes                  | Git (Rel) | N/A                                      | Summary of changes per version.                                                                   |
 |                    | CHANGELOG.md                   | Git       | N/A                                      | History file.                                                                                     |
 
