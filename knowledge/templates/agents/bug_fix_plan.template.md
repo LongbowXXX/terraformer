@@ -19,15 +19,22 @@
 - [Low/Medium/High/Critical]
 - [Describe the business or technical impact]
 
-## 2. Reproduction
+## 2. Methodology (Scientific Method)
 
-### Steps to Reproduce
+### Observation
 
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
+- [Fact 1]
+- [Fact 2]
 
-### Reproduction Script (Optional but Recommended)
+### Hypothesis
+
+- "Because [Constraint X], [Process Y] fails with [Error Z]."
+
+### Experiment (Reproduction)
+
+- **Goal**: Verify hypothesis without "guessing".
+- **Method**: [e.g., Insert Logs, Use Sleep, Create Test Case]
+- **Script**:
 
 ```{{LANGUAGE}}
 // Code to reproduce the issue
@@ -41,9 +48,10 @@
 - **Line(s)**: [Line numbers]
 - **Logic Flaw**: [Explain WHY the code is failing]
 
-### Evidence
+### Impact Analysis (Do No Harm)
 
-- [Trace analysis, variable values, etc.]
+- **Dependencies**: [List functions calling the broken code]
+- **Side Effects**: [Risk of breaking existing features]
 
 ## 4. Proposed Solution
 
@@ -59,9 +67,13 @@
 + fixed_code
 ```
 
-### Alternatives Considered
+### Horizontal Expansion (Yokoten)
 
-- [Alternative 1]: [Why rejected]
+- **Pattern**: [Describe the bad code pattern]
+- **Search Scope**: [e.g., "All Controller files"]
+- **Findings**:
+  - [ ] Found similar bug in `file_b.ts` -> Will fix here / Created Issue #XXX
+  - [ ] No other instances found.
 
 ## 5. Verification Plan
 

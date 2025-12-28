@@ -16,6 +16,8 @@
 
 - [ ] Implementation Task (`task_implementation.md`)
   - **Deliverable**: PR with Fix + Regression Test.
+- [ ] Horizontal Expansion (Yokoten)
+  - **Check**: Search for similar bugs in codebase.
 
 ### 3. Verification
 
