@@ -24,7 +24,7 @@ We use a **Story (Parent)** - **Task (Child)** hierarchy.
 - `task_test_functional.md`: Functional Test Reporting.
 - `task_exit_criteria.md`: Final Exit Criteria Check.
 
-### 2. [Product Templates](./templates/)
+### 2. Product Templates
 
 Templates for persistent artifacts and agent outputs.
 
