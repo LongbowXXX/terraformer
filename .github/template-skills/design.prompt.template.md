@@ -30,7 +30,7 @@ Produce a clear, high-level design that defines _how_ the system will be structu
 
 **File Path**: `docs/specs/[FeatureName]/design.md`
 
-Use the standard template: `knowledge/templates/design.template.md` (if it exists) or the following format:
+Use the standard template: `knowledge/templates/artifacts/design.template.md` (if it exists) or the following format:
 
 ````markdown
 # Design Document: [Feature Name]

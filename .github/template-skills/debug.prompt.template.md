@@ -32,7 +32,7 @@ Move from "Something is broken" to "Here is exactly why and how to fix it".
 ## 📝 Output Format
 
 You must output a **Bug Fix Plan** file in `docs/specs/fixes/[IssueID]/`.
-Use the standard template: `knowledge/templates/bug_fix_plan.template.md`
+Use the standard template: `knowledge/templates/agents/bug_fix_plan.template.md`
 
 **File Name**: `docs/specs/fixes/[IssueID]/fix-plan.md`
 

@@ -52,7 +52,7 @@ Perform a **parallel search** investigation:
 
 **Generate the specification using the project standard template.**
 
-1.  Read the template at `knowledge/templates/specification.template.md`.
+1.  Read the template at `knowledge/templates/artifacts/specification.template.md`.
 2.  **Determine Granularity**:
     - **Avoid splitting purely by Technical Component** (e.g., `UserController`, `UserService`).
     - **Group by Business Feature or User Story** (e.g., `UserRegistration`, `OrderProcessing`).

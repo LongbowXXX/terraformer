@@ -159,7 +159,7 @@ To maximize the reusability of the AI-Native Transformation Protocol across diff
 
 ### Standardized Templates
 
-We use standard templates (e.g., `knowledge/templates/specification.template.md`, `knowledge/templates/review_report.template.md`) for all key deliverables.
+We use standard templates (e.g., `knowledge/templates/artifacts/specification.template.md`, `knowledge/templates/agents/review_report.template.md`) for all key deliverables.
 
 - **Consistency**: Ensures all agents and humans provide the same level of detail.
 - **Evidence**: Acts as a permanent record of decisions and agreements.

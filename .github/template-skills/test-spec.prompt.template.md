@@ -34,7 +34,7 @@ For each scenario, define the precise expected outcome (e.g., "Returns HTTP 200"
 
 Save as `docs/specs/[FeatureName]/test-specs/{feature_name}_test_spec.md`.
 
-You **MUST** use the standard template located at `knowledge/templates/test_spec.template.md`.
+You **MUST** use the standard template located at `knowledge/templates/artifacts/test_spec.template.md`.
 
 ```markdown
 # Test Specification: {Feature Name}

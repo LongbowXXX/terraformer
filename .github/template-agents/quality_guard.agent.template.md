@@ -73,7 +73,7 @@ If the code has the `/* PROTOTYPE ... */` header: - **Relaxed Rules:** You may a
 
 ## 4. Output Format
 
-Use the standard template: `knowledge/templates/review_report.template.md`
+Use the standard template: `knowledge/templates/agents/review_report.template.md`
 Save to: `docs/specs/reviews/YYYYMMDD-target-name.md`
 
 ```markdown
