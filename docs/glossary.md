@@ -11,6 +11,8 @@
 | **Antigravity**               | The advanced agentic coding environment used to build and maintain the Terraformer project.                                                                |
 | **Context Debt**              | The invisible accumulation of implicit knowledge (tribal knowledge) in a project that makes it difficult for AI (and new humans) to understand the system. |
 | **Meta-Engine**               | A system (like Terraformer) that generates configuration and agents for _other_ systems.                                                                   |
+| **Specification Drift**       | When code and documentation diverge because changes were made to code without updating the specs.                                                          |
+| **Hallucination**             | When an AI agent confidently asserts false information or generates code for non-existent APIs due to lack of context.                                     |
 
 ## Domain Terminology
 
