@@ -47,6 +47,7 @@ graph TD
 - **Human Role**: Design decisions, security risk assessment, specification approval.
 - **Key Deliverables**:
   - [Design Discussion Task](../templates/issues/task_design.md)
+  - **Artifact**: `docs/specs/[FeatureName]/specification.md`
   - **Artifact**: `docs/specs/[FeatureName]/design.md`
   - **Artifact**: `docs/specs/[FeatureName]/implementation_plan.md`
 
