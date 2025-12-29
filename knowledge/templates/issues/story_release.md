@@ -9,22 +9,27 @@
 
 ### 1. New Version Agreement
 
-- [ ] Determine Version Number (SemVer)
+- [ ] Determine Version Number (`task_version_agreement.md`)
 - [ ] Update `CHANGELOG.md` with planned changes.
 
 ### 2. Pre-Release Checks
 
 - [ ] **Sanity Check**: Run `task_test_sanity.md` against the release candidate.
-- [ ] **Regression Test**: Run automated regression suite.
-- [ ] **Vulnerability Check**: Run security audit.
+- [ ] **Merge Check**: Verify related fixes (`task_verify_related_fixes.md`).
+- [ ] **Vulnerability Check**: Run security audit (`task_vulnerability_check.md`).
+- [ ] **Static Analysis**: Run static analysis (`task_static_analysis.md`).
+- [ ] **License Check**: Run license check (`task_license_check.md`).
+- [ ] **Release Checklist**: Create checklist (`task_release_checklist.md`).
+- [ ] **Define Exit Criteria**: Define criteria (`task_define_exit_criteria.md`).
 
 ### 3. Release Execution
 
-- [ ] Merge `main` to `release` (if applicable) or Tag `main`.
+- [ ] Execute Release (`task_release_execution.md`).
 - [ ] Create GitHub Release.
-- [ ] Update Documentation (Version references).
+- [ ] Update Documentation (`task_docs_update.md`).
 
 ### 4. Post-Release
 
 - [ ] Verify deployment.
+- [ ] Verify Exit Criteria (`task_verify_exit_criteria.md`).
 - [ ] Close this Story.

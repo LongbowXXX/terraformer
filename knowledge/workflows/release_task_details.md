@@ -35,7 +35,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - Git Tag name decision.
 - Draft Release Notes core content.
 - Record agreement on ticket.
-  - **Template**: [Release Story](../templates/issues/story_release.md)
+  - **Template**: [Release Version Agreement](../templates/issues/task_version_agreement.md)
 
 **Checkpoints**:
 
@@ -61,6 +61,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - Check for merge omissions.
 - Confirm conflict resolution.
 - Record confirmation results on ticket.
+  - **Template**: [Verify Related Fixes](../templates/issues/task_verify_related_fixes.md)
 
 **Checkpoints**:
 
@@ -131,6 +132,8 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 ### 5. Update Documentation
 
 **Deliverable**: Updated Documentation (Git)
+
+- **Template**: [Update Documentation](../templates/issues/task_docs_update.md)
 
 **Goal**: Ensure users and developers have access to the latest info.
 
@@ -237,7 +240,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Deliverable**: Exit Criteria Document (Issue/PM Tool)
 
-- **Template**: [Exit Criteria Template](../templates/issues/task_exit_criteria.md)
+- **Template**: [Define Exit Criteria](../templates/issues/task_define_exit_criteria.md)
 
 **Goal**: Clarify criteria for release completion.
 
@@ -268,6 +271,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 **Activities**:
 
 - Create Git Tag.
+- **Template**: [Execute Release](../templates/issues/task_release_execution.md)
 - Create GitHub Release Page.
 - Publish to Package Registry (if applicable).
 - Send release announcement.
@@ -294,6 +298,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 **Activities**:
 
 - Final check based on Exit Criteria.
+- **Template**: [Verify Exit Criteria](../templates/issues/task_verify_exit_criteria.md)
 - Verification of all deliverables.
 - Record confirmation results as comment on ticket.
 

@@ -45,7 +45,7 @@
 
 **Deliverable**: Exit Criteria Document (Issue/Project Management Tool)
 
-- **Template**: [Exit Criteria Template](../templates/issues/task_exit_criteria.md)
+- **Template**: [Define Exit Criteria](../templates/issues/task_define_exit_criteria.md)
 
 **Goal**: Clarify the criteria for story completion and ensure quality.
 
@@ -116,6 +116,7 @@
 - Review existing items (remove obsolete, modify content).
 - Update the checklist file.
   - **Template**: [Sanity Update Checklist](../templates/artifacts/checklist_sanity_update.template.md)
+  - **Issue Template**: [Update Sanity Checklist](../templates/issues/task_update_sanity_checklist.md)
 - Commit to Git.
 
 **Checkpoints**:
@@ -140,6 +141,7 @@
 
 - Create check items based on spec/design.
   - **Template**: [Implementation Verification Checklist](../templates/artifacts/checklist_impl_verify.template.md)
+  - **Issue Template**: [Create Feature Checklist](../templates/issues/task_create_feature_checklist.md)
 - Define normal and abnormal test cases.
 - Define boundary value tests.
 
@@ -243,6 +245,7 @@
 **Activities**:
 
 - Final check based on Exit Criteria document.
+  - **Template**: [Verify Exit Criteria](../templates/issues/task_verify_exit_criteria.md)
 - Verification of all deliverables.
 - Record confirmation results as a comment on the ticket.
 

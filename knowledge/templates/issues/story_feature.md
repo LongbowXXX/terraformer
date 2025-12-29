@@ -14,12 +14,16 @@ Check off items as you create the corresponding Child Task Issues.
 - [ ] Requirements Definition Task (`task_requirement.md`)
   - **Deliverable**: `docs/specs/[FeatureName]/requirements.md`
   - **Exit Criteria**: Requirements approved by Product Owner.
+- [ ] Define Exit Criteria Task (`task_define_exit_criteria.md`)
+  - **Deliverable**: Exit Criteria Document
 
 ### 2. Design Phase
 
 - [ ] Design Discussion Task (`task_design.md`)
   - **Deliverable**: `docs/specs/[FeatureName]/design.md`
   - **Deliverable**: `docs/specs/[FeatureName]/implementation_plan.md`
+  - **Check**: Update Sanity Checklist (`task_update_sanity_checklist.md`)
+  - **Check**: Create Feature Checklist (`task_create_feature_checklist.md`)
   - **Exit Criteria**: Design approved by Architect.
 
 ### 3. Implementation Phase
@@ -39,6 +43,6 @@ Check off items as you create the corresponding Child Task Issues.
 
 ### 5. Exit Criteria & Completion
 
-- [ ] Exit Criteria Confirmation Task (`task_exit_criteria.md`)
+- [ ] Exit Criteria Confirmation Task (`task_verify_exit_criteria.md`)
   - **Check**: All critical bugs fixed.
   - **Check**: All docs updated.
