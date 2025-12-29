@@ -41,7 +41,8 @@ Read the documentation before creating the agent file based on the user's requir
 
    - Once the goal is understood, automatically propose the following:
      - **Name**: A short, descriptive name for the UI.
-     - **Scope**: Suggest **Workspace** (`.github/agents/`) unless the user implies a personal agent.
+     - **Scope**: **Workspace** (`.github/agents/`)
+       - _Constraint_: All agents must be created in the current workspace. Do not offer User Profile as an option.
      - **Tools**: **OMIT by default** (Environment Agnostic).
        - _Note_: Explicitly explain: "I will omit the `tools` list so this agent can use all your installed tools (Extensions, MCP, etc.)."
 
