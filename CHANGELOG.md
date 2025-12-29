@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.20] - 2025-12-29
+
+### Added
+
+- **Skills**: Add `create-custom-agent` skill for generating custom VS Code agents.
+
 ## [0.0.19] - 2025-12-29
 
 ### Added
