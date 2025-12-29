@@ -44,8 +44,6 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - [ ] Team agreement obtained.
 - [ ] Agreement recorded on ticket.
 
-**Dependencies**: None
-
 ---
 
 ### 2. Verify Related Fixes
@@ -69,8 +67,6 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - [ ] All PRs are merged.
 - [ ] Branch conflicts are resolved.
 - [ ] Confirmation results recorded on ticket.
-
-**Dependencies**: Completion of each feature story
 
 ---
 
@@ -99,8 +95,6 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - [ ] Risk evaluation for remaining vulnerabilities recorded.
 - [ ] Check results recorded on ticket.
 
-**Dependencies**: 2. Verify Related Fixes
-
 ---
 
 ### 4. Static Analysis
@@ -124,8 +118,6 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - [ ] Critical issues addressed.
 - [ ] Reasons for not addressing issues recorded.
 - [ ] Results recorded on ticket.
-
-**Dependencies**: 2. Verify Related Fixes
 
 ---
 
@@ -152,8 +144,6 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - [ ] Version number consistent across all docs.
 - [ ] Breaking changes clearly noted.
 - [ ] Documents committed to Git.
-
-**Dependencies**: 1. Agree on Version & Tag Name
 
 ---
 
@@ -182,8 +172,6 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - [ ] No issues with commercial use licenses.
 - [ ] Confirmation results recorded on ticket.
 
-**Dependencies**: 2. Verify Related Fixes
-
 ---
 
 ### 7. Create Release Checklist
@@ -208,8 +196,6 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - [ ] Check items are specific and executable.
 - [ ] Check items recorded on ticket.
 
-**Dependencies**: 1. Agree on Version & Tag Name
-
 ---
 
 ### 8. Run Pre-release Checks
@@ -231,8 +217,6 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - [ ] All check items passed.
 - [ ] Issues handled appropriately.
 - [ ] Confirmation results recorded on ticket.
-
-**Dependencies**: 3. Vulnerability Check, 4. Static Analysis, 5. Update Documentation, 6. License Check, 7. Create Release Checklist
 
 ---
 
@@ -257,8 +241,6 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 - [ ] Exit Criteria fully listed.
 - [ ] Exit Criteria recorded on ticket.
-
-**Dependencies**: 7. Create Release Checklist
 
 ---
 
@@ -285,8 +267,6 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - [ ] Published to package registry (if applicable).
 - [ ] Release announcement sent.
 
-**Dependencies**: 8. Run Pre-release Checks, 9. Define Exit Criteria
-
 ---
 
 ### 11. Verify Exit Criteria
@@ -310,43 +290,3 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - [ ] All docs verified up-to-date.
 - [ ] Team approval obtained.
 - [ ] Confirmation completion recorded on ticket.
-
-**Dependencies**: 10. Execute Release
-
----
-
-## Task Flow Diagram
-
-```mermaid
-graph TD
-    Start([Start]) --> T1
-    Features[Feature Stories Completed] --> T2
-
-    T1["1. Agree on Version & Tag<br/>📄 Ver Spec"] --> T5
-    T1 --> T6
-    T2["2. Verify Related Fixes<br/>📋 Record"] --> T3
-    T2 --> T4
-    T3["3. Vulnerability Scan<br/>🔒 Result"] --> T8
-    T4["4. Static Analysis<br/>🔍 Result"] --> T8
-    T5["5. Update Documentation<br/>📚 Updated Docs"] --> T8
-    T6["6. License Check<br/>⚖️ Result"] --> T8
-    T7["7. Create Release Checklist<br/>✓ Check Items"] --> T8
-    T7 --> T9
-    T8["8. Run Pre-release Checks<br/>📊 Result"] --> T10
-    T9["9. Define Exit Criteria<br/>📋 Exit Criteria"] --> T10
-    T10["10. Execute Release<br/>🚀 Page & Artifacts"] --> T11
-    T11["11. Verify Exit Criteria<br/>✅ Record on Ticket"] --> End
-    End([Released])
-
-    classDef startEnd fill:#e1f5e1,stroke:#4caf50,stroke-width:2px,color:#000
-    classDef prereq fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px,color:#000
-    classDef task fill:#e3f2fd,stroke:#2196f3,stroke-width:2px,color:#000
-    classDef check fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000
-    classDef release fill:#ffebee,stroke:#f44336,stroke-width:2px,color:#000
-
-    class Start,End startEnd
-    class Features prereq
-    class T1,T2,T5,T6 task
-    class T3,T4,T7,T8,T10 check
-    class T9 release
-```

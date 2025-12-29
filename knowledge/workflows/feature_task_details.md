@@ -65,8 +65,6 @@
 - [ ] Feature verification items are created based on specifications.
 - [ ] Changed sanity test items have been executed.
 
-**Dependencies**: 1. Spec Creation & Agreement
-
 ---
 
 ### 3. Design
@@ -100,8 +98,6 @@
 - [ ] Reviewed by the team.
 - [ ] Design documents are committed to Git.
 
-**Dependencies**: 1. Spec Creation & Agreement
-
 ---
 
 ### 4. Update Sanity Checklist
@@ -127,8 +123,6 @@
 - [ ] Check items match the latest app specifications.
 - [ ] Checklist file is managed in Git.
 
-**Dependencies**: 1. Spec Creation & Agreement, 3. Design
-
 ---
 
 ### 5. Create Feature Checklist
@@ -149,8 +143,6 @@
 
 - [ ] There are check items corresponding to all spec items.
 - [ ] Both normal and abnormal cases are covered.
-
-**Dependencies**: 1. Spec Creation & Agreement, 3. Design
 
 ---
 
@@ -184,8 +176,6 @@
 - [ ] CI passed.
 - [ ] Source code committed to Git.
 
-**Dependencies**: 3. Design
-
 ---
 
 ### 7. Run Sanity Tests
@@ -207,8 +197,6 @@
 - [ ] Results are recorded.
 - [ ] Issues found are handled appropriately.
 - [ ] Confirmation results are recorded on the ticket.
-
-**Dependencies**: 4. Update Sanity Checklist, 6. Implementation & Tests
 
 ---
 
@@ -232,8 +220,6 @@
 - [ ] Issues found are handled appropriately.
 - [ ] Confirmation results are recorded on the ticket.
 
-**Dependencies**: 5. Create Feature Checklist, 6. Implementation & Tests
-
 ---
 
 ### 9. Verify Exit Criteria
@@ -256,38 +242,3 @@
 - [ ] Documentation is updated to the latest state.
 - [ ] Team approval obtained.
 - [ ] Confirmation completion recorded on the ticket.
-
-**Dependencies**: 2. Define Exit Criteria, 7. Run Sanity Tests, 8. Run Feature Check
-
----
-
-## Task Flow Diagram
-
-```mermaid
-graph TD
-    Start([Start]) --> T1
-    T1["1. Spec Creation & Agreement<br/>📄 Spec"] --> T2
-    T1 --> T3
-    T2["2. Define Exit Criteria<br/>📋 Exit Criteria"] --> T9
-    T3["3. Design<br/>📐 Design Doc"] --> T4
-    T3 --> T5
-    T3 --> T6
-    T1 --> T4
-    T1 --> T5
-    T4["4. Update Sanity Checklist<br/>📋 Updated Checklist"] --> T7
-    T5["5. Create Feature Checklist<br/>✓ Check Items"] --> T8
-    T6["6. Implementation & Tests<br/>💻 Code & Tests"] --> T7
-    T6 --> T8
-    T7["7. Run Sanity Tests<br/>📊 Result"] --> T9
-    T8["8. Run Feature Check<br/>📊 Result"] --> T9
-    T9["9. Verify Exit Criteria<br/>✅ Record on Ticket"] --> End
-    End([Completed])
-
-    classDef startEnd fill:#e1f5e1,stroke:#4caf50,stroke-width:2px,color:#000
-    classDef task fill:#e3f2fd,stroke:#2196f3,stroke-width:2px,color:#000
-    classDef check fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000
-
-    class Start,End startEnd
-    class T1,T2,T3,T4,T5,T6 task
-    class T7,T8,T9 check
-```
