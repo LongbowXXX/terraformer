@@ -135,6 +135,8 @@ graph TD
 - 🔵 Blue: Task (Creating Artifacts)
 - 🟠 Orange: Verification/Check Task
 
+**Detailed Steps**: Refer to [Feature Task Details](./feature_task_details.md).
+
 ### Bug Fix Story
 
 For fixing bugs, emphasizing "Reproduction" and "Prevention".
@@ -166,6 +168,8 @@ graph TD
 - 🟢 Green: Start/End
 - 🔵 Blue: Task
 - 🟠 Orange: Verification
+
+**Detailed Steps**: Refer to [Bug Fix Task Details](./bug_fix_task_details.md).
 
 ### Release Story
 
@@ -212,6 +216,8 @@ graph TD
 - 🔵 Blue: Task
 - 🟠 Orange: Verification
 - 🔴 Red: Release Criteria
+
+**Detailed Steps**: Refer to [Release Task Details](./release_task_details.md).
 
 ## Related Documents
 
