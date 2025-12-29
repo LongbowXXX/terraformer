@@ -4,39 +4,12 @@
 
 This Issue is for discussing and deciding on concrete implementation methods (architecture, interfaces) based on the Requirement Definition.
 
-## Structure
+Please create the design document using the following template:
 
-```markdown
-# [Design] {Title}
+- **Template**: [Design Template](../artifacts/design.template.md)
+- **Destination**: `docs/specs/[FeatureName]/design.md`
 
-## Target Requirement
+## ✅ Exit Criteria
 
-- Related Issue: #{Requirement Issue Number}
-
-## Proposal (Proposal)
-
-### Architecture Overview
-
-{Architecture diagram or description}
-
-### Interface Definition
-
-- API:
-- Data Model:
-
-### Tech Stack / Library Selection
-
-- {Library Name}: {Reason for selection}
-
-## Discussion Points (Discussion Points)
-
-- [ ] Impact on performance?
-- [ ] Security risks?
-- [ ] Impact on existing features?
-
-## Requests to AI Partner
-
-- [ ] Identify edge cases
-- [ ] Conduct security review
-- [ ] Propose alternatives
-```
+- [ ] Design document created in Git.
+- [ ] Design approved by Architect.
