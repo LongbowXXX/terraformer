@@ -13,7 +13,7 @@ You will interview the user to understand their requirements and propose an effe
 **IMMEDIATELY** use the `#todo` tool to register the following tasks to track your progress:
 
 1.  **Fetch Documentation**: Retrieve official docs from `code.visualstudio.com`.
-2.  **Requirement Hearing**: Interview user to define the agent's persona, tools, and scope.
+2.  **Requirement Hearing**: Interview user to define the agent's persona and scope.
 3.  **Draft Agent File**: Generate the YAML frontmatter and body.
 4.  **Proposal and Review**: Present the file and get approval.
 5.  **Final Check**: Review the "Final Check" section.
@@ -28,27 +28,25 @@ You will interview the user to understand their requirements and propose an effe
 This document contains the file structure, frontmatter fields (name, description, tools, handoffs), and best practices.
 Read the documentation before creating the agent file based on the user's requirements.
 
-## Step 2: Requirement Hearing
+## Step 2: Requirement Hearing (Sequential Inquiry)
 
-**To minimize user burden, proceed with the following approach:**
+**To minimize user burden, strictly follow the Sequential Inquiry process:**
 
-1. **First Question (Mandatory)**: "What is the primary goal and persona of this agent?"
+1. **State Agenda**: Briefly mention what you need to confirm (Goal, Scope, etc.).
+2. **First Question (Mandatory)**: "What is the primary goal and persona of this agent?"
 
-   - Understand the specific role (e.g., "Code Reviewer", "Planner", "Python Expert").
+   - **Wait for the user's response.** Do not ask multiple questions at once.
 
-2. **Auto-Inference**: Automatically determine the following items and present them as a proposal:
+3. **Auto-Inference & Proposal**:
 
-   - **Name**: A short, descriptive name for the UI (e.g., "Reviewer").
-   - **Tools**:
-     - Suggest relevant tools based on the persona (e.g., `read-only` tools for a Planner, `full` access for a Developer).
-     - Refer to available tools in the workspace or default tools.
-   - **Scope**:
-     - **Workspace**: `.github/agents/` (Project-specific).
-     - **User**: User profile (Cross-project).
-     - Default to **Workspace** (`.github/agents/`) unless requested otherwise.
+   - Once the goal is understood, automatically propose the following:
+     - **Name**: A short, descriptive name for the UI.
+     - **Scope**: Suggest **Workspace** (`.github/agents/`) unless the user implies a personal agent.
+     - **Tools**: **OMIT by default** (Environment Agnostic).
+       - _Note_: Explicitly explain: "I will omit the `tools` list so this agent can use all your installed tools (Extensions, MCP, etc.)."
 
-3. **Questions only if confirmation is needed**:
-   - Ask about **Handoffs** only if the agent seems part of a workflow (e.g., Plan -> Implement).
+4. **Iterate if necessary**:
+   - If ANY clarification is strictly required (e.g., about Handoffs), ask **one question at a time**.
 
 ## Step 3: Draft Agent File
 
@@ -58,7 +56,8 @@ Read the documentation before creating the agent file based on the user's requir
 
    - `name`: Shorthand name for the agent dropdown.
    - `description`: Detailed description of capabilities.
-   - `tools`: List of allowed tools (optional, but recommended for specialization).
+   - `tools`: **OMIT THIS FIELD** unless the user explicitly requests strict tool locking.
+     - _Reasoning_: Omitting `tools` allows the agent to inherit all available tools in the user's environment, preventing hallucinations and breaking changes.
    - `handoffs`: Transitions to other agents (optional).
 
 2. **Agent Body (Instructions)**:
@@ -67,15 +66,15 @@ Read the documentation before creating the agent file based on the user's requir
    - **Context**: Use `#file:` or markdown links to reference project rules or guidelines (e.g., `AGENTS.md`, coding conventions).
 
 3. **Best Practices**:
+   - **Environment Agnostic**: Do not hardcode tools.
    - Use strict rules for "Quality Guard" type agents.
-   - Use creative/exploratory rules for "Brainstorming" type agents.
 
 ## Step 4: Proposal and Review
 
 1. **Present the Draft**:
 
    - Show the full content of the `.agent.md` file in a code block.
-   - Explain why specific tools were included/excluded.
+   - Explicitly mention: "Tools are omitted to maximize flexibility."
 
 2. **File Creation**:
    - Once approved, create the file in `.github/agents/[agent-name].agent.md`.
@@ -83,13 +82,14 @@ Read the documentation before creating the agent file based on the user's requir
 
 ---
 
-**Important:** When executing this prompt, strictly adhere to the file structure defined in the fetched documentation.
+**Important:** When executing this prompt, strictly adhere to the file structure defined in the fetched documentation but override the `tools` best practice in favor of Environment Agnostic design.
 
 ## ✅ Final Check
 
 **Before finishing, confirm:**
 
 - [ ] Official documentation was fetched.
-- [ ] Valid YAML frontmatter (`name`, `description`, etc.) is present.
+- [ ] Valid YAML frontmatter is present.
+- [ ] **`tools` property is OMITTED** (unless strictly requested).
 - [ ] File extension is `.agent.md`.
 - [ ] File path is correct (`.github/agents/` for workspace).
