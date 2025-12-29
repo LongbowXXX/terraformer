@@ -89,6 +89,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
   - Critical/High: Must fix.
   - Medium: Evaluate risk and decide.
   - Low: Record and consider for future.
+- **Template**: [Vulnerability Check Task](../templates/issues/task_vulnerability_check.md)
 
 **Checkpoints**:
 
@@ -114,6 +115,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - Fix high-priority issues.
 - Determine and record False Positives.
 - Record check results on ticket.
+  - **Template**: [Static Analysis Task](../templates/issues/task_static_analysis.md)
 
 **Checkpoints**:
 
@@ -167,6 +169,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 - Identify and handle problematic licenses.
 - Update license notices.
 - Record confirmation results on ticket.
+  - **Template**: [License Check Task](../templates/issues/task_license_check.md)
 
 **Checkpoints**:
 
@@ -194,6 +197,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
   - Documents (README updates, etc.).
   - Release Artifacts (Build output, etc.).
   - Version Control (Tags, Commits).
+- **Template**: [Release Checklist](../templates/issues/task_release_checklist.md)
 
 **Checkpoints**:
 
