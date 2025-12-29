@@ -111,7 +111,7 @@ graph TD
     T2["2. Define Exit Criteria<br/>📋 Issue (Exit Criteria)"] --> T9
     T3["3. Design<br/>📐 Git (Docs)"] --> T4
     T3 --> T5
-    T3 --> T6
+    T5 --> T6
     T4["4. Update Sanity Checklist<br/>📋 Git (Sanity)"] --> T7
     T5["5. Create Feature Checklist<br/>✓ Issue (Checklist)"] --> T8
     T6["6. Implementation & Tests<br/>💻 Git (Code)"] --> T7
@@ -206,8 +206,8 @@ graph TD
 
     class Start,End startEnd
     class Features prereq
-    class T1,T2,T3,T6,T7,T8,T10 task
-    class T4,T5,T9,T12 check
+    class T1,T2,T6,T8,T10 task
+    class T3,T4,T5,T7,T9,T12 check
     class T11 release
 ```
 
