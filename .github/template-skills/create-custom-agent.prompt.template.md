@@ -89,6 +89,7 @@ Read the documentation before creating the agent file based on the user's requir
 
 **Before finishing, confirm:**
 
+- [ ] All todo are marked as completed.
 - [ ] Official documentation was fetched.
 - [ ] Valid YAML frontmatter is present.
 - [ ] **`tools` property is OMITTED** (unless strictly requested).
