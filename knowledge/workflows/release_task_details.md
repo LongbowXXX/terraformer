@@ -70,7 +70,28 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ---
 
-### 3. Vulnerability Check
+### 3. Run Sanity Test
+
+**Deliverable**: Sanity Test Result (Issue)
+
+- **Template**: [Sanity Test Task](../templates/issues/task_test_sanity.md)
+
+**Goal**: Ensure the release candidate is stable enough for further testing.
+
+**Activities**:
+
+- Deploy Release Candidate to Staging/Test environment.
+- Execute Sanity Test items (Smoke Test).
+- Record pass/fail.
+
+**Checkpoints**:
+
+- [ ] All Sanity items passed.
+- [ ] No critical regressions found.
+
+---
+
+### 4. Vulnerability Check
 
 **Deliverable**: Vulnerability Check Result (Git)
 
@@ -97,7 +118,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ---
 
-### 4. Static Analysis
+### 5. Static Analysis
 
 **Deliverable**: Static Analysis Result (Project Management Tool)
 
@@ -121,7 +142,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ---
 
-### 5. Update Documentation
+### 6. Update Documentation
 
 **Deliverable**: Updated Documentation (Git)
 
@@ -147,7 +168,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ---
 
-### 6. License Check
+### 7. License Check
 
 **Deliverable**: License List File (Git), Confirmation Result (PM Tool)
 
@@ -174,7 +195,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ---
 
-### 7. Create Release Checklist
+### 8. Create Release Checklist
 
 **Deliverable**: Check items on Project Management Tool
 
@@ -198,7 +219,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ---
 
-### 8. Run Pre-release Checks
+### 9. Run Pre-release Checks
 
 **Deliverable**: Confirmation result on Project Management Tool
 
@@ -220,7 +241,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ---
 
-### 9. Define Exit Criteria
+### 10. Define Exit Criteria
 
 **Deliverable**: Exit Criteria Document (Issue/PM Tool)
 
@@ -244,7 +265,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ---
 
-### 10. Execute Release
+### 11. Execute Release
 
 **Deliverable**: Release Page, Release Artifacts
 
@@ -269,7 +290,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ---
 
-### 11. Verify Exit Criteria
+### 12. Verify Exit Criteria
 
 **Deliverable**: Confirmation result on Project Management Tool
 

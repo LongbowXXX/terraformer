@@ -14,8 +14,8 @@
 
 ### 2. Pre-Release Checks
 
-- [ ] **Sanity Check**: Run `task_test_sanity.md` against the release candidate.
 - [ ] **Merge Check**: Verify related fixes (`task_verify_related_fixes.md`).
+- [ ] **Sanity Check**: Run `task_test_sanity.md` against the release candidate.
 - [ ] **Vulnerability Check**: Run security audit (`task_vulnerability_check.md`).
 - [ ] **Static Analysis**: Run static analysis (`task_static_analysis.md`).
 - [ ] **License Check**: Run license check (`task_license_check.md`).

@@ -181,20 +181,21 @@ graph TD
     Start([Start]) --> T1
     Features[Feature Stories Completed] --> T2
 
-    T1["1. Agree on Version & Tag<br/>📄 Issue (Spec)"] --> T5
-    T1 --> T6
+    T1["1. Agree on Version & Tag<br/>📄 Issue (Spec)"] --> T6
+    T1 --> T7
     T2["2. Verify Related Fixes<br/>📋 Issue (Record)"] --> T3
-    T2 --> T4
-    T3["3. Vulnerability Scan<br/>🔒 Issue (Result)"] --> T8
-    T4["4. Static Analysis<br/>🔍 Issue (Result)"] --> T8
-    T5["5. Update Documentation<br/>📚 Git (Docs)"] --> T8
-    T6["6. License Check<br/>⚖️ Issue (Record)"] --> T8
-    T7["7. Create Release Checklist<br/>✓ Issue (Checklist)"] --> T8
-    T7 --> T9
-    T8["8. Run Pre-release Checks<br/>📊 Issue (Result)"] --> T10
-    T9["9. Define Exit Criteria<br/>📋 Issue (Exit Criteria)"] --> T10
-    T10["10. Execute Release<br/>🚀 Git (Tag/Artifact)"] --> T11
-    T11["11. Verify Exit Criteria<br/>✅ Issue (Record)"] --> End
+    T3["3. Run Sanity Test<br/>🧪 Issue (Result)"] --> T4
+    T3 --> T5
+    T4["4. Vulnerability Scan<br/>🔒 Issue (Result)"] --> T9
+    T5["5. Static Analysis<br/>🔍 Issue (Result)"] --> T9
+    T6["6. Update Documentation<br/>📚 Git (Docs)"] --> T9
+    T7["7. License Check<br/>⚖️ Issue (Record)"] --> T9
+    T8["8. Create Release Checklist<br/>✓ Issue (Checklist)"] --> T9
+    T8 --> T10
+    T9["9. Run Pre-release Checks<br/>📊 Issue (Result)"] --> T11
+    T10["10. Define Exit Criteria<br/>📋 Issue (Exit Criteria)"] --> T11
+    T11["11. Execute Release<br/>🚀 Git (Tag/Artifact)"] --> T12
+    T12["12. Verify Exit Criteria<br/>✅ Issue (Record)"] --> End
     End([Released])
 
     classDef startEnd fill:#e1f5e1,stroke:#4caf50,stroke-width:2px,color:#000
@@ -205,9 +206,9 @@ graph TD
 
     class Start,End startEnd
     class Features prereq
-    class T1,T2,T5,T6,T7,T9 task
-    class T3,T4,T8,T11 check
-    class T10 release
+    class T1,T2,T3,T6,T7,T8,T10 task
+    class T4,T5,T9,T12 check
+    class T11 release
 ```
 
 **Legend**:
