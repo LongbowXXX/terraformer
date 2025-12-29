@@ -115,7 +115,7 @@
 - Add/Update check items based on spec/design.
 - Review existing items (remove obsolete, modify content).
 - Update the checklist file.
-  - **Template**: [Sanity Update Checklist](../templates/artifacts/checklist_sanity_update.template.md)
+  - **Template**: [Sanity Checklist](../templates/artifacts/sanity_checklist.template.md)
   - **Issue Template**: [Update Sanity Checklist](../templates/issues/task_update_sanity_checklist.md)
 - Commit to Git.
 
@@ -140,7 +140,7 @@
 **Activities**:
 
 - Create check items based on spec/design.
-  - **Template**: [Implementation Verification Checklist](../templates/artifacts/checklist_impl_verify.template.md)
+  - **Template**: [Test Spec](../templates/artifacts/test_spec.template.md)
   - **Issue Template**: [Create Feature Checklist](../templates/issues/task_create_feature_checklist.md)
 - Define normal and abnormal test cases.
 - Define boundary value tests.
