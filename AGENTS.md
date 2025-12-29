@@ -157,6 +157,7 @@ Manual verification via test projects; automated CI planned.
 | `/doc-sync`              | Documentation sync                  |
 | `/check-doc-consistency` | Verify doc consistency              |
 | `/create-custom-prompt`  | Create custom skill prompt          |
+| `/create-custom-agent`   | Create custom agent (.agent.md)     |
 | `/vscode-tasks`          | Generate .vscode/tasks.json         |
 | `/vscode-settings`       | Generate .vscode/settings.json      |
 | `/vscode-extensions`     | Generate .vscode/extensions.json    |
