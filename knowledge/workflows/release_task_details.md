@@ -205,7 +205,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Activities**:
 
-- Execute checks based on items created in 7.
+- Execute checks based on items created in 8.
 - Record results for each item.
 - Handle discovered issues.
 - Record confirmation results on ticket.
