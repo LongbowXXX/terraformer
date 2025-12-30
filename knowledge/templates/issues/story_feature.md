@@ -23,7 +23,7 @@ Check off items as you create the corresponding Child Task Issues.
   - **Deliverable**: `docs/specs/[FeatureName]/design.md`
   - **Deliverable**: `docs/specs/[FeatureName]/implementation_plan.md`
   - **Check**: Update Sanity Checklist (`task_update_sanity_checklist.md`)
-  - **Check**: Create Feature Checklist (`task_create_feature_checklist.md`)
+  - **Check**: Create Test Spec (`task_create_test_spec.md`)
   - **Exit Criteria**: Design approved by Architect.
 
 ### 3. Implementation Phase

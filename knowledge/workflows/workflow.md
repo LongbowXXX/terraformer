@@ -113,7 +113,7 @@ graph TD
     T3 --> T5
     T5 --> T6
     T4["4. Update Sanity Checklist<br/>📋 Git (Sanity)"] --> T7
-    T5["5. Create Feature Checklist<br/>✓ Issue (Checklist)"] --> T8
+    T5["5. Create Test Spec<br/>✓ Git (Test Spec)"] --> T8
     T6["6. Implementation & Tests<br/>💻 Git (Code)"] --> T7
     T6 --> T8
     T7["7. Run Sanity Tests<br/>📊 Issue (Result)"] --> T9
@@ -189,7 +189,7 @@ graph TD
     T4["4. Vulnerability Scan<br/>🔒 Issue (Result)"] --> T9
     T5["5. Static Analysis<br/>🔍 Issue (Result)"] --> T9
     T6["6. Update Documentation<br/>📚 Git (Docs)"] --> T9
-    T7["7. License Check<br/>⚖️ Issue (Record)"] --> T9
+    T7["7. License Check<br/>⚖️ Issue/Git (Record)"] --> T9
     T8["8. Create Release Checklist<br/>✓ Issue (Checklist)"] --> T9
     Features --> T8
     T8 --> T10

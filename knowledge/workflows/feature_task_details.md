@@ -8,7 +8,7 @@
 2. [Define Exit Criteria](#2-define-exit-criteria)
 3. [Design](#3-design)
 4. [Update Sanity Checklist](#4-update-sanity-checklist)
-5. [Create Feature Checklist](#5-create-feature-checklist)
+5. [Create Test Spec](#5-create-test-spec)
 6. [Implementation & Tests](#6-implementation--tests)
 7. [Run Sanity Tests](#7-run-sanity-tests)
 8. [Run Feature Check](#8-run-feature-check)
@@ -105,7 +105,7 @@
 
 ---
 
-### 5. Create Feature Checklist
+### 5. Create Test Spec
 
 **Deliverable**: Feature Implementation Verification Items (Issue)
 
@@ -115,13 +115,13 @@
 
 - Create check items based on spec/design.
   - **Template**: [Test Spec](../templates/artifacts/test_spec.template.md)
-  - **Issue Template**: [Create Feature Checklist](../templates/issues/task_create_feature_checklist.md)
+  - **Issue Template**: [Create Test Spec](../templates/issues/task_create_test_spec.md)
 - Define normal and abnormal test cases.
 - Define boundary value tests.
 
 **Checkpoints**:
 
-- [ ] Verify using [Create Feature Checklist](../templates/issues/task_create_feature_checklist.md).
+- [ ] Verify using [Create Test Spec](../templates/issues/task_create_test_spec.md).
 
 ---
 
