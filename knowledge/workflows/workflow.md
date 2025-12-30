@@ -70,8 +70,9 @@ graph TD
 
 **Goal**: Guarantee quality and decide on release.
 
-- **AI Role**: **@QualityGuard** (Skill: `/test-spec`, `/audit`, `/sanity-test`)
-  - **@Architect** (creating Test Cases)
+- **AI Role**:
+  - **@QualityGuard** (Skill: `/test-spec`, `/audit`, `/sanity-test`)
+    - Creating Test Specifications.
   - **@Debugger** (Skill: `/debug`)
     - Analyzing bugs found during verification and proposing fixes.
     - **Ref**: [Debugging Guidelines](../guidelines/debugging.md)
