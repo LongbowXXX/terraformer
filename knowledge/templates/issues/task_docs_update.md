@@ -25,7 +25,7 @@ Ensure all project documentation reflects the changes in the new release.
 
 ## ✅ Exit Criteria
 
-- [ ] All relevant documents.
+- [ ] All relevant documents are updated.
 - [ ] README.md updated.
 - [ ] CHANGELOG.md updated.
 - [ ] Version numbers consistent.
