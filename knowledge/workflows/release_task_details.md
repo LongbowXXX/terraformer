@@ -86,7 +86,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ### 4. Vulnerability Check
 
-**Deliverable**: Vulnerability Check Result (Git)
+**Deliverable**: Vulnerability Check Result (Issue)
 
 **Goal**: Identify and address security risks.
 
@@ -153,7 +153,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ### 7. License Check
 
-**Deliverable**: License List File (Git), Confirmation Result (PM Tool)
+**Deliverable**: License List File (Git)
 
 **Goal**: Ensure library licenses are appropriate and avoid legal risks.
 
@@ -220,7 +220,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 ### 10. Define Exit Criteria
 
-**Deliverable**: Exit Criteria Document (Issue/PM Tool)
+**Deliverable**: Exit Criteria Document (Issue)
 
 - **Template**: [Define Exit Criteria](../templates/issues/task_define_exit_criteria.md)
 

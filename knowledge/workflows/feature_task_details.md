@@ -107,7 +107,7 @@
 
 ### 5. Create Feature Checklist
 
-**Deliverable**: Feature Implementation Verification Items (Issue/PM Tool)
+**Deliverable**: Feature Implementation Verification Items (Issue)
 
 **Goal**: Clarify criteria to judge the completion of feature implementation.
 
@@ -153,7 +153,7 @@
 
 ### 7. Run Sanity Tests
 
-**Deliverable**: Sanity Test Results (Issue/PM Tool)
+**Deliverable**: Sanity Test Results (Issue)
 
 **Goal**: Perform a quick system-wide check to ensure no regression.
 
@@ -172,7 +172,7 @@
 
 ### 8. Run Feature Check
 
-**Deliverable**: Feature Implementation Verification Results (Issue/PM Tool)
+**Deliverable**: Feature Implementation Verification Results (Issue)
 
 **Goal**: Confirm the completion of feature implementation.
 
