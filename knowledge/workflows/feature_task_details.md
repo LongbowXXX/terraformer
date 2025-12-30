@@ -95,7 +95,7 @@
 - Add/Update check items based on spec/design.
 - Review existing items (remove obsolete, modify content).
 - Update the checklist file.
-  - **Template**: [Sanity Checklist](../templates/artifacts/sanity_checklist.template.md)
+  - **File**: `docs/tests/sanity.md`
   - **Issue Template**: [Update Sanity Checklist](../templates/issues/task_update_sanity_checklist.md)
 - Commit to Git.
 
@@ -160,7 +160,7 @@
 **Activities**:
 
 - Operation check based on updated Sanity Checklist.
-  - **Checklist**: [Sanity Checklist](../templates/artifacts/sanity_checklist.template.md)
+  - **Checklist**: `docs/tests/sanity.md`
 - Record results (Ticket Comment).
   - **Template**: [Sanity Test Task](../templates/issues/task_test_sanity.md)
 

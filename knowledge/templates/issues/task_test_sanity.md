@@ -17,7 +17,9 @@ Template for recording quick check (health check) results to see if major featur
 
 Please execute using the latest Sanity Checklist on Git (`docs/tests/sanity.md`).
 
-## Execution- [ ] All check items executed.
+## Execution
+
+- [ ] All check items executed.
 
 - [ ] Results recorded.
 - [ ] Issues found handled.

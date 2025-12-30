@@ -8,13 +8,13 @@ assignees: []
 
 ## 🎯 Objective
 
-Update the `sanity_checklist.template.md` to ensure the new feature is covered and obsolete items are removed.
+Update `docs/tests/sanity.md` to ensure the new feature is covered and obsolete items are removed.
 
 ## 📝 Activities
 
 - [ ] **Add**: Items to verify the new feature's core functionality.
 - [ ] **Review**: Check if any existing items are affected by this change.
-- [ ] **Update**: Modify `knowledge/templates/artifacts/sanity_checklist.template.md`.
+- [ ] **Update**: Modify `docs/tests/sanity.md`.
 - [ ] **Commit**: Push changes to Git.
 
 ## 📊 Changes

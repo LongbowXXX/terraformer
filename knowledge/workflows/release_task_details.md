@@ -75,7 +75,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 **Activities**:
 
 - Deploy Release Candidate to Staging/Test environment.
-- Execute Sanity Test items (Smoke Test).
+- Execute Sanity Test items based on `docs/tests/sanity.md`.
 - Record pass/fail.
 
 **Checkpoints**:
