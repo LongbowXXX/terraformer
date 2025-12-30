@@ -15,12 +15,12 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 4. [Vulnerability Check](#4-vulnerability-check)
 5. [Static Analysis](#5-static-analysis)
 6. [Update Documentation](#6-update-documentation)
-7. [License Check](#6-license-check)
-8. [Create Release Checklist](#7-create-release-checklist)
-9. [Run Pre-release Checks](#8-run-pre-release-checks)
-10. [Define Exit Criteria](#9-define-exit-criteria)
-11. [Execute Release](#10-execute-release)
-12. [Verify Exit Criteria](#11-verify-exit-criteria)
+7. [License Check](#7-license-check)
+8. [Create Release Checklist](#8-create-release-checklist)
+9. [Run Pre-release Checks](#9-run-pre-release-checks)
+10. [Define Exit Criteria](#10-define-exit-criteria)
+11. [Execute Release](#11-execute-release)
+12. [Verify Exit Criteria](#12-verify-exit-criteria)
 
 ---
 
