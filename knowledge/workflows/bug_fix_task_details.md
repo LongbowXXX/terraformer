@@ -140,7 +140,7 @@ Bug Fix Stories focus on explicitly "Reproduction" and "Prevention" to ensure bu
 **Activities**:
 
 - Final check based on Exit Criteria.
-  - **Template**: [Exit Criteria Template](../templates/issues/task_exit_criteria.md)
+  - **Template**: [Verify Exit Criteria](../templates/issues/task_verify_exit_criteria.md)
 - Verify all deliverables are in Git.
 - Close the issue.
 

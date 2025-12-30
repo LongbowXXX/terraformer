@@ -22,7 +22,7 @@ We use a **Story (Parent)** - **Task (Child)** hierarchy.
 - `task_implementation.md`: Implementation & PR.
 - `task_test_sanity.md`: Sanity Test Reporting.
 - `task_test_functional.md`: Functional Test Reporting.
-- `task_exit_criteria.md`: Final Exit Criteria Check.
+- `task_verify_exit_criteria.md`: Final Exit Criteria Check.
 
 ### 2. Product Templates
 

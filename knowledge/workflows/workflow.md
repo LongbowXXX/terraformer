@@ -82,7 +82,7 @@ graph TD
   - **Artifact**: `docs/specs/fixes/[IssueID]/fix-plan.md` (Bug Fix Plans)
   - [Sanity Test Result](../templates/issues/task_test_sanity.md)
   - [Functional Test Result](../templates/issues/task_test_functional.md)
-  - [Exit Criteria Check Task](../templates/issues/task_exit_criteria.md)
+  - [Exit Criteria Check Task](../templates/issues/task_verify_exit_criteria.md)
 
 ### 5. Release Phase
 

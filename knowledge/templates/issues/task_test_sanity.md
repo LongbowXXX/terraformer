@@ -20,14 +20,12 @@ Please execute using the latest Sanity Checklist on Git (`docs/tests/sanity.md`)
 ## Execution
 
 - [ ] All check items executed.
-
 - [ ] Results recorded.
 - [ ] Issues found handled.
-- [ ] | Confirmation results recorded on ticket. |    Date     | Runner       | Note   |
-      | :--------------------------------------- | :---------: | :----------- | :----- | :------------------------ |
-      | {Commit Hash}                            | PASS / FAIL | {YYYY-MM-DD} | {Name} | All OK / Failed at ST-003 |
 
-## NG Details (If FAIL)
+**Execution Result**
 
-- **ST-XXX**: {Failure Detail}
+| Version       |   Result    | Date         | Runner | Note                      |
+| :------------ | :---------: | :----------- | :----- | :------------------------ |
+| {Commit Hash} | PASS / FAIL | {YYYY-MM-DD} | {Name} | All OK / Failed at ST-003 |
 ```

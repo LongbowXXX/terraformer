@@ -43,4 +43,5 @@ Run static analysis tools to detect and fix potential bugs, code smell, and qual
 - [ ] Static analysis executed.
 - [ ] Critical issues addressed.
 - [ ] Reasons for ignored issues recorded.
-- [ ] Results recorded on ticket. analysis tools run without error (or with known exceptions).
+- [ ] Results recorded on ticket.
+- [ ] Analysis tools run without error (or with known exceptions).
