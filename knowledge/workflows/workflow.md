@@ -191,9 +191,10 @@ graph TD
     T6["6. Update Documentation<br/>📚 Git (Docs)"] --> T9
     T7["7. License Check<br/>⚖️ Issue (Record)"] --> T9
     T8["8. Create Release Checklist<br/>✓ Issue (Checklist)"] --> T9
+    Features --> T8
     T8 --> T10
     T9["9. Run Pre-release Checks<br/>📊 Issue (Result)"] --> T11
-    T10["10. Define Exit Criteria<br/>📋 Issue (Exit Criteria)"] --> T11
+    T10["10. Define Exit Criteria<br/>📋 Issue (Exit Criteria)"] --> T12
     T11["11. Execute Release<br/>🚀 Git (Tag/Artifact)"] --> T12
     T12["12. Verify Exit Criteria<br/>✅ Issue (Record)"] --> End
     End([Released])
