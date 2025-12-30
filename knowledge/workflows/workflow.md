@@ -186,7 +186,7 @@ graph TD
     T2["2. Verify Related Fixes<br/>📋 Issue (Record)"] --> T3
     T3["3. Run Sanity Test<br/>🧪 Issue (Result)"] --> T4
     T3 --> T5
-    T4["4. Vulnerability Scan<br/>🔒 Issue (Result)"] --> T9
+    T4["4. Vulnerability Check<br/>🔒 Issue (Result)"] --> T9
     T5["5. Static Analysis<br/>🔍 Issue (Result)"] --> T9
     T6["6. Update Documentation<br/>📚 Git (Docs)"] --> T9
     T7["7. License Check<br/>⚖️ Issue/Git (Record)"] --> T9
