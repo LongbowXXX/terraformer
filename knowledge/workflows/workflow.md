@@ -106,20 +106,21 @@ One story per independent feature. If dependencies exist, reconsider the story b
 
 ```mermaid
 graph TD
-    Start([Start]) --> T1
-    T1["1. Spec Creation & Agreement<br/>📄 Issue (Requirement)"] --> T2
+    Start([Start]) --> T0
+    T0["1. Requirement Definition<br/>📄 Issue (Requirement)"] --> T1
+    T1["2. Spec Creation & Agreement<br/>📄 Git (Spec)"] --> T2
     T1 --> T3
-    T2["2. Define Exit Criteria<br/>📋 Issue (Exit Criteria)"] --> T9
-    T3["3. Design<br/>📐 Git (Docs)"] --> T4
+    T2["3. Define Exit Criteria<br/>📋 Issue (Exit Criteria)"] --> T10
+    T3["4. Design<br/>📐 Git (Docs)"] --> T4
     T3 --> T5
     T5 --> T6
-    T4["4. Update Sanity Checklist<br/>📋 Git (Sanity)"] --> T7
-    T5["5. Create Test Spec<br/>✓ Git (Test Spec)"] --> T8
-    T6["6. Implementation & Tests<br/>💻 Git (Code)"] --> T7
+    T4["5. Update Sanity Checklist<br/>📋 Git (Sanity)"] --> T7
+    T5["6. Create Test Spec<br/>✓ Git (Test Spec)"] --> T8
+    T6["7. Implementation & Tests<br/>💻 Git (Code)"] --> T7
     T6 --> T8
-    T7["7. Run Sanity Tests<br/>📊 Issue (Result)"] --> T9
-    T8["8. Run Feature Check<br/>📊 Issue (Result)"] --> T9
-    T9["9. Verify Exit Criteria<br/>✅ Issue (Record)"] --> End
+    T7["8. Run Sanity Tests<br/>📊 Issue (Result)"] --> T10
+    T8["9. Run Feature Check<br/>📊 Issue (Result)"] --> T10
+    T10["10. Verify Exit Criteria<br/>✅ Issue (Record)"] --> End
     End([Completed])
 
     classDef startEnd fill:#e1f5e1,stroke:#4caf50,stroke-width:2px,color:#000
@@ -127,8 +128,8 @@ graph TD
     classDef check fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000
 
     class Start,End startEnd
-    class T1,T2,T3,T4,T5,T6 task
-    class T7,T8,T9 check
+    class T0,T1,T2,T3,T4,T5,T6 task
+    class T7,T8,T10 check
 ```
 
 **Legend**:

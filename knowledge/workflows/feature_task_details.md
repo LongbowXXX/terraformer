@@ -4,19 +4,39 @@
 
 ## Task List
 
-1. [Spec Creation & Agreement](#1-spec-creation--agreement)
-2. [Define Exit Criteria](#2-define-exit-criteria)
-3. [Design](#3-design)
-4. [Update Sanity Checklist](#4-update-sanity-checklist)
-5. [Create Test Spec](#5-create-test-spec)
-6. [Implementation & Tests](#6-implementation--tests)
-7. [Run Sanity Tests](#7-run-sanity-tests)
-8. [Run Feature Check](#8-run-feature-check)
-9. [Verify Exit Criteria](#9-verify-exit-criteria)
+1. [Requirement Definition](#1-requirement-definition)
+2. [Spec Creation & Agreement](#2-spec-creation--agreement)
+3. [Define Exit Criteria](#3-define-exit-criteria)
+4. [Design](#4-design)
+5. [Update Sanity Checklist](#5-update-sanity-checklist)
+6. [Create Test Spec](#6-create-test-spec)
+7. [Implementation & Tests](#7-implementation--tests)
+8. [Run Sanity Tests](#8-run-sanity-tests)
+9. [Run Feature Check](#9-run-feature-check)
+10. [Verify Exit Criteria](#10-verify-exit-criteria)
 
 ---
 
-### 1. Spec Creation & Agreement
+### 1. Requirement Definition
+
+**Deliverable**: Requirement Definition (Issue), Requirements Doc (Git)
+
+**Goal**: Clarify WHY we are doing this and WHAT problem we are solving.
+
+**Activities**:
+
+- Define background and purpose.
+- Identify user stories.
+- Define acceptance criteria.
+- **Template**: [Requirement Definition Task](../templates/issues/task_requirement.md)
+
+**Checkpoints**:
+
+- [ ] Verify using [Requirement Definition Task](../templates/issues/task_requirement.md).
+
+---
+
+### 2. Spec Creation & Agreement
 
 **Deliverable**: Updated Specification (Git)
 
@@ -38,7 +58,7 @@
 
 ---
 
-### 2. Define Exit Criteria
+### 3. Define Exit Criteria
 
 **Deliverable**: Exit Criteria Document (Issue/Project Management Tool)
 
@@ -56,7 +76,7 @@
 
 - [ ] Verify using [Define Exit Criteria](../templates/issues/task_define_exit_criteria.md).
 
-### 3. Design
+### 4. Design
 
 **Deliverable**: Updated Design Document (Git)
 
@@ -84,7 +104,7 @@
 
 ---
 
-### 4. Update Sanity Checklist
+### 5. Update Sanity Checklist
 
 **Deliverable**: Updated Sanity Test Items
 
@@ -105,7 +125,7 @@
 
 ---
 
-### 5. Create Test Spec
+### 6. Create Test Spec
 
 **Deliverable**: Feature Implementation Verification Items (Issue)
 
@@ -125,7 +145,7 @@
 
 ---
 
-### 6. Implementation & Tests
+### 7. Implementation & Tests
 
 **Deliverable**: Source Code, Test Code (Git)
 
@@ -151,7 +171,7 @@
 
 ---
 
-### 7. Run Sanity Tests
+### 8. Run Sanity Tests
 
 **Deliverable**: Sanity Test Results (Issue)
 
@@ -170,7 +190,7 @@
 
 ---
 
-### 8. Run Feature Check
+### 9. Run Feature Check
 
 **Deliverable**: Feature Implementation Verification Results (Issue)
 
@@ -188,7 +208,7 @@
 
 ---
 
-### 9. Verify Exit Criteria
+### 10. Verify Exit Criteria
 
 **Deliverable**: Verification Record on Project Management Tool
 
