@@ -24,4 +24,7 @@ Confirm that all features and bug fixes planned for this release are correctly m
 
 ## ✅ Exit Criteria
 
-- [ ] Release branch composition is verified and correct.
+- [ ] All related tickets closed.
+- [ ] All PRs merged.
+- [ ] Branch conflicts resolved.
+- [ ] Confirmation recorded on ticket.

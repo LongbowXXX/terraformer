@@ -13,3 +13,8 @@ Please create the design document using the following template:
 
 - [ ] Design document created in Git.
 - [ ] Design approved by Architect.
+- [ ] All specifications are reflected.
+- [ ] Consistency with existing systems confirmed.
+- [ ] Performance impact considered.
+- [ ] Error handling designed.
+- [ ] Testability considered.

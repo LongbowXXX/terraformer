@@ -27,5 +27,8 @@ Implement the features/fixes described in [Spec/Design].
 
 ## 5. Definition of Done
 
-- [ ] Merged to `main`
-- [ ] Story Checklist Updated
+- [ ] Merged to `main`.
+- [ ] Follows coding standards.
+- [ ] Unit tests created and passed.
+- [ ] Code review completed.
+- [ ] Story Checklist Updated.

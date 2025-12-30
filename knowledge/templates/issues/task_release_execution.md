@@ -26,5 +26,9 @@ Execute the release process to publish the new version to users.
 
 ## ✅ Exit Criteria
 
-- [ ] Release is public and accessible.
-- [ ] Announcement sent.
+- [ ] Git Tag created and pushed.
+- [ ] GitHub Release Page created.
+- [ ] Release notes written.
+- [ ] Artifacts uploaded.
+- [ ] Published to package registry (if applicable).
+- [ ] Release announcement sent.

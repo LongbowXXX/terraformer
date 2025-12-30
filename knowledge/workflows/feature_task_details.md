@@ -33,11 +33,8 @@
 
 **Checkpoints**:
 
-- [ ] The purpose of the feature is clearly stated.
-- [ ] User stories are defined.
-- [ ] Non-functional requirements are included.
-- [ ] Approved by the Product Owner.
-- [ ] Specifications are committed to Git.
+- [ ] Verify using [Specification Template](../templates/artifacts/specification.template.md).
+- [ ] See Issue Template for sign-off criteria.
 
 ---
 
@@ -55,17 +52,9 @@
 - List validation items.
 - Create Exit Criteria document.
 
-**Mandatory Items**:
+**Checkpoints**:
 
-- [ ] Any spec changes after Exit Criteria creation must be reflected in subsequent check items.
-- [ ] All specifications are finalized and agreed upon.
-- [ ] Spec changes are reflected in Git documents.
-- [ ] Design is based on specifications, and design changes are reflected in Git.
-- [ ] Sanity test items are updated based on specifications.
-- [ ] Feature verification items are created based on specifications.
-- [ ] Changed sanity test items have been executed.
-
----
+- [ ] Verify using [Define Exit Criteria](../templates/issues/task_define_exit_criteria.md).
 
 ### 3. Design
 
@@ -90,13 +79,8 @@
 
 **Checkpoints**:
 
-- [ ] All specifications are reflected in the design.
-- [ ] Consistency with existing systems is confirmed.
-- [ ] Performance impact is considered.
-- [ ] Error handling is designed.
-- [ ] Testability is considered.
-- [ ] Reviewed by the team.
-- [ ] Design documents are committed to Git.
+- [ ] Verify using [Design Template](../templates/artifacts/design.template.md).
+- [ ] See Issue Template for review criteria.
 
 ---
 
@@ -117,11 +101,7 @@
 
 **Checkpoints**:
 
-- [ ] Operation check items for the new feature are added.
-- [ ] Items to check impact on existing features are included.
-- [ ] Obsolete items due to changes are removed or updated.
-- [ ] Check items match the latest app specifications.
-- [ ] Checklist file is managed in Git.
+- [ ] Verify using [Update Sanity Checklist](../templates/issues/task_update_sanity_checklist.md).
 
 ---
 
@@ -141,8 +121,7 @@
 
 **Checkpoints**:
 
-- [ ] There are check items corresponding to all spec items.
-- [ ] Both normal and abnormal cases are covered.
+- [ ] Verify using [Create Feature Checklist](../templates/issues/task_create_feature_checklist.md).
 
 ---
 
@@ -168,13 +147,7 @@
 
 **Checkpoints**:
 
-- [ ] Implemented as designed.
-- [ ] Follows coding standards.
-- [ ] Unit tests are created.
-- [ ] Test coverage meets criteria.
-- [ ] Code review completed.
-- [ ] CI passed.
-- [ ] Source code committed to Git.
+- [ ] Verify using [Implementation Task](../templates/issues/task_implementation.md).
 
 ---
 
@@ -193,10 +166,7 @@
 
 **Checkpoints**:
 
-- [ ] All check items are executed.
-- [ ] Results are recorded.
-- [ ] Issues found are handled appropriately.
-- [ ] Confirmation results are recorded on the ticket.
+- [ ] Verify using [Sanity Test Task](../templates/issues/task_test_sanity.md).
 
 ---
 
@@ -214,11 +184,7 @@
 
 **Checkpoints**:
 
-- [ ] All check items are executed.
-- [ ] Both normal and abnormal cases are checked.
-- [ ] Results are recorded.
-- [ ] Issues found are handled appropriately.
-- [ ] Confirmation results are recorded on the ticket.
+- [ ] Verify using [Functional Test Task](../templates/issues/task_test_functional.md).
 
 ---
 
@@ -237,8 +203,4 @@
 
 **Checkpoints**:
 
-- [ ] All Exit Criteria items are verified.
-- [ ] Git-managed deliverables (code, specs, design, etc.) exist on Git.
-- [ ] Documentation is updated to the latest state.
-- [ ] Team approval obtained.
-- [ ] Confirmation completion recorded on the ticket.
+- [ ] Verify using [Verify Exit Criteria](../templates/issues/task_verify_exit_criteria.md).

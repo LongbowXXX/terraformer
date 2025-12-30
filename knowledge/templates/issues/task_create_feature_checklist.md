@@ -29,4 +29,6 @@ Create a detailed checklist to verify the implementation of the new feature, cov
 ## ✅ Exit Criteria
 
 - [ ] Checklist covers all acceptance criteria.
+- [ ] Normal cases covered.
+- [ ] Abnormal/Edge cases covered.
 - [ ] Checklist is recorded in this Issue or Project Management Tool.

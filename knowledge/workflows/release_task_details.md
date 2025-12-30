@@ -39,10 +39,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Checkpoints**:
 
-- [ ] Version number follows SemVer.
-- [ ] Tag name follows naming convention.
-- [ ] Team agreement obtained.
-- [ ] Agreement recorded on ticket.
+- [ ] Verify using [Release Version Agreement](../templates/issues/task_version_agreement.md).
 
 ---
 
@@ -63,10 +60,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Checkpoints**:
 
-- [ ] All related tickets are closed.
-- [ ] All PRs are merged.
-- [ ] Branch conflicts are resolved.
-- [ ] Confirmation results recorded on ticket.
+- [ ] Verify using [Verify Related Fixes](../templates/issues/task_verify_related_fixes.md).
 
 ---
 
@@ -86,8 +80,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Checkpoints**:
 
-- [ ] All Sanity items passed.
-- [ ] No critical regressions found.
+- [ ] Verify using [Sanity Test Task](../templates/issues/task_test_sanity.md).
 
 ---
 
@@ -111,10 +104,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Checkpoints**:
 
-- [ ] All dependencies scanned.
-- [ ] Critical/High vulnerabilities addressed.
-- [ ] Risk evaluation for remaining vulnerabilities recorded.
-- [ ] Check results recorded on ticket.
+- [ ] Verify using [Vulnerability Check Task](../templates/issues/task_vulnerability_check.md).
 
 ---
 
@@ -135,10 +125,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Checkpoints**:
 
-- [ ] Static analysis executed.
-- [ ] Critical issues addressed.
-- [ ] Reasons for not addressing issues recorded.
-- [ ] Results recorded on ticket.
+- [ ] Verify using [Static Analysis Task](../templates/issues/task_static_analysis.md).
 
 ---
 
@@ -160,11 +147,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Checkpoints**:
 
-- [ ] README.md updated.
-- [ ] CHANGELOG.md updated.
-- [ ] Version number consistent across all docs.
-- [ ] Breaking changes clearly noted.
-- [ ] Documents committed to Git.
+- [ ] Verify using [Update Documentation](../templates/issues/task_docs_update.md).
 
 ---
 
@@ -187,11 +170,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Checkpoints**:
 
-- [ ] License list file updated.
-- [ ] License list file committed to Git.
-- [ ] All dependency licenses checked.
-- [ ] No issues with commercial use licenses.
-- [ ] Confirmation results recorded on ticket.
+- [ ] Verify using [License Check Task](../templates/issues/task_license_check.md).
 
 ---
 
@@ -213,9 +192,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Checkpoints**:
 
-- [ ] All check items covered.
-- [ ] Check items are specific and executable.
-- [ ] Check items recorded on ticket.
+- [ ] Verify using [Release Checklist](../templates/issues/task_release_checklist.md).
 
 ---
 
@@ -260,8 +237,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Checkpoints**:
 
-- [ ] Exit Criteria fully listed.
-- [ ] Exit Criteria recorded on ticket.
+- [ ] Verify using [Define Exit Criteria](../templates/issues/task_define_exit_criteria.md).
 
 ---
 
@@ -281,12 +257,7 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Checkpoints**:
 
-- [ ] Git Tag created and pushed.
-- [ ] GitHub Release Page created.
-- [ ] Release notes written.
-- [ ] Artifacts uploaded.
-- [ ] Published to package registry (if applicable).
-- [ ] Release announcement sent.
+- [ ] Verify using [Execute Release](../templates/issues/task_release_execution.md).
 
 ---
 
@@ -305,9 +276,4 @@ Bug fixes and small tasks that shouldn't be individual stories are linked to the
 
 **Checkpoints**:
 
-- [ ] All Exit Criteria items verified.
-- [ ] Release page verified public.
-- [ ] Release announcement verified sent.
-- [ ] All docs verified up-to-date.
-- [ ] Team approval obtained.
-- [ ] Confirmation completion recorded on ticket.
+- [ ] Verify using [Verify Exit Criteria](../templates/issues/task_verify_exit_criteria.md).

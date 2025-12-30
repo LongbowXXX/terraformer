@@ -35,10 +35,7 @@ Bug Fix Stories focus on explicitly "Reproduction" and "Prevention" to ensure bu
 
 **Checkpoints**:
 
-- [ ] Root cause is identified.
-- [ ] Reproduction steps are clear.
-- [ ] Fix plan is feasible.
-- [ ] Impact on other features is assessed.
+- [ ] Verify using [Bug Fix Story](../templates/issues/story_bug_fix.md).
 
 ---
 
@@ -74,8 +71,7 @@ Bug Fix Stories focus on explicitly "Reproduction" and "Prevention" to ensure bu
 
 **Checkpoints**:
 
-- [ ] Code is modified to fix the root cause.
-- [ ] Coding standards are followed.
+- [ ] Verify using [Implementation Task](../templates/issues/task_implementation.md).
 
 ---
 
@@ -93,8 +89,7 @@ Bug Fix Stories focus on explicitly "Reproduction" and "Prevention" to ensure bu
 
 **Checkpoints**:
 
-- [ ] Reproduction test passes.
-- [ ] Other existing tests pass (No obvious regression).
+- [ ] Verify using [Functional Test Task](../templates/issues/task_test_functional.md).
 
 ---
 
@@ -151,7 +146,4 @@ Bug Fix Stories focus on explicitly "Reproduction" and "Prevention" to ensure bu
 
 **Checkpoints**:
 
-- [ ] Bug is fixed and verified by tests.
-- [ ] No degradations found.
-- [ ] Documentation is updated.
-- [ ] Ticket is closed.
+- [ ] Verify using [Verify Exit Criteria](../templates/issues/task_verify_exit_criteria.md).

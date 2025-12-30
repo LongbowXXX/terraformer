@@ -1,6 +1,12 @@
 ---
 name: Verify Exit Criteria
-about: Confirm that all exit criteria are met
+about: |
+  Confirm that:
+  - [ ] All Exit Criteria items verified.
+  - [ ] Deliverables exist in Git.
+  - [ ] Documentation updated.
+  - [ ] Team approval obtained.
+  - [ ] Confirmation recorded on ticket.
 title: "✅ Verify Exit Criteria: [Feature/Release Name]"
 labels: ["verification", "completion"]
 assignees: []

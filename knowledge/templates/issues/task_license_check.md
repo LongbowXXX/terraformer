@@ -36,6 +36,7 @@ Ensure all third-party libraries comply with the project's license policy (e.g.,
 
 ## ✅ Exit Criteria
 
-- [ ] License list is up-to-date in Git.
-- [ ] No prohibited licenses are used.
-- [ ] All attributions (NOTICE files) are updated if required.
+- [ ] License list file updated and committed.
+- [ ] All dependency licenses checked.
+- [ ] No issues with commercial use.
+- [ ] Confirmation recorded on ticket.

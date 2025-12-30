@@ -40,5 +40,7 @@ Run static analysis tools to detect and fix potential bugs, code smell, and qual
 
 ## ✅ Exit Criteria
 
-- [ ] All critical issues are resolved.
-- [ ] Static analysis tools run without error (or with known exceptions).
+- [ ] Static analysis executed.
+- [ ] Critical issues addressed.
+- [ ] Reasons for ignored issues recorded.
+- [ ] Results recorded on ticket. analysis tools run without error (or with known exceptions).

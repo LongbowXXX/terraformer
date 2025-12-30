@@ -15,3 +15,6 @@ Please create the requirements document using the following template:
 
 - [ ] Requirements document created in Git.
 - [ ] Requirements approved by Product Owner.
+- [ ] The purpose of the feature is clear.
+- [ ] User stories are defined.
+- [ ] Non-functional requirements are included.

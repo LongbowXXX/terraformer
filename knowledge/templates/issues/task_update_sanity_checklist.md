@@ -30,3 +30,6 @@ Update the `sanity_checklist.template.md` to ensure the new feature is covered a
 ## ✅ Exit Criteria
 
 - [ ] Sanity Checklist file is updated and committed.
+- [ ] New feature items added.
+- [ ] Impact on existing features check included.
+- [ ] Obsolete items removed/updated.

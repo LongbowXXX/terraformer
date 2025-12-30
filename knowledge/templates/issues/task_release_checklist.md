@@ -44,3 +44,9 @@ Perform final verification before executing the release to ensure quality and co
 
 - [ ] **GO**: Ready for Release
 - [ ] **NO GO**: Release Aborted (Reason: )
+
+## ✅ Exit Criteria
+
+- [ ] All check items covered.
+- [ ] Check items are specific and executable.
+- [ ] Check items recorded on ticket.

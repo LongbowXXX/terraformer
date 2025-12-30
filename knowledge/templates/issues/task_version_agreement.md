@@ -26,6 +26,7 @@ Decide on the version number and tag name for the upcoming release, adhering to 
 
 ## ✅ Exit Criteria
 
-- [ ] Version number agreed upon.
+- [ ] Version number agreed upon (SemVer).
 - [ ] Tag name agreed upon.
+- [ ] Team agreement obtained.
 - [ ] Agreement recorded in this Issue.
