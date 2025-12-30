@@ -30,4 +30,4 @@ Ensure all project documentation reflects the changes in the new release.
 - [ ] CHANGELOG.md updated.
 - [ ] Version numbers consistent.
 - [ ] Breaking changes noted.
-- [ ] Documents committed. to Git.
+- [ ] Documents committed to Git.
