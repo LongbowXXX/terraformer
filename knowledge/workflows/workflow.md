@@ -16,11 +16,11 @@ In each phase, AI performs tasks such as "Proposing", "Drafting", "Implementing"
 ```mermaid
 graph TD
     Start([Start]) --> Req
-    Req["1. Requirement Phase<br/>(Issue)"] --> Design
-    Design["2. Design Phase<br/>(Issue & Git)"] --> Impl
-    Impl["3. Implementation Phase<br/>(Git)"] --> Verify
-    Verify["4. Verification Phase<br/>(Issue & Git)"] --> Release
-    Release["5. Release Phase<br/>(Git)"] --> End
+    Req["1. Requirement Phase"] --> Design
+    Design["2. Design Phase"] --> Impl
+    Impl["3. Implementation Phase"] --> Verify
+    Verify["4. Verification Phase"] --> Release
+    Release["5. Release Phase"] --> End
 
     Verify -.->|Bug Fix| Impl
     Impl -.->|Spec Change| Design
