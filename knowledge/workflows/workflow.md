@@ -209,8 +209,8 @@ graph TD
 
     class Start,End startEnd
     class Features prereq
-    class T1,T2,T6,T8,T10 task
-    class T3,T4,T5,T7,T9,T12 check
+    class T1,T6,T8,T10 task
+    class T2,T3,T4,T5,T7,T9,T12 check
     class T11 release
 ```
 
