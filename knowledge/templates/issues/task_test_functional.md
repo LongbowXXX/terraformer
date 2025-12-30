@@ -4,6 +4,14 @@
 
 Template for recording detailed functional test results based on Acceptance Criteria.
 
+## Exit Criteria
+
+- [ ] All check items executed.
+- [ ] Normal and Abnormal cases checked.
+- [ ] Results recorded.
+- [ ] Issues found handled.
+- [ ] Confirmation results recorded on ticket.
+
 ## Structure
 
 ```markdown

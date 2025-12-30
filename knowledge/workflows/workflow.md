@@ -16,11 +16,11 @@ In each phase, AI performs tasks such as "Proposing", "Drafting", "Implementing"
 ```mermaid
 graph TD
     Start([Start]) --> Req
-    Req["1. Requirement Phase<br/>(Issue)"] --> Design
-    Design["2. Design Phase<br/>(Issue & Git)"] --> Impl
-    Impl["3. Implementation Phase<br/>(Git)"] --> Verify
-    Verify["4. Verification Phase<br/>(Issue & Git)"] --> Release
-    Release["5. Release Phase<br/>(Git)"] --> End
+    Req["1. Requirement Phase"] --> Design
+    Design["2. Design Phase"] --> Impl
+    Impl["3. Implementation Phase"] --> Verify
+    Verify["4. Verification Phase"] --> Release
+    Release["5. Release Phase"] --> End
 
     Verify -.->|Bug Fix| Impl
     Impl -.->|Spec Change| Design
@@ -47,6 +47,7 @@ graph TD
 - **Human Role**: Design decisions, security risk assessment, specification approval.
 - **Key Deliverables**:
   - [Design Discussion Task](../templates/issues/task_design.md)
+  - **Artifact**: `docs/specs/[FeatureName]/specification.md`
   - **Artifact**: `docs/specs/[FeatureName]/design.md`
   - **Artifact**: `docs/specs/[FeatureName]/implementation_plan.md`
 
@@ -69,8 +70,9 @@ graph TD
 
 **Goal**: Guarantee quality and decide on release.
 
-- **AI Role**: **@QualityGuard** (Skill: `/test-spec`, `/audit`, `/sanity-test`)
-  - **@Architect** (creating Test Cases)
+- **AI Role**:
+  - **@QualityGuard** (Skill: `/test-spec`, `/audit`, `/sanity-test`)
+    - Creating Test Specifications.
   - **@Debugger** (Skill: `/debug`)
     - Analyzing bugs found during verification and proposing fixes.
     - **Ref**: [Debugging Guidelines](../guidelines/debugging.md)
@@ -81,7 +83,7 @@ graph TD
   - **Artifact**: `docs/specs/fixes/[IssueID]/fix-plan.md` (Bug Fix Plans)
   - [Sanity Test Result](../templates/issues/task_test_sanity.md)
   - [Functional Test Result](../templates/issues/task_test_functional.md)
-  - [Exit Criteria Check Task](../templates/issues/task_exit_criteria.md)
+  - [Exit Criteria Check Task](../templates/issues/task_verify_exit_criteria.md)
 
 ### 5. Release Phase
 
@@ -104,20 +106,21 @@ One story per independent feature. If dependencies exist, reconsider the story b
 
 ```mermaid
 graph TD
-    Start([Start]) --> T1
-    T1["1. Spec Creation & Agreement<br/>📄 Issue (Requirement)"] --> T2
+    Start([Start]) --> T0
+    T0["1. Requirement Definition<br/>📄 Issue (Requirement)"] --> T1
+    T1["2. Spec Creation & Agreement<br/>📄 Git (Spec)"] --> T2
     T1 --> T3
-    T2["2. Define Exit Criteria<br/>📋 Issue (Exit Criteria)"] --> T9
-    T3["3. Design<br/>📐 Git (Docs)"] --> T4
+    T2["3. Define Exit Criteria<br/>📋 Issue (Exit Criteria)"] --> T10
+    T3["4. Design<br/>📐 Git (Docs)"] --> T4
     T3 --> T5
-    T3 --> T6
-    T4["4. Update Sanity Checklist<br/>📋 Git (Sanity)"] --> T7
-    T5["5. Create Feature Checklist<br/>✓ Issue (Checklist)"] --> T8
-    T6["6. Implementation & Tests<br/>💻 Git (Code)"] --> T7
+    T5 --> T6
+    T4["5. Update Sanity Checklist<br/>📋 Git (Sanity)"] --> T7
+    T5["6. Create Test Spec<br/>✓ Git (Test Spec)"] --> T8
+    T6["7. Implementation & Tests<br/>💻 Git (Code)"] --> T7
     T6 --> T8
-    T7["7. Run Sanity Tests<br/>📊 Issue (Result)"] --> T9
-    T8["8. Run Feature Check<br/>📊 Issue (Result)"] --> T9
-    T9["9. Verify Exit Criteria<br/>✅ Issue (Record)"] --> End
+    T7["8. Run Sanity Tests<br/>📊 Issue (Result)"] --> T10
+    T8["9. Run Feature Check<br/>📊 Issue (Result)"] --> T10
+    T10["10. Verify Exit Criteria<br/>✅ Issue (Record)"] --> End
     End([Completed])
 
     classDef startEnd fill:#e1f5e1,stroke:#4caf50,stroke-width:2px,color:#000
@@ -125,8 +128,8 @@ graph TD
     classDef check fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000
 
     class Start,End startEnd
-    class T1,T2,T3,T4,T5,T6 task
-    class T7,T8,T9 check
+    class T0,T1,T2,T3,T4,T5,T6 task
+    class T7,T8,T10 check
 ```
 
 **Legend**:
@@ -134,6 +137,8 @@ graph TD
 - 🟢 Green: Start/End
 - 🔵 Blue: Task (Creating Artifacts)
 - 🟠 Orange: Verification/Check Task
+
+**Detailed Steps**: Refer to [Feature Task Details](./feature_task_details.md).
 
 ### Bug Fix Story
 
@@ -167,6 +172,8 @@ graph TD
 - 🔵 Blue: Task
 - 🟠 Orange: Verification
 
+**Detailed Steps**: Refer to [Bug Fix Task Details](./bug_fix_task_details.md).
+
 ### Release Story
 
 Create a specific story for releasing the application.
@@ -176,20 +183,22 @@ graph TD
     Start([Start]) --> T1
     Features[Feature Stories Completed] --> T2
 
-    T1["1. Agree on Version & Tag<br/>📄 Issue (Spec)"] --> T5
-    T1 --> T6
+    T1["1. Agree on Version & Tag<br/>📄 Issue (Spec)"] --> T6
+    T1 --> T7
     T2["2. Verify Related Fixes<br/>📋 Issue (Record)"] --> T3
-    T2 --> T4
-    T3["3. Vulnerability Scan<br/>🔒 Issue (Result)"] --> T8
-    T4["4. Static Analysis<br/>🔍 Issue (Result)"] --> T8
-    T5["5. Update Documentation<br/>📚 Git (Docs)"] --> T8
-    T6["6. License Check<br/>⚖️ Issue (Record)"] --> T8
-    T7["7. Create Release Checklist<br/>✓ Issue (Checklist)"] --> T8
-    T7 --> T9
-    T8["8. Run Pre-release Checks<br/>📊 Issue (Result)"] --> T10
-    T9["9. Define Exit Criteria<br/>📋 Issue (Exit Criteria)"] --> T10
-    T10["10. Execute Release<br/>🚀 Git (Tag/Artifact)"] --> T11
-    T11["11. Verify Exit Criteria<br/>✅ Issue (Record)"] --> End
+    T3["3. Run Sanity Test<br/>🧪 Issue (Result)"] --> T4
+    T3 --> T5
+    T4["4. Vulnerability Check<br/>🔒 Issue (Result)"] --> T9
+    T5["5. Static Analysis<br/>🔍 Issue (Result)"] --> T9
+    T6["6. Update Documentation<br/>📚 Git (Docs)"] --> T9
+    T7["7. License Check<br/>⚖️ Issue/Git (Record)"] --> T9
+    T8["8. Create Release Checklist<br/>✓ Issue (Checklist)"] --> T9
+    Features --> T8
+    T8 --> T10
+    T9["9. Run Pre-release Checks<br/>📊 Issue (Result)"] --> T11
+    T10["10. Define Exit Criteria<br/>📋 Issue (Exit Criteria)"] --> T12
+    T11["11. Execute Release<br/>🚀 Git (Tag/Artifact)"] --> T12
+    T12["12. Verify Exit Criteria<br/>✅ Issue (Record)"] --> End
     End([Released])
 
     classDef startEnd fill:#e1f5e1,stroke:#4caf50,stroke-width:2px,color:#000
@@ -200,9 +209,9 @@ graph TD
 
     class Start,End startEnd
     class Features prereq
-    class T1,T2,T5,T6,T7,T9 task
-    class T3,T4,T8,T11 check
-    class T10 release
+    class T1,T6,T8,T10 task
+    class T2,T3,T4,T5,T7,T9,T12 check
+    class T11 release
 ```
 
 **Legend**:
@@ -212,6 +221,8 @@ graph TD
 - 🔵 Blue: Task
 - 🟠 Orange: Verification
 - 🔴 Red: Release Criteria
+
+**Detailed Steps**: Refer to [Release Task Details](./release_task_details.md).
 
 ## Related Documents
 
