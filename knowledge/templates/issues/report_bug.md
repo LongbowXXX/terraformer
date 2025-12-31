@@ -27,6 +27,14 @@
 
 [Describe what you expected to happen.]
 
+## Actual Behavior
+
+[Describe what actually happened.]
+
+## Screenshots / Logs
+
+[If applicable, add screenshots or log snippets to help explain your problem.]
+
 ## Related Story Link
 
 [Link to the created Bug Fix Story (e.g. #123) - To be filled by Maintainer]
