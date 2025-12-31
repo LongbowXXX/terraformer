@@ -31,7 +31,6 @@ status: draft
 ### Scope
 
 - **Included**:
-
   - [Item 1]
   - [Item 2]
 
