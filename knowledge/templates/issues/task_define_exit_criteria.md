@@ -32,7 +32,12 @@ Clarify the specific criteria that must be met to consider this story Complete/D
 
 ### Quality & Documentation
 
-- [ ] Exit Criteria document attached/linked to the project management tool.
+- [ ] **Test coverage**: Automated test coverage for new/changed code is at least **X%** (or team-agreed threshold) and reported in CI.
+- [ ] **CI status**: All relevant automated tests (unit/integration/e2e as applicable) are passing in the CI pipeline.
+- [ ] **User documentation**: User-facing documentation (README, feature guides, API docs, etc.) is updated to reflect the changes.
+- [ ] **Operational documentation**: Runbooks/operational guides are updated where necessary (monitoring, alerts, on-call procedures, etc.).
+- [ ] **Known issues & risks**: Any known limitations, follow-ups, or risks are documented and linked from this story.
+- [ ] **Traceability**: A link to this Exit Criteria checklist (or summary of its status) is attached/linked in the project management tool.
 
 ## ✅ Exit Criteria for this Task
 
