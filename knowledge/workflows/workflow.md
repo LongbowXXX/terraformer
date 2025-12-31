@@ -27,6 +27,15 @@ graph TD
     End([End])
 ```
 
+### 0. Issue Reporting
+
+**Goal**: Report problems, request features, or ask questions to initiate the workflow.
+
+- **Key Deliverables**:
+  - [Bug Report](../templates/issues/report_bug.md) -> Triggers **Bug Fix Story**
+  - [Feature Request](../templates/issues/report_feature.md) -> Triggers **Feature Story**
+  - [Question](../templates/issues/report_question.md) -> May trigger **Task** or Docs Update
+
 ### 1. Requirement Phase
 
 **Goal**: Clarify WHY we are doing this and WHAT problem we are solving.
