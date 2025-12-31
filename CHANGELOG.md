@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.21] - 2025-12-31
+
+### Added
+
+- **Workflows**: Detailed task workflows for features (`feature_task_details.md`), releases (`release_task_details.md`), and bug fixes (`bug_fix_task_details.md`).
+- **Templates**: New issue templates for requirements, design, implementation, verification, and various checklists (sanity, security, vulnerabilities).
+- **Documentation**: Enhanced AI collaborative workflow documentation.
+
+### Changed
+
+- **Workflows**: Updated `workflow.md` and `deliverables.md` to align with the new task breakdowns.
+
 ## [0.0.20] - 2025-12-29
 
 ### Added
