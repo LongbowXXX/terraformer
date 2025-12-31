@@ -34,7 +34,7 @@ graph TD
 - **Key Deliverables**:
   - [Bug Report](../templates/issues/report_bug.md) -> Triggers **Bug Fix Story**
   - [Feature Request](../templates/issues/report_feature.md) -> Triggers **Feature Story**
-  - [Question](../templates/issues/report_question.md) -> May trigger **Task** or Docs Update
+  - [Question](../templates/issues/report_question.md) -> May trigger a **Task** (e.g., for a documentation update)
 
 ### 1. Requirement Phase
 
