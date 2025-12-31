@@ -28,6 +28,16 @@ status: draft
 
 [What are the specific objectives of this feature/change?]
 
+### Scope
+
+- **Included**:
+  - [Item 1]
+  - [Item 2]
+
+- **Excluded**:
+  - [Item 1]
+  - [Item 2]
+
 ### Uncertainties & Open Questions
 
 <!-- List items that need confirmation from the domain expert or product owner. -->
@@ -63,6 +73,13 @@ Then [Result]
 ```
 
 </gherkin>
+
+### Non-Functional Requirements
+
+- **Performance**: [e.g., Latency < 200ms]
+- **Security**: [e.g., Authentication required]
+- **Reliability**: [e.g., 99.9% uptime]
+
 </requirements>
 
 <technical_design>
