@@ -25,7 +25,7 @@ Clarify the specific criteria that must be met to consider this story Complete/D
 ### Release
 
 - [ ] **Pre-release**: All pre-release checks are executed and passed.
-- [ ] **Release**: Release page is created.
+- [ ] **Release**: GitHub Release page is created.
 - [ ] **Release**: Release announcement is sent.
 - [ ] **Release**: Git tag is created.
 - [ ] **Release**: Release artifacts are published.
