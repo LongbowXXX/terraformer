@@ -17,7 +17,7 @@ Clarify the specific criteria that must be met to consider this story Complete/D
 - [ ] **Specification**: Specification changes are reflected in the checkpoints below.
 - [ ] **Specification**: All specifications are finalized and agreed upon.
 - [ ] **Documentation**: Specification changes are reflected in the project documentation in this repository.
-- [ ] **Design**: Design is completed, and changes are reflected in Git.
+- [ ] **Design**: Design is completed and documented in Git (design documents are committed to the repository).
 - [ ] **Testing**: Sanity test items are updated.
 - [ ] **Testing**: Operational verification items for feature implementation are created.
 - [ ] **Testing**: Modified sanity test items are executed.
