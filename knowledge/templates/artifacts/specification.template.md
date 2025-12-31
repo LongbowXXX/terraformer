@@ -74,6 +74,7 @@ Then [Result]
 ```
 
 </gherkin>
+
 ### Non-Functional Requirements
 
 - **Performance**: [e.g., Latency < 200ms]
