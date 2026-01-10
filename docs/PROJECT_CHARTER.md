@@ -127,8 +127,8 @@ The Terraformer Engine bootstraps the project using the following logic:
 
 1.  **Context Generation:** Executes `/terraform-context` to generate `AGENTS.md`, creating a high-density map of the project.
 2.  **Command Scanning:** Scans the user's `.github/prompts/` to detect existing know-how (Prompt Files).
-3.  **Command Installation:** Installs standard commands (Plan, Refactor, Test) from the **Source Definitions** (`.github/prompts/`) into the target project.
-4.  **Dynamic Injection:** When generating Agent definitions (`.agent.md`), the engine injects instructions such as _"When performing this task, you MUST follow the procedure defined in `#command-name`."_
+3.  **Command Translation:** If the user specifies a target language, the engine translates the standard commands (`.github/prompts/`) into that language.
+4.  **Role Definition:** The Agents (`.agent.md`) are similarly translated and configured to reference these standard commands as their operational procedures.
 
 This allows users to acquire a **"Team of Agents equipped with Senior Engineer thought processes"** simply by running `/terraform-context`.
 
