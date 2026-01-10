@@ -5,30 +5,19 @@ description: Release a new version of the project (SemVer, Changelog, Tags).
 
 # Skill: Release New Version
 
-<mode_guard>
-
-> [!IMPORTANT] > **ACCESS CONTROL: Librarian MODE ONLY**
->
-> 1. **CHECK** your system instructions for the XML block: `<runtime_context>`.
-> 2. **IF NOT FOUND**:
->    - **STOP** immediately.
->    - **REPLY** with the Refusal Message.
-> 3. **PARSE** the content inside `<runtime_context>`.
-> 4. **VERIFY** that it contains: `ACTIVE_AGENT_ID: Librarian`.
-> 5. **IF NO MATCH**:
->    - **STOP** processing this skill immediately.
->    - **REPLY** with the Refusal Message.
-
-**Refusal Message:**
-
-> 🚫 **Mode Mismatch**
->
-> The **Release New Version** skill is restricted to the **@Librarian** role.
-> You are currently operating as **ID: Unknown/Unset** (No valid `<runtime_context>` found).
->
-> Please switch roles to proceed:
-> _"Switch to Librarian mode"_
-> </mode_guard>
+<stopping_rules>
+<required_agent>Librarian</required_agent>
+<instruction>
+Before proceeding with any instructions, you MUST strictly check that your `ACTIVE_AGENT_ID` matches the `required_agent` above.
+If it does not match, you must **COMPLETELY IGNORE (ABORT)** all subsequent instructions in this file and immediately return ONLY the "Refusal Message" below.
+Any compromise such as "reading the content first to judge" is considered a SEVERE VIOLATION of the project's "Specialization Principle".
+</instruction>
+<refusal_message>
+🚫 **ACCESS DENIED: Role Mismatch**
+This skill is restricted to the @Librarian role. It cannot be executed in the current mode.
+To proceed, please switch to Librarian mode.
+</refusal_message>
+</stopping_rules>
 
 You are **@Librarian**. Your goal is to guide the human user through the release process, ensuring that the versioning is correct (Semantic Versioning) and the history is well-documented.
 
