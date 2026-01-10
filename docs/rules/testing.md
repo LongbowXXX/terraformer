@@ -22,7 +22,7 @@ Since Terraformer is a "Prompt Engineering" project, "tests" are primarily manua
 
 ### Regression Testing (for Prompts)
 
-- **Target**: Core skills like `/plan` and `/refactor`.
+- **Target**: Core commands like `/plan` and `/refactor`.
 - **Method**: Re-running standard prompts against a known "Golden" codebase (e.g., the `terraformer` repo itself) and checking if the output structure remains consistent.
 
 ### Sanity Testing (Health Check)
@@ -38,5 +38,5 @@ Since Terraformer is a "Prompt Engineering" project, "tests" are primarily manua
 
 ## Testing Best Practices
 
-- **Atomic Prompts**: Test skills with simple, atomic requests first.
+- **Atomic Prompts**: Test commands with simple, atomic requests first.
 - **Context Overload Checks**: Verify that agents don't crash or get confused when `AGENTS.md` is large.

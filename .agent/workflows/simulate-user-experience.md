@@ -26,23 +26,23 @@ It checks for broken installation paths, workflow inconsistencies, and prompt lo
 1.  Read `AGENTS.md` (The Constitution) and `knowledge/workflows/workflow.md` (The Process).
 2.  **Verify**:
     - Do all Roles mentioned in `AGENTS.md` appear in `workflow.md`?
-    - Do all phases in `workflow.md` assign a specific Agent/Skill?
+    - Do all phases in `workflow.md` assign a specific Agent/Command?
 3.  **Report**: Log discrepancies to the report file.
     - _Example_: "@Debugger is in AGENTS.md but missing from Verification Phase in workflow.md".
 
 ## 4. Scenario Simulation (Mental Walkthrough)
 
 Perform a "Mental Walkthrough" for the following scenarios.
-**CRITICAL**: Do NOT check against a static list. You must **Dynamically Trace** the path from Workflow to Skill to Template.
+**CRITICAL**: Do NOT check against a static list. You must **Dynamically Trace** the path from Workflow to Command to Template.
 
 ### Verification Loop (For Each Step)
 
-1.  **Discovery**: Read `knowledge/workflows/workflow.md` (and `AGENTS.md`) to identify the **Rule** and **Skill**.
-2.  **Trace**: Read the **Skill Prompt** (e.g., `.github/prompts/*.prompt.md`) to find the referenced **Template**.
+1.  **Discovery**: Read `knowledge/workflows/workflow.md` (and `AGENTS.md`) to identify the **Rule** and **Command**.
+2.  **Trace**: Read the **Command Prompt** (e.g., `.github/prompts/*.prompt.md`) to find the referenced **Template**.
 3.  **Existence Check**: Verify that the specific Template file exists at the path referenced in the Prompt.
 4.  **Usability Check (Worker's Perspective)**: Read the Template content.
     - **Clarity**: Is it clear what to fill in?
-    - **Consistency**: Does it align with the Skill's instructions?
+    - **Consistency**: Does it align with the Command's instructions?
     - **Placeholders**: Are `{{PLACEHOLDER}}` markers intuitive?
     - **Links**: Do references to Guidelines work?
 
@@ -50,7 +50,7 @@ Perform a "Mental Walkthrough" for the following scenarios.
 
 1.  **Instruction**: Simulate the **Feature Story** flow defined in `knowledge/workflows/workflow.md`.
 2.  **Meta-Check**: Dynamically identify every Task and Artifact required by the WBS in the workflow.
-3.  **Action**: For each identified step, trace the Skill to its Template and verify consistent existence and usability.
+3.  **Action**: For each identified step, trace the Command to its Template and verify consistent existence and usability.
 
 ### Scenario B: Specification Change
 
@@ -65,8 +65,8 @@ Perform a "Mental Walkthrough" for the following scenarios.
 
 ### Scenario D: Refactoring (@Gardener)
 
-1.  **Instruction**: Simulate a Refactoring task using the `refactor` skill.
-2.  **Meta-Check**: Verify that the skill prompt instructions explicitly forbid business logic changes.
+1.  **Instruction**: Simulate a Refactoring task using the `refactor` command.
+2.  **Meta-Check**: Verify that the command prompt instructions explicitly forbid business logic changes.
 
 ## 5. Finalize
 

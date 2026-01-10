@@ -4,7 +4,7 @@
 
 ## Performance Requirements
 
-- **Token Usage**: Agents must be concise. `AGENTS.md` and skills are injected into the context window, so they must be kept as compact as possible to leave room for the actual codebase.
+- **Token Usage**: Agents must be concise. `AGENTS.md` and commands are injected into the context window, so they must be kept as compact as possible to leave room for the actual codebase.
 - **Latency**: Agent responses (especially with GPT-5 class models) can take time. Users should be patient.
 
 ## Security Considerations

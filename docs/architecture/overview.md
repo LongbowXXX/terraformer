@@ -7,11 +7,11 @@
 **Terraformer** is a Meta-Engine and reference implementation of the **AI-Native Transformation Protocol (ANTP)**.
 Its primary purpose is to transform existing "human-centric" software projects into **AI-Native ecosystems** where humans and AI agents can collaborate seamlessly.
 
-Unlike typical AI coding assistants that simply autocomplete code, Terraformer operates as a **configuration engine**. It analyzes the target project and generates a "Context Map" and a specialized "AI Team" (Agents and Skills) tailored to that project. This eliminates "Context Debt"—the invisible knowledge gap that causes AI to hallucinate or drift from specifications.
+Unlike typical AI coding assistants that simply autocomplete code, Terraformer operates as a **configuration engine**. It analyzes the target project and generates a "Context Map" and a specialized "AI Team" (Agents and Commands) tailored to that project. This eliminates "Context Debt"—the invisible knowledge gap that causes AI to hallucinate or drift from specifications.
 
 ## Key Components
 
-The system is built upon the **Roles & Skills Architecture** (ANTP v1.4), comprising four distinct layers:
+The system is built upon the **Roles & Commands Architecture** (ANTP v1.4), comprising four distinct layers:
 
 ### L1: Constitution (Immutable Rules)
 
@@ -19,7 +19,7 @@ The system is built upon the **Roles & Skills Architecture** (ANTP v1.4), compri
 - **Key Artifact**: `AGENTS.md`
 - **Responsibility**: ensuring all agents adhere to the "Anti-Generalist Principle" and respect role boundaries.
 
-### L2: Skills (Standard Operating Procedures)
+### L2: Commands (Standard Operating Procedures)
 
 - **Role**: Provides agents with specific, executable capabilities.
 - **Key Artifacts**: `.github/prompts/*.prompt.md`
@@ -35,7 +35,7 @@ The system is built upon the **Roles & Skills Architecture** (ANTP v1.4), compri
 
 - **Role**: The active participants that execute tasks.
 - **Key Artifacts**: `.github/agents/*.agent.md` (implied/generated via Copilot Custom Agents or templates)
-- **Responsibility**: Each agent (e.g., `@Architect`, `@Developer`) has a specific scope of authority and a defined set of allowed skills.
+- **Responsibility**: Each agent (e.g., `@Architect`, `@Developer`) has a specific scope of authority and a defined set of allowed commands.
 
 ## Architecture Diagram
 
@@ -46,10 +46,10 @@ graph TD
 
     subgraph "Terraformer Engine (ANTP)"
         Agent -->|Follows| Const["Constitution (L1)"]
-        Agent -->|Uses| Skill["Skill / Prompt (L2)"]
+        Agent -->|Uses| Command["Command / Prompt (L2)"]
         Agent -->|Reads| Know["Knowledge / Docs (L3)"]
 
-        Skill -->|References| Know
+        Command -->|References| Know
     end
 
     Agent -->|Modifies| Code[Project Codebase]
@@ -58,8 +58,8 @@ graph TD
 ## Data Flow
 
 1.  **Context Injection**: When a user invokes an agent (e.g., `@Architect`), the `AGENTS.md` (L1) is loaded into the context.
-2.  **Instruction Execution**: The agent receives the user's prompt and selects the appropriate Skill (L2) (e.g., `/plan`).
-3.  **Knowledge Retrieval**: The skill may reference specific documents in `docs` or `knowledge` (L3) to ground its response in the project's actual standards.
+2.  **Instruction Execution**: The agent receives the user's prompt and selects the appropriate Command (L2) (e.g., `/plan`).
+3.  **Knowledge Retrieval**: The command may reference specific documents in `docs` or `knowledge` (L3) to ground its response in the project's actual standards.
 4.  **Output Generation**: The agent generates a response (code, plan, or answer) that is strictly aligned with the retrieved context.
 
 ## Design Background and Rationale

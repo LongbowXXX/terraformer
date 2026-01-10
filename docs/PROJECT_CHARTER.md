@@ -2,12 +2,12 @@
 
 **Version:** 1.4.1
 **Date:** December 10, 2025
-**Status:** Prototype Phase (Roles & Skills Architecture Implemented)
+**Status:** Prototype Phase (Roles & Commands Architecture Implemented)
 
 ## 1. Executive Summary
 
 This project aims to establish a **universal transition protocol (Meta-Plan)** to transform any existing software project into an "AI-Native" state.
-In ANTP v1.4, we evolve beyond simple role definitions. We introduce the **"Roles & Skills Architecture,"** where AI agents are not only assigned specific responsibilities (Roles) but are also equipped with standardized procedural knowledge (Skills/SOPs). This ensures a high-quality, autonomous **"AI Collaboration System"** generated automatically for any legacy codebase.
+In ANTP v1.4, we evolve beyond simple role definitions. We introduce the **"Roles & Commands Architecture,"** where AI agents are not only assigned specific responsibilities (Roles) but are also equipped with standardized procedural knowledge (Commands/SOPs). This ensures a high-quality, autonomous **"AI Collaboration System"** generated automatically for any legacy codebase.
 
 > [!IMPORTANT]  
 > **Before you start coding**, please read the [AI Literacy Guide](../knowledge/guidelines/ai-literacy/) to understand how to collaborate safely with AI agents.
@@ -59,7 +59,7 @@ As Generative AI becomes integral to development, simply assigning a persona (e.
 By analyzing a target project, Terraformer provides a complete package:
 
 1.  **The Agents (Roles):** Specialized personas with strict authority boundaries (`.agent.md`).
-2.  **The Skills (SOPs):** Standardized thinking processes for specific tasks (`.prompt.md`).
+2.  **The Commands (SOPs):** Standardized thinking processes for specific tasks (`.prompt.md`).
 
 ## 5. Deliverables: The AI Integration Stack
 
@@ -68,40 +68,40 @@ The protocol establishes four integrated layers within a project:
 | Layer  | Name             | Role                                                                             | Implementation                |
 | :----- | :--------------- | :------------------------------------------------------------------------------- | :---------------------------- |
 | **L1** | **Constitution** | Project Rules & Laws                                                             | `AGENTS.md`                   |
-| **L2** | **Skills**       | **(New)** Standardized Task Procedures<br>(e.g., Planning, Testing, Refactoring) | `.github/prompts/*.prompt.md` |
+| **L2** | **Commands**     | **(New)** Standardized Task Procedures<br>(e.g., Planning, Testing, Refactoring) | `.github/prompts/*.prompt.md` |
 | **L3** | **Knowledge**    | Explicit Context Map                                                             | `docs/*`                      |
 | **L4** | **Agents**       | Specialized Roles with Authority                                                 | `.github/agents/*.agent.md`   |
 
-## 6. Architecture: Roles & Skills Matrix
+## 6. Architecture: Roles & Commands Matrix
 
-In ANTP v1.4, each L4 Agent is generated with specific L2 Skills "injected" into their system instructions.
+In ANTP v1.4, each L4 Agent is generated with specific L2 Commands "injected" into their system instructions.
 
 ### A. Management Layer (Authority Holders)
 
 1.  **@Architect (The Designer)**
     - **Authority:** Sole power to decide specs and design.
-    - **Equipped Skill:** **`/plan`** (Implementation plans), **`/design`** (System design), **`/vscode-tasks`**, **`/vscode-settings`**, **`/vscode-extensions`**, **`/discover-specs`** (Reverse-engineer specs).
+    - **Equipped Command:** **`/plan`** (Implementation plans), **`/design`** (System design), **`/vscode-tasks`**, **`/vscode-settings`**, **`/vscode-extensions`**, **`/discover-specs`** (Reverse-engineer specs).
 2.  **@BusinessAnalyst (The Translator)**
     - **Authority:** Requirement definition.
-    - **Equipped Skill:** **`/requirements`** (Convert vague requests into User Stories), **`/brainstorm`** (Brainstorming & Spec consultation).
+    - **Equipped Command:** **`/requirements`** (Convert vague requests into User Stories), **`/brainstorm`** (Brainstorming & Spec consultation).
 3.  **@QualityGuard (The Enforcer)**
     - **Authority:** Code review and merge approval.
-    - **Equipped Skill:** **`/audit`** (Security & Quality checklist), **`/test-spec`** (Test Plan generation), **`/audit-spec`** (Specification Linter), **`/sanity-test`** (Sanity Test generation).
+    - **Equipped Command:** **`/audit`** (Security & Quality checklist), **`/test-spec`** (Test Plan generation), **`/audit-spec`** (Specification Linter), **`/sanity-test`** (Sanity Test generation).
 4.  **@Librarian (The Keeper)**
     - **Authority:** Documentation synchronization.
-    - **Equipped Skill:** **`/doc-sync`** (Detect diffs between Code and Docs), **`/check-doc-consistency`** (Verify doc consistency).
+    - **Equipped Command:** **`/doc-sync`** (Detect diffs between Code and Docs), **`/check-doc-consistency`** (Verify doc consistency).
 5.  **@Gardener (The Maintainer)**
     - **Authority:** Tech debt removal.
-    - **Equipped Skill:** **`/refactor`** (Safe structural improvements without logic changes).
+    - **Equipped Command:** **`/refactor`** (Safe structural improvements without logic changes).
 6.  **@Debugger (The Hunter)**
     - **Authority:** Root cause analysis and fix planning.
-    - **Equipped Skill:** **`/debug`** (Scientific method for bug hunting).
+    - **Equipped Command:** **`/debug`** (Scientific method for bug hunting).
 
 ### B. Execution Layer (Restricted)
 
 7.  **@Developer (The Implementer)**
     - **Authority:** Implementation ONLY (Strictly prohibited from changing specs).
-    - **Equipped Skill:** **`/test`** (Test Code implementation), **`/implement`** (Implementation from specs).
+    - **Equipped Command:** **`/test`** (Test Code implementation), **`/implement`** (Implementation from specs).
     - **Constraint:** Must escalate to `@Architect` (using `/plan`) if implementation is blocked.
 
 ## 7. Development Modes
@@ -111,7 +111,7 @@ To balance the need for high-quality production code with the reality of rapid e
 ### A. Standard Mode (Default)
 
 - **Philosophy:** "Slow is Smooth, Smooth is Fast."
-- **Process:** Strict adherence to the Roles & Skills Matrix. No code without specs.
+- **Process:** Strict adherence to the Roles & Commands Matrix. No code without specs.
 - **Goal:** Maintainability, Security, and Long-term Stability.
 
 ### B. Prototype Mode (Opt-in)
@@ -121,22 +121,22 @@ To balance the need for high-quality production code with the reality of rapid e
 - **Goal:** Idea Validation, PoC, Temporary Solutions.
 - **Constraint:** Code MUST be marked as `/* PROTOTYPE */` and is considered technical debt that must be paid down (refactored/rewritten) before production use.
 
-## 8. Technical Strategy: Skill Injection Mechanism
+## 8. Technical Strategy: Command Injection Mechanism
 
 The Terraformer Engine bootstraps the project using the following logic:
 
 1.  **Context Generation:** Executes `/terraform-context` to generate `AGENTS.md`, creating a high-density map of the project.
-2.  **Skill Scanning:** Scans the user's `.github/prompts/` to detect existing know-how (Prompt Files).
-3.  **Template Expansion:** Automatically generates missing standard skills (Plan, Refactor, Test) from built-in templates.
-4.  **Dynamic Injection:** When generating Agent definitions (`.agent.md`), the engine injects instructions such as _"When performing this task, you MUST follow the procedure defined in `#skill-name`."_
+2.  **Command Scanning:** Scans the user's `.github/prompts/` to detect existing know-how (Prompt Files).
+3.  **Command Translation:** If the user specifies a target language, the engine translates the standard commands (`.github/prompts/`) into that language.
+4.  **Role Definition:** The Agents (`.agent.md`) are similarly translated and configured to reference these standard commands as their operational procedures.
 
-This allows users to acquire a **"Team of Agents equipped with Senior Engineer thought processes"** simply by running `/terraformer` (after context generation).
+This allows users to acquire a **"Team of Agents equipped with Senior Engineer thought processes"** simply by running `/terraform-context`.
 
 ## 9. Expected Effects
 
-- **Quality Homogenization:** Regardless of who operates the AI, common procedures (Skills) are applied, stabilizing output quality.
+- **Quality Homogenization:** Regardless of who operates the AI, common procedures (Commands) are applied, stabilizing output quality.
 - **Rapid Onboarding:** New members can start immediately by relying on `@Architect` to plan and `@Developer` to implement using the correct procedures.
-- Maintainability: Workflows can be updated simply by editing the "Skill Files" (`.prompt.md`) rather than modifying complex Agent prompts.
+- Maintainability: Workflows can be updated simply by editing the "Command Files" (`.prompt.md`) rather than modifying complex Agent prompts.
 
 ## 10. Documentation & Traceability
 
@@ -176,7 +176,7 @@ We maintain explicit links between documents (e.g., Specification links to Requi
 ## 11. Roadmap
 
 1.  **Validation:** Field testing of `handoffs` and Prompt File integration in VS Code environments.
-2.  **Skill Library Expansion:** Develop extended skill templates (Release, Debug, Security Audit).
+2.  **Command Library Expansion:** Develop extended command definitions (Release, Debug, Security Audit).
 3.  **CI/CD Integration:** Research workflows to automatically trigger `@QualityGuard` within GitHub Actions.
 
 ## 12. AI Collaboration Policy

@@ -21,8 +21,7 @@ AI agents rely on **Explicit Context**. The more information you provide _before
 Follow the standard installation instructions in the [README](../../README.md).
 
 1.  **Install**: Copy the `.github` and `knowledge` directories.
-2.  **Initialize Context**: Run `/terraform-context` to generate the initial `AGENTS.md`.
-3.  **Summon Agents**: Run `/terraformer` to generate project-specific agent personas and skills.
+2.  **Initialize Context**: Run `/terraform-context` to generate the initial `AGENTS.md`, agents, and commands.
 
 ### Anatomy of a Terraformed Project
 
@@ -32,7 +31,7 @@ After installation, your project structure will look like this:
 my-project/
 ├── .github/
 │   ├── agents/          # (Generated) Active agents for this project (e.g., architect.agent.md)
-│   ├── prompts/         # (Generated) Skills and SOPs (e.g., plan.prompt.md)
+│   ├── prompts/         # (Generated) Commands and SOPs (e.g., plan.prompt.md)
 │   └── ...              # Templates used by the meta-engine
 ├── knowledge/           # (Static) Universal knowledge from Terraformer
 │   ├── guidelines/      # AI Literacy, Review Guidelines, etc.
@@ -81,7 +80,7 @@ Shift from "Command & Control" to "collaboration".
 
 To prevent confusion, we separate "Universal Principles" from "Project Reality".
 
-| Directory        | Type                    | Description                                                                                                                                                                                                                        |
-| :--------------- | :---------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`knowledge/`** | **Immutable** (Mostly)  | Contains the "Textbook" of the ANTP method. These files (like _AI Literacy_ or _Review Guidelines_) are generic and apply to _any_ project. You typically **do not** edit these unless you are customizing the methodology itself. |
-| **`docs/`**      | **Mutable**             | Contains the "State" of _your_ project. This is where you write specs, architecture diagrams, and project-specific rules (`docs/rules/`). **This is where the Agents work.**                                                       |
+| Directory        | Type                   | Description                                                                                                                                                                                                                        |
+| :--------------- | :--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`knowledge/`** | **Immutable** (Mostly) | Contains the "Textbook" of the ANTP method. These files (like _AI Literacy_ or _Review Guidelines_) are generic and apply to _any_ project. You typically **do not** edit these unless you are customizing the methodology itself. |
+| **`docs/`**      | **Mutable**            | Contains the "State" of _your_ project. This is where you write specs, architecture diagrams, and project-specific rules (`docs/rules/`). **This is where the Agents work.**                                                       |

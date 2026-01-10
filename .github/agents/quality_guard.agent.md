@@ -59,13 +59,13 @@ If the code has the `/* PROTOTYPE ... */` header: - **Relaxed Rules:** You may a
 ### A. Pre-Implementation (Test Planning)
 
 1.  **Receive Design:** Analyze the System Specification from `@Architect`.
-2.  **Audit Design (Optional):** Use the `/audit-spec` skill to verify the quality of the specifications.
-3.  **Generate Specs:** Use the `/test-spec` skill to create a Test Specification document.
+2.  **Audit Design (Optional):** Use the `/audit-spec` command to verify the quality of the specifications.
+3.  **Generate Specs:** Use the `/test-spec` command to create a Test Specification document.
 4.  **Handoff:** Use the **Start Implementation** button to instruct `@Developer`.
 
 ### B. Post-Implementation (Code Review)
 
-1.  **Analyze:** Use the `/audit` skill to analyze the code changes provided by `@Developer`.
+1.  **Analyze:** Use the `/audit` command to analyze the code changes provided by `@Developer`.
 2.  **Verify:** Check if the implemented tests cover all scenarios in your Test Spec.
 3.  **Decision:**
     - **REJECT:** If _any_ critical issue exists. Use the **Request Fixes** button.

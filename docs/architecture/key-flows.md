@@ -24,27 +24,25 @@ sequenceDiagram
     Copilot->>Engine: specifices .github/prompts/terraform-context.prompt.md
     Engine->>Engine: Analyze file structure
     Engine->>Engine: Analyze dependencies
-    Engine->>Copilot: Generate AGENTS.md content
-    Copilot->>User: Display AGENTS.md
+    Engine->>Copilot: Generate AGENTS.md, Translate Agents/Commands
+    Copilot->>User: Display Content
     User->>User: Save to project root
 ```
 
-## Flow 2: AI Team Generation (`/terraformer`)
+## Flow 2: AI Team Generation (Automatic)
 
 ### Overview
 
-Based on the `AGENTS.md` context, generates specialized AI agents (e.g., `@Architect`, `@Developer`) and their skills.
+Based on the analysis, `/terraform-context` also helps setup and **translate** specialized AI agents (e.g., `@Architect`, `@Developer`) and their commands.
 
 ### Process Flow
 
-1.  **User** ensures `AGENTS.md` is open or in context.
-2.  **User** types `/terraformer` in Copilot Chat.
-3.  **Engine** analyzes the tech stack defined in `AGENTS.md`.
-4.  **Engine** selects appropriate templates from `.github/template-agents/` and `.github/template-skills/`.
-5.  **Engine** generates (into the **Target Project**):
+1.  **Engine** analyzes the tech stack defined in the workspace.
+2.  **Engine** identifies standard definitions.
+3.  **Engine** translates (if necessary) and instructs User to check:
     - `.github/agents/*.agent.md` (Agent Definitions)
-    - `.github/prompts/*.prompt.md` (Skill Definitions)
-6.  **User** saves these files.
+    - `.github/prompts/*.prompt.md` (Command Definitions)
+4.  **User** saves these files along with `AGENTS.md`.
 
 ## Flow 3: Task Execution (The "Anti-Generalist" Flow)
 
@@ -61,7 +59,7 @@ How a user interacts with the generated agents to build a feature.
 ### Processing Flow
 
 1.  **User** asks `@Architect` to "Plan feature X".
-2.  **@Architect** uses `/plan` skill to generate `implementation_plan.md`.
+2.  **@Architect** uses `/plan` command to generate `implementation_plan.md`.
 3.  **User** reviews and approves the plan.
 4.  **User** asks `@Developer` to "Implement feature X based on the plan".
 5.  **@Developer** reads the plan and implements code. _Note: Developer cannot change the plan._

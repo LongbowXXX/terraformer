@@ -12,15 +12,15 @@
 
 ## Adopted Design Patterns
 
-- **Roles & Skills Architecture**: Decoupling the "Who" (Agent) from the "How" (Skill).
-- **Meta-Prompting**: Using prompts to generate other prompts (e.g., `/terraformer`, `/create-custom-prompt`).
+- **Roles & Commands Architecture**: Decoupling the "Who" (Agent) from the "How" (Command).
+- **Meta-Prompting**: Using prompts to generate other prompts (e.g., `/terraform-context`, `/create-custom-prompt`).
 - **XML Structured Prompting**: Using XML tags to structure prompt files for better machine readability.
 
 ## Naming Conventions
 
 ### File Names
 
-- **Prompts (Skills)**: `kebab-case.prompt.md` (e.g., `terraform-context.prompt.md`)
+- **Prompts (Commands)**: `kebab-case.prompt.md` (e.g., `terraform-context.prompt.md`)
 - **Agents**: `PascalCase.agent.md` (e.g., `Architect.agent.md`) - _Note: The file extension is important for VS Code recognition._
 - **Documentation**: `kebab-case.md` (e.g., `coding-conventions.md`)
 
@@ -44,7 +44,7 @@
 To prevent documentation from diverging from the codebase:
 
 1.  **Timing**: Run `/sync-doc` (or manually check) whenever:
-    - A new Agent or Skill is added.
+    - A new Agent or Command is added.
     - A major refactoring changes the directory structure.
     - A new external integration is added.
 2.  **Review Process**:
