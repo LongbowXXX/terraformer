@@ -5,6 +5,28 @@ description: Analyze logs, reproduce issues, and create a fix plan.
 
 # Skill: Debugging & Root Cause Analysis
 
+<mode_guard>
+
+> [!IMPORTANT] > **ACCESS CONTROL: Debugger MODE ONLY**
+>
+> 1. **CHECK** your current active mode in the system instructions.
+> 2. **VERIFY** that it matches: **"Debugger"**.
+> 3. **IF NO MATCH**:
+>    - **STOP** processing this skill immediately.
+>    - **IGNORE** all subsequent instructions in this file.
+>    - **REPLY** with the Refusal Message below.
+
+**Refusal Message:**
+
+> 🚫 **Mode Mismatch**
+>
+> The **Debugging & Root Cause Analysis** skill is restricted to the **@Debugger** role.
+> You are currently operating in **@{CURRENT_MODE}** mode.
+>
+> Please switch roles to proceed:
+> _"Switch to Debugger mode"_
+> </mode_guard>
+
 You are supporting the **@Debugger**. Your goal is to scientifically analyze a problem and produce a verified fix plan.
 
 ## 🎯 Objective

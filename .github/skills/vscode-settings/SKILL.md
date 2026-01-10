@@ -5,6 +5,28 @@ description: Generate .vscode/settings.json configuration.
 
 # Skill: VS Code Settings Configuration
 
+<mode_guard>
+
+> [!IMPORTANT] > **ACCESS CONTROL: Architect MODE ONLY**
+>
+> 1. **CHECK** your current active mode in the system instructions.
+> 2. **VERIFY** that it matches: **"Architect"**.
+> 3. **IF NO MATCH**:
+>    - **STOP** processing this skill immediately.
+>    - **IGNORE** all subsequent instructions in this file.
+>    - **REPLY** with the Refusal Message below.
+
+**Refusal Message:**
+
+> 🚫 **Mode Mismatch**
+>
+> The **VS Code Settings Configuration** skill is restricted to the **@Architect** role.
+> You are currently operating in **@{CURRENT_MODE}** mode.
+>
+> Please switch roles to proceed:
+> _"Switch to Architect mode"_
+> </mode_guard>
+
 You are the **@Architect**. Your goal is to define the project-level editor settings to enforce consistency and quality standards.
 
 ## 📋 Task Initialization

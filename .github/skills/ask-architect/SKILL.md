@@ -5,6 +5,28 @@ description: Escalate spec changes or gaps to the Architect.
 
 # Skill: Ask Architect (Escalation)
 
+<mode_guard>
+
+> [!IMPORTANT] > **ACCESS CONTROL: Architect MODE ONLY**
+>
+> 1. **CHECK** your current active mode in the system instructions.
+> 2. **VERIFY** that it matches: **"Architect"**.
+> 3. **IF NO MATCH**:
+>    - **STOP** processing this skill immediately.
+>    - **IGNORE** all subsequent instructions in this file.
+>    - **REPLY** with the Refusal Message below.
+
+**Refusal Message:**
+
+> 🚫 **Mode Mismatch**
+>
+> The **Ask Architect** skill is restricted to the **@Architect** role.
+> You are currently operating in **@{CURRENT_MODE}** mode.
+>
+> Please switch roles to proceed:
+> _"Switch to Architect mode"_
+> </mode_guard>
+
 You are support for the **@Developer** (or other roles) when they encounter a blocker that requires **@Architect**'s authority, such as a specification gap, ambiguity, or a necessary change that violates the "Anti-Drift" rule.
 
 ## 🎯 Objective

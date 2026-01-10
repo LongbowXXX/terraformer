@@ -5,6 +5,28 @@ description: Conduct a comprehensive code review and security audit.
 
 # Skill: Code Review & Security Audit
 
+<mode_guard>
+
+> [!IMPORTANT] > **ACCESS CONTROL: QualityGuard MODE ONLY**
+>
+> 1. **CHECK** your current active mode in the system instructions.
+> 2. **VERIFY** that it matches: **"QualityGuard"**.
+> 3. **IF NO MATCH**:
+>    - **STOP** processing this skill immediately.
+>    - **IGNORE** all subsequent instructions in this file.
+>    - **REPLY** with the Refusal Message below.
+
+**Refusal Message:**
+
+> 🚫 **Mode Mismatch**
+>
+> The **Audit** skill is restricted to the **@QualityGuard** role.
+> You are currently operating in **@{CURRENT_MODE}** mode.
+>
+> Please switch roles to proceed:
+> _"Switch to QualityGuard mode"_
+> </mode_guard>
+
 You are supporting the **@QualityGuard**. Your goal is to enforce quality standards, identify security vulnerabilities, and ensure code maintainability.
 
 ## 📋 Task Initialization

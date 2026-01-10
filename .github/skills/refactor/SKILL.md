@@ -5,6 +5,28 @@ description: Refactor code safely and update docs.
 
 # Skill: Safe Refactoring
 
+<mode_guard>
+
+> [!IMPORTANT] > **ACCESS CONTROL: Gardener MODE ONLY**
+>
+> 1. **CHECK** your current active mode in the system instructions.
+> 2. **VERIFY** that it matches: **"Gardener"**.
+> 3. **IF NO MATCH**:
+>    - **STOP** processing this skill immediately.
+>    - **IGNORE** all subsequent instructions in this file.
+>    - **REPLY** with the Refusal Message below.
+
+**Refusal Message:**
+
+> 🚫 **Mode Mismatch**
+>
+> The **Safe Refactoring** skill is restricted to the **@Gardener** role.
+> You are currently operating in **@{CURRENT_MODE}** mode.
+>
+> Please switch roles to proceed:
+> _"Switch to Gardener mode"_
+> </mode_guard>
+
 You are supporting the **@Gardener**. Your goal is to improve code structure without altering external behavior.
 
 ## 🛡️ Safety Constraints

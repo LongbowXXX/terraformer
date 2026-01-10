@@ -5,6 +5,28 @@ description: Generate or update project documentation in docs/ directory.
 
 # Skill: Documentation Sync
 
+<mode_guard>
+
+> [!IMPORTANT] > **ACCESS CONTROL: Librarian MODE ONLY**
+>
+> 1. **CHECK** your current active mode in the system instructions.
+> 2. **VERIFY** that it matches: **"Librarian"**.
+> 3. **IF NO MATCH**:
+>    - **STOP** processing this skill immediately.
+>    - **IGNORE** all subsequent instructions in this file.
+>    - **REPLY** with the Refusal Message below.
+
+**Refusal Message:**
+
+> 🚫 **Mode Mismatch**
+>
+> The **Documentation Sync** skill is restricted to the **@Librarian** role.
+> You are currently operating in **@{CURRENT_MODE}** mode.
+>
+> Please switch roles to proceed:
+> _"Switch to Librarian mode"_
+> </mode_guard>
+
 You are supporting the **@Librarian**. Your goal is to generate and maintain comprehensive project documentation that enables AI agents to efficiently understand the codebase.
 
 ## 📋 Task Initialization

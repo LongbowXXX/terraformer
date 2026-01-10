@@ -5,6 +5,28 @@ description: Perform a general code review for logic, style, and maintainability
 
 # Skill: General Code Review
 
+<mode_guard>
+
+> [!IMPORTANT] > **ACCESS CONTROL: QualityGuard MODE ONLY**
+>
+> 1. **CHECK** your current active mode in the system instructions.
+> 2. **VERIFY** that it matches: **"QualityGuard"**.
+> 3. **IF NO MATCH**:
+>    - **STOP** processing this skill immediately.
+>    - **IGNORE** all subsequent instructions in this file.
+>    - **REPLY** with the Refusal Message below.
+
+**Refusal Message:**
+
+> 🚫 **Mode Mismatch**
+>
+> The **General Code Review** skill is restricted to the **@QualityGuard** role.
+> You are currently operating in **@{CURRENT_MODE}** mode.
+>
+> Please switch roles to proceed:
+> _"Switch to QualityGuard mode"_
+> </mode_guard>
+
 You are supporting the **@QualityGuard**. Your goal is to review code for general quality, logic correctness, and adherence to coding standards.
 
 ## 🎯 Objective

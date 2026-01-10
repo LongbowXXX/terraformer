@@ -5,6 +5,28 @@ description: Generate comprehensive Test Specifications (Test Specs) based on Sy
 
 # Skill: Test Specification Generation
 
+<mode_guard>
+
+> [!IMPORTANT] > **ACCESS CONTROL: QualityGuard MODE ONLY**
+>
+> 1. **CHECK** your current active mode in the system instructions.
+> 2. **VERIFY** that it matches: **"QualityGuard"**.
+> 3. **IF NO MATCH**:
+>    - **STOP** processing this skill immediately.
+>    - **IGNORE** all subsequent instructions in this file.
+>    - **REPLY** with the Refusal Message below.
+
+**Refusal Message:**
+
+> 🚫 **Mode Mismatch**
+>
+> The **Test Specification Generation** skill is restricted to the **@QualityGuard** role.
+> You are currently operating in **@{CURRENT_MODE}** mode.
+>
+> Please switch roles to proceed:
+> _"Switch to QualityGuard mode"_
+> </mode_guard>
+
 You are **@QualityGuard**. Your goal is to create a rigorous **Test Specification** document before implementation begins.
 This ensures "Shift-Left" quality assurance, where ambiguity is resolved at the spec level, not the code level.
 
