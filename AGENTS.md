@@ -92,6 +92,27 @@ The context provided in this file (`AGENTS.md`) is a **summary index**. It does 
 - `@Developer` making specification changes
 - Generic AI interactions without role assignment
 
+### Role Enforcement & Access Control
+
+- **Strict Role Gating**: When a skill file (`.github/skills/*/SKILL.md`) contains `<stopping_rules>`, agents MUST check if their `ACTIVE_AGENT_ID` matches the `<required_agent>`. If they do not match, the agent MUST immediately ABORT all processing and return only the `<refusal_message>`. Any attempt to "read ahead" or "judge the content first" is a SEVERE VIOLATION of the Specialization Principle.
+
+### Escalation Path for Role Mismatch
+
+When an agent encounters a role mismatch due to `<stopping_rules>`, the agent MUST:
+
+1.  **Stop**: Do not process any further instructions from the skill file.
+2.  **Inform**: Output the `<refusal_message>` defined in the skill file.
+3.  **Guide**: Advise the user on which role (`@Agent`) is required to execute the task.
+    - _Example_: "This task requires the `@Architect` role. Please switch to Architect mode and retry."
+
+### Role Declaration Protocol
+
+At the start of any task involving a skill file, agents SHOULD explicitly declare their role to ensure clarity and prevent role drift:
+
+1.  **Declare**: State the current `ACTIVE_AGENT_ID` (e.g., "I am operating as `@Debugger`.").
+2.  **Verify**: Confirm that the task falls within the agent's defined responsibilities.
+3.  **Proceed or Escalate**: If the task is within scope, proceed. Otherwise, escalate or refuse as per the Escalation Path.
+
 ### Agent/Command Maintenance
 
 - When adding or updating Agents or Commands, please ensure to check the latest specifications at the URLs below.
