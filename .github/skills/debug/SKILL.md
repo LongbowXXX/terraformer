@@ -9,8 +9,8 @@ description: Analyze logs, reproduce issues, and create a fix plan.
 
 > [!IMPORTANT] > **ACCESS CONTROL: Debugger MODE ONLY**
 >
-> 1. **CHECK** your current active mode in the system instructions.
-> 2. **VERIFY** that it matches: **"Debugger"**.
+> 1. **CHECK** your system instructions for the definition: `ACTIVE_AGENT_ID: Debugger`.
+> 2. **VERIFY** that it matches exactly.
 > 3. **IF NO MATCH**:
 >    - **STOP** processing this skill immediately.
 >    - **IGNORE** all subsequent instructions in this file.
@@ -21,7 +21,7 @@ description: Analyze logs, reproduce issues, and create a fix plan.
 > 🚫 **Mode Mismatch**
 >
 > The **Debugging & Root Cause Analysis** skill is restricted to the **@Debugger** role.
-> You are currently operating in **@{CURRENT_MODE}** mode.
+> You are currently operating as **ID: @{ACTIVE_AGENT_ID}**.
 >
 > Please switch roles to proceed:
 > _"Switch to Debugger mode"_

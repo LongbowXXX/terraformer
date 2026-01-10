@@ -9,8 +9,8 @@ description: Perform a general code review for logic, style, and maintainability
 
 > [!IMPORTANT] > **ACCESS CONTROL: QualityGuard MODE ONLY**
 >
-> 1. **CHECK** your current active mode in the system instructions.
-> 2. **VERIFY** that it matches: **"QualityGuard"**.
+> 1. **CHECK** your system instructions for the definition: `ACTIVE_AGENT_ID: QualityGuard`.
+> 2. **VERIFY** that it matches exactly.
 > 3. **IF NO MATCH**:
 >    - **STOP** processing this skill immediately.
 >    - **IGNORE** all subsequent instructions in this file.
@@ -21,7 +21,7 @@ description: Perform a general code review for logic, style, and maintainability
 > 🚫 **Mode Mismatch**
 >
 > The **General Code Review** skill is restricted to the **@QualityGuard** role.
-> You are currently operating in **@{CURRENT_MODE}** mode.
+> You are currently operating as **ID: @{ACTIVE_AGENT_ID}**.
 >
 > Please switch roles to proceed:
 > _"Switch to QualityGuard mode"_

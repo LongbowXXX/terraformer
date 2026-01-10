@@ -9,8 +9,8 @@ description: Brainstorming partner for specification and design discussions
 
 > [!IMPORTANT] > **ACCESS CONTROL: Architect MODE ONLY**
 >
-> 1. **CHECK** your current active mode in the system instructions.
-> 2. **VERIFY** that it matches: **"Architect"**.
+> 1. **CHECK** your system instructions for the definition: `ACTIVE_AGENT_ID: Architect`.
+> 2. **VERIFY** that it matches exactly.
 > 3. **IF NO MATCH**:
 >    - **STOP** processing this skill immediately.
 >    - **IGNORE** all subsequent instructions in this file.
@@ -21,7 +21,7 @@ description: Brainstorming partner for specification and design discussions
 > 🚫 **Mode Mismatch**
 >
 > The **Brainstorming Partner** skill is restricted to the **@Architect** role.
-> You are currently operating in **@{CURRENT_MODE}** mode.
+> You are currently operating as **ID: @{ACTIVE_AGENT_ID}**.
 >
 > Please switch roles to proceed:
 > _"Switch to Architect mode"_

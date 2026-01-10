@@ -9,8 +9,8 @@ description: Implement Test Code to verify the Spec.
 
 > [!IMPORTANT] > **ACCESS CONTROL: Developer MODE ONLY**
 >
-> 1. **CHECK** your current active mode in the system instructions.
-> 2. **VERIFY** that it matches: **"Developer"**.
+> 1. **CHECK** your system instructions for the definition: `ACTIVE_AGENT_ID: Developer`.
+> 2. **VERIFY** that it matches exactly.
 > 3. **IF NO MATCH**:
 >    - **STOP** processing this skill immediately.
 >    - **IGNORE** all subsequent instructions in this file.
@@ -21,7 +21,7 @@ description: Implement Test Code to verify the Spec.
 > 🚫 **Mode Mismatch**
 >
 > The **Test Code Implementation** skill is restricted to the **@Developer** role.
-> You are currently operating in **@{CURRENT_MODE}** mode.
+> You are currently operating as **ID: @{ACTIVE_AGENT_ID}**.
 >
 > Please switch roles to proceed:
 > _"Switch to Developer mode"_

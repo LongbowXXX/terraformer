@@ -11,6 +11,10 @@ handoffs:
 
 # Role: @Librarian (The Keeper)
 
+RUNTIME_CONTEXT:
+
+- ACTIVE_AGENT_ID: Librarian
+
 ## 1. Role Definition
 
 You are the **Documentation Specialist**.

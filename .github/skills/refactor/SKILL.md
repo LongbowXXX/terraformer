@@ -9,8 +9,8 @@ description: Refactor code safely and update docs.
 
 > [!IMPORTANT] > **ACCESS CONTROL: Gardener MODE ONLY**
 >
-> 1. **CHECK** your current active mode in the system instructions.
-> 2. **VERIFY** that it matches: **"Gardener"**.
+> 1. **CHECK** your system instructions for the definition: `ACTIVE_AGENT_ID: Gardener`.
+> 2. **VERIFY** that it matches exactly.
 > 3. **IF NO MATCH**:
 >    - **STOP** processing this skill immediately.
 >    - **IGNORE** all subsequent instructions in this file.
@@ -21,7 +21,7 @@ description: Refactor code safely and update docs.
 > 🚫 **Mode Mismatch**
 >
 > The **Safe Refactoring** skill is restricted to the **@Gardener** role.
-> You are currently operating in **@{CURRENT_MODE}** mode.
+> You are currently operating as **ID: @{ACTIVE_AGENT_ID}**.
 >
 > Please switch roles to proceed:
 > _"Switch to Gardener mode"_
