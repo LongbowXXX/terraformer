@@ -61,7 +61,6 @@ This section defines the core terminology used across the project. For the full 
 
 | Command              | Purpose                          |
 | -------------------- | -------------------------------- |
-| `/terraformer`       | Generate agents and commands     |
 | `/terraform-context` | Generate `AGENTS.md`             |
 | `@Architect`         | Design authority                 |
 | `@Developer`         | Implementation (no spec changes) |

@@ -130,7 +130,7 @@ The Terraformer Engine bootstraps the project using the following logic:
 3.  **Command Installation:** Installs standard commands (Plan, Refactor, Test) from the **Source Definitions** (`.github/prompts/`) into the target project.
 4.  **Dynamic Injection:** When generating Agent definitions (`.agent.md`), the engine injects instructions such as _"When performing this task, you MUST follow the procedure defined in `#command-name`."_
 
-This allows users to acquire a **"Team of Agents equipped with Senior Engineer thought processes"** simply by running `/terraformer` (after context generation).
+This allows users to acquire a **"Team of Agents equipped with Senior Engineer thought processes"** simply by running `/terraform-context`.
 
 ## 9. Expected Effects
 

@@ -13,7 +13,7 @@
 ## Adopted Design Patterns
 
 - **Roles & Commands Architecture**: Decoupling the "Who" (Agent) from the "How" (Command).
-- **Meta-Prompting**: Using prompts to generate other prompts (e.g., `/terraformer`, `/create-custom-prompt`).
+- **Meta-Prompting**: Using prompts to generate other prompts (e.g., `/terraform-context`, `/create-custom-prompt`).
 - **XML Structured Prompting**: Using XML tags to structure prompt files for better machine readability.
 
 ## Naming Conventions

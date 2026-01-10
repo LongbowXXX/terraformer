@@ -85,20 +85,19 @@ _The era of humans typing commands is over! 😜🚀_
 
 1.  Type **`/terraform-context`** in the Chat.
     - _Tip: You can specify a language: `/terraform-context Japanese`_
-2.  Terraformer will generate a high-density `AGENTS.md`.
+2.  Terraformer will generate `AGENTS.md` and the AI Team configuration.
 3.  Save it to the project root.
 
 ### 3. Generate Your AI Team (L4 & L2)
 
-1.  Open your project in **VS Code** (ensure GitHub Copilot Chat extension is active).
-2.  Open `AGENTS.md` (generated in step 2) to provide context.
-3.  Type **`/terraformer`** in the Copilot Chat.
-    - _Tip: You can specify a language: `/terraformer Japanese`_
-4.  Terraformer will analyze your project and **generate or update**:
-    - **Agent Definitions** (e.g., `architect.agent.md`) customized for your tech stack.
-    - **Standard Commands** (`plan.prompt.md`, `refactor.prompt.md`, etc.).
-5.  Save the outputs to `.github/agents/` and `.github/prompts/`.
-    - _Note: You can re-run `/terraformer` at any time to update your agents and commands if the project context changes._
+Terraformer is now "All-in-One". The **`/terraform-context`** command (Step 2) automatically handles this:
+
+1.  **Context Analysis**: It reads your project structure.
+2.  **Asset Setup**: It sets up:
+    - **`AGENTS.md`** (Context Map)
+    - **Agent Definitions** (L4)
+    - **Standard Commands** (L2)
+3.  **Language Support**: If you specified a language (e.g., Japanese), these assets will be **translated** for you.
 
 ## 👥 The Specialized Agents (Agents & Commands)
 

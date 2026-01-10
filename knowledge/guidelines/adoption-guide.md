@@ -21,8 +21,7 @@ AI agents rely on **Explicit Context**. The more information you provide _before
 Follow the standard installation instructions in the [README](../../README.md).
 
 1.  **Install**: Copy the `.github` and `knowledge` directories.
-2.  **Initialize Context**: Run `/terraform-context` to generate the initial `AGENTS.md`.
-3.  **Summon Agents**: Run `/terraformer` to generate project-specific agent personas and commands.
+2.  **Initialize Context**: Run `/terraform-context` to generate the initial `AGENTS.md`, agents, and commands.
 
 ### Anatomy of a Terraformed Project
 

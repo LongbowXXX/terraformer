@@ -31,7 +31,8 @@ The output follows the [AGENTS.md](https://agents.md/) format - a simple, open f
 5.  **Documentation Generation**: Generate initial docs in `docs/` in the **Target Language**.
 6.  **Knowledge Base Translation**: Translate `knowledge/` files if the Target Language is not English.
 7.  **AGENTS.md Generation**: Generate the `AGENTS.md` file following the format in the **Target Language**.
-8.  **Final Check**: Review the "Final Check" section.
+8.  **Agent & Command Translation**: Translate agents and commands (if Target Language is not English).
+9.  **Final Check**: Review the "Final Check" section.
 
 ## 🛠️ Generation Logic
 
@@ -109,6 +110,28 @@ If the **Target Language** is NOT English:
     - _Note_: Ensure specific technical terms remain accurate (English may be kept where appropriate).
 
 _Note: Create these files with initial content based on your analysis. They will be refined by the @Librarian later._
+
+### Step 6: Agent & Command Translation
+
+If the **Target Language** is NOT English:
+
+**IMPORTANT**:
+
+> [!IMPORTANT]  
+> **CRITICAL TRANSLATION RULE**:
+> When generating the content below in the **Target Language**, you MUST:
+>
+> 1. **DO NOT SUMMARIZE**: Translate the text **verbatim**.
+> 2. **PRESERVE STRUCTURE**: Keep all structure, bullet points, and warnings.
+> 3. **MAINTAIN INTENSITY**: Do not soften "MUST" to "should".
+
+1.  **Read** all files in `.github/agents/` and `.github/prompts/`.
+2.  **Translate** the content of each file into the **Target Language**.
+3.  **Overwrite** the files in their respective directories.
+    - _Note_: Do NOT specify `tools` in the generated agent file. Omitting the `tools` field ensures all available tools are accessible.
+    - _Note_: Ensure specific technical terms remain accurate.
+
+If the **Target Language** IS English, SKIP this step.
 
 <agents_style_guide>
 
@@ -278,6 +301,7 @@ Before outputting, verify:
 - [ ] All todo are marked as completed.
 - [ ] `AGENTS.md` has been generated in the Target Language.
 - [ ] Initial documentation files in `docs/` have been created in the Target Language.
+- [ ] Agents and Commands have been translated (if needed).
 - [ ] All placeholders in the generated files are replaced with actual values.
 
 </instruction>
