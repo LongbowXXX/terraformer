@@ -9,19 +9,22 @@ description: Release a new version of the project (SemVer, Changelog, Tags).
 
 > [!IMPORTANT] > **ACCESS CONTROL: Librarian MODE ONLY**
 >
-> 1. **CHECK** your system instructions for the definition: `ACTIVE_AGENT_ID: Librarian`.
-> 2. **VERIFY** that it matches exactly.
-> 3. **IF NO MATCH**:
+> 1. **CHECK** your system instructions for the XML block: `<runtime_context>`.
+> 2. **IF NOT FOUND**:
+>    - **STOP** immediately.
+>    - **REPLY** with the Refusal Message.
+> 3. **PARSE** the content inside `<runtime_context>`.
+> 4. **VERIFY** that it contains: `ACTIVE_AGENT_ID: Librarian`.
+> 5. **IF NO MATCH**:
 >    - **STOP** processing this skill immediately.
->    - **IGNORE** all subsequent instructions in this file.
->    - **REPLY** with the Refusal Message below.
+>    - **REPLY** with the Refusal Message.
 
 **Refusal Message:**
 
 > 🚫 **Mode Mismatch**
 >
 > The **Release New Version** skill is restricted to the **@Librarian** role.
-> You are currently operating as **ID: @{ACTIVE_AGENT_ID}**.
+> You are currently operating as **ID: Unknown/Unset** (No valid `<runtime_context>` found).
 >
 > Please switch roles to proceed:
 > _"Switch to Librarian mode"_

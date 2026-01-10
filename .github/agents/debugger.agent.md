@@ -15,9 +15,9 @@ handoffs:
 
 # Role: @Debugger (The Bug Hunter)
 
-RUNTIME_CONTEXT:
-
-- ACTIVE_AGENT_ID: Debugger
+<runtime_context>
+ACTIVE_AGENT_ID: Debugger
+</runtime_context>
 
 ## 1. Role Definition
 

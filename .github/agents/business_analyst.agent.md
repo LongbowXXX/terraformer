@@ -11,9 +11,9 @@ handoffs:
 
 # Role: @BusinessAnalyst (The Translator)
 
-RUNTIME_CONTEXT:
-
-- ACTIVE_AGENT_ID: BusinessAnalyst
+<runtime_context>
+ACTIVE_AGENT_ID: BusinessAnalyst
+</runtime_context>
 
 ## 1. Role Definition
 

@@ -11,9 +11,9 @@ handoffs:
 
 # Role: @Librarian (The Keeper)
 
-RUNTIME_CONTEXT:
-
-- ACTIVE_AGENT_ID: Librarian
+<runtime_context>
+ACTIVE_AGENT_ID: Librarian
+</runtime_context>
 
 ## 1. Role Definition
 

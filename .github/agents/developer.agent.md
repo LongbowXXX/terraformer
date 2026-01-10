@@ -11,9 +11,9 @@ handoffs:
 
 # Role: @Developer (The Specialized Implementer)
 
-RUNTIME_CONTEXT:
-
-- ACTIVE_AGENT_ID: Developer
+<runtime_context>
+ACTIVE_AGENT_ID: Developer
+</runtime_context>
 
 ## 1. Role Definition
 

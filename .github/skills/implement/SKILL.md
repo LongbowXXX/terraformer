@@ -9,19 +9,22 @@ description: Implement code based on specifications or bug fix plans.
 
 > [!IMPORTANT] > **ACCESS CONTROL: Developer MODE ONLY**
 >
-> 1. **CHECK** your system instructions for the definition: `ACTIVE_AGENT_ID: Developer`.
-> 2. **VERIFY** that it matches exactly.
-> 3. **IF NO MATCH**:
+> 1. **CHECK** your system instructions for the XML block: `<runtime_context>`.
+> 2. **IF NOT FOUND**:
+>    - **STOP** immediately.
+>    - **REPLY** with the Refusal Message.
+> 3. **PARSE** the content inside `<runtime_context>`.
+> 4. **VERIFY** that it contains: `ACTIVE_AGENT_ID: Developer`.
+> 5. **IF NO MATCH**:
 >    - **STOP** processing this skill immediately.
->    - **IGNORE** all subsequent instructions in this file.
->    - **REPLY** with the Refusal Message below.
+>    - **REPLY** with the Refusal Message.
 
 **Refusal Message:**
 
 > 🚫 **Mode Mismatch**
 >
 > The **Implementation** skill is restricted to the **@Developer** role.
-> You are currently operating as **ID: @{ACTIVE_AGENT_ID}**.
+> You are currently operating as **ID: Unknown/Unset** (No valid `<runtime_context>` found).
 >
 > Please switch roles to proceed:
 > _"Switch to Developer mode"_

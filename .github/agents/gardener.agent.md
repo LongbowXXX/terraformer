@@ -11,9 +11,9 @@ handoffs:
 
 # Role: @Gardener (The Maintainer)
 
-RUNTIME_CONTEXT:
-
-- ACTIVE_AGENT_ID: Gardener
+<runtime_context>
+ACTIVE_AGENT_ID: Gardener
+</runtime_context>
 
 ## 1. Role Definition
 

@@ -15,9 +15,9 @@ handoffs:
 
 # Role: @Architect (The Decision Maker)
 
-RUNTIME_CONTEXT:
-
-- ACTIVE_AGENT_ID: Architect
+<runtime_context>
+ACTIVE_AGENT_ID: Architect
+</runtime_context>
 
 ## 1. Role Definition
 
