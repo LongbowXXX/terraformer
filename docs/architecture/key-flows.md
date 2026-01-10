@@ -33,7 +33,7 @@ sequenceDiagram
 
 ### Overview
 
-Based on the `AGENTS.md` context, generates specialized AI agents (e.g., `@Architect`, `@Developer`) and their skills.
+Based on the `AGENTS.md` context, generates specialized AI agents (e.g., `@Architect`, `@Developer`) and their commands.
 
 ### Process Flow
 
@@ -43,7 +43,7 @@ Based on the `AGENTS.md` context, generates specialized AI agents (e.g., `@Archi
 4.  **Engine** selects appropriate definitions from `.github/agents/` and `.github/prompts/`.
 5.  **Engine** generates (into the **Target Project**):
     - `.github/agents/*.agent.md` (Agent Definitions)
-    - `.github/prompts/*.prompt.md` (Skill Definitions)
+    - `.github/prompts/*.prompt.md` (Command Definitions)
 6.  **User** saves these files.
 
 ## Flow 3: Task Execution (The "Anti-Generalist" Flow)
@@ -61,7 +61,7 @@ How a user interacts with the generated agents to build a feature.
 ### Processing Flow
 
 1.  **User** asks `@Architect` to "Plan feature X".
-2.  **@Architect** uses `/plan` skill to generate `implementation_plan.md`.
+2.  **@Architect** uses `/plan` command to generate `implementation_plan.md`.
 3.  **User** reviews and approves the plan.
 4.  **User** asks `@Developer` to "Implement feature X based on the plan".
 5.  **@Developer** reads the plan and implements code. _Note: Developer cannot change the plan._

@@ -9,9 +9,9 @@ Terraformer uses a specific directory structure to organize its components. Sinc
 ```
 terraformer/
 ├── .agent/                 # Antigravity specific definitions (Workflows, etc.)
-├── .github/                # The Core Engine (Prompts, Templates)
+├── .github/                # The Core Engine (Prompts, Agents)
 │   ├── agents/             # Agent Definitions (L4)
-│   └── prompts/            # Skill Definitions (L2)
+│   └── prompts/            # Command Definitions (L2)
 ├── docs/                   # Project Documentation (L3) - Architecture, Specs, Context
 ├── knowledge/              # Universal Guidelines (not project-specific)
 ├── AGENTS.md               # The Constitution & Context Map Entry Point (L1)
@@ -22,9 +22,9 @@ terraformer/
 
 ### `/.github/prompts/`
 
-- **Role**: Contains the "Skills" (SOPs) available to agents.
-- **In Source Repo**: Contains all skill definitions including engine-core prompts.
-- **In Target Project**: Populated with all generated skills (`plan`, `debug`, etc.).
+- **Role**: Contains the "Commands" (SOPs) available to agents.
+- **In Source Repo**: Contains all command definitions including engine-core prompts.
+- **In Target Project**: Populated with all generated commands (`plan`, `debug`, etc.).
 - **Dependencies**: These files are referenced by Copilot Custom Prompts (commands).
 
 ### `/docs/`

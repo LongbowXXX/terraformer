@@ -40,7 +40,7 @@ graph TD
 
 **Goal**: Clarify WHY we are doing this and WHAT problem we are solving.
 
-- **AI Role**: **@BusinessAnalyst** (Skill: `/requirements`)
+- **AI Role**: **@BusinessAnalyst** (Command: `/requirements`)
   - Organizing requirements, identifying unknowns, researching similar features, drafting user stories.
 - **Human Role**: Presenting requirements, defining scope, judging business value.
 - **Key Deliverables**:
@@ -51,7 +51,7 @@ graph TD
 
 **Goal**: Concretize HOW to achieve it and prevent rework.
 
-- **AI Role**: **@Architect** (Skill: `/design`)
+- **AI Role**: **@Architect** (Command: `/design`)
   - Drafting specifications, proposing architecture, defining interfaces.
 - **Human Role**: Design decisions, security risk assessment, specification approval.
 - **Key Deliverables**:
@@ -65,9 +65,9 @@ graph TD
 **Goal**: Create code that works as designed.
 
 - **AI Role**:
-  - **@Developer** (Skill: `/implement`)
+  - **@Developer** (Command: `/implement`)
     - Implementing code, creating unit tests, updating documentation, drafting commit messages.
-  - **@Gardener** (Skill: `/refactor`)
+  - **@Gardener** (Command: `/refactor`)
     - Performing safe refactoring to improve code structure without changing behavior.
 - **Human Role**: Code review, assisting with complex logic, directing AI.
 - **Key Deliverables**:
@@ -80,9 +80,9 @@ graph TD
 **Goal**: Guarantee quality and decide on release.
 
 - **AI Role**:
-  - **@QualityGuard** (Skill: `/test-spec`, `/audit`, `/sanity-test`)
+  - **@QualityGuard** (Command: `/test-spec`, `/audit`, `/sanity-test`)
     - Creating Test Specifications.
-  - **@Debugger** (Skill: `/debug`)
+  - **@Debugger** (Command: `/debug`)
     - Analyzing bugs found during verification and proposing fixes.
     - **Ref**: [Debugging Guidelines](../guidelines/debugging.md)
   - Assisting test case execution, identifying bugs, and proposing fixes.
@@ -98,7 +98,7 @@ graph TD
 
 **Goal**: Deliver value to the user.
 
-- **AI Role**: **@Librarian** (Skill: `/release-new-version`)
+- **AI Role**: **@Librarian** (Command: `/release-new-version`)
   - Generating CHANGELOG, creating release notes, automating tagging.
 - **Human Role**: Final approval, pushing the release button (or approving).
 - **Key Deliverables**:

@@ -1,19 +1,19 @@
 ---
 agent: agent
-description: Generate ANTP v1.4 Agents and Standard Skills based on the workspace context.
+description: Generate ANTP v1.4 Agents and Standard Commands based on the workspace context.
 ---
 
 <system>
 
-# Role: Terraformer Engine (Roles & Skills Edition)
+# Role: Terraformer Engine (Roles & Commands Edition)
 
 You are the **Terraformer Engine**.
-Your goal is to implement the **AI-Native Transformation Protocol (ANTP)** by generating or **updating** both **Agents (Roles)** and **Standard Skills (Prompt Files)**.
+Your goal is to implement the **AI-Native Transformation Protocol (ANTP)** by generating or **updating** both **Agents (Roles)** and **Standard Commands (Prompt Files)**.
 
 ## 🎯 Objective
 
 1.  Generate or Update Agent definitions (`.github/agents/*.agent.md`).
-2.  Generate or Update Standard Skill files (`.github/prompts/*.prompt.md`).
+2.  Generate or Update Standard Command files (`.github/prompts/*.prompt.md`).
 
 </system>
 
@@ -27,8 +27,8 @@ Your goal is to implement the **AI-Native Transformation Protocol (ANTP)** by ge
 2.  **Prerequisite Check**: Verify `AGENTS.md` exists.
 3.  **Knowledge Retrieval**: Fetch latest documentation for agents and prompts.
 4.  **Context Analysis**: Read `AGENTS.md` to understand the project context.
-5.  **Skill Generation**: Generate or update all skill files (`.github/prompts/*.prompt.md`) from templates (Translate to Target Language).
-6.  **Agent Generation**: Generate or update agent files (`.github/agents/*.agent.md`) from templates (Translate to Target Language).
+5.  **Command Installation**: Install or update all command files (`.github/prompts/*.prompt.md`) from the source definitions (Translate to Target Language).
+6.  **Agent Installation**: Install or update agent files (`.github/agents/*.agent.md`) from the source definitions (Translate to Target Language).
 7.  **Validation**: Perform link integrity checks and auto-correction.
 8.  **Final Check**: Review the "Final Check" section at the end of this prompt.
 
@@ -57,9 +57,9 @@ If no language is specified, default to **English**.
 
 - **Primary Language**: The main programming language used.
 
-### 2. Skill Generation (Standard Equipment)
+### 2. Command Installation (Standard Equipment)
 
-Generate or **Update** **ALL** skill files by reading their definitions from `.github/prompts/`.
+Generate or **Update** **ALL** command files by reading their definitions from `.github/prompts/`.
 **IMPORTANT**:
 
 > [!IMPORTANT]  
@@ -70,17 +70,17 @@ Generate or **Update** **ALL** skill files by reading their definitions from `.g
 > 2. **PRESERVE STRUCTURE**: Keep all structure, bullet points, and warnings.
 > 3. **MAINTAIN INTENSITY**: Do not soften "MUST" to "should".
 
-- If the file already exists, **UPDATE** it to match the latest template and `AGENTS.md` context.
-- **Translate the content of the template into the Target Language** (Step 0).
+- If the file already exists, **UPDATE** it to match the latest definition and `AGENTS.md` context.
+- **Translate the content of the source definition into the Target Language** (Step 0).
 - Keep technical terms (e.g., specific commands, variable names) in English if appropriate for the target audience.
 
 **Representative Examples:**
 
-- `.github/prompts/plan.prompt.md` (from `plan.prompt.template.md`)
-- `.github/prompts/test.prompt.md` (from `test.prompt.template.md`)
-- ... (Process all other templates similarly)
+- `.github/prompts/plan.prompt.md`
+- `.github/prompts/test.prompt.md`
+- ... (Process all other definitions similarly)
 
-### 3. Agent Generation
+### 3. Agent Installation
 
 Generate agents using `.github/agents/*.agent.md`.
 
@@ -94,7 +94,7 @@ Generate agents using `.github/agents/*.agent.md`.
 > 2. **PRESERVE STRUCTURE**: Keep all structure, bullet points, and warnings.
 > 3. **MAINTAIN INTENSITY**: Do not soften "MUST" to "should".
 
-- **Translate the content of the template into the Target Language** (Step 0).
+- **Translate the content of the source definition into the Target Language** (Step 0).
 - Do **NOT** specify `tools` in the generated agent file. While best practices may suggest defining them, available tools vary by development environment. Omitting the `tools` field ensures all available tools are accessible.
 
 ### 4. Final Validation

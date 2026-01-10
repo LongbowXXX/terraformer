@@ -28,14 +28,14 @@ Traditional projects rely on implicit knowledge ("Context Debt") that only human
 - **Specification Drift:** AI fixing code "on the fly" without updating docs.
 - **Low Quality:** Inconsistent coding styles and security gaps.
 
-## 🚀 The Solution: ANTP v1.4 (Roles & Skills)
+## 🚀 The Solution: ANTP v1.4 (Roles & Commands)
 
-Terraformer implements the **Roles & Skills Architecture**. It doesn't just give you a generic chatbot; it builds a **specialized AI team** equipped with **standard operating procedures (SOPs)**.
+Terraformer implements the **Roles & Commands Architecture**. It doesn't just give you a generic chatbot; it builds a **specialized AI team** equipped with **standard operating procedures (SOPs)**.
 
 | Component            | Function                         | Implementation                |
 | :------------------- | :------------------------------- | :---------------------------- |
 | **L1: Constitution** | Immutable Rules                  | [`AGENTS.md`](./AGENTS.md)    |
-| **L2: Skills**       | Standardized Procedures (SOPs)   | `.github/prompts/*.prompt.md` |
+| **L2: Commands**     | Standardized Procedures (SOPs)   | `.github/prompts/*.prompt.md` |
 | **L3: Knowledge**    | Explicit Context Map             | [`docs/*`](./docs/)           |
 | **L4: Agents**       | Specialized Roles with Authority | `.github/agents/*.agent.md`   |
 
@@ -96,15 +96,15 @@ _The era of humans typing commands is over! 😜🚀_
     - _Tip: You can specify a language: `/terraformer Japanese`_
 4.  Terraformer will analyze your project and **generate or update**:
     - **Agent Definitions** (e.g., `architect.agent.md`) customized for your tech stack.
-    - **Standard Skills** (`plan.prompt.md`, `refactor.prompt.md`, etc.).
+    - **Standard Commands** (`plan.prompt.md`, `refactor.prompt.md`, etc.).
 5.  Save the outputs to `.github/agents/` and `.github/prompts/`.
-    - _Note: You can re-run `/terraformer` at any time to update your agents and skills if the project context changes._
+    - _Note: You can re-run `/terraformer` at any time to update your agents and commands if the project context changes._
 
-## 👥 The Specialized Agents (Agents & Skills)
+## 👥 The Specialized Agents (Agents & Commands)
 
-Once generated, you can invoke these agents via `@Name`. They come equipped with specialized skills (`#skill`).
+Once generated, you can invoke these agents via `@Name`. They come equipped with specialized commands (`#command`).
 
-| Agent                | Role               | Authority              | Equipped Skill                       |
+| Agent                | Role               | Authority              | Equipped Command                     |
 | :------------------- | :----------------- | :--------------------- | :----------------------------------- |
 | **@Architect**       | **Decision Maker** | ✅ Design & Specs      | `/plan` (Impact Analysis & Planning) |
 | **@BusinessAnalyst** | **Translator**     | ✅ Requirements        | `/requirements` (User Story Gen)     |
@@ -116,10 +116,10 @@ Once generated, you can invoke these agents via `@Name`. They come equipped with
 
 > **The Anti-Generalist Principle:** `@Developer` is strictly prohibited from changing specifications. If a blocker is found, it must escalate to `@Architect`.
 
-### 🧩 Extensibility (Custom Skills)
+### 🧩 Extensibility (Custom Commands)
 
-Terraformer is designed to be **extensible**. You are not limited to the default skills.
-Use **`/create-custom-prompt`** to generate project-specific skills (e.g., `/migration`, `/deploy`, `/api-gen`) tailored to your unique workflow.
+Terraformer is designed to be **extensible**. You are not limited to the default commands.
+Use **`/create-custom-prompt`** to generate project-specific commands (e.g., `/migration`, `/deploy`, `/api-gen`) tailored to your unique workflow.
 
 ### ⚡ Prototype Mode (Speed > Strictness)
 

@@ -18,15 +18,15 @@
 
 | Term             | Definition                                                                                                   |
 | ---------------- | ------------------------------------------------------------------------------------------------------------ |
-| **Agent**        | A specialized persona (e.g., `@Architect`) defined by a system prompt and a set of allowed tools/skills.     |
-| **Skill**        | A specific capability or Standard Operating Procedure (SOP) defined as a prompt file (e.g., `/plan`).        |
+| **Agent**        | A specialized persona (e.g., `@Architect`) defined by a system prompt and a set of allowed tools/commands.   |
+| **Command**      | A specific capability or Standard Operating Procedure (SOP) defined as a prompt file (e.g., `/plan`).        |
 | **Constitution** | The `AGENTS.md` file that defines the high-level rules and context for all agents.                           |
 | **Context Map**  | A structured document (`AGENTS.md`) that maps the project's architecture, rules, and terminology for the AI. |
 
 ## Acronyms
 
-| Acronym | Full Name                    | Description                                                               |
-| ------- | ---------------------------- | ------------------------------------------------------------------------- |
-| **SOP** | Standard Operating Procedure | A step-by-step guide for performing a specific task (encoded as a Skill). |
-| **ADR** | Architecture Decision Record | A document capturing an important architectural decision.                 |
-| **LLM** | Large Language Model         | The underlying AI model (e.g., GPT-5) powering the agents.                |
+| Acronym | Full Name                    | Description                                                                 |
+| ------- | ---------------------------- | --------------------------------------------------------------------------- |
+| **SOP** | Standard Operating Procedure | A step-by-step guide for performing a specific task (encoded as a Command). |
+| **ADR** | Architecture Decision Record | A document capturing an important architectural decision.                   |
+| **LLM** | Large Language Model         | The underlying AI model (e.g., GPT-5) powering the agents.                  |

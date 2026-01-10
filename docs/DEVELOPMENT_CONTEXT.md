@@ -59,7 +59,7 @@ We have defined the **AI-Native Transformation Protocol (ANTP)**, a comprehensiv
 | Layer  | Component        | Description & Strategic Value                                                                                                                                                                                                                      | Tech Stack                    |
 | :----- | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------- |
 | **L1** | **Constitution** | **The Rule of Law.** Defines the project's immutable laws, coding standards, and security policies. It acts as the "Global System Prompt" that applies to every interaction, ensuring consistency across all agents.                               | `AGENTS.md`                   |
-| **L2** | **Skills**       | **Standardized Procedures (SOPs).** A library of reusable prompt patterns for specific tasks (e.g., Planning, Testing, Refactoring). These ensure that routine tasks are executed with high precision and uniform quality, regardless of the user. | `.github/prompts/*.prompt.md` |
+| **L2** | **Commands**     | **Standardized Procedures (SOPs).** A library of reusable prompt patterns for specific tasks (e.g., Planning, Testing, Refactoring). These ensure that routine tasks are executed with high precision and uniform quality, regardless of the user. | `.github/prompts/*.prompt.md` |
 | **L3** | **Knowledge**    | **Explicit Context / The Brain.** A standardized, machine-readable summary of the project. Split into **Universal** (`knowledge/`) and **Project-Specific** (`docs/`).                                                                             | `docs/*`, `knowledge/*`       |
 | **L4** | **Agents**       | **The Workforce.** A team of specialized AI personas. Unlike a general chatbot, these agents have narrow scopes, specific tools, and strict authority boundaries. They prevent the "One AI fits all" problem.                                      | `.github/agents/*.agent.md`   |
 
@@ -140,9 +140,9 @@ We selected this specific implementation path to create a GUI-driven, guided exp
 terraformer/  
 ├── .github/  
 │ ├── prompts/  
-│ │ ├── terraformer.prompt.md # The Meta-Engine. Generates agents & skills.  
+│ │ ├── terraformer.prompt.md # The Meta-Engine. Generates agents & commands.  
 │ │ └── terraform-context.prompt.md # Generates AGENTS.md context map.  
-│ │ └── _.prompt.md # L2: Skill definitions (plan, refactor, test)
+│ │ └── _.prompt.md # L2: Command definitions (plan, refactor, test)
 │ └── agents/_.agent.md # L4: Agent definitions (roles)  
 ├── docs/  
 │ ├── PROJECT_CHARTER.md # The "Constitution" of this project. Detailed definition of ANTP v1.4.  

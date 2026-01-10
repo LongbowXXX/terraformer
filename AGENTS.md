@@ -16,14 +16,14 @@ This file provides context and instructions for AI coding agents working on this
 
 → **Details**: [docs/architecture/overview.md](./docs/architecture/overview.md), [docs/architecture/tech-stack.md](./docs/architecture/tech-stack.md)
 
-| Category      | Technology               | Purpose                 |
-| ------------- | ------------------------ | ----------------------- |
-| Runtime       | VS Code + GitHub Copilot | Execution environment   |
-| Configuration | Markdown + YAML          | Agent/Skill definitions |
+| Category      | Technology               | Purpose                   |
+| ------------- | ------------------------ | ------------------------- |
+| Runtime       | VS Code + GitHub Copilot | Execution environment     |
+| Configuration | Markdown + YAML          | Agent/Command definitions |
 
 ### Core Patterns
 
-- **Four-Layer Stack (ANTP)**: L1 Constitution → L2 Skills → L3 Knowledge → L4 Agents
+- **Four-Layer Stack (ANTP)**: L1 Constitution → L2 Commands → L3 Knowledge → L4 Agents
 - **Anti-Generalist Principle**: `@Developer` has zero spec authority; must escalate
 
 ## 3. Directory Structure
@@ -34,14 +34,14 @@ This file provides context and instructions for AI coding agents working on this
 terraformer/
 ├── .github/
 │   ├── agents/                     # Agent Definitions (Target Project & Source)
-│   └── prompts/                    # Engine & Skills (Target Project & Source)
+│   └── prompts/                    # Engine & Commands (Target Project & Source)
 ├── docs/                           # Project-specific docs (architecture, features, specs)
 ├── knowledge/                      # Universal guidelines & templates
 └── AGENTS.md                       # This file (L1: Constitution & L3: Knowledge Hub)
 ```
 
 > **Note on Directory Structure**:
-> In this source repository, `.github/agents/` contains the default agent definitions and `.github/prompts/` contains all available skills.
+> In this source repository, `.github/agents/` contains the default agent definitions and `.github/prompts/` contains all available commands.
 > When Terraformer is installed in a **Target Project**, these definitions are copied or referenced.
 
 ## 4. Key Concepts (Ubiquitous Language)
@@ -61,7 +61,7 @@ This section defines the core terminology used across the project. For the full 
 
 | Command              | Purpose                          |
 | -------------------- | -------------------------------- |
-| `/terraformer`       | Generate agents and skills       |
+| `/terraformer`       | Generate agents and commands     |
 | `/terraform-context` | Generate `AGENTS.md`             |
 | `@Architect`         | Design authority                 |
 | `@Developer`         | Implementation (no spec changes) |
@@ -79,9 +79,10 @@ The context provided in this file (`AGENTS.md`) is a **summary index**. It does 
 1.  **Search**: Use your available tools to perform **keyword/regex searches** or **semantic searches** to find specific documentation in `docs/` or `knowledge/` relevant to the user's request.
     - _Example_: If the user asks about "Testing", search for and read documents related to testing instructions.
     - _Example_: If the user asks for a "Review", search for and read review guidelines.
-2.  **Follow Links**: Since `AGENTS.md` serves as a summary index and provides links to important files and folders, you MUST follow these links to obtain detailed information.
-3.  **Read**: Load the content of these detailed documents into your context.
-4.  **Cross-Reference**: Do NOT rely on assumptions. Always verify against the official documentation found.
+2.  **Command Installation:** Installs standard commands (Plan, Refactor, Test) from the **Source Definitions** (`.github/prompts/`) into the target project.
+3.  **Dynamic Injection:** When generating Agent definitions (`.agent.md`), the engine injects instructions such as _"When performing this task, you MUST follow the procedure defined in `#command-name`."_
+4.  **Read**: Load the content of these detailed documents into your context.
+5.  **Cross-Reference**: Do NOT rely on assumptions. Always verify against the official documentation found.
 
 ### Must Follow
 
@@ -93,9 +94,9 @@ The context provided in this file (`AGENTS.md`) is a **summary index**. It does 
 - `@Developer` making specification changes
 - Generic AI interactions without role assignment
 
-### Agent/Skill Maintenance
+### Agent/Command Maintenance
 
-- When adding or updating Agents or Skills, please ensure to check the latest specifications at the URLs below.
+- When adding or updating Agents or Commands, please ensure to check the latest specifications at the URLs below.
   - https://code.visualstudio.com/docs/copilot/customization/prompt-files
   - https://code.visualstudio.com/docs/copilot/customization/custom-agents
 
@@ -131,7 +132,7 @@ Manual verification via test projects; automated CI planned.
 
 ### Agents (The Specialized Team)
 
-| Agent              | Authority      | Constraint                         | Skills                                 |
+| Agent              | Authority      | Constraint                         | Commands                               |
 | ------------------ | -------------- | ---------------------------------- | -------------------------------------- |
 | `@Architect`       | Design & Specs | —                                  | `/plan`, `/design`                     |
 | `@BusinessAnalyst` | Requirements   | No code                            | `/requirements`                        |
@@ -141,9 +142,9 @@ Manual verification via test projects; automated CI planned.
 | `@Debugger`        | Bug Analysis   | Must escalate spec bugs            | `/debug`                               |
 | `@Developer`       | **None**       | Must escalate blockers             | `/test`, `/implement`                  |
 
-### Skills
+### Commands
 
-| Skill                    | Purpose                             |
+| Command                  | Purpose                             |
 | ------------------------ | ----------------------------------- |
 | `/requirements`          | PRD & User Story generation         |
 | `/design`                | System design & diagrams            |
@@ -155,7 +156,7 @@ Manual verification via test projects; automated CI planned.
 | `/debug`                 | Root cause analysis & fix           |
 | `/doc-sync`              | Documentation sync                  |
 | `/check-doc-consistency` | Verify doc consistency              |
-| `/create-custom-prompt`  | Create custom skill prompt          |
+| `/create-custom-prompt`  | Create custom command prompt        |
 | `/create-custom-agent`   | Create custom agent (.agent.md)     |
 | `/vscode-tasks`          | Generate .vscode/tasks.json         |
 | `/vscode-settings`       | Generate .vscode/settings.json      |
