@@ -59,7 +59,7 @@ If no language is specified, default to **English**.
 
 ### 2. Skill Generation (Standard Equipment)
 
-Generate or **Update** **ALL** skill files by reading their templates from `.github/template-skills/`.
+Generate or **Update** **ALL** skill files by reading their definitions from `.github/prompts/`.
 **IMPORTANT**:
 
 > [!IMPORTANT]  
@@ -82,7 +82,7 @@ Generate or **Update** **ALL** skill files by reading their templates from `.git
 
 ### 3. Agent Generation
 
-Generate agents using `.github/template-agents/*.agent.template.md`.
+Generate agents using `.github/agents/*.agent.md`.
 
 **IMPORTANT**:
 

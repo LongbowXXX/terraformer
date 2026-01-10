@@ -40,6 +40,7 @@ First, use the following tools to grasp the overall picture of the project:
 3.  **Check Dependencies**
 
     - Identify frameworks and libraries from configuration files or import statements in source code.
+
     - Look for traces of integration with external services (API, database, etc.).
 
 4.  **Check Existing Documentation**
@@ -334,8 +335,8 @@ Verify that the generated documentation matches the implementation:
 
 4.  **Check Agents and Skills**
 
-    - Use `list_dir` to check `.github/template-skills/`, `.github/template-agents/` and `.github/prompts/`.
-    - Verify that all Agent and Skill templates are mentioned in `AGENTS.md`.
+    - Use `list_dir` to check `.github/prompts/` and `.github/agents/`.
+    - Verify that all Agent and Skill definitions are mentioned in `AGENTS.md`.
     - Verify that they are also reflected in other relevant documentation (e.g. `docs/architecture/directory-structure.md`, `docs/architecture/tech-stack.md`).
 
 ### Step 4: Maintenance Guidelines Proposal
