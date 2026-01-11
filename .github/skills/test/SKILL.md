@@ -36,4 +36,4 @@ Implement test cases for EACH scenario defined in the Test Spec.
 ## 📤 Output Format
 
 Generate executable test code (e.g., `*.test.ts`, `test_*.py`).
-Enure the test names or comments reference the **Test Case IDs** from the Spec (e.g., `// Covers T-001`).
+Ensure the test names or comments reference the **Test Case IDs** from the Spec (e.g., `// Covers T-001`).
