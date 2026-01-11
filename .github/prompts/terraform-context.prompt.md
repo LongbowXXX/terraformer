@@ -31,7 +31,7 @@ The output follows the [AGENTS.md](https://agents.md/) format - a simple, open f
 5.  **Documentation Generation**: Generate initial docs in `docs/` in the **Target Language**.
 6.  **Knowledge Base Translation**: Translate `knowledge/` files if the Target Language is not English.
 7.  **AGENTS.md Generation**: Generate the `AGENTS.md` file following the format in the **Target Language**.
-8.  **Agent, Command & Skill Translation**: Translate agents, commands, and skills (if Target Language is not English).
+8.  **Agent, Command, and Skill Translation**: Translate agents, commands, and skills (if Target Language is not English).
 9.  **Final Check**: Review the "Final Check" section.
 
 ## 🛠️ Generation Logic
