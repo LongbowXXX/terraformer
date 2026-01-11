@@ -31,7 +31,7 @@ The output follows the [AGENTS.md](https://agents.md/) format - a simple, open f
 5.  **Documentation Generation**: Generate initial docs in `docs/` in the **Target Language**.
 6.  **Knowledge Base Translation**: Translate `knowledge/` files if the Target Language is not English.
 7.  **AGENTS.md Generation**: Generate the `AGENTS.md` file following the format in the **Target Language**.
-8.  **Agent & Command Translation**: Translate agents and commands (if Target Language is not English).
+8.  **Agent, Command & Skill Translation**: Translate agents, commands, and skills (if Target Language is not English).
 9.  **Final Check**: Review the "Final Check" section.
 
 ## 🛠️ Generation Logic
@@ -111,7 +111,7 @@ If the **Target Language** is NOT English:
 
 _Note: Create these files with initial content based on your analysis. They will be refined by the @Librarian later._
 
-### Step 6: Agent & Command Translation
+### Step 6: Agent, Command & Skill Translation
 
 If the **Target Language** is NOT English:
 
@@ -125,7 +125,7 @@ If the **Target Language** is NOT English:
 > 2. **PRESERVE STRUCTURE**: Keep all structure, bullet points, and warnings.
 > 3. **MAINTAIN INTENSITY**: Do not soften "MUST" to "should".
 
-1.  **Read** all files in `.github/agents/` and `.github/prompts/`.
+1.  **Read** all files in `.github/agents/`, `.github/prompts/`, and `.github/skills/`.
 2.  **Translate** the content of each file into the **Target Language**.
 3.  **Overwrite** the files in their respective directories.
     - _Note_: Do NOT specify `tools` in the generated agent file. Omitting the `tools` field ensures all available tools are accessible.
