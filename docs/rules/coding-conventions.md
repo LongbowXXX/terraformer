@@ -21,7 +21,7 @@
 ### File Names
 
 - **Prompts (Commands)**: `kebab-case.prompt.md` (e.g., `terraform-context.prompt.md`)
-- **Agents**: `PascalCase.agent.md` (e.g., `Architect.agent.md`) - _Note: The file extension is important for VS Code recognition._
+- **Agents**: `snake_case.agent.md` (e.g., `architect.agent.md`, `business_analyst.agent.md`) - _Note: The file extension is important for VS Code recognition._
 - **Documentation**: `kebab-case.md` (e.g., `coding-conventions.md`)
 
 ### Workflow Names
