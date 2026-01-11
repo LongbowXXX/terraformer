@@ -34,7 +34,8 @@ This file provides context and instructions for AI coding agents working on this
 terraformer/
 ├── .github/
 │   ├── agents/                     # Agent Definitions (Target Project & Source)
-│   └── prompts/                    # Engine & Commands (Target Project & Source)
+│   ├── prompts/                    # Command Entry Points (Target Project & Source)
+│   └── skills/                     # Skill Implementations (Detailed Command Logic)
 ├── docs/                           # Project-specific docs (architecture, features, specs)
 ├── knowledge/                      # Universal guidelines & templates
 └── AGENTS.md                       # This file (L1: Constitution & L3: Knowledge Hub)

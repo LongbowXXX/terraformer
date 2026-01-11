@@ -21,7 +21,7 @@ sequenceDiagram
     participant Engine as Terraformer Engine
 
     User->>Copilot: /terraform-context
-    Copilot->>Engine: specifices .github/prompts/terraform-context.prompt.md
+    Copilot->>Engine: specifies .github/prompts/terraform-context.prompt.md
     Engine->>Engine: Analyze file structure
     Engine->>Engine: Analyze dependencies
     Engine->>Copilot: Generate AGENTS.md, Translate Agents/Commands

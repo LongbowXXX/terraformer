@@ -9,9 +9,10 @@ Terraformer uses a specific directory structure to organize its components. Sinc
 ```
 terraformer/
 ├── .agent/                 # Antigravity specific definitions (Workflows, etc.)
-├── .github/                # The Core Engine (Prompts, Agents)
+├── .github/                # The Core Engine (Prompts, Agents, Skills)
 │   ├── agents/             # Agent Definitions (L4)
-│   └── prompts/            # Command Definitions (L2)
+│   ├── prompts/            # Command Definitions (L2 - Entry Points)
+│   └── skills/             # Skill Definitions (L2 - Implementation Details)
 ├── docs/                   # Project Documentation (L3) - Architecture, Specs, Context
 ├── knowledge/              # Universal Guidelines (not project-specific)
 ├── AGENTS.md               # The Constitution & Context Map Entry Point (L1)
@@ -22,10 +23,19 @@ terraformer/
 
 ### `/.github/prompts/`
 
-- **Role**: Contains the "Commands" (SOPs) available to agents.
+- **Role**: Contains the "Commands" (SOPs) available to agents. These are lightweight entry points that delegate to Skills.
 - **In Source Repo**: Contains all command definitions including engine-core prompts.
 - **In Target Project**: Populated with all generated commands (`plan`, `debug`, etc.).
-- **Dependencies**: These files are referenced by Copilot Custom Prompts (commands).
+- **Dependencies**: These files reference corresponding Skills in `/.github/skills/`.
+
+### `/.github/skills/`
+
+- **Role**: Contains the detailed implementation (`SKILL.md`) files for each Command. Skills encapsulate the full logic, role requirements, and step-by-step instructions.
+- **Structure**: Each skill has its own directory (e.g., `.github/skills/plan/SKILL.md`).
+- **Key Features**:
+  - **Role-Based Access Control**: Skills can define `<stopping_rules>` to restrict execution to specific agents.
+  - **Detailed Instructions**: Contains the full prompt engineering logic that would be too large for the entry-point prompt files.
+- **Dependencies**: Referenced by the corresponding prompt files in `/.github/prompts/`.
 
 ### `/docs/`
 
@@ -54,10 +64,11 @@ graph TD
     Root --> Docs[docs]
 
     Github --> Prompts[prompts]
+    Github --> Skills[skills]
 
-
-    Prompts -->|Reads| Docs
-    Prompts -->|Reads| Knowledge
+    Prompts -->|Delegates to| Skills
+    Skills -->|Reads| Docs
+    Skills -->|Reads| Knowledge
 ```
 
 ## Layer Structure
