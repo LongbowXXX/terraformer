@@ -111,7 +111,7 @@ If the **Target Language** is NOT English:
 
 _Note: Create these files with initial content based on your analysis. They will be refined by the @Librarian later._
 
-### Step 6: Agent, Command & Skill Translation
+### Step 6: Agent, Command, and Skill Translation
 
 If the **Target Language** is NOT English:
 
