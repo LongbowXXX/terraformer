@@ -91,3 +91,68 @@ Reverse-engineering specifications from existing code when documentation is miss
 2.  **Agent** analyzes the source code to understand logic and behavior.
 3.  **Agent** generates a `requirements.md` and `design.md` file in `docs/specs/[FeatureName]/`.
 4.  **User** verifies the generated specs match the actual behavior.
+
+## Flow 6: Documentation Maintenance
+
+### Overview
+
+Ensuring documentation stays in sync with the codebase.
+
+### Commands
+
+- **`/doc-sync`**: Updates the core architecture documentation (this file, `overview.md`, etc.).
+- **`/check-doc-consistency`**: Verifies links and content consistency across `docs/` and `src/`.
+
+### Processing Flow
+
+1.  **User** runs `/doc-sync`.
+2.  **Agent** analyzes the current project structure and agent configurations.
+3.  **Agent** updates/creates files in `docs/architecture/` and `docs/rules/`.
+4.  **User** reviews the changes and commits them.
+
+## Flow 7: Quality Assurance
+
+### Overview
+
+Enforcing quality standards and ensuring no regressions.
+
+### Commands
+
+- **`/audit`**: Performs a comprehensive code review and security audit.
+- **`/sanity-test`**: Generates a checklist to verify the system's health.
+- **`/test-spec`**: Generates test cases from specification documents.
+
+### Processing Flow
+
+1.  **User** runs `/audit` on a file or PR.
+2.  **@QualityGuard** reviews the code against `docs/rules/coding-conventions.md`.
+3.  **@QualityGuard** provides a list of issues and improvement suggestions.
+
+## Flow 8: Maintenance & Refactoring
+
+### Overview
+
+Safe refactoring and debugging of the system.
+
+### Commands
+
+- **`/refactor`**: Refactors code while maintaining behavior (requires existing tests).
+- **`/debug`**: Analyzes errors and proposes fixes using "Root Cause Analysis".
+
+## Flow 9: Extensibility
+
+### Overview
+
+Adding custom capabilities to the AI team.
+
+### Commands
+
+- **`/create-custom-prompt`**: Generates a new command tailored to project-specific needs.
+- **`/create-custom-agent`**: Creates a new specialized agent role.
+
+### Processing Flow
+
+1.  **User** runs `/create-custom-prompt`.
+2.  **Agent** asks for the goal and steps of the new command.
+3.  **Agent** generates `.github/prompts/my-command.prompt.md`.
+4.  **User** can now use `/my-command`.
