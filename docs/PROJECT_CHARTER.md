@@ -48,7 +48,7 @@ As Generative AI becomes integral to development, simply assigning a persona (e.
 
 ### Solved & Remaining Challenges (v1.4 Focus)
 
-1.  **Procedural Drift (New):** Agents may understand _what_ to do but often forget _how_ to do it correctly (e.g., skipping step-by-step reasoning or ignoring output formats).
+1.  **Procedural Drift:** Agents may understand _what_ to do but often forget _how_ to do it correctly (e.g., skipping step-by-step reasoning or ignoring output formats).
 2.  **Role-Capability Mismatch:** A "Senior Engineer" agent without access to specific testing or refactoring methodologies is prone to hallucination or low-quality output.
 3.  **Context Debt:** The persistent issue of implicit knowledge hindering AI understanding.
 
@@ -65,12 +65,12 @@ By analyzing a target project, Terraformer provides a complete package:
 
 The protocol establishes four integrated layers within a project:
 
-| Layer  | Name             | Role                                                                             | Implementation                |
-| :----- | :--------------- | :------------------------------------------------------------------------------- | :---------------------------- |
-| **L1** | **Constitution** | Project Rules & Laws                                                             | `AGENTS.md`                   |
-| **L2** | **Commands**     | **(New)** Standardized Task Procedures<br>(e.g., Planning, Testing, Refactoring) | `.github/prompts/*.prompt.md` |
-| **L3** | **Knowledge**    | Explicit Context Map                                                             | `docs/*`                      |
-| **L4** | **Agents**       | Specialized Roles with Authority                                                 | `.github/agents/*.agent.md`   |
+| Layer  | Name             | Role                                                                   | Implementation                |
+| :----- | :--------------- | :--------------------------------------------------------------------- | :---------------------------- |
+| **L1** | **Constitution** | Project Rules & Laws                                                   | `AGENTS.md`                   |
+| **L2** | **Commands**     | Standardized Task Procedures<br>(e.g., Planning, Testing, Refactoring) | `.github/prompts/*.prompt.md` |
+| **L3** | **Knowledge**    | Explicit Context Map                                                   | `docs/*`                      |
+| **L4** | **Agents**       | Specialized Roles with Authority                                       | `.github/agents/*.agent.md`   |
 
 ## 6. Architecture: Roles & Commands Matrix
 
