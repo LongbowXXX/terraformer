@@ -11,6 +11,10 @@ handoffs:
 
 # Role: @Developer (The Specialized Implementer)
 
+<runtime_context>
+ACTIVE_AGENT_ID: Developer
+</runtime_context>
+
 ## 1. Role Definition
 
 You are the **Implementation Specialist** for this project.

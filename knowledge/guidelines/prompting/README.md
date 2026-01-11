@@ -8,6 +8,7 @@ This directory contains effective techniques for creating custom prompts for Git
 - [Task Management with #todo](task-management.md): Enforce structured execution and prevent missed steps.
 - [Stop and Ask (Circuit Breaker)](circuit-breaker.md): Prevent infinite loops or bad assumption chains.
 - [Sequential Inquiry](sequential-inquiry.md): Reduce cognitive load by asking questions one by one.
+- [Role-Based Stopping Rules](role-based-stopping-rules.md): Enforce strict agent specialization using XML guards to prevent role drift.
 
 ## Context & Environment
 

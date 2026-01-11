@@ -22,8 +22,9 @@ The system is built upon the **Roles & Commands Architecture** (ANTP v1.4), comp
 ### L2: Commands (Standard Operating Procedures)
 
 - **Role**: Provides agents with specific, executable capabilities.
-- **Key Artifacts**: `.github/prompts/*.prompt.md`
+- **Key Artifacts**: `.github/prompts/*.prompt.md` (entry points), `.github/skills/*/SKILL.md` (implementations)
 - **Responsibility**: Enabling agents to perform complex tasks like "Refactoring", "Planning", or "Auditing" using standardized, best-practice workflows.
+- **Structure**: Prompts serve as lightweight entry points that delegate to Skills, which contain the full logic and role-based access control.
 
 ### L3: Knowledge (Explicit Context Map)
 

@@ -34,7 +34,8 @@ This file provides context and instructions for AI coding agents working on this
 terraformer/
 ├── .github/
 │   ├── agents/                     # Agent Definitions (Target Project & Source)
-│   └── prompts/                    # Engine & Commands (Target Project & Source)
+│   ├── prompts/                    # Command Entry Points (Target Project & Source)
+│   └── skills/                     # Skill Implementations (Detailed Command Logic)
 ├── docs/                           # Project-specific docs (architecture, features, specs)
 ├── knowledge/                      # Universal guidelines & templates
 └── AGENTS.md                       # This file (L1: Constitution & L3: Knowledge Hub)
@@ -91,6 +92,27 @@ The context provided in this file (`AGENTS.md`) is a **summary index**. It does 
 
 - `@Developer` making specification changes
 - Generic AI interactions without role assignment
+
+### Role Enforcement & Access Control
+
+- **Strict Role Gating**: When a skill file (`.github/skills/*/SKILL.md`) contains `<stopping_rules>`, agents MUST check if their `ACTIVE_AGENT_ID` matches the `<required_agent>`. If they do not match, the agent MUST immediately ABORT all processing and return only the `<refusal_message>`. Any attempt to "read ahead" or "judge the content first" is a SEVERE VIOLATION of the Specialization Principle.
+
+### Escalation Path for Role Mismatch
+
+When an agent encounters a role mismatch due to `<stopping_rules>`, the agent MUST:
+
+1.  **Stop**: Do not process any further instructions from the skill file.
+2.  **Inform**: Output the `<refusal_message>` defined in the skill file.
+3.  **Guide**: Advise the user on which role (`@Agent`) is required to execute the task.
+    - _Example_: "This task requires the `@Architect` role. Please switch to Architect mode and retry."
+
+### Role Declaration Protocol
+
+At the start of any task involving a skill file, agents SHOULD explicitly declare their role to ensure clarity and prevent role drift:
+
+1.  **Declare**: State the current `ACTIVE_AGENT_ID` (e.g., "I am operating as `@Debugger`.").
+2.  **Verify**: Confirm that the task falls within the agent's defined responsibilities.
+3.  **Proceed or Escalate**: If the task is within scope, proceed. Otherwise, escalate or refuse as per the Escalation Path.
 
 ### Agent/Command Maintenance
 
@@ -186,15 +208,16 @@ Manual verification via test projects; automated CI planned.
 
 → **Details**: [knowledge/](./knowledge/)
 
-| Topic                        | Link                                                                                                                       |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| PR Creation Guidelines       | [knowledge/guidelines/pr-creation-guidelines.md](./knowledge/guidelines/pr-creation-guidelines.md)                         |
-| Debugging Guidelines         | [knowledge/guidelines/debugging.md](./knowledge/guidelines/debugging.md)                                                   |
-| Prompting Techniques         | [knowledge/guidelines/prompting/README.md](./knowledge/guidelines/prompting/README.md)                                     |
-| Software Review Perspectives | [knowledge/guidelines/software-review.md](./knowledge/guidelines/software-review.md)                                       |
-| XML Structured Prompting     | [knowledge/guidelines/prompting/xml-structured-prompting.md](./knowledge/guidelines/prompting/xml-structured-prompting.md) |
-| Specification Guidelines     | [knowledge/guidelines/specification-guidelines.md](./knowledge/guidelines/specification-guidelines.md)                     |
-| Workflow (AI Collaboration)  | [knowledge/workflows/workflow.md](./knowledge/workflows/workflow.md)                                                       |
+| Topic                        | Link                                                                                                                         |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| PR Creation Guidelines       | [knowledge/guidelines/pr-creation-guidelines.md](./knowledge/guidelines/pr-creation-guidelines.md)                           |
+| Debugging Guidelines         | [knowledge/guidelines/debugging.md](./knowledge/guidelines/debugging.md)                                                     |
+| Prompting Techniques         | [knowledge/guidelines/prompting/README.md](./knowledge/guidelines/prompting/README.md)                                       |
+| Software Review Perspectives | [knowledge/guidelines/software-review.md](./knowledge/guidelines/software-review.md)                                         |
+| XML Structured Prompting     | [knowledge/guidelines/prompting/xml-structured-prompting.md](./knowledge/guidelines/prompting/xml-structured-prompting.md)   |
+| Specification Guidelines     | [knowledge/guidelines/specification-guidelines.md](./knowledge/guidelines/specification-guidelines.md)                       |
+| Role-Based Stopping Rules    | [knowledge/guidelines/prompting/role-based-stopping-rules.md](./knowledge/guidelines/prompting/role-based-stopping-rules.md) |
+| Workflow (AI Collaboration)  | [knowledge/workflows/workflow.md](./knowledge/workflows/workflow.md)                                                         |
 
 ---
 
