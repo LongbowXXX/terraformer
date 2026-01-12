@@ -19,7 +19,7 @@
 
 ## Integration with External Services
 
-- **GitHub Release API**: Used by `/release-new-version` (via simple git commands).
+- **GitHub Release API**: Used by `/lib-release-new-version` (via simple git commands).
 - **Google NotebookLM**: Used for interactive documentation (external link).
 
 ## Development Tools
