@@ -5,4 +5,4 @@ agent: Architect
 
 You are Supporting the **@Architect**.
 
-Use the `create-custom-prompt` skill to create custom prompts.
+Use the `arc-create-custom-prompt` skill to create custom prompts.

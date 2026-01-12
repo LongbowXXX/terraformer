@@ -25,13 +25,13 @@ terraformer/
 
 - **Role**: Contains the "Commands" (SOPs) available to agents. These are lightweight entry points that delegate to Skills.
 - **In Source Repo**: Contains all command definitions including engine-core prompts.
-- **In Target Project**: Populated with all generated commands (`plan`, `debug`, etc.).
+- **In Target Project**: Populated with all generated commands (`arc-plan`, `dbg-debug`, etc.).
 - **Dependencies**: These files reference corresponding Skills in `/.github/skills/`.
 
 ### `/.github/skills/`
 
 - **Role**: Contains the detailed implementation (`SKILL.md`) files for each Command. Skills encapsulate the full logic, role requirements, and step-by-step instructions.
-- **Structure**: Each skill has its own directory (e.g., `.github/skills/plan/SKILL.md`).
+- **Structure**: Each skill has its own directory (e.g., `.github/skills/arc-implementation-planning/SKILL.md`).
 - **Key Features**:
   - **Role-Based Access Control**: Skills can define `<stopping_rules>` to restrict execution to specific agents.
   - **Detailed Instructions**: Contains the full prompt engineering logic that would be too large for the entry-point prompt files.

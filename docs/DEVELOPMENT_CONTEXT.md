@@ -136,7 +136,7 @@ terraformer/
 ├── .github/
 │ ├── prompts/
 │ │ ├── terraform-context.prompt.md # The Meta-Engine. Generates AGENTS.md, docs, agents, and commands.
-│ │ └── _.prompt.md # L2: Command definitions (plan, refactor, test)
+│ │ └── _.prompt.md # L2: Command definitions (arc-plan, gar-refactor, dev-test)
 │ └── agents/_.agent.md # L4: Agent definitions (roles)
 ├── docs/
 │ ├── PROJECT_CHARTER.md # The "Constitution" of this project. Detailed definition of ANTP v1.4.

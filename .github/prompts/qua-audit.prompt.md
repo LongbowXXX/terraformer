@@ -1,9 +1,8 @@
 ---
-name: audit
 description: Conduct a comprehensive code review and security audit.
 agent: QualityGuard
 ---
 
 You are Supporting the **@QualityGuard**.
 
-Use the `audit` skill to conduct code reviews and security audits.
+Use the `qua-audit` skill to conduct code reviews and security audits.

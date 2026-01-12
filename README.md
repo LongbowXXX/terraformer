@@ -104,22 +104,22 @@ Terraformer is now "All-in-One". The **`/terraform-context`** command (Step 2) a
 
 Once generated, you can invoke these agents via `@Name`. They come equipped with specialized commands (`#command`).
 
-| Agent                | Role               | Authority              | Equipped Command                     |
-| :------------------- | :----------------- | :--------------------- | :----------------------------------- |
-| **@Architect**       | **Decision Maker** | ✅ Design & Specs      | `/plan` (Impact Analysis & Planning) |
-| **@BusinessAnalyst** | **Translator**     | ✅ Requirements        | `/requirements` (User Story Gen)     |
-| **@QualityGuard**    | **Enforcer**       | ✅ Merge Approval      | `/audit` (Code Review Checklist)     |
-| **@Librarian**       | **Keeper**         | ✅ Documentation       | `/doc-sync` (Doc Consistency Check)  |
-| **@Gardener**        | **Maintainer**     | ✅ Refactoring         | `/refactor` (Safe Refactoring)       |
-| **@Debugger**        | **Bug Hunter**     | ✅ Bug Analysis        | `/debug` (Root Cause Analysis)       |
-| **@Developer**       | **Implementer**    | ❌ **No Spec Changes** | `/test` (TDD & Verification)         |
+| Agent                | Role               | Authority              | Equipped Command                         |
+| :------------------- | :----------------- | :--------------------- | :--------------------------------------- |
+| **@Architect**       | **Decision Maker** | ✅ Design & Specs      | `/arc-plan` (Impact Analysis & Planning) |
+| **@BusinessAnalyst** | **Translator**     | ✅ Requirements        | `/bsa-requirements` (User Story Gen)     |
+| **@QualityGuard**    | **Enforcer**       | ✅ Merge Approval      | `/qua-audit` (Code Review Checklist)     |
+| **@Librarian**       | **Keeper**         | ✅ Documentation       | `/lib-doc-sync` (Doc Consistency Check)  |
+| **@Gardener**        | **Maintainer**     | ✅ Refactoring         | `/gar-refactor` (Safe Refactoring)       |
+| **@Debugger**        | **Bug Hunter**     | ✅ Bug Analysis        | `/dbg-debug` (Root Cause Analysis)       |
+| **@Developer**       | **Implementer**    | ❌ **No Spec Changes** | `/dev-test` (TDD & Verification)         |
 
 > **The Anti-Generalist Principle:** `@Developer` is strictly prohibited from changing specifications. If a blocker is found, it must escalate to `@Architect`.
 
 ### 🧩 Extensibility (Custom Commands)
 
 Terraformer is designed to be **extensible**. You are not limited to the default commands.
-Use **`/create-custom-prompt`** to generate project-specific commands (e.g., `/migration`, `/deploy`, `/api-gen`) tailored to your unique workflow.
+Use **`/arc-create-custom-prompt`** to generate project-specific commands (e.g., `/migration`, `/deploy`, `/api-gen`) tailored to your unique workflow.
 
 ### ⚡ Prototype Mode (Speed > Strictness)
 

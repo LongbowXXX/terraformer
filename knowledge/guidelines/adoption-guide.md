@@ -31,7 +31,7 @@ After installation, your project structure will look like this:
 my-project/
 ├── .github/
 │   ├── agents/          # (Generated) Active agents for this project (e.g., architect.agent.md)
-│   ├── prompts/         # (Generated) Commands and SOPs (e.g., plan.prompt.md)
+│   ├── prompts/         # (Generated) Commands and SOPs (e.g., arc-plan.prompt.md)
 │   └── ...              # Templates used by the meta-engine
 ├── knowledge/           # (Static) Universal knowledge from Terraformer
 │   ├── guidelines/      # AI Literacy, Review Guidelines, etc.
