@@ -54,7 +54,7 @@ How a user interacts with the generated agents to build a feature.
 
 - `.github/agents/Architect.agent.md`
 - `.github/agents/Developer.agent.md`
-- `.github/prompts/plan.prompt.md`
+- `.github/prompts/arc-plan.prompt.md`
 
 ### Processing Flow
 

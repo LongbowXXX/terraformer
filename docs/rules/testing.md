@@ -22,13 +22,13 @@ Since Terraformer is a "Prompt Engineering" project, "tests" are primarily manua
 
 ### Regression Testing (for Prompts)
 
-- **Target**: Core commands like `/plan` and `/refactor`.
+- **Target**: Core commands like `/arc-plan` and `/gar-refactor`.
 - **Method**: Re-running standard prompts against a known "Golden" codebase (e.g., the `terraformer` repo itself) and checking if the output structure remains consistent.
 
 ### Sanity Testing (Health Check)
 
 - **Target**: Application-wide health and configuration.
-- **Method**: Use `{ /sanity-test }` to generate a checklist of critical paths and configuration states (e.g., "Is the database connected?", "Are env vars loaded?").
+- **Method**: Use `{ /qua-sanity-test }` to generate a checklist of critical paths and configuration states (e.g., "Is the database connected?", "Are env vars loaded?").
 - **Usage**: Run before major releases or after significant refactoring to ensure the "skeleton" of the app is intact.
 
 ## Test Data Management

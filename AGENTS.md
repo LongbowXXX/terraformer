@@ -127,10 +127,10 @@ All agents MUST output their work as persistent Markdown artifacts in `docs/spec
 
 **Pipeline**:
 
-1.  **Requirements**: `/requirements` -> `docs/specs/[Feature]/requirements.md`
-2.  **Design**: `/design` -> `docs/specs/[Feature]/design.md`
-3.  **Plan**: `/plan` -> `docs/specs/[Feature]/implementation_plan.md`
-4.  **Implementation**: `/implement` -> Code (src/...)
+1.  **Requirements**: `/bsa-requirements` -> `docs/specs/[Feature]/requirements.md`
+2.  **Design**: `/arc-design` -> `docs/specs/[Feature]/design.md`
+3.  **Plan**: `/arc-plan` -> `docs/specs/[Feature]/implementation_plan.md`
+4.  **Implementation**: `/dev-implement` -> Code (src/...)
 
 **Context Hygiene**:
 

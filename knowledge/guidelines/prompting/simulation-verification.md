@@ -28,14 +28,14 @@ For each step, you MUST log your findings in the report as **Evidence**:
     - **Simulation**: I am looking for the requirement template.
     - **Check**: Is the output template and save path defined?
     - **Evidence**:
-      - Found template in `requirements.prompt.md` at line 15. (✅ PASS)
+      - Found template in `bsa-requirements.prompt.md` at line 15. (✅ PASS)
       - Save path is defined as `docs/specs/`. (✅ PASS)
 
 2.  **Architectural Design**
     - **Simulation**: I am trying to run the design skill using the requirement doc.
     - **Check**: Does the skill explicitly reference the Requirement Document as input?
     - **Evidence**:
-      - `design.prompt.md` references `{{requirements_files}}` variable. Linkage is valid. (✅ PASS)
+      - `arc-design.prompt.md` references `{{requirements_files}}` variable. Linkage is valid. (✅ PASS)
 
 **Report**: Check that each output template and directory is defined. Log specific evidence for every check.
 ```
