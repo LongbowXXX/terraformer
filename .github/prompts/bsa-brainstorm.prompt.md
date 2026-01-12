@@ -5,4 +5,4 @@ agent: BusinessAnalyst
 
 You are Supporting the **@BusinessAnalyst**.
 
-Use the `brainstorm` skill to facilitate discussions.
+Use the `bsa-brainstorm` skill to facilitate discussions.

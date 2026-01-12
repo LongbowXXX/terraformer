@@ -152,43 +152,43 @@ Manual verification via test projects; automated CI planned.
 
 ### Agents (The Specialized Team)
 
-| Agent              | Authority      | Constraint                         | Commands                               |
-| ------------------ | -------------- | ---------------------------------- | -------------------------------------- |
-| `@Architect`       | Design & Specs | —                                  | `/plan`, `/design`                     |
-| `@BusinessAnalyst` | Requirements   | No code                            | `/requirements`                        |
-| `@QualityGuard`    | Enforcer       | Review only                        | `/audit`, `/test-spec`, `/sanity-test` |
-| `@Librarian`       | Keeper         | Docs only; no behavior changes     | `/doc-sync`, `/release-new-version`    |
-| `@Gardener`        | Maintainer     | Refactors only; no feature changes | `/refactor`                            |
-| `@Debugger`        | Bug Analysis   | Must escalate spec bugs            | `/debug`                               |
-| `@Developer`       | **None**       | Must escalate blockers             | `/test`, `/implement`                  |
+| Agent              | Authority      | Constraint                         | Commands                                           |
+| ------------------ | -------------- | ---------------------------------- | -------------------------------------------------- |
+| `@Architect`       | Design & Specs | —                                  | `/arc-plan`, `/arc-design`                         |
+| `@BusinessAnalyst` | Requirements   | No code                            | `/bsa-requirements`                                |
+| `@QualityGuard`    | Enforcer       | Review only                        | `/qua-audit`, `/qua-test-spec`, `/qua-sanity-test` |
+| `@Librarian`       | Keeper         | Docs only; no behavior changes     | `/lib-doc-sync`, `/lib-release-new-version`        |
+| `@Gardener`        | Maintainer     | Refactors only; no feature changes | `/gar-refactor`                                    |
+| `@Debugger`        | Bug Analysis   | Must escalate spec bugs            | `/dbg-debug`                                       |
+| `@Developer`       | **None**       | Must escalate blockers             | `/dev-test`, `/dev-implement`                      |
 
 ### Commands
 
-| Command                  | Purpose                             |
-| ------------------------ | ----------------------------------- |
-| `/requirements`          | PRD & User Story generation         |
-| `/design`                | System design & diagrams            |
-| `/plan`                  | Impact analysis & planning          |
-| `/refactor`              | Safe refactoring                    |
-| `/test`                  | TDD-based test generation           |
-| `/implement`             | Implementation from specs           |
-| `/review`                | General code review                 |
-| `/debug`                 | Root cause analysis & fix           |
-| `/doc-sync`              | Documentation sync                  |
-| `/check-doc-consistency` | Verify doc consistency              |
-| `/create-custom-prompt`  | Create custom command prompt        |
-| `/create-custom-agent`   | Create custom agent (.agent.md)     |
-| `/vscode-tasks`          | Generate .vscode/tasks.json         |
-| `/vscode-settings`       | Generate .vscode/settings.json      |
-| `/vscode-extensions`     | Generate .vscode/extensions.json    |
-| `/audit-spec`            | Audit spec documents (Spec Linter)  |
-| `/test-spec`             | Generate Test Specs                 |
-| `/audit`                 | Code Review & Security Audit        |
-| `/brainstorm`            | Brainstorming & Spec consultation   |
-| `/discover-specs`        | Reverse-engineer specs from code    |
-| `/sanity-test`           | Generate sanity test checklist      |
-| `/release-new-version`   | Manual/Automated release management |
-| `/ask-architect`         | Ask Architect for clarification     |
+| Command                      | Purpose                             |
+| ---------------------------- | ----------------------------------- |
+| `/bsa-requirements`          | PRD & User Story generation         |
+| `/arc-design`                | System design & diagrams            |
+| `/arc-plan`                  | Impact analysis & planning          |
+| `/gar-refactor`              | Safe refactoring                    |
+| `/dev-test`                  | TDD-based test generation           |
+| `/dev-implement`             | Implementation from specs           |
+| `/qua-review`                | General code review                 |
+| `/dbg-debug`                 | Root cause analysis & fix           |
+| `/lib-doc-sync`              | Documentation sync                  |
+| `/lib-check-doc-consistency` | Verify doc consistency              |
+| `/arc-create-custom-prompt`  | Create custom command prompt        |
+| `/arc-create-custom-agent`   | Create custom agent (.agent.md)     |
+| `/arc-vscode-tasks`          | Generate .vscode/tasks.json         |
+| `/arc-vscode-settings`       | Generate .vscode/settings.json      |
+| `/arc-vscode-extensions`     | Generate .vscode/extensions.json    |
+| `/qua-audit-spec`            | Audit spec documents (Spec Linter)  |
+| `/qua-test-spec`             | Generate Test Specs                 |
+| `/qua-audit`                 | Code Review & Security Audit        |
+| `/bsa-brainstorm`            | Brainstorming & Spec consultation   |
+| `/arc-discover-specs`        | Reverse-engineer specs from code    |
+| `/qua-sanity-test`           | Generate sanity test checklist      |
+| `/lib-release-new-version`   | Manual/Automated release management |
+| `/dev-ask-architect`         | Ask Architect for clarification     |
 
 ---
 

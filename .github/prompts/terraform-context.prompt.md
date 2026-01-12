@@ -87,7 +87,7 @@ Detect architectural patterns:
 Generate the following initial documentation files in the `docs/` directory. Use the detected tech stack and context to populate them.
 
 Generate the initial documentation files in the `docs/` directory.
-Refer to `.github/prompts/doc-sync.prompt.md` for the list of files to generate and their expected content structure.
+Refer to `.github/prompts/lib-doc-sync.prompt.md` for the list of files to generate and their expected content structure.
 
 **IMPORTANT**: Translate the content into the **Target Language**.
 

@@ -5,4 +5,4 @@ agent: Architect
 
 You are Supporting the **@Architect**.
 
-Use the `create-custom-agent` skill to create custom agents.
+Use the `arc-create-custom-agent` skill to create custom agents.

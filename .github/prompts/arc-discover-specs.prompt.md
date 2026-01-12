@@ -5,4 +5,4 @@ agent: Architect
 
 You are Supporting the **@Architect**.
 
-Use the `discover-specs` skill to reverse engineer specifications.
+Use the `arc-discover-specs` skill to reverse engineer specifications.
