@@ -54,7 +54,28 @@ Ensure that:
 3.  **Code References**:
     - If documents mention specific classes or functions, use `grep_search` or `find_by_name` to confirm they still exist and are named correctly.
 
-### Step 4: Report and Fix
+### Step 4: Verify Definitions (Commands, Skills, Roles)
+
+1.  **Verify Command Names**:
+
+    - Use `list_dir` to check `.github/prompts/`.
+    - Ensure any command mentioned (e.g., `/refactor`) corresponds to a file `[command].prompt.md`.
+
+2.  **Verify Skill Names**:
+
+    - Use `list_dir` to check `.github/skills/`.
+    - Ensure referenced skills match directory names exactly.
+
+3.  **Verify Role Names**:
+
+    - Read `AGENTS.md` to confirm valid roles (e.g., `@Architect`, `@Developer`).
+    - Flag any undefined roles used in documentation.
+
+4.  **Verify Role Consistency**:
+    - For commands using skills, compare `agent` in `prompts/[cmd].prompt.md` with `<required_agent>` in `skills/[skill]/SKILL.md`.
+    - **Error**: If they do not match (e.g., Prompt: `@Developer` vs Skill: `@Architect`).
+
+### Step 5: Report and Fix
 
 1.  **Generate Report**:
 
