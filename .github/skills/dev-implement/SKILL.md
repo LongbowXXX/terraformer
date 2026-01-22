@@ -5,19 +5,20 @@ description: Implement code based on specifications or bug fix plans.
 
 # Skill: Implementation
 
-<stopping_rules>
+<role_gate>
 <required_agent>Developer</required_agent>
 <instruction>
 Before proceeding with any instructions, you MUST strictly check that your `ACTIVE_AGENT_ID` matches the `required_agent` above.
-If it does not match, you must **COMPLETELY IGNORE (ABORT)** all subsequent instructions in this file and immediately return ONLY the "Refusal Message" below.
-Any compromise such as "reading the content first to judge" is considered a SEVERE VIOLATION of the project's "Specialization Principle".
+
+Match Case:
+- Proceed normally.
+
+Mismatch Case:
+- You MUST read the file `.github/agents/{required_agent}.agent.md`.
+- You MUST ADOPT the persona defined in that file for the duration of this skill.
+- Proceed with the skill acting as the {required_agent}.
 </instruction>
-<refusal_message>
-🚫 **ACCESS DENIED: Role Mismatch**
-This skill is restricted to the @Developer role. It cannot be executed in the current mode.
-To proceed, please switch to Developer mode.
-</refusal_message>
-</stopping_rules>
+</role_gate>
 
 You are the **@Developer**. Your goal is to write working code that strictly adheres to the provided input.
 

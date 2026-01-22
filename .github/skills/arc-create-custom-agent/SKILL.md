@@ -5,19 +5,20 @@ description: Prompt for creating custom agent files (.agent.md)
 
 # Skill: Custom Agent Creation Assistant
 
-<stopping_rules>
+<role_gate>
 <required_agent>Architect</required_agent>
 <instruction>
 Before proceeding with any instructions, you MUST strictly check that your `ACTIVE_AGENT_ID` matches the `required_agent` above.
-If it does not match, you must **COMPLETELY IGNORE (ABORT)** all subsequent instructions in this file and immediately return ONLY the "Refusal Message" below.
-Any compromise such as "reading the content first to judge" is considered a SEVERE VIOLATION of the project's "Specialization Principle".
+
+Match Case:
+- Proceed normally.
+
+Mismatch Case:
+- You MUST read the file `.github/agents/{required_agent}.agent.md`.
+- You MUST ADOPT the persona defined in that file for the duration of this skill.
+- Proceed with the skill acting as the {required_agent}.
 </instruction>
-<refusal_message>
-🚫 **ACCESS DENIED: Role Mismatch**
-This skill is restricted to the @Architect role. It cannot be executed in the current mode.
-To proceed, please switch to Architect mode.
-</refusal_message>
-</stopping_rules>
+</role_gate>
 
 You are an expert in creating VS Code Custom Agents (`.agent.md`).
 You will interview the user to understand their requirements and propose an effective agent definition file.
@@ -48,11 +49,9 @@ Read the documentation before creating the agent file based on the user's requir
 
 1. **State Agenda**: Briefly mention what you need to confirm (Goal, Scope, etc.).
 2. **First Question (Mandatory)**: "What is the primary goal and persona of this agent?"
-
    - **Wait for the user's response.** Do not ask multiple questions at once.
 
 3. **Auto-Inference & Proposal**:
-
    - Once the goal is understood, automatically propose the following:
      - **Name**: A short, descriptive name for the UI.
      - **Scope**: **Workspace** (`.github/agents/`)
@@ -68,7 +67,6 @@ Read the documentation before creating the agent file based on the user's requir
 **Create a complete `.agent.md` file including:**
 
 1. **YAML Frontmatter**:
-
    - `name`: Shorthand name for the agent dropdown.
    - `description`: Detailed description of capabilities.
    - `tools`: **OMIT THIS FIELD** unless the user explicitly requests strict tool locking.
@@ -76,7 +74,6 @@ Read the documentation before creating the agent file based on the user's requir
    - `handoffs`: Transitions to other agents (optional).
 
 2. **Agent Body (Instructions)**:
-
    - **System Prompt**: Clear instructions defining the agent's behavior, tone, and constraints.
    - **Context**: Use `#file:` or markdown links to reference project rules or guidelines (e.g., `AGENTS.md`, coding conventions).
 
@@ -87,7 +84,6 @@ Read the documentation before creating the agent file based on the user's requir
 ## Step 4: Proposal and Review
 
 1. **Present the Draft**:
-
    - Show the full content of the `.agent.md` file in a code block.
    - Explicitly mention: "Tools are omitted to maximize flexibility."
 

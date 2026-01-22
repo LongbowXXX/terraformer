@@ -23,23 +23,23 @@ While XML provides strict structural boundaries that LLMs excel at parsing, Mark
 
 ## 3. Common XML Tags Cheatsheet
 
-| Category     | Tag                  | Purpose                                                                |
-| :----------- | :------------------- | :--------------------------------------------------------------------- |
-| **Meta**     | `<system>`           | Defines the absolute rules and behavior of the system.                 |
-|              | `<role>`             | Sets the persona (e.g., "Expert Python Dev").                          |
-| **Data**     | `<context>`          | Background information required for the task.                          |
-|              | `<documents>`        | Reference materials or search results.                                 |
-|              | `<example>`          | Few-shot examples to guide the model.                                  |
-| **Control**  | `<instruction>`      | The core task command.                                                 |
-|              | `<constraints>`      | Negative rules (what _not_ to do).                                     |
-| **Thinking** | `<thinking>`         | A space for the model to "reason" before answering (Chain of Thought). |
-| **Agentic**  | `<workflow>`         | Defines the specific loop or steps for an agent to follow.             |
-|              | `<stopping_rules>`   | Absolute safety boundaries (e.g., "STOP if you start implementing").   |
-|              | `<plan_research>`    | Instructions focused on context gathering and research phases.         |
-|              | `<plan_style_guide>` | Specific formatting rules for the agent's output (e.g., plans).        |
-| **Output**   | `<output>`           | The final answer container.                                            |
-| **Safety**   | `<uncertainty>`      | Highlights ambiguous or uncertain areas in the user request.           |
-|              | `<self_check>`       | A forced introspection step for high-risk operations.                  |
+| Category     | Tag                  | Purpose                                                                    |
+| :----------- | :------------------- | :------------------------------------------------------------------------- |
+| **Meta**     | `<system>`           | Defines the absolute rules and behavior of the system.                     |
+|              | `<role>`             | Sets the persona (e.g., "Expert Python Dev").                              |
+| **Data**     | `<context>`          | Background information required for the task.                              |
+|              | `<documents>`        | Reference materials or search results.                                     |
+|              | `<example>`          | Few-shot examples to guide the model.                                      |
+| **Control**  | `<instruction>`      | The core task command.                                                     |
+|              | `<constraints>`      | Negative rules (what _not_ to do).                                         |
+| **Thinking** | `<thinking>`         | A space for the model to "reason" before answering (Chain of Thought).     |
+| **Agentic**  | `<workflow>`         | Defines the specific loop or steps for an agent to follow.                 |
+|              | `<role_gate>`        | Absolute safety boundaries (e.g., "STOP/ADAPT if you start implementing"). |
+|              | `<plan_research>`    | Instructions focused on context gathering and research phases.             |
+|              | `<plan_style_guide>` | Specific formatting rules for the agent's output (e.g., plans).            |
+| **Output**   | `<output>`           | The final answer container.                                                |
+| **Safety**   | `<uncertainty>`      | Highlights ambiguous or uncertain areas in the user request.               |
+|              | `<self_check>`       | A forced introspection step for high-risk operations.                      |
 
 ## 4. Practical Example: XML + Markdown
 

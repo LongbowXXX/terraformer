@@ -1,4 +1,4 @@
-# Role-Based Stopping Rules
+# Adaptive Role Gating
 
 ## 1. Problem: The "Polite Refusal" Trap
 
@@ -10,9 +10,9 @@ Standard natural language instructions like "Do not execute this if you are not 
 2.  **Politeness**: The model might try to be "helpful" by offering a partial solution or explaining _why_ it can't do it, which consumes tokens and breaks the strict process flow.
 3.  **Hallucination**: Without a rigid anchor, the model might "pretend" to be the required role if the user prompt is persuasive enough.
 
-## 2. Solution: XML-Based Stopping Rules
+## 2. Solution: Adaptive Role Gating
 
-To enforce strict specialization, we use a **Role-Based Stopping Rule** pattern. This relies on three interlocking components:
+To enforce strict specialization, we use an **Adaptive Role Gating** pattern. This relies on three interlocking components:
 
 1.  **Runtime Identity**: The agent carries a verified ID in its prompt.
 2.  **XML Gate**: The skill file begins with a strict XML block that mandates an _immediate abort_ if the IDs don't match.
@@ -28,24 +28,25 @@ Every agent must have a machine-readable identity block injected into its prompt
 </runtime_context>
 ```
 
-### Component B: The Stopping Rule (Skill File)
+### Component B: The Role Gate (Skill File)
 
 At the very top of a skill file (e.g., `.github/skills/implement/SKILL.md`), place this block. It uses XML tags to delineate the logic, which modern models follow more rigorously than prose.
 
 ```xml
-<stopping_rules>
+<role_gate>
   <required_agent>Developer</required_agent>
   <instruction>
     Before proceeding with any instructions, you MUST strictly check that your `ACTIVE_AGENT_ID` matches the `required_agent` above.
-    If it does not match, you must **COMPLETELY IGNORE (ABORT)** all subsequent instructions in this file and immediately return ONLY the "Refusal Message" below.
-    Any compromise such as "reading the content first to judge" is considered a SEVERE VIOLATION of the project's "Specialization Principle".
+
+    Match Case:
+    - Proceed normally.
+
+    Mismatch Case:
+    - You MUST read the file `.github/agents/{required_agent}.agent.md`.
+    - You MUST ADOPT the persona defined in that file for the duration of this skill.
+    - Proceed with the skill acting as the {required_agent}.
   </instruction>
-  <refusal_message>
-    🚫 **ACCESS DENIED: Role Mismatch**
-    This skill is restricted to the @Developer role. It cannot be executed in the current mode.
-    To proceed, please switch to Developer mode.
-  </refusal_message>
-</stopping_rules>
+</role_gate>
 ```
 
 ### Component C: The Global Constitution (`AGENTS.md`)
@@ -59,9 +60,9 @@ To seal the behavior, you must also enforce these rules in the global context fi
 ```markdown
 ### Role Enforcement & Access Control
 
-- **Strict Role Gating**: When a skill file contains `<stopping_rules>`, agents MUST check if their `ACTIVE_AGENT_ID` matches.
-- **Immediate Abort**: If they do not match, the agent MUST immediately ABORT.
-- **Escalation Path**: Stop -> Inform -> Guide.
+- **Adaptive Role Gating**: When a skill contains `<role_gate>`, check `ACTIVE_AGENT_ID` against `required_agent`.
+- **Role Switching**: If mismatch, the agent MUST read the `required_agent`'s definition file and ADOPT that role.
+- **Continuity**: Do not refuse. Switch personas.
 ```
 
 ## 3. Why It Works (The Triad of Enforcement)
@@ -74,9 +75,9 @@ By triangulating these three signals, we create a robust "neuro-symbolic" constr
 
 ## 4. Behavior In Practice: The "Skill Selection" Paradox
 
-To make this stopping rule effective, we **deliberately expose** the 'Implementation Skill (Developer Only)' to the Architect.
+To make this role gate effective, we **deliberately expose** the 'Implementation Skill (Developer Only)' to the Architect.
 
-This exploits the agent's natural tendency to **prioritize available tools (skills) over its internal training data**. If we simply hid the tool, the Architect might try to "wing it" using internal knowledge. By showing the tool, we lure the agent into the controlled environment of the skill file, where the `stopping_rules` can decisively block the action.
+This exploits the agent's natural tendency to **prioritize available tools (skills) over its internal training data**. If we simply hid the tool, the Architect might try to "wing it" using internal knowledge. By showing the tool, we lure the agent into the controlled environment of the skill file, where the `role_gate` can decisively block the action.
 
 **Scenario**:
 
@@ -85,20 +86,20 @@ This exploits the agent's natural tendency to **prioritize available tools (skil
 3. The System loads the **Implementation Skill** (`.github/skills/implement/SKILL.md`) to support this action.
 4. **Crucial Moment**: The `@Architect` agent is now "holding" a skill intended for developers.
 
-Without `stopping_rules`, the `@Architect` might read the skill's instructions ("Write code...") and attempt to follow them, effectively becoming a Developer.
+Without `role_gate`, the `@Architect` might read the skill's instructions ("Write code...") and attempt to follow them, effectively becoming a Developer.
 
-**With `stopping_rules`**:
+**With `role_gate` (Adaptive)**:
 
 1. The `@Architect` reads the top of the file: `<required_agent>Developer</required_agent>`.
 2. It checks its own ID: `ACTIVE_AGENT_ID: Architect`.
-3. **Mismatch Detected**: The agent is forced to stop _despite_ having the "correct" skill for the request.
-4. **Outcome**: "I cannot do this. The Implementation skill is loaded, but my role implies I must not use it. Please switch to @Developer."
+3. **Mismatch Detected**: The agent reads `.github/agents/developer.agent.md` (the `required_agent`).
+4. **Outcome**: The Architect temporarily adopts the **Developer** persona to execute the skill faithfully as intended by the system.
 
-This mechanism turns **Tool Discovery** (which we encourage) into a safety checkpoint, ensuring that **Authorization** (which we strictly limit) is checked.
+This mechanism turns **Role Conflict** into **Authorized Delegation**, ensuring the skill is executed by the correct persona, even if triggered by a different agent.
 
 ## 5. Implementation Checklist
 
 - [ ] **Agent Definition**: Ensure `<runtime_context>` is present.
-- [ ] **Skill Definition**: Place `<stopping_rules>` as the _first_ element in the file.
+- [ ] **Skill Definition**: Place `<role_gate>` as the _first_ element in the file.
 - [ ] **Global Context**: Add strict enforcement clauses to `AGENTS.md`.
 - [ ] **Consistency**: Ensure the `required_agent` value exactly matches the `ACTIVE_AGENT_ID`.
