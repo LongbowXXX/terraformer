@@ -11,12 +11,15 @@ description: Generate sanity test items to verify the basic health of the applic
 Before proceeding with any instructions, you MUST strictly check that your `ACTIVE_AGENT_ID` matches the `required_agent` above.
 
 Match Case:
+
 - Proceed normally.
 
 Mismatch Case:
+
 - You MUST read the file `.github/agents/{required_agent}.agent.md`.
 - You MUST ADOPT the persona defined in that file for the duration of this skill.
 - Proceed with the skill acting as the {required_agent}.
+
 </instruction>
 </role_gate>
 
@@ -44,7 +47,6 @@ Ensure that:
 ### Step 1: Analyze Context
 
 1.  **Read Key Documentation**:
-
     - Read `README.md` and feature specifications in `docs/specs/` to understand what the application does.
     - Look for "Usage" or "Getting Started" sections.
 
@@ -54,7 +56,6 @@ Ensure that:
 ### Step 2: Identify Happy Paths
 
 1.  **List Core Features**:
-
     - Based on the analysis, list the top 3-5 core features.
     - Example: "User Login", "Create Post", "Search Function".
 

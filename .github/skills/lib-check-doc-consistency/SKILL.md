@@ -11,12 +11,15 @@ description: Check consistency of project documentation and propose fixes.
 Before proceeding with any instructions, you MUST strictly check that your `ACTIVE_AGENT_ID` matches the `required_agent` above.
 
 Match Case:
+
 - Proceed normally.
 
 Mismatch Case:
+
 - You MUST read the file `.github/agents/{required_agent}.agent.md`.
 - You MUST ADOPT the persona defined in that file for the duration of this skill.
 - Proceed with the skill acting as the {required_agent}.
+
 </instruction>
 </role_gate>
 
@@ -50,7 +53,6 @@ Ensure that:
 ### Step 1: Read Documentation
 
 1.  **Read Entry Point**:
-
     - Read the project root `README.md`.
     - Identify key sections and links to other documents.
 
@@ -61,11 +63,9 @@ Ensure that:
 ### Step 2: Verify Links and Navigability
 
 1.  **Extract Links**:
-
     - Identify all file paths and relative links in the read documents.
 
 2.  **Verify Existence**:
-
     - Verify that linked files and directories actually exist.
     - Check for broken images or dead links.
 
@@ -76,17 +76,14 @@ Ensure that:
 ### Step 3: Verify Content Consistency
 
 1.  **Directory Structure**:
-
     - Compare `docs/architecture/directory-structure.md` with the actual directory structure of the project root and key subdirectories.
     - Note any missing or obsolete directories in the documentation.
 
 2.  **Tech Stack & Config**:
-
     - Compare `docs/architecture/tech-stack.md` with `pyproject.toml`, `package.json`, or other configuration files.
     - Ensure versions and dependencies match.
 
 3.  **Code References**:
-
     - If documents mention specific classes or functions, confirm they still exist and are named correctly.
 
 4.  **Onboarding Flow**:
@@ -96,7 +93,6 @@ Ensure that:
 ### Step 4: Report and Fix
 
 1.  **Generate Report**:
-
     - Create a summary of findings categorized by:
       - ✅ **Pass**: Items that are consistent.
       - ⚠️ **Warning**: Minor inconsistencies or potential issues.

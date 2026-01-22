@@ -11,12 +11,15 @@ description: Implement Test Code to verify the Spec.
 Before proceeding with any instructions, you MUST strictly check that your `ACTIVE_AGENT_ID` matches the `required_agent` above.
 
 Match Case:
+
 - Proceed normally.
 
 Mismatch Case:
+
 - You MUST read the file `.github/agents/{required_agent}.agent.md`.
 - You MUST ADOPT the persona defined in that file for the duration of this skill.
 - Proceed with the skill acting as the {required_agent}.
+
 </instruction>
 </role_gate>
 
