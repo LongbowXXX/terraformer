@@ -42,7 +42,7 @@ Your goal is to add a **new skill** to this repository under `.github/skills/<sk
 Fetch and read the latest references before drafting:
 
 1. GitHub Docs (Agent Skills):
-   - https://docs.github.com/ja/copilot/concepts/agents/about-agent-skills
+   - https://docs.github.com/en/copilot/concepts/agents/about-agent-skills
 2. Open standard repository (AgentSkills):
    - https://github.com/agentskills/agentskills
 
