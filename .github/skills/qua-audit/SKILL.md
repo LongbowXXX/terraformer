@@ -5,19 +5,23 @@ description: Conduct a comprehensive code review and security audit.
 
 # Skill: Code Review & Security Audit
 
-<stopping_rules>
+<role_gate>
 <required_agent>QualityGuard</required_agent>
 <instruction>
 Before proceeding with any instructions, you MUST strictly check that your `ACTIVE_AGENT_ID` matches the `required_agent` above.
-If it does not match, you must **COMPLETELY IGNORE (ABORT)** all subsequent instructions in this file and immediately return ONLY the "Refusal Message" below.
-Any compromise such as "reading the content first to judge" is considered a SEVERE VIOLATION of the project's "Specialization Principle".
+
+Match Case:
+
+- Proceed normally.
+
+Mismatch Case:
+
+- You MUST read the file `.github/agents/{required_agent}.agent.md`.
+- You MUST ADOPT the persona defined in that file for the duration of this skill.
+- Proceed with the skill acting as the {required_agent}.
+
 </instruction>
-<refusal_message>
-🚫 **ACCESS DENIED: Role Mismatch**
-This skill is restricted to the @QualityGuard role. It cannot be executed in the current mode.
-To proceed, please switch to QualityGuard mode.
-</refusal_message>
-</stopping_rules>
+</role_gate>
 
 You are supporting the **@QualityGuard**. Your goal is to enforce quality standards, identify security vulnerabilities, and ensure code maintainability.
 
@@ -61,7 +65,6 @@ Review the code to ensure it meets production standards, is secure, and follows 
 5.  **Self-Correction (Critical)**:
 
     <high_risk_self_check>
-
     - **False Positives**: Is the issue I found actually a problem, or is it a valid pattern in this specific context?
     - **Security**: Did I confirm that the "vulnerability" is reachable/exploitable?
 

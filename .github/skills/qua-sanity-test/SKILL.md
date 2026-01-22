@@ -5,19 +5,23 @@ description: Generate sanity test items to verify the basic health of the applic
 
 # Skill: Sanity Test Generation
 
-<stopping_rules>
+<role_gate>
 <required_agent>QualityGuard</required_agent>
 <instruction>
 Before proceeding with any instructions, you MUST strictly check that your `ACTIVE_AGENT_ID` matches the `required_agent` above.
-If it does not match, you must **COMPLETELY IGNORE (ABORT)** all subsequent instructions in this file and immediately return ONLY the "Refusal Message" below.
-Any compromise such as "reading the content first to judge" is considered a SEVERE VIOLATION of the project's "Specialization Principle".
+
+Match Case:
+
+- Proceed normally.
+
+Mismatch Case:
+
+- You MUST read the file `.github/agents/{required_agent}.agent.md`.
+- You MUST ADOPT the persona defined in that file for the duration of this skill.
+- Proceed with the skill acting as the {required_agent}.
+
 </instruction>
-<refusal_message>
-🚫 **ACCESS DENIED: Role Mismatch**
-This skill is restricted to the @QualityGuard role. It cannot be executed in the current mode.
-To proceed, please switch to QualityGuard mode.
-</refusal_message>
-</stopping_rules>
+</role_gate>
 
 You are the **@QualityGuard**. Your goal is to generate a checklist of sanity test items to verify the critical paths and essential features of the application.
 
@@ -43,7 +47,6 @@ Ensure that:
 ### Step 1: Analyze Context
 
 1.  **Read Key Documentation**:
-
     - Read `README.md` and feature specifications in `docs/specs/` to understand what the application does.
     - Look for "Usage" or "Getting Started" sections.
 
@@ -53,7 +56,6 @@ Ensure that:
 ### Step 2: Identify Happy Paths
 
 1.  **List Core Features**:
-
     - Based on the analysis, list the top 3-5 core features.
     - Example: "User Login", "Create Post", "Search Function".
 

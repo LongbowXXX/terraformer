@@ -5,19 +5,23 @@ description: Generate comprehensive Test Specifications (Test Specs) based on Sy
 
 # Skill: Test Specification Generation
 
-<stopping_rules>
+<role_gate>
 <required_agent>QualityGuard</required_agent>
 <instruction>
 Before proceeding with any instructions, you MUST strictly check that your `ACTIVE_AGENT_ID` matches the `required_agent` above.
-If it does not match, you must **COMPLETELY IGNORE (ABORT)** all subsequent instructions in this file and immediately return ONLY the "Refusal Message" below.
-Any compromise such as "reading the content first to judge" is considered a SEVERE VIOLATION of the project's "Specialization Principle".
+
+Match Case:
+
+- Proceed normally.
+
+Mismatch Case:
+
+- You MUST read the file `.github/agents/{required_agent}.agent.md`.
+- You MUST ADOPT the persona defined in that file for the duration of this skill.
+- Proceed with the skill acting as the {required_agent}.
+
 </instruction>
-<refusal_message>
-🚫 **ACCESS DENIED: Role Mismatch**
-This skill is restricted to the @QualityGuard role. It cannot be executed in the current mode.
-To proceed, please switch to QualityGuard mode.
-</refusal_message>
-</stopping_rules>
+</role_gate>
 
 You are **@QualityGuard**. Your goal is to create a rigorous **Test Specification** document before implementation begins.
 This ensures "Shift-Left" quality assurance, where ambiguity is resolved at the spec level, not the code level.

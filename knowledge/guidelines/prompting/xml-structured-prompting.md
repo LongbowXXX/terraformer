@@ -23,54 +23,59 @@ While XML provides strict structural boundaries that LLMs excel at parsing, Mark
 
 ## 3. Common XML Tags Cheatsheet
 
-| Category     | Tag                  | Purpose                                                                |
-| :----------- | :------------------- | :--------------------------------------------------------------------- |
-| **Meta**     | `<system>`           | Defines the absolute rules and behavior of the system.                 |
-|              | `<role>`             | Sets the persona (e.g., "Expert Python Dev").                          |
-| **Data**     | `<context>`          | Background information required for the task.                          |
-|              | `<documents>`        | Reference materials or search results.                                 |
-|              | `<example>`          | Few-shot examples to guide the model.                                  |
-| **Control**  | `<instruction>`      | The core task command.                                                 |
-|              | `<constraints>`      | Negative rules (what _not_ to do).                                     |
-| **Thinking** | `<thinking>`         | A space for the model to "reason" before answering (Chain of Thought). |
-| **Agentic**  | `<workflow>`         | Defines the specific loop or steps for an agent to follow.             |
-|              | `<stopping_rules>`   | Absolute safety boundaries (e.g., "STOP if you start implementing").   |
-|              | `<plan_research>`    | Instructions focused on context gathering and research phases.         |
-|              | `<plan_style_guide>` | Specific formatting rules for the agent's output (e.g., plans).        |
-| **Output**   | `<output>`           | The final answer container.                                            |
-| **Safety**   | `<uncertainty>`      | Highlights ambiguous or uncertain areas in the user request.           |
-|              | `<self_check>`       | A forced introspection step for high-risk operations.                  |
+| Category     | Tag                  | Purpose                                                                    |
+| :----------- | :------------------- | :------------------------------------------------------------------------- |
+| **Meta**     | `<system>`           | Defines the absolute rules and behavior of the system.                     |
+|              | `<role>`             | Sets the persona (e.g., "Expert Python Dev").                              |
+| **Data**     | `<context>`          | Background information required for the task.                              |
+|              | `<documents>`        | Reference materials or search results.                                     |
+|              | `<example>`          | Few-shot examples to guide the model.                                      |
+| **Control**  | `<instruction>`      | The core task command.                                                     |
+|              | `<constraints>`      | Negative rules (what _not_ to do).                                         |
+| **Thinking** | `<thinking>`         | A space for the model to "reason" before answering (Chain of Thought).     |
+| **Agentic**  | `<workflow>`         | Defines the specific loop or steps for an agent to follow.                 |
+|              | `<role_gate>`        | Absolute safety boundaries (e.g., "STOP/ADAPT if you start implementing"). |
+|              | `<plan_research>`    | Instructions focused on context gathering and research phases.             |
+|              | `<plan_style_guide>` | Specific formatting rules for the agent's output (e.g., plans).            |
+| **Output**   | `<output>`           | The final answer container.                                                |
+| **Safety**   | `<uncertainty>`      | Highlights ambiguous or uncertain areas in the user request.               |
+|              | `<self_check>`       | A forced introspection step for high-risk operations.                      |
 
 ## 4. Practical Example: XML + Markdown
 
 Here is a standard template showing how Markdown organizes the content _within_ the XML tags:
 
-```xml
+```markdown
 <system>
-    You are a helpful assistant specialized in summarizing technical documents.
+You are a helpful assistant specialized in summarizing technical documents.
 </system>
 
 <context>
-    <documents>
-        <document index="1">
-            ### Spec v1.0
-            (Content of the first document...)
-        </document>
-    </documents>
+
+### Spec v1.0
+
+(Content of the first document...)
+
 </context>
 
 <instruction>
-    ### Your Task
-    Summarize the provided documents in **3 bullet points**.
 
-    ### Process
-    1.  **Analyze**: Look for key themes in the `<thinking>` block.
-    2.  **Draft**: Write the summary in the `<output>` block.
+### Your Task
+
+Summarize the provided documents in **3 bullet points**.
+
+### Process
+
+1.  **Analyze**: Look for key themes in the `<thinking>` block.
+2.  **Draft**: Write the summary in the `<output>` block.
+
 </instruction>
 
 <constraints>
-    - **No Jargon**: Use simple language.
-    - **Length**: Keep each point under 20 words.
+
+- **No Jargon**: Use simple language.
+- **Length**: Keep each point under 20 words.
+
 </constraints>
 ```
 
@@ -78,13 +83,15 @@ Here is a standard template showing how Markdown organizes the content _within_ 
 
 ```xml
 <thinking>
-    The document discusses X, Y, and Z. The key points are...
+The document discusses X, Y, and Z. The key points are...
 </thinking>
 
 <output>
-    - Point 1 summary.
-    - Point 2 summary.
-    - Point 3 summary.
+
+- Point 1 summary.
+- Point 2 summary.
+- Point 3 summary.
+
 </output>
 ```
 
@@ -104,10 +111,12 @@ To minimize hallucinations and increase reliability in high-stakes tasks using s
 
 **Usage**:
 
-```xml
+```markdown
 <uncertainty_and_ambiguity>
+
 1. It is unclear if the user wants X or Y.
 2. The version of the dependency is not specified.
+
 </uncertainty_and_ambiguity>
 ```
 
@@ -117,9 +126,11 @@ To minimize hallucinations and increase reliability in high-stakes tasks using s
 
 **Usage**:
 
-```xml
+```markdown
 <high_risk_self_check>
+
 1. Does the code I just generated introduce a SQL injection? -> CHECK: Parameterized queries used.
 2. Did I follow the "No formatting" rule? -> FAIL: I added bold text. Correcting...
+
 </high_risk_self_check>
 ```

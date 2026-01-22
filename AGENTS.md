@@ -95,16 +95,15 @@ The context provided in this file (`AGENTS.md`) is a **summary index**. It does 
 
 ### Role Enforcement & Access Control
 
-- **Strict Role Gating**: When a skill file (`.github/skills/*/SKILL.md`) contains `<stopping_rules>`, agents MUST check if their `ACTIVE_AGENT_ID` matches the `<required_agent>`. If they do not match, the agent MUST immediately ABORT all processing and return only the `<refusal_message>`. Any attempt to "read ahead" or "judge the content first" is a SEVERE VIOLATION of the Specialization Principle.
+- **Adaptive Role Gating**: When a skill file (`.github/skills/*/SKILL.md`) contains `<role_gate>`, agents MUST check if their `ACTIVE_AGENT_ID` matches the `<required_agent>`. If they do not match, the agent MUST read the `required_agent`'s `.agent.md` definition. They should NOT refuse, but adopt the required role.
 
-### Escalation Path for Role Mismatch
+### Adaptation Path for Role Mismatch
 
-When an agent encounters a role mismatch due to `<stopping_rules>`, the agent MUST:
+When an agent encounters a role mismatch due to `<role_gate>`, the agent MUST:
 
-1.  **Stop**: Do not process any further instructions from the skill file.
-2.  **Inform**: Output the `<refusal_message>` defined in the skill file.
-3.  **Guide**: Advise the user on which role (`@Agent`) is required to execute the task.
-    - _Example_: "This task requires the `@Architect` role. Please switch to Architect mode and retry."
+1.  **Read Identity**: Read the `.github/agents/{required_agent}.agent.md` file (the agent required by the skill).
+2.  **Allow**: Execute the skill's instructions from the perspective of the _Required Agent_ (temporary role adoption).
+3.  **Proceed**: Do NOT refuse. Switch personas and continue.
 
 ### Role Declaration Protocol
 
@@ -208,16 +207,16 @@ Manual verification via test projects; automated CI planned.
 
 → **Details**: [knowledge/](./knowledge/)
 
-| Topic                        | Link                                                                                                                         |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| PR Creation Guidelines       | [knowledge/guidelines/pr-creation-guidelines.md](./knowledge/guidelines/pr-creation-guidelines.md)                           |
-| Debugging Guidelines         | [knowledge/guidelines/debugging.md](./knowledge/guidelines/debugging.md)                                                     |
-| Prompting Techniques         | [knowledge/guidelines/prompting/README.md](./knowledge/guidelines/prompting/README.md)                                       |
-| Software Review Perspectives | [knowledge/guidelines/software-review.md](./knowledge/guidelines/software-review.md)                                         |
-| XML Structured Prompting     | [knowledge/guidelines/prompting/xml-structured-prompting.md](./knowledge/guidelines/prompting/xml-structured-prompting.md)   |
-| Specification Guidelines     | [knowledge/guidelines/specification-guidelines.md](./knowledge/guidelines/specification-guidelines.md)                       |
-| Role-Based Stopping Rules    | [knowledge/guidelines/prompting/role-based-stopping-rules.md](./knowledge/guidelines/prompting/role-based-stopping-rules.md) |
-| Workflow (AI Collaboration)  | [knowledge/workflows/workflow.md](./knowledge/workflows/workflow.md)                                                         |
+| Topic                        | Link                                                                                                                       |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| PR Creation Guidelines       | [knowledge/guidelines/pr-creation-guidelines.md](./knowledge/guidelines/pr-creation-guidelines.md)                         |
+| Debugging Guidelines         | [knowledge/guidelines/debugging.md](./knowledge/guidelines/debugging.md)                                                   |
+| Prompting Techniques         | [knowledge/guidelines/prompting/README.md](./knowledge/guidelines/prompting/README.md)                                     |
+| Software Review Perspectives | [knowledge/guidelines/software-review.md](./knowledge/guidelines/software-review.md)                                       |
+| XML Structured Prompting     | [knowledge/guidelines/prompting/xml-structured-prompting.md](./knowledge/guidelines/prompting/xml-structured-prompting.md) |
+| Specification Guidelines     | [knowledge/guidelines/specification-guidelines.md](./knowledge/guidelines/specification-guidelines.md)                     |
+| Adaptive Role Gating         | [knowledge/guidelines/prompting/adaptive-role-gating.md](./knowledge/guidelines/prompting/adaptive-role-gating.md)         |
+| Workflow (AI Collaboration)  | [knowledge/workflows/workflow.md](./knowledge/workflows/workflow.md)                                                       |
 
 ---
 
