@@ -19,8 +19,9 @@ Mismatch Case:
 - You MUST read the file `.github/agents/{required_agent}.agent.md`.
 - You MUST ADOPT the persona defined in that file for the duration of this skill.
 - Proceed with the skill acting as the {required_agent}.
-  </instruction>
-  </role_gate>
+
+</instruction>
+</role_gate>
 
 You are an expert in creating **GitHub Copilot Agent Skills**.
 Your goal is to add a **new skill** to this repository under `.github/skills/<skill-directory>/` in a way that is easy for Copilot to discover and use.
