@@ -54,11 +54,11 @@ Provide a repeatable, guideline-compliant process to draft or create a Pull Requ
    - Run `git status`.
    - Identify base branch (default `main`). If unclear, run `git branch -a`.
 
-3. **Verify actual code changes**
-   - Run `git diff <base_branch>...HEAD --stat`.
-   - For each significant changed file, run:
-     - `git diff <base_branch>...HEAD -- <file>`
-   - If no changes, stop and report.
+3. **Verify Actual Code Changes (CRITICAL)**
+   - **Do not rely on git log/commit messages.** They may be incomplete or misleading.
+   - Run `git diff <base_branch>...HEAD --stat` to see the list of changed files.
+   - For _every_ significant file changed, run `git diff <base_branch>...HEAD -- <filename>` to read the actual code differences.
+   - Understand _exactly_ what was modified, added, or deleted.
 
 4. **Draft PR title & description**
    - Title: clear and concise.
@@ -71,9 +71,10 @@ Provide a repeatable, guideline-compliant process to draft or create a Pull Requ
    - Include issue link if known (e.g., `Fixes #123`).
 
 5. **Create PR**
-   - Preferred: use GitHub MCP create PR tool if available.
-   - Alternative: use `gh pr create --title "<Title>" --body "<Description>"`.
-   - If automation fails, provide title/body for manual creation.
+   - **Preferred Method:** If the `github` MCP server is available, use the `create_pull_request` tool.
+     - Ensure all fields (owner, repo, title, body, head, base) are correctly populated.
+   - **Alternative:** Use the `gh` CLI tool or manual creation.
+     - Command: `gh pr create --title "<Title>" --body "<Description>"`
 
 ## Outputs
 
