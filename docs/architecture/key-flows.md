@@ -148,6 +148,7 @@ Adding custom capabilities to the AI team.
 ### Commands
 
 - **`/arc-create-custom-prompt`**: Generates a new command tailored to project-specific needs.
+- **`/arc-create-custom-skill`**: Generates a detailed skill implementation for complex commands.
 - **`/arc-create-custom-agent`**: Creates a new specialized agent role.
 
 ### Processing Flow

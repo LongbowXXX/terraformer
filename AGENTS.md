@@ -176,6 +176,7 @@ Manual verification via test projects; automated CI planned.
 | `/lib-doc-sync`              | Documentation sync                  |
 | `/lib-check-doc-consistency` | Verify doc consistency              |
 | `/arc-create-custom-prompt`  | Create custom command prompt        |
+| `/arc-create-custom-skill`   | Create custom skill implementation  |
 | `/arc-create-custom-agent`   | Create custom agent (.agent.md)     |
 | `/arc-vscode-tasks`          | Generate .vscode/tasks.json         |
 | `/arc-vscode-settings`       | Generate .vscode/settings.json      |
